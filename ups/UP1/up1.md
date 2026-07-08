@@ -13,7 +13,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:link: Visual Paradigm Online (digitalizar diagramas)](https://online.visual-paradigm.com/app/diagrams/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:pencil: Batería de problemas (DFDs y pseudocódigos)]()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:pencil: Batería de problemas (DFDs y pseudocódigos)](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/bateria_dfd.md)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:a:ctividad. Programando en pseudocódigo con PSeInt](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_pseudo/a_pseudo.md)	
 
