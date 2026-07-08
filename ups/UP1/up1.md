@@ -12,7 +12,7 @@
 5. [Control de errores (Excepciones básicas: try-catch)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/1_5_excepciones/index.html)
 
 ## :small_red_triangle_down: EXÁMENES
-- [:page_facing_up: Teórico-práctico (escrito) - modelo A](EXAMEN_TEÓRICO_UD1_daw.pdf)
-- [:page_facing_up: Teórico-práctico (escrito) - modelo B](EXAMEN_TEÓRICO_UD1_DAM.pdf)
-- [:computer: Práctico - modelo A](EXAMEN_PRÁCTICO_UD1_modeloA.pdf)
-- [:computer: Práctico - modelo B](EXAMEN_PRÁCTICO_UD1_modeloB.pdf)
+> [:page_facing_up: Teórico-práctico (escrito) - modelo A](EXAMEN_TEÓRICO_UD1_daw.pdf)
+> [:page_facing_up: Teórico-práctico (escrito) - modelo B](EXAMEN_TEÓRICO_UD1_DAM.pdf)
+> [:computer: Práctico - modelo A](EXAMEN_PRÁCTICO_UD1_modeloA.pdf)
+> [:computer: Práctico - modelo B](EXAMEN_PRÁCTICO_UD1_modeloB.pdf)
