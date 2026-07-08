@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.4. Serialización de objetos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="8.4. Serialización de objetos." />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8.4. Serialización de objetos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">8.4. Serialización de objetos.</a></li>
+   <li><a href="ejercicios_sobre_serializacin.html" class="no-ch">Ejercicios sobre serialización</a></li>
+   <li><a href="ficheros_json.html" class="daddy">Ficheros JSON.</a>
+   <ul class="other-section">
+      <li><a href="librera_gson.html" class="no-ch">Librería GSON.</a></li>
+      <li><a href="bonus_consumiendo_apis_externas_desde_java.html" class="no-ch">BONUS. Consumiendo APIs externas desde Java.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios_sobre_serializacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.4. Serialización de objetos.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">La <span style="color: #008000;"><strong>serialización</strong> </span>en <em>Java</em> es una técnica para guardar (y luego recuperar) el estado de un objeto en un fichero o en otro medio de almacenamiento, como si lo “congeláramos” y después lo “reviviéramos”.</p>
+<p style="text-align: justify;">La <span style="color: #008000;"><strong>deserialización</strong> </span>hace lo contrario: reconstruye el objeto original a partir de los <em>bytes</em> guardados.</p>
+<p><img src="1_8zJ4G6UTsAyqwpmbLyI5fg.png" width="687" height="390" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Para poder usarlas, nuestras clases deben implementar la interfaz <span style="color: #008000;"><em><strong>Serializable</strong></em></span>, aunque esta solamente sirve para marcar y no obliga a implementar ningún método (porque no tiene ninguno).</p>
+<p><img src="img1.png" width="766" height="470" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h5>Clases <span style="color: #008000;"><em>ObjectOutputStream</em> </span>(serializar) y <span style="color: #008000;"><em>ObjectInputStream</em> </span>(deserializar)</h5>
+<p style="text-align: justify;">Estas clases, igual que pasaba sobre la lectura y escritura de ficheros binarios, se usan a su vez sobre clases <em><span style="color: #008000;"><strong>FileOutputStream</strong> </span>ò <span style="color: #008000;"><strong>FileInputStream</strong></span></em>.</p>
+<p>Vamos a usar la siguiente clase <em><strong>Persona</strong> </em>de referencia para instanciar objetos y realizar los ejemplos:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Persona implements Serializable {
+    private String nombre;
+    private int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String toString() {
+        return nombre + " tiene " + edad + " años.";
+    }
+}
+</code></pre>
+</div>
+</div>
+<ul>
+<li>Serializamos (guardando el objeto en un archivo):</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class SerializarPersona {
+    public static void main(String[] args) {
+
+        Persona p = new Persona("Carlos", 30);
+
+        try {
+
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("src/main/resources/persona.ser"));
+
+            out.writeObject(p);
+
+            out.close();
+
+        } catch (IOException e) {
+            System.out.println("Algo ha ido mal.");
+            e.printStackTrace();
+        }
+
+        System.out.println("Objeto serializado en persona.ser");
+        
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img2.png" width="353" height="422" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px;"><span style="background-color: #ffff99;">El archivo resultante (<em>persona.ser</em>) no es legible a simple vista: está en formato binario.</span></p>
+<ul>
+<li>Deserializamos (leemos el objeto desde el archivo creado anteriormente):</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class DeserializarPersona {
+    public static void main(String[] args){
+
+        try {
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream("src/main/resources/persona.ser"));
+            Persona p = (Persona) in.readObject();
+            in.close();
+            System.out.println("Objeto persona leído: " + p);
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Algo ha ido mal.");
+            e.printStackTrace();
+        }
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p><img src="img3.png" width="593" height="152" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<h5>Atributos serializables y no-serializables</h5>
+<p style="text-align: justify;">Hasta ahora, hemos supuesto que todos los atributos de nuestro objeto <em><strong>Persona</strong> </em>eran serializables, pero puede ser que no necesitemos almacenar el estado completo del objeto, si no solamente los atributos necesarios. Si alguno no lo es, debemos marcarlo como <span style="color: #008000;"><em><strong>transient</strong> </em></span>para que se ignore. Lo probamos con la <strong><em>edad</em></strong>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Persona implements Serializable {
+    private String nombre;
+    private transient int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String toString() {
+        return nombre + " tiene " + edad + " años.";
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Al deserializar, su valor será <em><strong>null</strong> </em>(para objetos) o <em>0</em>, <em>false</em>, etc., según el tipo primitivo que utilice. Vamos a probarlo...</p>
+<p style="text-align: justify; padding-left: 30px;">Volvemos a lanzar los métodos para serializar y deserializar personas:</p>
+<p style="padding-left: 30px;"><img src="img4.png" width="504" height="358" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify; padding-left: 30px;">Como no hemos serializado la <em>edad</em>, cuando se deserializa, esta se crea con valor 0 (nulo para enteros).</p>
+<hr />
+<p style="text-align: justify;"><span style="background-color: #ffff99;"> La serialización en <em>Java</em> es un proceso inherentemente inseguro, ya que puede ser utilizada para fines malintencionados, como la inyección de objetos. Por lo tanto, siempre debemos asegurarnos de deserializar sólo los datos de fuentes en las que confiemos y, si es posible, usar alternativas más seguras como <em>JSON</em> (lo veremos más adelante).</span></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios_sobre_serializacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

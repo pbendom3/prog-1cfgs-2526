@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1.1. Clases y objetos | Introducción a la POO </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Introducción a la POO</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.1. Introducción a la POO</a></li>
+   <li id="active"><a href="511_clases_y_objetos.html" class="active no-ch">5.1.1. Clases y objetos</a></li>
+   <li><a href="512_constructores.html" class="no-ch">5.1.2. Constructores</a></li>
+   <li><a href="513_visibilidad.html" class="no-ch">5.1.3. Visibilidad</a></li>
+   <li><a href="514_encapsulamiento_getterssetters.html" class="no-ch">5.1.4. Encapsulamiento (getters/setters)</a></li>
+   <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+   <li><a href="batera_de_ejercicios_sobre_clases_y_objetos.html" class="no-ch">Batería de ejercicios sobre clases y objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="512_constructores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.1.1. Clases y objetos</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Una <em><strong>clase </strong></em>representa al conjunto de objetos que tienen unas características comunes. Si volvemos al ejemplo del triángulo, sabemos que hay de distintos tipos: rectángulo, equilátero, isósceles... Pero todos tienen algo en común: base y altura. Pero en este caso, la POO va más allá, y nos permite hacer analogía más allá de la lógica y las matemáticas. Podríamos definir, por ejemplo, una clase <em><strong>Persona</strong> </em>con su edad, nombre, DNI, etc.</p>
+<p style="text-align: justify;">Los datos que resumen dichas características comunes y las operaciones que se pueden hacer con ellos reciben el nombre de <em><strong>atributos </strong></em>y<em><strong> métodos</strong></em>, respectivamente, de modo que los métodos operan sobre los atributos de la clase. Podría entenderse una clase como una plantilla con las características y comportamientos comunes de los objetos, lo que permite definirlos y crearlos.  </p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Persona {
+    //atributos
+    String nombre;
+    String dni;
+    int edad;
+}</code></pre>
+</div>
+</div>
+<h5 style="text-align: justify;">¿Y los objetos?</h5>
+<p style="text-align: justify;">Como ya hemos ido hablando, las clases son un concepto estático definido en el programa fuente, mientras que <strong>los objetos son instancias de una clase</strong>. Son entes dinámicos que ocupan memoria en la ejecución de un programa. Por ejemplo, en la clase <em>Persona</em>, tendríamos una serie de atributos o variables que puedan tener en común las personas (edad, nombre, DNI, etc), y unos métodos u operaciones que puede hacer (hablar, andar, comer). Después podemos tener varios objetos de esa clase, por ejemplo, uno con nombre = Andrés y edad = 20, otro con nombre = Silvia y edad = 34, etc.  </p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>       CLASE
++-----------------+
+|     Persona     |
++-----------------+
+| - nombre: String|
+| - dni: String   |
+| - edad: int     |
++-----------------+
+| + mostrarInfo() |
++-----------------+
+
+                 OBJETOS 
++------------------+   +-----------------------+
+| persona1: Persona|   | persona2: Persona     |
++------------------+   +-----------------------+
+| nombre = "Juan"  |   | nombre = "Ana García" |
+| dni = "12345678A"|   | dni = "87654321B"     |
+| edad = 30        |   | edad = 25             |
++------------------+   +-----------------------+
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">En definitiva, es como definir un tipo de dato (clase) y varias variables de ese tipo (objetos), con sus respectivos valores.  </p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Persona persona1 = new Persona("Juan", "12345678A", 30); 
+Persona persona2 = new Persona("Ana García", "87654321B", 25);</code></pre>
+</div>
+</div>
+<h5 style="text-align: justify;"> Vale... ¿pero cómo se crea una clase?</h5>
+<p>Toda clase (u objeto) puede estar compuesta por los siguientes elementos: </p>
+<ul>
+<li style="text-align: justify;"><span style="text-decoration: underline;"><strong>Atributos o campos</strong></span>: son las variables o características propias de una clase u objeto. Por ejemplo, como ya sabemos, las personas tienen un nombre, por lo que el nombre sería un atributo de la clase <em>Persona</em>. Los atributos que tienen las clases y objetos pueden ser tipos simples (enteros, reales, booleanos) o compuestos (por ejemplo, <em>arrays</em>, u objetos del tipo de otras clases). </li>
+</ul>
+<p style="text-align: justify;"></p>
+<ul style="text-align: justify;">
+<li><span style="text-decoration: underline;"><strong>Mensajes</strong></span>. Un objeto no funciona de forma aislada en un programa, sino que tiene que comunicarse con otros. Para ello, se utilizan los mensajes. <span style="background-color: #ffff99;">En <em>Java</em>, los "mensajes" son básicamente las llamadas a los métodos que permiten que los objetos se comuniquen entre sí</span>.</li>
+</ul>
+<p style="text-align: justify;"></p>
+<ul style="text-align: justify;">
+<li><span style="text-decoration: underline;"><strong>Métodos</strong></span>. Un método indica qué debe hacer un objeto cuando recibe cierto mensaje. Además, permite enviar mensajes a otros objetos. Cuando se envía un mensaje a un objeto, es decir, cuando se invoca a un método de dicho objeto, es necesario saber qué hace ese mensaje/método, pero no cómo lo hace. Estructuralmente, la definición y programación equivale a lo que en programación modular se denominaban procedimientos o funciones. </li>
+</ul>
+<p><img src="img0.1.png" width="477" height="431" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul style="text-align: justify;">
+<li><span style="text-decoration: underline;"><strong>Constructores</strong></span>. Los constructores son un tipo de métodos que permiten crear objetos de una clase. Para ello, permiten reservar memoria para ellos y guardar los datos de sus atributos y métodos en memoria. <span style="text-decoration: underline;">Los vemos a continuación</span>.</li>
+</ul>
+<p style="text-align: justify;"></p>
+<ul>
+<li style="text-align: justify;"><span style="text-decoration: underline;"><strong>Destructores</strong></span>. Los destructores son un tipo de métodos que permiten borrar objetos de una clase, liberando la memoria que estaban ocupando. <span style="background-color: #ffff99;">Algunos lenguajes de programación como <em>Java</em> no requieren de destructores para liberar memoria</span>, ya que disponen de mecanismos que periódicamente eliminan de la memoria aquellos objetos que ya no se están usando. Otros lenguajes como <em>C++</em> sí que dejan en manos del programador la responsabilidad de liberar la memoria de objetos que ya no necesite, cuando lo considere oportuno. </li>
+</ul></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="512_constructores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

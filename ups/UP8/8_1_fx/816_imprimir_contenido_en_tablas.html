@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.1.6. Imprimir contenido en tablas | Introducción a JavaFX </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Introducción a JavaFX</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.1. Introducción a las aplicaciones JavaFX y Scene Builder</a></li>
+   <li><a href="811_instalacin.html" class="no-ch">8.1.1. Instalación</a></li>
+   <li><a href="812_conociendo_el_entorno_y_primeros_ejemplos.html" class="no-ch">8.1.2. Conociendo el entorno y primeros ejemplos</a></li>
+   <li><a href="813_objetos_modelo.html" class="no-ch">8.1.3. Objetos (modelo)</a></li>
+   <li><a href="814_moverse_entre_pantallas_scene.html" class="no-ch">8.1.4. Moverse entre pantallas (Scene)</a></li>
+   <li><a href="815_manipular_info_desde_formularios.html" class="no-ch">8.1.5. Manipular info desde formularios</a></li>
+   <li id="active"><a href="816_imprimir_contenido_en_tablas.html" class="active no-ch">8.1.6. Imprimir contenido en tablas</a></li>
+   <li><a href="prctica_1_entrega_tutorial_app_pruebas_en_javafx.html" class="no-ch">Práctica 1. Entrega tutorial: App pruebas en JavaFX</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="815_manipular_info_desde_formularios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_1_entrega_tutorial_app_pruebas_en_javafx.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.1.6. Imprimir contenido en tablas</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div id="ta7_134_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Para terminar con esta introducción, añadiremos a nuestra aplicación la posibilidad de imprimir en una tabla la información de las personas que vamos creando.</p>
+<p style="text-align: justify;">Insertamos una <em><strong>TableView</strong> </em>en nuestro fxml:</p>
+<p style="text-align: justify;"><img src="img0.5.png" width="991" height="614" alt="1" /></p>
+<p style="text-align: justify;">y la retocamos desde el código para establecer sus propiedades:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>    &lt;TableView fx:id="tablaPersonas"&gt;
+        &lt;columns&gt;
+            &lt;TableColumn fx:id="columnaNombre" text="Nombre" prefWidth="120"/&gt;
+            &lt;TableColumn fx:id="columnaEdad" text="Edad" prefWidth="80"/&gt;
+        &lt;/columns&gt;
+    &lt;/TableView&gt;</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Quedaría así:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;?import javafx.geometry.*?&gt;
+&lt;?import javafx.scene.control.*?&gt;
+&lt;?import javafx.scene.layout.*?&gt;
+
+&lt;VBox alignment="CENTER" prefHeight="247.0" prefWidth="335.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.SegundaPantallaController"&gt;
+&lt;padding&gt;
+    &lt;Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /&gt;
+&lt;/padding&gt;
+    &lt;TableView fx:id="tablaPersonas"&gt;
+        &lt;columns&gt;
+            &lt;TableColumn fx:id="columnaNombre" text="Nombre" prefWidth="120"/&gt;
+            &lt;TableColumn fx:id="columnaEdad" text="Edad" prefWidth="80"/&gt;
+        &lt;/columns&gt;
+    &lt;/TableView&gt;
+   &lt;TextField fx:id="nombreTextField" promptText="Inserta un nombre..." /&gt;
+   &lt;TextField fx:id="edadTextField" promptText="Inserta tu edad..." /&gt;
+    &lt;Button onAction="#guardarPersona" text="Guardar" /&gt;
+    &lt;Button onAction="#irAPantallaHello" text="Volver a pantalla de inicio" textAlignment="CENTER" /&gt;
+&lt;/VBox&gt;
+</code></pre>
+</div>
+</div>
+<p><img src="img1.3.png" width="347" height="265" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Ahora, desde el controlador usaremos una lista de tipo <em><strong>ObservableList&lt;Persona&gt;</strong></em>. No te preocupes, porque lo único que asuta es el nombre: el comportamiento es el mismo que el de una lista tradicional. Enlazaremos las columnas a las propiedades de <em>Persona,</em> y añadiremos<strong> <em>.add()</em></strong> a la lista por cada nueva persona cuando se hace clic en "<em><strong>Guardar</strong></em>".</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>package org.example.demo;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
+import java.io.IOException;
+
+public class SegundaPantallaController {
+
+    @FXML
+    private TextField nombreTextField;
+
+    @FXML
+    private TextField edadTextField;
+
+    @FXML
+    private TableView&lt;Persona&gt; tablaPersonas;
+
+    @FXML
+    private TableColumn&lt;Persona, String&gt; columnaNombre;
+
+    @FXML
+    private TableColumn&lt;Persona, Integer&gt; columnaEdad;
+
+    private ObservableList&lt;Persona&gt; listaPersonas = FXCollections.observableArrayList();
+
+    @FXML
+    public void initialize() {
+        // enlazamos columnas con propiedades del objeto Persona
+        columnaNombre.setCellValueFactory(data -&gt; new javafx.beans.property.SimpleStringProperty(data.getValue().getNombre()));
+        columnaEdad.setCellValueFactory(data -&gt; new javafx.beans.property.SimpleIntegerProperty(data.getValue().getEdad()).asObject());
+
+        // asignamos la lista al TableView
+        tablaPersonas.setItems(listaPersonas);
+    }
+
+    @FXML
+    private void guardarPersona() {
+
+        String nombre = nombreTextField.getText();
+        int edad;
+
+        try {
+            edad = Integer.parseInt(edadTextField.getText());
+        } catch (NumberFormatException e) {
+            System.out.println("Edad inválida");
+            return;
+        }
+
+        Persona persona = new Persona(nombre, edad);
+        listaPersonas.add(persona);
+        System.out.println("Persona creada: " + persona.getNombre() + ", " + persona.getEdad());
+
+        nombreTextField.clear();
+        edadTextField.clear();
+
+    }
+
+    @FXML
+    public void irAPantallaHello() throws IOException {
+        HelloApplication.setRoot("hello-view");
+    }
+
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">Lo probamos:</p>
+<p style="text-align: justify;"><img src="img2.5.png" width="991" height="341" alt="5" /></p>
+<hr />
+<h5 style="text-align: justify;">Haz esta prueba...</h5>
+<p style="text-align: justify;">Ejecuta tu aplicación, crea a varias personas, vuelve a la pantalla principal y vuelve a entrar en tu segunda pantalla... han desaparecido las personas que teníamos en la tabla:</p>
+<p><img src="img3.4.png" width="956" height="428" alt="20" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Eso pasa porque cuando volvemos a la pantalla de inicio, el controlador se vuelve a crear desde cero, lo que significa que se crea una nueva lista vacía (<em>listaPersonas = FXCollections.observableArrayList()</em>) y, por tanto, la tabla aparece vacía otra vez.</p>
+<p style="text-align: justify;">Para solucionarlo, usaremos una clase estática para guardar los datos de la lista:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+public class RepositorioPersonas {
+    private static final ObservableList&lt;Persona&gt; personas = FXCollections.observableArrayList();
+
+    public static ObservableList&lt;Persona&gt; getPersonas() {
+        return personas;
+    }
+
+    public static void insertarPersona(Persona persona) {
+        personas.add(persona);
+    }
+}
+</code></pre>
+</div>
+</div>
+<p><img src="img4.3.png" width="344" height="448" alt="21" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">En el <em><strong>initialize()</strong> </em>del controlador, deberemos modificar la llamada a <em><strong>.setItems()</strong></em> que teníamos para adaptarlo a la nueva clase:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>
+@FXML
+public void initialize() {
+
+    columnaNombre.setCellValueFactory(data -&gt; new javafx.beans.property.SimpleStringProperty(data.getValue().getNombre()));
+    columnaEdad.setCellValueFactory(data -&gt; new javafx.beans.property.SimpleIntegerProperty(data.getValue().getEdad()).asObject());
+
+    // en lugar de crear lista propia, usamos la lista estática
+    tablaPersonas.setItems(RepositorioPersonas.getPersonas());
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Y al guardar, en lugar de hacer un <strong><em>.add</em></strong> directamente, usaremos el método <em><strong>insertarPersona()</strong></em> de la nueva clase estática:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code> @FXML
+    private void guardarPersona() {
+
+        String nombre = nombreTextField.getText();
+        int edad;
+
+        try {
+            edad = Integer.parseInt(edadTextField.getText());
+        } catch (NumberFormatException e) {
+            System.out.println("Edad inválida");
+            return;
+        }
+
+        Persona persona = new Persona(nombre, edad);
+
+        RepositorioPersonas.insertarPersona(persona);
+
+        System.out.println("Persona creada: " + persona.getNombre() + ", " + persona.getEdad());
+
+        nombreTextField.clear();
+        edadTextField.clear();
+
+    }</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Vuelve a probar y comprueba que ahora la lista se guarda correctamente aunque cambiemos la pantalla...</p>
+<p><img src="img5.3.png" width="991" height="327" alt="23" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="815_manipular_info_desde_formularios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_1_entrega_tutorial_app_pruebas_en_javafx.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

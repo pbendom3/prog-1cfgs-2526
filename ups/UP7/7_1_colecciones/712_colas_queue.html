@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.1.2. Colas (Queue) | 7.1. Colecciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.1. Colecciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.1. Colecciones (interfaz Collection&lt;E&gt;)</a></li>
+   <li><a href="711_listas_list.html" class="daddy">7.1.1. Listas (List)</a>
+   <ul class="other-section">
+      <li><a href="pilas_stack.html" class="no-ch">Pilas (Stack)</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="712_colas_queue.html" class="active daddy">7.1.2. Colas (Queue)</a>
+   <ul>
+      <li><a href="clase_linkedlist.html" class="no-ch">Clase LinkedList</a></li>
+   </ul>
+   </li>
+   <li><a href="713_conjuntos_set__sin_duplicados.html" class="daddy">7.1.3. Conjuntos (Set) - sin duplicados</a>
+   <ul class="other-section">
+      <li><a href="clase_hashset.html" class="no-ch">Clase HashSet</a></li>
+   </ul>
+   </li>
+   <li><a href="714_mtodos_equals_y_hashcode_de_un_objeto.html" class="daddy">7.1.4. Métodos equals() y hashCode() de un objeto</a>
+   <ul class="other-section">
+      <li><a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="no-ch">Un ejemplo de lo que ocurre, paso por paso</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios_de_colecciones_haciendo_uso_de_objetos.html" class="no-ch">Ejercicios de colecciones haciendo uso de objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="pilas_stack.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="clase_linkedlist.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.1.2. Colas (Queue)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id2">
+<div class="iDevice emphasis0" >
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Una cola es una estructura de datos <strong><em>FIFO</em> (First In, First Out)</strong>, que sigue el principio de "primero en entrar, primero en salir". Esto significa que el primer elemento que se inserta en la cola es el primer elemento que se elimina de la cola.</p>
+<p style="text-align: justify;"><img src="img0.3.png" width="552" height="200" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Son muy útiles en estructuras de datos donde el orden de procesamiento es importante, como colas de impresión, manejo de procesos en sistemas operativos y simulaciones de tráfico.</p>
+<p style="text-align: justify;">  <strong><span style="background-color: #ffff99;">Los métodos principales de una cola son</span></strong>:</p>
+<ul>
+<li style="text-align: justify;"><em><strong>add(E e)</strong></em>: inserta un elemento en la cola y lanza una excepción (<strong><em>IllegalStateException</em></strong>) si la <span style="color: #ff6600;"><strong>cola está llena*</strong></span>.</li>
+<li style="text-align: justify;"><em><strong>offer(E e)</strong></em>: inserta un elemento en la cola y devuelve <strong><em>false</em> </strong>si la cola está llena en vez de lanzar una excepción.</li>
+<li style="text-align: justify;"><strong><em>remove()</em></strong>: elimina y devuelve el primer elemento, y lanza excepción si la cola está vacía.</li>
+<li style="text-align: justify;"><em><strong>poll()</strong></em>: elimina y devuelve el primer elemento, y devuelve <em><strong>null</strong> </em>si la cola está vacía.</li>
+<li style="text-align: justify;"><em><strong>element()</strong></em>: obtiene el primer elemento sin eliminarlo y lanza excepción si la cola está vacía.</li>
+<li style="text-align: justify;"><em><strong>peek()</strong></em>: obtiene el primer elemento sin eliminarlo y devuelve <em><strong>null</strong> </em>si la cola está vacía.</li>
+</ul>
+<p><strong><span style="color: #ff6600;">*Una cola está llena</span></strong> cuando ya no puede aceptar más elementos debido a restricciones de memoria o de tamaño predefinido. Esto depende del tipo de implementación de la cola.</p>
+<p style="padding-left: 30px;">Ejemplo en <em>Java</em> usando <span style="color: #008000;"><strong><em>ArrayBlockingQueue</em> </strong></span>y un tamaño fijo de 3:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.concurrent.ArrayBlockingQueue;
+import java.util.Queue;
+
+public class ColaLlenaEjemplo {
+    public static void main(String[] args) {
+        Queue&lt;Integer&gt; cola = new ArrayBlockingQueue&lt;&gt;(3);  // capacidad máxima = 3
+
+        cola.offer(1);
+        cola.offer(2);
+        cola.offer(3);
+
+        System.out.println("Cola actual: " + cola); // [1, 2, 3]
+
+        // intentamos añadir otro elemento cuando la cola ya está llena
+        boolean exito = cola.offer(4);
+        System.out.println("¿Se ha podido añadir el 4? " + exito);  // false
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Si usáramos <em><strong>add(4)</strong></em>, lanzaría una excepción <span style="color: #ff0000;"><em><strong>IllegalStateException</strong></em></span>. <strong><span style="background-color: #ffff00;">Pruébalo</span></strong>.</p>
+<p style="text-align: justify;">Por otro lado, si una cola no tiene un tamaño máximo, técnicamente nunca está "llena", pero puede quedarse sin memoria si se insertan demasiados elementos.</p>
+<hr />
+<p><strong>Diferencia entre <em>add() vs offer(), remove() vs poll(), element() vs peek()</em></strong></p>
+<p style="padding-left: 30px;"><strong><span style="color: #008000;">✔</span></strong> Usaremos <em>offer(), poll(), y peek()</em> si queremos evitar excepciones y manejar la cola de forma segura.<br /><strong><span style="color: #008000;">✔</span></strong> Usaremos <em>add(), remove(), y element()</em> si queremos que el programa falle en caso de error.</p>
+<hr />
+<p style="text-align: justify;">En <em><strong>Java</strong></em>, la interfaz <em><strong>Queue&lt;E&gt;</strong></em> puede ser implementada por varias clases, pero en este curso <strong>nos centraremos en las</strong> <em><strong>LinkedList</strong>.</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.LinkedList;
+import java.util.Queue;
+
+public class EjemploQueue {
+    public static void main(String[] args) {
+        Queue&lt;String&gt; cola = new LinkedList&lt;&gt;();
+        cola.offer("Elemento 1");
+        cola.offer("Elemento 2");
+        cola.offer("Elemento 3");
+
+        System.out.println(cola.poll());  // "Elemento 1" (eliminado)
+        System.out.println(cola.peek());  // "Elemento 2" (siguiente en salir)
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;"><span style="background-color: #ffff99;"><span style="text-decoration: underline;"><span style="color: #ff0000;"><strong>IMPORTANTE</strong></span></span>: En una <em>Queue</em>, con <strong><em>offer</em> </strong>no podremos insertar elementos en posiciones arbitrarias. Sólo se añaden elementos al final de la cola, y se eliminan desde el principio (FIFO).</span></p>
+<p style="text-align: justify; padding-left: 30px;"><span style="background-color: #ffff99;">Cuando definimos un <em>LinkedList </em>como una cola, los métodos <em>offer(), poll(), y peek()</em> están diseñados para manejar la cola de manera eficiente, mientras que si lo definiéramos como una <em>List</em> podríamos manipular elementos en cualquier índice (<em>add(int index, E element)</em>).</span></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="pilas_stack.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="clase_linkedlist.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

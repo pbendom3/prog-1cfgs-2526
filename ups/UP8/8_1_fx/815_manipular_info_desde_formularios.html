@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.1.5. Manipular info desde formularios | Introducción a JavaFX </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Introducción a JavaFX</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.1. Introducción a las aplicaciones JavaFX y Scene Builder</a></li>
+   <li><a href="811_instalacin.html" class="no-ch">8.1.1. Instalación</a></li>
+   <li><a href="812_conociendo_el_entorno_y_primeros_ejemplos.html" class="no-ch">8.1.2. Conociendo el entorno y primeros ejemplos</a></li>
+   <li><a href="813_objetos_modelo.html" class="no-ch">8.1.3. Objetos (modelo)</a></li>
+   <li><a href="814_moverse_entre_pantallas_scene.html" class="no-ch">8.1.4. Moverse entre pantallas (Scene)</a></li>
+   <li id="active"><a href="815_manipular_info_desde_formularios.html" class="active no-ch">8.1.5. Manipular info desde formularios</a></li>
+   <li><a href="816_imprimir_contenido_en_tablas.html" class="no-ch">8.1.6. Imprimir contenido en tablas</a></li>
+   <li><a href="prctica_1_entrega_tutorial_app_pruebas_en_javafx.html" class="no-ch">Práctica 1. Entrega tutorial: App pruebas en JavaFX</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="814_moverse_entre_pantallas_scene.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="816_imprimir_contenido_en_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.1.5. Manipular info desde formularios</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id6">
+<div class="iDevice emphasis0" >
+<div id="ta6_133_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">En <em>JavaFX</em>, para guardar los valores de un <em>TextField</em> (o cualquier otro componente de entrada de datos) como atributos de un objeto, simplemente tenemos que obtener el texto del <em>TextField</em> y pasarlo al objeto correspondiente.</p>
+<p style="text-align: justify;">Empezaremos insertando en nuestra segunda pantalla dos <em>TextFields</em>, que servirán para guardar el <em>nombre</em> y la <em>edad</em> de una Persona:</p>
+<p><img src="img0.4.png" width="991" height="529" alt="3" /></p>
+<p>Además, insertaremos un botón "<em>Guardar</em>". </p>
+<p>Volvemos a <em>IntelliJ</em>...</p>
+<p><img src="img1.2.png" width="949" height="512" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Primero retocamos el <em>fxml</em> para asignar a cada <em>TextField</em> un <em>id</em> y asignar una acción al botón de <em>Guardar</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;?import javafx.geometry.Insets?&gt;
+&lt;?import javafx.scene.control.Button?&gt;
+&lt;?import javafx.scene.control.TextField?&gt;
+&lt;?import javafx.scene.layout.VBox?&gt;
+
+&lt;VBox alignment="CENTER" prefHeight="247.0" prefWidth="335.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.SegundaPantallaController"&gt;
+&lt;padding&gt;
+    &lt;Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /&gt;
+&lt;/padding&gt;
+   &lt;TextField fx:id="nombreTextField" promptText="Inserta un nombre..." /&gt;
+   &lt;TextField fx:id="edadTextField" promptText="Inserta tu edad..." /&gt;
+    &lt;Button text="Guardar" onAction="#guardarPersona"/&gt;
+    &lt;Button onAction="#irAPantallaHello" text="Volver a pantalla de inicio" textAlignment="CENTER" /&gt;
+&lt;/VBox&gt;
+</code></pre>
+</div>
+</div>
+<p>A continuación, creamos nuestra clase <em><strong>Persona</strong> </em>que será manipulada por el controlador:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>package org.example.demo;
+
+public class Persona {
+    private String nombre;
+    private int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Y ahora sí que sí, nos dirigimos al controlador que usará la propiedad <em>.getText()</em> para guardarse lo que tengamos escrito en cada <em>TextField,</em> y creará una nueva <em>Persona</em> con esos valores de atributos <em>nombre</em> y <em>edad</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>package org.example.demo;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+
+import java.io.IOException;
+
+public class SegundaPantallaController {
+
+    @FXML
+    private TextField nombreTextField;
+
+    @FXML
+    private TextField edadTextField;
+
+    @FXML
+    private void guardarPersona() {
+
+        String nombre = nombreTextField.getText();
+        int edad;
+
+        try {
+            edad = Integer.parseInt(edadTextField.getText());
+        } catch (NumberFormatException e) {
+            System.out.println("Edad inválida");
+            return;
+        }
+
+        Persona persona = new Persona(nombre, edad);
+        System.out.println("Persona creada: " + persona.getNombre() + ", " + persona.getEdad());
+    }
+
+    @FXML
+    public void irAPantallaHello() throws IOException {
+        HelloApplication.setRoot("hello-view");
+    }
+
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Para confirmar que hemos guardado a la persona, imprimiremos en la consola un mensaje.</p>
+<p style="text-align: justify; padding-left: 30px;">Lo probamos:</p>
+<p style="text-align: center;"><img src="img2.4.png" width="327" height="277" alt="10" />         <img src="img3.3.png" width="327" height="278" alt="11" /></p>
+<p><img src="img4.2.png" width="991" height="357" alt="12" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img5.2.png" width="991" height="359" alt="13" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img6.3.png" width="326" height="277" alt="14" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img7.4.png" width="991" height="357" alt="15" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Para hacer la app un poco más curiosa, insertaremos dos <strong><em>.clear()</em></strong> para cada<em>TextField</em> destinados a borrar el contenido que tuvieran estos cada vez que guardamos exitosamente a la persona:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>package org.example.demo;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+
+import java.io.IOException;
+
+public class SegundaPantallaController {
+
+    @FXML
+    private TextField nombreTextField;
+
+    @FXML
+    private TextField edadTextField;
+
+    @FXML
+    private void guardarPersona() {
+
+        String nombre = nombreTextField.getText();
+        int edad;
+
+        try {
+            edad = Integer.parseInt(edadTextField.getText());
+        } catch (NumberFormatException e) {
+            System.out.println("Edad inválida");
+            return;
+        }
+
+        Persona persona = new Persona(nombre, edad);
+        System.out.println("Persona creada: " + persona.getNombre() + ", " + persona.getEdad());
+
+        nombreTextField.clear();
+        edadTextField.clear();
+
+    }
+
+    @FXML
+    public void irAPantallaHello() throws IOException {
+        HelloApplication.setRoot("hello-view");
+    }
+
+}
+</code></pre>
+</div>
+</div>
+<p><img src="img8.2.png" width="991" height="360" alt="16" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="814_moverse_entre_pantallas_scene.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="816_imprimir_contenido_en_tablas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

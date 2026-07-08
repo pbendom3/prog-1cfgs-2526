@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ficheros JSON. | 8.4. Serialización de objetos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8.4. Serialización de objetos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.4. Serialización de objetos.</a></li>
+   <li><a href="ejercicios_sobre_serializacin.html" class="no-ch">Ejercicios sobre serialización</a></li>
+   <li id="active"><a href="ficheros_json.html" class="active daddy">Ficheros JSON.</a>
+   <ul>
+      <li><a href="librera_gson.html" class="no-ch">Librería GSON.</a></li>
+      <li><a href="bonus_consumiendo_apis_externas_desde_java.html" class="no-ch">BONUS. Consumiendo APIs externas desde Java.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios_sobre_serializacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="librera_gson.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Ficheros JSON.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id9">
+<div class="iDevice emphasis0" >
+<div id="ta9_128_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><span style="color: #008000;"><em><strong>JSON (JavaScript Object Notation)</strong></em></span> es un formato ligero de intercambio de datos. Es fácil de leer, escribir y parsear, tanto para humanos como para máquinas. </p>
+<p><img src="147291500-402b5260-4d61-41eb-a9ff-b38957abd81f.png" width="378" height="150" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Para entender la estructura de estos archivos debemos tener en cuenta dos conceptos:</p>
+<ul>
+<li><span style="text-decoration: underline;"><strong>Objetos</strong></span>: son colecciones no ordenadas de pares de la forma <em><strong>nombre:valor</strong></em> separados por comas y puestos entre llaves:</li>
+</ul>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>{
+  "nombre": "Juan",
+  "edad": 25
+}</code></pre>
+</div>
+</div>
+<ul>
+<li style="text-align: justify;"><em><strong>Listas (arrays o vectores)</strong></em>: representa una lista ordenada de cero o más valores, los cuales pueden ser de cualquier tipo (pero todos los de una misma lista deben ser del mismo tipo). Los valores se separan por comas, y el vector se mete entre corchetes:</li>
+</ul>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>{
+  "nombre": "Juan",
+  "edad": 25,
+  "lenguajes": ["Java", "Python", "JavaScript"]
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Sabiendo esto, vamos a crear un <em>JSON</em> que contenga un objeto “<em>estudiantes</em>”. A su vez, este objeto contendrá un array (o lista) de varios estudiantes. Usaremos la herramienta <a href="https://jsonformatter.org/">https://jsonformatter.org/</a></p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>{
+  "estudiantes" : [
+    
+    ]
+}</code></pre>
+</div>
+</div>
+<p>Y cada elemento de esta lista, a su vez, será un objeto que contiene varios campos:</p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>{
+  "estudiantes" : [
+    {
+      
+    },
+    {
+      
+    }
+    ]
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Por ejemplo:</p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>{
+  "estudiantes": [
+    {
+      "nombre": "Juan",
+      "curso": "1DAM"
+    },
+    {
+      "nombre": "María",
+      "curso": "1DAW"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<p>Ahora, crearemos otra lista distinta que se llame <strong><em>profesores</em></strong>:</p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>{
+  "estudiantes" : [
+    {
+      "nombre":"Juan",
+      "curso":"1DAM"
+    },
+    {
+      "nombre":"María",
+      "curso":"1DAW"
+    }
+    ],
+  "profesores": [
+    
+  ]
+}</code></pre>
+</div>
+</div>
+<p>Dentro contendrá un objeto por cada profesor, pero con una diferencia respecto a los estudiantes: cada profesor imparte más de un módulo, por lo tanto, uno de los campos de cada profesor será a su vez otra lista:</p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>{
+  "estudiantes" : [
+    {
+      "nombre":"Juan",
+      "curso":"1DAM"
+    },
+    {
+      "nombre":"María",
+      "curso":"1DAW"
+    }
+    ],
+  "profesores": [
+    {
+      "nombre":"Patricia",
+      "modulos" : ["Programación","Tutoría"]
+    },
+    {
+      "nombre":"Paco",
+      "modulos":["Sistemas","Hardware"]
+    }
+    
+  ]
+}</code></pre>
+</div>
+</div>
+<p><span style="text-decoration: underline;"><strong><img src="img1.2.png" width="991" height="458" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></strong></span></p>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;"><strong>RESUMEN</strong></span>:</p>
+<ul>
+<li>Dentro del <em>JSON</em> creado tenemos dos objetos: estudiantes y profesores. Ambos guardan una lista de objetos.</li>
+<li>Por cada estudiante, guardamos su nombre y el curso en el que está.</li>
+<li>Por cada profesor, guardamos su nombre y una lista de los módulos que imparte.</li>
+</ul>
+<p style="text-align: justify;">Para comprobar la estructura de nuestro <em>JSON</em>, desde la parte derecha de la aplicación <em>JSON Formatter</em>, seleccionamos la opción <em><strong>Vista</strong></em>, <b><i>Árbol </i></b>o <em><strong>Formulario</strong> </em>(elige la que prefieras):</p>
+<p><img src="img2.1.png" width="545" height="557" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios_sobre_serializacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="librera_gson.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.1. Colecciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="7.1. Colecciones" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.1. Colecciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">7.1. Colecciones (interfaz Collection&lt;E&gt;)</a></li>
+   <li><a href="711_listas_list.html" class="daddy">7.1.1. Listas (List)</a>
+   <ul class="other-section">
+      <li><a href="pilas_stack.html" class="no-ch">Pilas (Stack)</a></li>
+   </ul>
+   </li>
+   <li><a href="712_colas_queue.html" class="daddy">7.1.2. Colas (Queue)</a>
+   <ul class="other-section">
+      <li><a href="clase_linkedlist.html" class="no-ch">Clase LinkedList</a></li>
+   </ul>
+   </li>
+   <li><a href="713_conjuntos_set__sin_duplicados.html" class="daddy">7.1.3. Conjuntos (Set) - sin duplicados</a>
+   <ul class="other-section">
+      <li><a href="clase_hashset.html" class="no-ch">Clase HashSet</a></li>
+   </ul>
+   </li>
+   <li><a href="714_mtodos_equals_y_hashcode_de_un_objeto.html" class="daddy">7.1.4. Métodos equals() y hashCode() de un objeto</a>
+   <ul class="other-section">
+      <li><a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="no-ch">Un ejemplo de lo que ocurre, paso por paso</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios_de_colecciones_haciendo_uso_de_objetos.html" class="no-ch">Ejercicios de colecciones haciendo uso de objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="711_listas_list.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.1. Colecciones (interfaz Collection&lt;E&gt;)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">En Java, las colecciones de objetos se agrupan utilizando el <em><strong>Java Collections Framework (JCF)</strong></em>, un conjunto de interfaces y clases que facilitan el trabajo. El <em>JCF</em> se organiza en torno a varias interfaces clave:</p>
+<ul>
+<li style="text-align: justify;"><strong> Interfaz <em>Collection&lt;E&gt;</em></strong>: es la base de las colecciones en <em>Java</em>. Define un conjunto básico de operaciones que cualquier colección de objetos debe soportar, como añadir, eliminar y verificar la existencia de elementos.</li>
+</ul>
+<p><img src="img0.png" width="864" height="141" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px; text-align: justify;">Esta interfaz tiene varias subinterfaces que proporcionan más funcionalidad específica según lo que necesitemos:  <em><strong>List, Set</strong> y <strong>Queue</strong></em>. En los siguientes apartados conoceremos más cada una de estas estructuras, pero como aperitivo, podemos decir que las listas son colecciones de elementos que permiten duplicados (como la clase <em>ArrayList</em>). En cuanto a los <em>Set</em>, estos presentan una colección de elementos únicos, es decir, no permiten duplicados (clases <em>HashSet</em>); y los <em>Queue </em>representan una colección de elementos que se procesan siguiendo el principio <em>FIFO</em>: los elementos se insertan al final de la cola y se eliminan por el inicio.</p>
+<ul>
+<li style="text-align: justify;"><strong> Interfaz <em>Map&lt;K, V&gt;</em></strong>: representa una colección de pares <em>clave-valor</em> donde cada clave está asociada a un valor. Las claves son únicas, pero los valores pueden duplicarse.</li>
+</ul>
+<p><em><img src="img1.png" width="919" height="214" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></em></p>
+<p style="padding-left: 30px;"><em>HashMap, TreeMap</em> y <em>LinkedHashMap</em> son implementaciones comunes de <em>Map</em>. Este tipo de interfaz la veremos en el próximo apartado (7.2.).</p>
+<hr />
+<p><img src="img2.png" width="919" height="466" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<h5>Métodos típicos de la interfaz <em>Collection</em></h5>
+<p style="text-align: justify;">Como ya conocemos de los <em>ArrayList</em>, las principales funcionalidades que comparten todos los objetos que implementan la interfaz <em>Collection</em> son las siguientes:</p>
+<ul>
+<li style="text-align: justify;"><em><strong> boolean add(Object o)</strong></em>: añade un elemento a la colección. Retornará <strong><em>true</em> </strong>si la colección cambia como resultado de la llamada (es decir, si el elemento se agrega correctamente) y <strong><em>false</em> </strong>en caso contrario (por ejemplo, si el elemento ya está en un conjunto que no permite duplicados como las clases <em>Set</em>).</li>
+<li style="text-align: justify;"><em><strong>boolean remove(Object o)</strong></em>: elimina una instancia del objeto especificado de la colección, en caso de que exista. Devuelve <strong><em>true</em> </strong>si la colección cambia y <strong><em>false</em> </strong>en caso contrario.</li>
+<li style="text-align: justify;"><em><strong>void clear()</strong></em>: elimina todos los elementos de la colección.</li>
+<li style="text-align: justify;"><em><strong>boolean contains(Object o)</strong></em>: verifica si la colección contiene una instancia del objeto especificado. Retorna <em><strong>true</strong> </em>si el objeto existe y <em><strong>false</strong> </em>en caso contrario.</li>
+<li style="text-align: justify;"><strong><em>boolean isEmpty()</em></strong>: retorna <em><strong>true</strong> </em>si la colección está vacía y <em><strong>false</strong> </em>en caso contrario.</li>
+<li style="text-align: justify;"><em><strong>int size()</strong></em>: devuelve el número de elementos en la colección.</li>
+</ul></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="711_listas_list.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

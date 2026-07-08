@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Librería GSON. | 8.4. Serialización de objetos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8.4. Serialización de objetos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.4. Serialización de objetos.</a></li>
+   <li><a href="ejercicios_sobre_serializacin.html" class="no-ch">Ejercicios sobre serialización</a></li>
+   <li class="current-page-parent"><a href="ficheros_json.html" class="current-page-parent daddy">Ficheros JSON.</a>
+   <ul>
+      <li id="active"><a href="librera_gson.html" class="active no-ch">Librería GSON.</a></li>
+      <li><a href="bonus_consumiendo_apis_externas_desde_java.html" class="no-ch">BONUS. Consumiendo APIs externas desde Java.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ficheros_json.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bonus_consumiendo_apis_externas_desde_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Librería GSON.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id8">
+<div class="iDevice emphasis0" >
+<div id="ta8_127_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="color: #008000;"><em><strong>Gson</strong></em></span> es una librería de <em>Google</em> que permite:</p>
+<ul>
+<li>Convertir objetos <em>Java</em> a <em>JSON</em> (serialización).</li>
+<li>Convertir <em>JSON</em> a objetos <em>Java</em> (deserialización).</li>
+</ul>
+<p><img src="java-gson.png" width="512" height="250" alt="3" style="display: block; margin-left: auto; margin-right: auto;" />Para poder usarla, debemos añadir la siguiente dependencia al <em>pom.xml</em> nuestro proyecto <em>Maven</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;
+    &lt;artifactId&gt;gson&lt;/artifactId&gt;
+    &lt;version&gt;2.10.1&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<p>Además, crearemos la siguiente clase <span style="color: #008000;"><strong><em>PersonaJSON</em> </strong></span>de referencia para manipularla:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>@Getter
+@ToString
+public class PersonaJSON {
+    private String nombre;
+    private int edad;
+    private List&lt;String&gt; lenguajes;
+
+    public PersonaJSON() {}
+
+    public PersonaJSON(String nombre, int edad, List&lt;String&gt; lenguajes) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.lenguajes = new ArrayList&lt;&gt;(lenguajes);
+    }
+
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;">Observa que es necesario crear un constructor vacío para poder usar <em>Gson</em>.</span></p>
+<h5>De objeto <em>Java</em> a formato <em>JSON</em>:</h5>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class GsonEjemplo {
+    public static void main(String[] args) {
+
+        Gson gson = new Gson();
+
+        // convertir objeto a JSON
+        PersonaJSON persona = new PersonaJSON("Luis", 25, Arrays.asList("Java", "Python"));
+        String json = gson.toJson(persona);
+        System.out.println("JSON: " + json);
+
+    }
+}</code></pre>
+</div>
+</div>
+<h5><img src="img0.png" width="592" height="165" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></h5>
+<p style="padding-left: 30px;">Con listas:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class GsonEjemplo {
+    public static void main(String[] args) {
+
+        Gson gson = new Gson();
+
+        // convertir objeto a JSON
+        ArrayList&lt;PersonaJSON&gt; listaPersonas = new ArrayList&lt;&gt;(Arrays.asList(new PersonaJSON("Luis", 25, Arrays.asList("Java", "Python")), new PersonaJSON("Patricia", 40, Arrays.asList("Java", "MongoDB"))));
+        String json = gson.toJson(listaPersonas);
+        System.out.println("JSON: " + json);
+
+    }
+}</code></pre>
+</div>
+</div>
+<h5><img src="img3.1.png" width="991" height="129" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></h5>
+<p>Para ver mejor el formato, podemos pegar el <em>JSON</em> en alguna herramienta como <a href="https://jsonformatter.org/">Online JSON Formatter</a></p>
+<h5><img src="img4.1.png" width="991" height="450" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></h5>
+<p>ò definir el objeto <em>JSON</em> como <span style="color: #008000;"><strong><em>GsonBuilder()</em></strong></span> desde <em>Java</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Gson gson = new GsonBuilder().setPrettyPrinting().create();</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Por ejemplo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class GsonEjemplo {
+    public static void main(String[] args) {
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        // convertir objeto a JSON
+        ArrayList&lt;PersonaJSON&gt; listaPersonas = new ArrayList&lt;&gt;(Arrays.asList(new PersonaJSON("Luis", 25, Arrays.asList("Java", "Python")), new PersonaJSON("Patricia", 40, Arrays.asList("Java", "MongoDB"))));
+        String json = gson.toJson(listaPersonas);
+        System.out.println("JSON: " + json);
+
+    }
+}</code></pre>
+</div>
+</div>
+<h5><img src="img7.1.png" width="501" height="530" alt="11" style="display: block; margin-left: auto; margin-right: auto;" /></h5>
+<h5>Guardar el <em>JSON</em> en un archivo</h5>
+<p>Haremos uso de nuestra vieja conocida <em>FileWriter:</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class GsonEjemplo {
+    public static void main(String[] args) {
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        // convertir objeto a JSON
+        ArrayList&lt;PersonaJSON&gt; listaPersonas = new ArrayList&lt;&gt;(Arrays.asList(new PersonaJSON("Luis", 25, Arrays.asList("Java", "Python")), new PersonaJSON("Patricia", 40, Arrays.asList("Java", "MongoDB"))));
+        String json = gson.toJson(listaPersonas);
+        System.out.println("JSON: " + json);
+
+        try (FileWriter writer = new FileWriter("src/main/resources/personas.json")) {
+            gson.toJson(listaPersonas, writer);
+            System.out.println("JSON guardado en persona.json");
+        } catch (Exception e) {
+            System.out.println("Algo ha ido mal.");
+            e.printStackTrace();
+        }
+
+    }
+}</code></pre>
+</div>
+</div>
+<h5><img src="img7.png" width="459" height="647" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></h5>
+<h5><img src="img6.png" width="710" height="495" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></h5>
+<h5>De formato <em>JSON</em> a objeto <em>Java</em>:</h5>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class GsonEjemplo {
+    public static void main(String[] args) {
+
+        Gson gson = new Gson();
+
+        // convertir objeto a JSON
+        PersonaJSON persona = new PersonaJSON("Luis", 25, Arrays.asList("Java", "Python"));
+        String json = gson.toJson(persona);
+        System.out.println("JSON: " + json);
+
+        // convertir JSON a objeto
+        PersonaJSON persona2 = gson.fromJson(json, PersonaJSON.class);
+        System.out.println("Nombre: " + persona2.getNombre() + ", Edad: " + persona2.getEdad() + " Lenguajes: " + persona2.getLenguajes());
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img1.1.png" width="613" height="173" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h5><strong>Leer el <em>JSON</em> desde el archivo</strong></h5>
+<p>Usaremos la clase <em>FileReader</em>, que también conocemos de ejercicios previos.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class GsonEjemplo {
+    public static void main(String[] args) {
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        // convertir objeto a fichero JSON
+        PersonaJSON persona = new PersonaJSON("Luis", 25, Arrays.asList("Java", "Python"));
+        String json = gson.toJson(persona);
+        System.out.println("JSON: " + json);
+
+        try (FileWriter writer = new FileWriter("src/main/resources/persona.json")) {
+            gson.toJson(persona, writer);
+            System.out.println("JSON guardado en persona.json");
+        } catch (Exception e) {
+            System.out.println("Algo ha ido mal.");
+            e.printStackTrace();
+        }
+
+        // convertir fichero JSON a objeto
+        try {
+            FileReader reader = new FileReader("src/main/resources/persona.json");
+            PersonaJSON persona2 = gson.fromJson(reader, PersonaJSON.class);  // se reconstruye el objeto
+            System.out.println("Nombre: " + persona2.getNombre());
+            System.out.println("Edad: " + persona2.getEdad());
+            System.out.println("Lenguajes: " + persona2.getLenguajes());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img8.png" width="446" height="430" alt="12" style="display: block; margin-left: auto; margin-right: auto;" /><br /><img src="img9.png" width="772" height="290" alt="13" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id12">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Práctica (1)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_131_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea un programa en <em>Java</em> que gestione el inventario de una tienda de videojuegos.</p>
+<p>Cada videojuego debe tener:</p>
+<ul>
+<li>Nombre del juego.</li>
+<li>Plataforma (por ejemplo: PC, PS5, Xbox).</li>
+<li>Precio.</li>
+<li>Disponible (booleano).</li>
+<li>Una lista de géneros (acción, estrategia, etc.).</li>
+</ul>
+<p>El programa debe:</p>
+<p style="padding-left: 30px;">a) Crear 3 videojuegos distintos <strong><span style="background-color: #ffff99;">por consola</span></strong> y guardarlos en una colección.</p>
+<p style="padding-left: 30px;">b) Guardar toda la colección en un archivo <em>JSON</em> (<strong><em>videojuegos.json</em></strong>).</p>
+<p style="padding-left: 30px;">c) Leer ese archivo y mostrarlo por pantalla.</p>
+<p style="padding-left: 30px;">d) Reconstruir la colección de objetos <em>Java </em>a partir del archivo guardado.</p>
+<p style="padding-left: 30px;">e) Añadir un videojuego nuevo a la colección.</p>
+<p style="padding-left: 30px;">f) Mostrar en consola los videojuegos cuyo precio sea menor a 30€.</p>
+<p style="padding-left: 30px;">g) Volver a guardar la lista actualizada en el archivo <em>JSON</em>.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ficheros_json.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bonus_consumiendo_apis_externas_desde_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

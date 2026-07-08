@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2. Polimorfismo | 6.1. Herencia y polimorfismo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.1. Herencia y polimorfismo</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.1. Herencia y redefinición de métodos (@Override + super)</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+   <li id="active"><a href="62_polimorfismo.html" class="active daddy">6.2. Polimorfismo</a>
+   <ul>
+      <li><a href="ejercicio0.html" class="no-ch">Ejercicio</a></li>
+   </ul>
+   </li>
+   <li><a href="diagramas_uml_con_herencia.html" class="no-ch">Diagramas UML con herencia</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ejercicio.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio0.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2. Polimorfismo</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_131_2" class="block iDevice_content">
+<div class="exe-text"><h5>Diferencia entre crear un objeto de una subclase directamente vs. usarlo como una referencia de la superclase</h5>
+<p style="padding-left: 30px;">En el ejemplo del <em>Festival</em> de música, en el <em>main()</em> usamos:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Asistente a1 = new Asistente("Carlos", 25, "VIP");</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Pero también podríamos haber hecho esto:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Persona a1 = new Asistente("Carlos", 25, "VIP");</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">¿Cuál es la diferencia?</p>
+<p style="padding-left: 30px;"> </p>
+<p><strong>1. Usar una referencia de la superclase (<em>Persona a1 = new Asistente(...)</em>)</strong></p>
+<ul>
+<li>Se usa <strong>polimorfismo</strong>, lo que significa que a1 se comporta como una <em>Persona</em>.</li>
+<li><strong>Sólo podemos acceder a los métodos y atributos declarados en <em>Persona</em></strong>, incluso si el objeto es un <em>Asistente</em>.</li>
+<li style="text-align: justify;">Si un método está sobrescrito (<em>@Override</em>), sí que se usará la versión de la subclase. <strong>Aunque no escribiéramos la anotación <em>@Override</em> también sería así</strong>, ya que si sobrescribimos un método en una subclase, <em>Java</em> lo reconoce aunque no usemos <em>@Override</em>, siempre que el método siga la misma estructura (nombre, parámetros y tipo de retorno).</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Persona a1 = new Asistente("Carlos", 25, "VIP");
+p1.mostrarInfo(); //llamará al método de Asistente, NO al de Persona
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Pero si intentamos acceder a <em>p1.entrada</em> (un atributo de <em>Asistente</em>), nos dará error:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>System.out.println(p1.entrada); //ERROR: no se puede acceder desde una referencia Persona
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Esto es útil cuando queremos manejar objetos de distintas subclases de forma genérica, por ejemplo, en un <em>array</em> de <em>Persona</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Persona[] personas = {
+    new Asistente("Lucas", 18, "VIP"),
+    new Artista("Sofía", 25, "Rock Alternativo"),
+    new Organizador("Martín", 30, "Producción")
+};
+
+for (Persona p : personas) {
+    p.mostrarInfo(); //se ejecuta la versión sobrescrita de cada subclase
+}
+</code></pre>
+</div>
+</div>
+<p><strong><img src="img0.1.png" width="459" height="237" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong> </strong></p>
+<p><strong>2. Usar una referencia de la subclase (<em>Asistente a1 = new Asistente(...)</em>)</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Asistente p1 = new Asistente("Lucas", 18, "VIP");
+p1.mostrarInfo(); //llama al método de Asistente
+System.out.println(p1.entrada); //FUNCIONA: puede acceder a su propio atributo
+</code></pre>
+</div>
+</div>
+<ul>
+<li>En este caso, <em>a1</em> es específicamente un <em>Asistente</em>, por lo que podemos acceder a todos sus atributos y métodos.</li>
+<li><strong>No hay polimorfismo aquí</strong>, porque <em>a1</em> siempre se tratará como <em>Asistente</em>.</li>
+<li>Esto es útil cuando necesitamos acceder a funcionalidades específicas de la subclase.</li>
+</ul>
+<p> </p>
+<h5>¿Cuándo usar cada uno?</h5>
+<table border="1" style="height: 311px; width: 100%;" class="EducaAnd_EXP">
+<tbody>
+<tr style="height: 23px;">
+<td style="width: 50%; height: 23px; text-align: center; background-color: #093fe0;"><span style="color: #99cc00;"><strong>Caso</strong></span></td>
+<td style="width: 50%; height: 23px; text-align: center; background-color: #093fe0;"><span style="color: #99cc00;"><strong>¿Cuál usar?</strong></span></td>
+</tr>
+<tr style="height: 97px;">
+<td style="width: 50%; text-align: center; height: 97px;">Manejar diferentes tipos de objetos en un solo <em>array</em>/lista</td>
+<td style="width: 50%; text-align: center; height: 97px;">
+<p><em>Persona p = new Asistente(...)</em></p>
+<p>(polimorfismo)</p>
+</td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 50%; text-align: center; height: 47px;">Sólo queremos tratar un objeto como su propia clase sin restricciones</td>
+<td style="width: 50%; text-align: center; height: 47px;"><em>Asistente p = new Asistente(...)</em></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 50%; text-align: center; height: 47px;">Queremos asegurarnos de que usamos la versión correcta de un método sobrescrito</td>
+<td style="width: 50%; text-align: center; height: 47px;">Cualquiera, ya que <span style="color: #008000;"><em>@Override</em></span> funcionará igual</td>
+</tr>
+<tr style="height: 97px;">
+<td style="width: 50%; text-align: center; height: 97px;">Necesitamos acceder a métodos o atributos específicos de la subclase</td>
+<td style="width: 50%; text-align: center; height: 97px;">
+<p><em>Asistente p = new Asistente(...)</em></p>
+<p>(porque con <em>Persona</em> no podríamos)</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id7">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Implementación del polimorfismo en el Festival</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>1. Crearemos en la clase Persona un método nuevo llamado <em><strong>accederEvento()</strong></em>, que imprima lo siguiente:</p>
+<p style="text-align: center;"><em><strong>"Accediendo al evento..."</strong></em></p>
+<p>2. Las clases Artista, Asistente y Organizador sobreescriben <em><strong>accederEvento</strong> </em>para hacer algo diferente. Por ejemplo:</p>
+<p style="padding-left: 120px;"><em><strong>Artista: "Accediendo como Artista: Preparando el show."</strong></em></p>
+<p style="padding-left: 120px;"><em><strong>Asistente: "Accediendo como Asistente: Buscando asiento."</strong></em></p>
+<p style="padding-left: 120px;"><em><strong>Organizador: "Accediendo como Organizador: Coordinando el evento."</strong></em></p>
+<p>3. En la clase principal <em>Concierto</em>, deberemos crear un nuevo método <strong></strong><em><strong>mostrarAcceso(Persona persona)  </strong></em>que llame a <strong></strong><em><strong>accederEvento()</strong></em> para el tipo de persona que se le pase por parámetro. Además, actualizaremos su lógica para incorporar lo siguiente:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>    public static void main(String[] args) {
+        Persona artista = new Artista("Sofía", 25, "Rock Alternativo");
+        Persona asistente = new Asistente("Lucas", 18, "VIP");
+        Persona organizador = new Organizador("Martín", 30, "Producción");
+
+        //usamos el método con polimorfismo
+        mostrarAcceso(artista);      //Accediendo como Artista: Preparando el show.
+        mostrarAcceso(asistente);    //Accediendo como Asistente: Buscando su asiento.
+        mostrarAcceso(organizador);  //Accediendo como Organizador: Coordinando el evento.
+    }</code></pre>
+</div>
+</div>
+<p><img src="img0.3.png" width="489" height="106" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ejercicio.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio0.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

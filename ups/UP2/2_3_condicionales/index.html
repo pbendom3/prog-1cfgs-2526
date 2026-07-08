@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Estructuras de control condicional </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente " />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="3. Estructuras de control condicional" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">3. Estructuras de control condicional</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active no-ch main-node">3. Estructuras de control condicional</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3. Estructuras de control condicional</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Tipos de estructuras</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_132_2" class="block iDevice_content">
+<div class="exe-text"><p>Como ya hemos estado viendo durante estas semanas, las estructuras condicionales sirven para la toma de decisiones en los algoritmos: si ocurre algo entonces ejecutamos unas sentencias y en caso contrario ejecutamos otras.</p>
+<p>Toda toma de decisión tiene una evaluación a realizar para, en función de ella, tomar la decisión. Esa evaluación generalmente compara una variable con otra o contra otro valor, para que en base al resultado de esta comparación, se siga un curso de acción dentro del programa.</p>
+<p>Existen tres tipos básicos de estructuras condicionales, en función de las ramas que puedan tener: las simples, las dobles y las múltiples.</p>
+<p></p>
+<h4>3.1. Estructuras condicionales simples (<em>if-then)</em></h4>
+<p>A las estructuras condicionales simples se les conoce como "tomas de decisión", y realizan una única acción cuando la expresión a evaluar resulta en un resultado positivo.</p>
+<p style="padding-left: 30px;">Su estructura básica en lenguaje <em>Java</em> es:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>if (condición a evaluar){
+
+//sentencias a realizar
+
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><strong></strong></p>
+<p style="padding-left: 30px;"><strong>NOTA</strong>: cuando en una condición solamente se indica el nombre de la variable, por ejemplo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>if (variable){
+
+   //sentencias a realizar
+
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">lo que va a hacer <em>Java</em> es preguntar si el valor de dicha variable es <strong><em>true</em></strong>, es decir, lo supone de tipo <em>booleano</em>. Si quisiéramos escribir la condición contraria, es decir, comprobar si la variable tiene valor <em><strong>false</strong></em>, escribiremos lo siguiente:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>if (!variable){
+
+   //sentencias a realizar
+
+}</code></pre>
+</div>
+</div>
+<p></p>
+<h4><em>3.2. Estructuras condicionales dobles (if-then-else)</em></h4>
+<p>Las estructuras condicionales dobles permiten elegir entre dos opciones o alternativas posibles, en función del cumplimiento o no de una determinada condición. Por tanto, presentan dos caminos diferentes que puede tomar el flujo de ejecución del programa: si la expresión a evaluar se cumple, el programa se irá por una camino y si no se cumple (<em>else</em>) se va por otro.</p>
+<p style="padding-left: 30px;">Su estructura básica en lenguaje <em>Java</em> es:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>if (condición a evaluar){
+
+//sentencias a realizar si se cumple la condición
+
+}else{
+
+//sentencias a realizar si no se cumple la condición
+
+}</code></pre>
+</div>
+</div>
+<p></p>
+<h4>3.3. Estructuras condicionales múltiples (<em>if-then-else-if</em> y <em>switch-case)</em></h4>
+<p>Las estructuras de comparación múltiples son tomas de decisión que permiten comparar una variable contra distintos posibles resultados. Por lo tanto, en estas estructuras podemos tener no solamente uno o dos caminos, sino tantos como podamos llegar a necesitar en un algoritmo.</p>
+<p style="padding-left: 30px;">Un ejemplo de uso lo tenemos en el programa sobre <em><strong>Generaciones</strong> </em>realizado con anterioridad, donde para decidir a cuál pertenecíamos necesitamos implantar la sentencia <em>if-else-if</em> múltiple:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>if (anyo_nac&gt;= 1900 &amp;&amp; anyo_nac&lt;=1927){
+    System.out.println("Eres de la Generación sin bautizar");
+} else if (anyo_nac&gt;=1928 &amp;&amp; anyo_nac&lt;= 1944) {
+    System.out.println("Eres de la Generación Silent");
+} else if (anyo_nac&gt;=1945 &amp;&amp; anyo_nac&lt;= 1964) {
+    System.out.println("Eres de la Generación Baby Boomers");
+} else if (anyo_nac&gt;=1965 &amp;&amp; anyo_nac&lt;= 1981) {
+    System.out.println("Eres de la Generación X");
+} else if (anyo_nac&gt;=1982 &amp;&amp; anyo_nac&lt;= 1994) {
+    System.out.println("Eres de la Generación Millenial");
+} else if (anyo_nac&gt;=1995 &amp;&amp; anyo_nac &lt;= anyo_actual) {
+    System.out.println("Eres de la Generación Centennials");
+}else{
+    System.out.println("No eres de ninguna generación");
+}</code></pre>
+</div>
+</div>
+<p>Esta estructura en realidad la puedes ver simplemente como una anidación de estructuras condicionales simples y dobles de las que hemos visto anteriormente.</p>
+<table border="1" style="width: 100%;" class="feedbackbutton">
+<tbody>
+<tr>
+<td style="width: 100%;">EJERCICIO DE AMPLIACIÓN</td>
+</tr>
+<tr>
+<td style="width: 100%;">
+<p>Se necesita escribir un programa que pida la altura de una persona.</p>
+<p style="padding-left: 30px;">- Si la altura es menor o igual a 150 cm, mostraremos el mensaje: "Persona de altura baja",</p>
+<p style="padding-left: 30px;">- si la altura está entre 151 y 175 cm, mostraremos el mensaje: "Persona de altura media",</p>
+<p style="padding-left: 30px;">- y si la altura es mayor a 176 cm escriba el mensaje: "Persona alta".</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="padding-left: 90px;"></p>
+<h5><em></em>Sentencia <em>switch-case</em></h5>
+<p>El <em>switch-case</em> permite comparar una variable, o constante, ante diversos posibles valores. Esta estructura también permite crear varias ramas dentro de un algoritmo con base a distintos posibles valores de la variable, pero ejecutando para cada caso una serie de instrucciones especificas sin necesidad de anidar estructuras más simples (como en el caso anterior <em>if-then-else-if).</em></p>
+<p style="padding-left: 30px;">Su estructura básica en lenguaje <em>Java</em> es:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>switch (variable a evaluar) {
+    case value1:
+        // secuencia de sentencias.
+        break;
+    case value2:
+       // secuencia de sentencias.
+       break;
+      .
+      .
+      .
+    case valueN :
+      // secuencia de sentencias.
+      break;
+    default:
+      // secuencia de sentencias para cualquier otro valor.
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Ejemplo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>switch(i) {
+  case 0:
+    System.out.println("i es cero.");
+    break;
+  case 1:
+    System.out.println("i es uno.");
+    break;
+  case 2:
+    System.out.println("i es dos.");
+    break;
+  case 3:
+    System.out.println("i es tres.");
+    break;
+  default:
+    System.out.println("i no es 1, 2 ni 3");
+}</code></pre>
+</div>
+</div>
+<p></p>
+<table border="1" style="width: 100%;" class="feedbackbutton">
+<tbody>
+<tr>
+<td style="width: 100%;"><strong>EJERCICIO DE AMPLIACIÓN</strong></td>
+</tr>
+<tr>
+<td style="width: 100%;">Realiza un programa que dado un número entre 1 y 7, escriba su correspondiente día de la semana así: 1- Lunes 2- Martes 3- Miércoles 4- Jueves 5- Viernes 6- Sábado 7- Domingo.</td>
+</tr>
+</tbody>
+</table>
+<div id="t0cf4a144-8a58-957c-1d7d-b1761fdd2dc5" class="exe-dialog-text js-hidden"></div>
+<p><span style="background-color: #ffff99;"><strong></strong></span></p>
+<p><span style="background-color: #ffff99;"><strong></strong></span></p>
+<p><span style="background-color: #ffff99;"><strong>IMPORTANTE</strong>: En <em>Java</em>, la sentencia <em>switch </em>sirve para comparar valores estáticos en tiempo de compilación. Es decir, <span style="color: #ff0000;"><strong><span style="text-decoration: underline;">sólo podemos usar <em>switch </em>cuando tenemos valores conocidos</span></strong></span>. </span></p>
+<p>Por lo tanto, el ejercicio sobre las Generaciones no se podría resolver estrictamente usando <em>switch</em>. Podríamos forzar el uso de <em>switch </em>así, pero no tiene sentido porque habremos usado igualmente <em>if-else-if</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>if (anyo_nac&gt;= 1900 &amp;&amp; anyo_nac&lt;=1927){
+    valor=1;
+} else if (anyo_nac&gt;=1928 &amp;&amp; anyo_nac&lt;= 1944) {
+    valor=2;
+} else if (anyo_nac&gt;=1945 &amp;&amp; anyo_nac&lt;= 1964) {
+    valor=3;
+} else if (anyo_nac&gt;=1965 &amp;&amp; anyo_nac&lt;= 1981) {
+    valor=4;
+} else if (anyo_nac&gt;=1982 &amp;&amp; anyo_nac&lt;= 1994) {
+    valor=5;
+} else if (anyo_nac&gt;=1995 &amp;&amp; anyo_nac &lt;= anyo_actual) {
+    valor=6;   
+}
+
+switch(valor) {
+    case 1:
+        System.out.println("Eres de la generación sin bautizar");
+        break;
+    case 2: //código...
+        break;
+    case 3:
+        break;
+       .
+       .
+       .
+    default:
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Lo que sí se puede hacer es agrupar casos de la siguiente manera:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int x = 4;<br /><br />switch(x) {
+    case 0:
+    case 1:
+        System.out.println("Rango entre 0 y 1");
+        break;
+    case 2:
+    case 3:
+        System.out.println("Rango entre 2 y 3");
+        break;
+    case 4:
+    case 5:
+    case 6:
+        System.out.println("Rango entre 4 y 6");
+        break;
+    default :
+        System.out.println("otro rango");
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Como se puede observar, en este caso el valor a imprimir va a ser "<em>Rango entre 4 y 6</em>", dado que va a ingresar por el case 4, pero al tener el <em>break </em>en el case 6 va a procesar desde <em>case</em> 4 hasta el <em>case</em> 6 y terminará en esa instrucción, dado que existe un <em>break</em> que indica al <em>switch </em>que debe terminar, es decir, salir de él.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

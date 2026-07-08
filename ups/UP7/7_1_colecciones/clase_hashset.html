@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Clase HashSet | 7.1. Colecciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.1. Colecciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.1. Colecciones (interfaz Collection&lt;E&gt;)</a></li>
+   <li><a href="711_listas_list.html" class="daddy">7.1.1. Listas (List)</a>
+   <ul class="other-section">
+      <li><a href="pilas_stack.html" class="no-ch">Pilas (Stack)</a></li>
+   </ul>
+   </li>
+   <li><a href="712_colas_queue.html" class="daddy">7.1.2. Colas (Queue)</a>
+   <ul class="other-section">
+      <li><a href="clase_linkedlist.html" class="no-ch">Clase LinkedList</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="713_conjuntos_set__sin_duplicados.html" class="current-page-parent daddy">7.1.3. Conjuntos (Set) - sin duplicados</a>
+   <ul>
+      <li id="active"><a href="clase_hashset.html" class="active no-ch">Clase HashSet</a></li>
+   </ul>
+   </li>
+   <li><a href="714_mtodos_equals_y_hashcode_de_un_objeto.html" class="daddy">7.1.4. Métodos equals() y hashCode() de un objeto</a>
+   <ul class="other-section">
+      <li><a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="no-ch">Un ejemplo de lo que ocurre, paso por paso</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios_de_colecciones_haciendo_uso_de_objetos.html" class="no-ch">Ejercicios de colecciones haciendo uso de objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="713_conjuntos_set__sin_duplicados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="714_mtodos_equals_y_hashcode_de_un_objeto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Clase HashSet</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id19">
+<div class="iDevice emphasis0" >
+<div id="ta19_128_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><em><strong>HashSet</strong> </em>es muy rápida, pero no garantiza el orden de los elementos. Es decir, si en una lista tenemos guardados <em>A, B y C,</em> cada vez que la imprimamos podría mostrarse en cualquier orden.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.HashSet;
+import java.util.Set;
+
+public class EjemploHashSet {
+
+    public static void main(String[] args) {
+
+        Set&lt;String&gt; conjunto = new HashSet&lt;&gt;();
+
+        conjunto.add("B");
+        conjunto.add("A");
+        conjunto.add("C");
+        conjunto.add("A"); // no se añadirá, porque ya existe
+
+        System.out.println("Conjunto: " + conjunto); // [A, B, C] (puede salir en otro orden)
+
+        System.out.println("¿Contiene 'B'?: " + conjunto.contains("B")); // true
+
+        conjunto.remove("A");
+
+        System.out.println("Tamaño del conjunto: " + conjunto.size()); // 2
+
+    }
+
+}
+</code></pre>
+</div>
+</div>
+<p><img src="img0.9.png" width="377" height="141" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Si necesitamos que se mantenga el orden de inserción, en lugar de <em>HashSet</em> deberemos implementar una lista de tipo <em><strong>LinkedHashSet:</strong></em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class EjemploLinkedHashSet {
+
+    public static void main(String[] args) {
+
+        Set&lt;Integer&gt; numeros = new LinkedHashSet&lt;&gt;();
+
+        numeros.add(3);
+        numeros.add(1);
+        numeros.add(2);
+
+        System.out.println("Conjunto ordenado: " + numeros); // [3, 1, 2]
+
+    }
+
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Y si queremos que además los elementos se ordenen automáticamente (ascendentemente) conforme se van añadiendo, entonces necesitaremos una estructura de tipo árbol: <em><strong>TreeSet.</strong></em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.TreeSet;
+import java.util.Set;
+
+public class EjemploTreeSet {
+
+    public static void main(String[] args) {
+
+        Set&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;();
+
+        treeSet.add(50);
+        treeSet.add(10);
+        treeSet.add(30);
+
+        System.out.println("Conjunto ordenado: " + treeSet); // [10, 30, 50]
+
+    }
+
+}
+</code></pre>
+</div>
+</div>
+<hr />
+<h5 style="text-align: justify;">Comparación de <em>HashSet, TreeSet y LinkedHashSet</em></h5>
+<p>Vamos a añadir los siguientes valores en tres estructuras distintas: <em>HashSet, TreeSet y LinkedHashSet.</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>String[] palabras = {"banana", "manzana", "pera", "uva", "manzana", "cereza", "banana"};</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class ComparacionSets {
+    public static void main(String[] args) {
+
+        String[] palabras = {"banana", "manzana", "pera", "uva", "manzana", "cereza", "banana"};
+
+        Set&lt;String&gt; hashSet = new HashSet&lt;&gt;();
+        Set&lt;String&gt; treeSet = new TreeSet&lt;&gt;();
+        Set&lt;String&gt; linkedHashSet = new LinkedHashSet&lt;&gt;();
+
+        for (String palabra : palabras) {
+            hashSet.add(palabra);
+            treeSet.add(palabra);
+            linkedHashSet.add(palabra);
+        }
+
+        System.out.println("HashSet (orden impredecible): " + hashSet);
+        System.out.println("TreeSet (ordenado alfabéticamente): " + treeSet);
+        System.out.println("LinkedHashSet (orden de inserción): " + linkedHashSet);
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 60px;"> Resultado:</p>
+<p><em><img src="img1.6.png" width="606" height="135" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /><br /></em></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id21">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1: Filtrar palabras únicas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta21_130_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Dado un texto, almacenar sólo las palabras únicas en un <em>HashSet</em> (sin repeticiones).</p>
+<p><span style="text-decoration: underline;">Pistas</span>:</p>
+<ol>
+<li>Pide al usuario que ingrese una frase.</li>
+<li>Divide la frase en palabras.</li>
+<li>Guarda las palabras en un <em>HashSet</em> para eliminar duplicados. <strong><span style="background-color: #ffff99;">Cuidado con las mayúsculas y minúsculas</span></strong>, ya que no se deben tener en cuenta.</li>
+<li>Muestra el conjunto de palabras únicas.</li>
+</ol>
+<p><img src="img0.11.png" width="615" height="56" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id22">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2: Agenda de contactos (ordenados alfabéticamente)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_131_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crear una agenda donde los nombres se almacenen de forma ordenada usando <em>TreeSet</em>.</p>
+<p>Implementa un menú, donde el usuario pueda:</p>
+<ul>
+<li>Añadir un contacto.</li>
+<li>Mostrar todos los contactos ordenados.</li>
+<li>Buscar si un contacto existe.</li>
+<li>Eliminar un contacto.</li>
+</ul>
+<p><img src="img0.12.png" width="336" height="541" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /><img src="img1.5.png" width="314" height="272" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id23">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3: Historial de navegación (mantener orden de visitas)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta23_132_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Simular un historial de navegación donde se guarden las páginas visitadas sin repetir, pero manteniendo el orden de acceso con <em>LinkedHashSet</em>.</p>
+<p><img src="img0.13.png" width="633" height="212" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id26">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 4</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_127_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Implementa una función <em><strong>mezclados()</strong></em> que tenga como parámetros dos listas de enteros ordenados de menor a mayor, y que devuelva una nueva lista como unión de ambas con sus elementos ordenados de la misma forma.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="713_conjuntos_set__sin_duplicados.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="714_mtodos_equals_y_hashcode_de_un_objeto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

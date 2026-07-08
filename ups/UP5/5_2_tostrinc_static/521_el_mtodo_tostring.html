@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.2.1. El método toString() | tostring y static </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">tostring y static</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.2. El método toString() y uso de static en la POO</a></li>
+   <li id="active"><a href="521_el_mtodo_tostring.html" class="active no-ch">5.2.1. El método toString()</a></li>
+   <li><a href="522_mtodos_y_atributos_estticos_static.html" class="no-ch">5.2.2. Métodos y atributos estáticos (static)</a></li>
+   <li><a href="ejercicio_de_ampliacin_sobre_clasesobjetos_y_mtodos_static.html" class="no-ch">Ejercicio de ampliación sobre clases/objetos y métodos static</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="522_mtodos_y_atributos_estticos_static.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.2.1. El método toString()</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">En Java, la clase <em>Object</em> (que es la madre de todas las clases) proporciona un <strong>método llamado <em>toString</em>()</strong>. Este método devuelve una representación en forma de cadena de texto (<em>String</em>) del objeto, de forma que podemos imprimir el nombre de la clase y el valor <em>hash</em> del objeto, lo cual no es muy útil para los usuarios del programa. Es lo mismo que nos pasaba cuando intentábamos imprimir <em>arrays</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        String nombres[] = {"Pepe", "Juan"};
+        System.out.println(nombres);
+
+        Persona persona = new Persona("Juan", 30);
+        System.out.println(persona); 
+
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img0.png" width="364" height="82" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Es decir, <span style="background-color: #ffff99;">al imprimir el objeto persona, <em>Java</em> llama automáticamente al método <em>toString()</em></span>. Como se puede ver, esta salida no es útil para describir los datos del objeto. Por esta razón, es importante sobrescribirlo para proporcionar una representación más significativa de nuestros objetos. Por ejemplo:</p>
+<p><img src="img1.png" width="327" height="80" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h5>Re-implementación del Método <em>toString</em>()</h5>
+<p style="text-align: justify;">Imaginemos que tenemos una clase <em>Persona</em> y queremos sobrescribir el método <em>toString</em>() para mostrar de forma legible los detalles relevantes de una persona. La forma de hacerlo es la siguiente:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>class Persona {
+    String nombre;
+    int edad;
+
+    Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona [nombre=" + nombre + ", edad=" + edad + "]";
+    }
+}</code></pre>
+</div>
+</div>
+<p> <strong>¿Qué es ese @<em>Override</em>?</strong></p>
+<p style="text-align: justify;">En este caso, @<em>Override</em> es una anotación de <em>Java</em> que se escribe encima del método a sobrescribir (<em>toString</em>()), e indica que un método en una subclase (<em>Persona</em>) está sobrescribiendo (o redefiniendo) un método de su clase madre (<em>Object</em>). Lo veremos más en profundidad cuando hablemos de Herencia en el próximo tema.</p>
+<p>Si ejecutamos ahora el <em>main</em> anterior, obtendríamos la siguiente salida que ya es legible y proporciona información útil sobre el objeto:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        Persona persona = new Persona("Juan", 30);
+        System.out.println(persona); 
+
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img2.png" width="374" height="59" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio de ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_127_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Abre tu proyecto creado recientemente y reemplaza en todas las Clases los métodos de tipo <em>mostrarInfo</em>() creados hasta ahora por el método <em>toString</em>(). </p>
+<p>Modifica también los programas principales que usaban dichas Clases para adaptarlos al nuevo método.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="522_mtodos_y_atributos_estticos_static.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

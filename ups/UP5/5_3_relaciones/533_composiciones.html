@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.3.3. Composiciones | 5.3. Relaciones simples entre clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">5.3. Relaciones simples entre clases</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.3. Relaciones simples entre clases</a></li>
+   <li><a href="531_asociacionesagregaciones.html" class="no-ch">5.3.1. Asociaciones/agregaciones</a></li>
+   <li><a href="532_asociaciones_bidireccionales.html" class="no-ch">5.3.2. Asociaciones bidireccionales</a></li>
+   <li><a href="bonus_paso_por_valor_y_por_referencia.html" class="no-ch">BONUS: Paso por valor y por referencia</a></li>
+   <li id="active"><a href="533_composiciones.html" class="active no-ch">5.3.3. Composiciones</a></li>
+   <li><a href="534_asociaciones_reflexivas.html" class="no-ch">5.3.4. Asociaciones reflexivas</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="bonus_paso_por_valor_y_por_referencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="534_asociaciones_reflexivas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.3.3. Composiciones</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id8">
+<div class="iDevice emphasis0" >
+<div id="ta8_127_2" class="block iDevice_content">
+<div class="exe-text"><p>La <strong>composición</strong> es una relación fuerte <em><strong>"parte de</strong></em>", en la cual una clase contiene otra, y si la clase contenedora se elimina, los objetos dentro también desaparecen.</p>
+<p>Este tipo de asociación se representa de forma idéntica a una <em>agregación</em>, sólo que en este caso el rombo es de color negro.</p>
+<p><img src="img0.5.png" width="454" height="80" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h5>Ejemplo</h5>
+<p>📌 Podríamos tener el siguiente escenario...</p>
+<ul>
+<li>Una Casa tiene Habitaciones.</li>
+<li>Una Habitación no puede existir sin una Casa.</li>
+<li>Si la Casa se destruye, todas sus Habitaciones desaparecen.</li>
+</ul>
+<p>Esto podría implementarse en <em>Java</em> de la siguiente manera:</p>
+<p style="padding-left: 30px;">- Clase <em>Habitacion</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>class Habitacion {
+    private String nombre;
+
+    public Habitacion(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">- Clase <em>Casa</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>class Casa {
+    private String direccion;
+    private List&lt;Habitacion&gt; habitaciones; // COMPOSICIÓN: la Casa tiene habitaciones
+
+    public Casa(String direccion) {
+        this.direccion = direccion;
+        this.habitaciones = new ArrayList&lt;&gt;(); 
+    }
+
+    public void agregarHabitacion(String nombre) {
+        Habitacion habitacion = new Habitacion(nombre); //solamente la Casa crea las habitaciones
+        habitaciones.add(habitacion);
+    }
+
+    public void mostrarHabitaciones() {
+        System.out.println("Casa en " + direccion + " tiene las siguientes habitaciones: " + habitaciones);
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">- <em>Main</em> de prueba:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        Casa casa = new Casa("Calle Mayor 123");
+
+        casa.agregarHabitacion("Dormitorio");
+        casa.agregarHabitacion("Cocina");
+        casa.agregarHabitacion("Baño");
+
+        casa.mostrarHabitaciones();
+
+    }
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">✅ La clase Casa contiene Habitaciones dentro de sí misma.<br />✅ Las Habitaciones se crean dentro de Casa, no fuera de ella.<br />✅ Si eliminamos la Casa, sus Habitaciones también desaparecen.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicios </h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>a) Añade el atributo <em>metrosCuadrados</em> y sus correspondientes getters y setters a la clase <em>Habitación</em>.</p>
+<p>b) Modificar el método <em>mostrarHabitaciones()</em> para incluir el número total de habitaciones y su tamaño correspondiente.</p>
+<p><img src="img0.3.png" width="416" height="80" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>c) Crear un método <strong><em>public Habitacion getHabitacionMasGrande()</em></strong> que devuelva la habitación más grande de la <em>Casa</em>.</p>
+<p>d) Modifica el método <em>agregarHabitacion()</em> para evitar que se añadan habitaciones con el mismo nombre.</p>
+<p>e) Implementa un método <em><strong>eliminarHabitacion(String nombre)</strong></em>, que elimine una habitación (si existe).</p>
+<p>f) Añadir una clase <strong><em>Propietario</em> </strong>y asociarla a la <em>Casa</em> mediante composición.</p>
+<p style="padding-left: 30px;">--&gt; <em>Propietario</em> debe tener los atributos <em><strong>nombre</strong> </em>y <em><strong>edad</strong></em>.<br />--&gt; La <em>Casa</em> debe contener un <em>Propietario</em> (un propietario no existe sin una casa).<br />--&gt; Modifica <em>Casa</em> para que el propietario sea obligatorio y mostrar su información en <em>mostrarHabitaciones()</em>.</p>
+<p>g) Crear una clase <em><strong>Electrodomestico</strong> y asociarla a la</em> <em>Habitacion </em>mediante composición. (Si una <em>Casa</em> es destruida, todas sus <em>Habitaciones</em> y los <em>Electrodomésticos</em> en ellas deben ser destruidos también).</p>
+<p style="padding-left: 30px;">--&gt; <em>Electrodomestico</em> tendrá los atributos <strong><em>nombre</em> </strong>y <em><strong>consumo</strong> </em>energético (kWh).<br />--&gt; Cada habitación contiene una lista de electrodomésticos.</p>
+<p>h) Crea los métodos <em>agregarElectrodomestico()</em> y <em>mostrarElectrodomesticos() </em>en la clase <em>Habitacion. </em>Evita añadir electrodomésticos con el mismo nombre dentro de la misma habitación.</p>
+<p>i) Crea un método <em><strong>public double calcularConsumo()</strong> </em>en la clase <em>Habitación</em>, que calcule el consumo total en esa estancia.</p>
+<p>j) Crea un método en la clase <em>Casa</em> que haga uso del que acabas de crear en el apartado anterior, para mostrar qué habitación consume más energía dentro de la casa.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="bonus_paso_por_valor_y_por_referencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="534_asociaciones_reflexivas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

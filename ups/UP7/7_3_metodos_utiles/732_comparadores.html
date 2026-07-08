@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.3.2. Comparadores | 7.3. Métodos útiles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.3. Métodos útiles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.3. Métodos útiles para la manipulación de colecciones</a></li>
+   <li><a href="731_iteradores.html" class="daddy">7.3.1. Iteradores</a>
+   <ul class="other-section">
+      <li><a href="listiterator.html" class="no-ch">ListIterator</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="732_comparadores.html" class="active daddy">7.3.2. Comparadores</a>
+   <ul>
+      <li><a href="ordenacin_de_mapas.html" class="no-ch">Ordenación de mapas</a></li>
+   </ul>
+   </li>
+   <li><a href="733_inmutabilidad_en_java.html" class="no-ch">7.3.3. Inmutabilidad en Java</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="listiterator.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ordenacin_de_mapas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.3.2. Comparadores</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id6">
+<div class="iDevice emphasis0" >
+<div id="ta6_131_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Como ya hemos ido viendo durante el curso, en caso de necesitar ordenar los elementos de una lista o <em>array</em>, podemos usar la clase <em><strong>Collections</strong> </em>y su método <em><strong>sort()</strong></em>. Por ejemplo, si nos pidieran ordenar la lista [1, 3, 5, 4, 2], tanto nosotros como el método <em>sort()</em> podríamos decir fácilmente que la respuesta es [1, 2, 3, 4, 5], ya que los números enteros tienen un orden natural. ¿Pero qué pasa con clases personalizadas?</p>
+<p style="text-align: justify;">Supongamos que estamos trabajando en una clase que representa a una <em><strong>Persona</strong> </em>mediante su nombre y apellido. Hemos creado una clase básica para hacerlo e implementado correctamente los métodos <em>equals</em> y <em>hashCode:</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Persona {
+    private final String apellido;
+    private final String nombre; 
+
+    public Persona(String nombre, String apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String toString() {
+        return apellido + ", " + nombre;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Persona)) return false;
+        Persona p = (Persona) o;
+        return nombre.equals(p.nombre) &amp;&amp; apellido.equals(p.apellido);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, apellido);
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Ahora queremos ordenar una lista de objetos <em>Persona</em> por su <em>nombre</em> y <em>apellido</em>, como en el siguiente caso:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static void main(String[] args) {
+    List&lt;Persona&gt; personas = Arrays.asList(
+        new Persona("Juan", "Pérez"),
+        new Persona("Ana", "Gómez"),
+        new Persona("Carlos", "López"),
+        new Persona("Beatriz", "López"),
+        new Persona("Pedro", "Pérez")
+    );
+
+    Collections.sort(personas); // esto no funcionará!!
+}
+</code></pre>
+</div>
+</div>
+<p><span style="text-decoration: underline; background-color: #ffff99;"><strong>PROBLEMA</strong></span>: desafortunadamente, el código anterior no compilará porque <em><strong>Collections.sort(..)</strong> </em>sólo sabe ordenar listas si:</p>
+<p style="padding-left: 30px;">- los elementos son comparables (es decir, si <strong>implementan <em>Comparable</em></strong>) ò,</p>
+<p style="padding-left: 30px;">- si se usa un método de comparación personalizado (<strong><em>Comparator</em></strong>).</p>
+<hr />
+<h5><span style="text-decoration: underline;">Solución 1</span>: implementando <em>Comparable</em></h5>
+<p>En el caso de la lista con <em>Integer</em>'s del primer ejemplo funcionaba, porque:</p>
+<p><img src="img0.1.png" width="748" height="285" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">pero nuestra clase <em>Persona</em> no implementa <em>Comparable</em>, por lo tanto, no funcionará. Para hacer que nuestra clase <em>Persona</em> tenga un orden definido (ordenar por <strong><em>apellidos</em> </strong>y luego por el <strong><em>nombre</em></strong>), implementamos <em><strong>Comparable&lt;Persona&gt;</strong></em> y sobreescribimos el método <em><strong>compareTo(Persona p):</strong></em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Persona implements Comparable&lt;Persona&gt; {
+    private final String apellido; 
+    private final String nombre;
+
+    public Persona(String nombre, String apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String toString() {
+        return apellido + ", " + nombre;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Persona)) return false;
+        Persona p = (Persona) o;
+        return nombre.equals(p.nombre) &amp;&amp; apellido.equals(p.apellido);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, apellido);
+    }
+
+    @Override
+    public int compareTo(Persona otra) {
+        
+        // comparar primero por apellido
+        int comparacionApellido = apellido.compareTo(otra.apellido);
+       
+       if (comparacionApellido != 0) { // si la comparación devuelve 0, es porque los apellidos son iguales y debemos mirar el nombre para desempatar
+            return comparacionApellido;
+        } 
+
+        // si los apellidos son iguales, comparar por nombre
+        return nombre.compareTo(otra.nombre);
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Como ves <strong><em>elemento.<strong>compareTo(otro_elemento</strong>)</em> devolverá un número entero</strong>: si son iguales, devolverá un 0; si es mayor el de la izquierda (<em>this</em>) un número positivo; y si es mayor el de la derecha un número negativo.</p>
+<p style="text-align: justify;">Ahora, el <em>main</em> funciona correctamente:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static void main(String[] args) {
+    List&lt;Persona&gt; personas = Arrays.asList(
+        new Persona("Juan", "Pérez"),
+        new Persona("Ana", "Gómez"),
+        new Persona("Carlos", "López"),
+        new Persona("Beatriz", "López"),
+        new Persona("Pedro", "Pérez")
+    );
+
+    Collections.sort(personas); // funciona correctamente
+    System.out.println(personas); //[Ana Gómez, Beatriz López, Carlos López, Pedro Pérez, Juan Pérez]<br />
+
+}
+</code></pre>
+</div>
+</div>
+<hr />
+<h5 style="text-align: justify;"><span style="text-decoration: underline;">Solución 2</span>: Usar un <em>Comparator</em></h5>
+<p>Si no queremos o no podemos modificar la clase <em>Persona</em> (porque va a haber varios criterios de ordenación, por ejemplo), podemos proporcionar una clase aislada que implemente <em>Comparator&lt;T&gt;</em> y defina la forma de comparar los objetos reescribiendo el método <em><strong>compare()</strong></em>.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.Comparator;
+
+public class PersonaComparator implements Comparator&lt;Persona&gt; {
+   
+    @Override
+    public int compare(Persona p1, Persona p2) {
+
+        // comparar primero por apellido
+        int comparacionApellido = p1.getApellido().compareTo(p2.getApellido());
+
+        if (comparacionApellido != 0) {
+            return comparacionApellido;
+        } 
+
+        // si los apellidos son iguales, comparar por nombre
+        return p1.getNombre().compareTo(p2.getNombre());
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p>Y en el <em>main, </em>pasaremos al método <em>sort() </em>un parámetro más de tipo <em>Comparator</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static void main(String[] args) {
+    List&lt;Persona&gt; personas = Arrays.asList(
+        new Persona("Juan", "Pérez"),
+        new Persona("Ana", "Gómez"),
+        new Persona("Carlos", "López"),
+        new Persona("Beatriz", "López"),
+        new Persona("Pedro", "Pérez")
+    );
+
+    Collections.sort(personas, new PersonaComparator()); // ahora se puede
+    System.out.println(personas); // [Ana Gómez, Beatriz López, Carlos López, Pedro Pérez, Juan Pérez]
+
+}
+</code></pre>
+</div>
+</div>
+<hr />
+<h5>En resumen...</h5>
+<p style="padding-left: 30px; text-align: justify;">→ <strong>Usaremos <em>Comparable sobreescribiendo comparteTo()</em></strong> cuando queramos definir un orden natural en la clase y que <em>Collections.sort()</em> siempre se use ese criterio de comparación. Se implementa <em>Comparable</em> en la misma clase y se sobrescribe<em> compareTo()</em>.</p>
+<p style="padding-left: 30px;"><img src="comparable.png" width="409" height="321" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px; text-align: justify;">→ <strong>Usaremos <em>Comparator sobreescribiendo compare()</em></strong> cuando necesitemos varios criterios de ordenación sin modificar la clase original. Se usa una clase externa que implementa a <em>Comparator</em> y se pasa un objeto de ese tipo a<em> Collections.sort() </em>cada vez que necesitemos ordenar con ese criterio.</p>
+<p style="padding-left: 30px;"><img src="javacomparator4.png" width="616" height="198" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<h5 style="text-align: justify;">Ordenar descendentemente</h5>
+<p>En caso de que necesitemos ordenar al revés, una vez teniendo implementados <em>Comparable</em> o <em>Comparator</em> es tan fácil como realizar un <em><strong>Collections.reverseOrder()</strong></em> ò <em><strong>PersonaComparator().reversed()</strong></em> en <em>Collections.sort():</em></p>
+<ul>
+<li><em>Para Comparable:</em></li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Collections.sort(personas, Collections.reverseOrder()); </code></pre>
+</div>
+</div>
+<p style="padding-left: 60px;">Esto funciona porque <em>reverseOrder()</em> invierte el criterio de comparación definido en <em>compareTo()</em> de la clase <em>Persona</em>.</p>
+<p style="padding-left: 30px;"></p>
+<ul>
+<li><em>Para Comparator:</em></li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Collections.sort(personas, new PersonaComparator().reversed());</code></pre>
+</div>
+</div>
+<p style="text-align: center;">La salida esperada en ambos casos será <em><strong>[Pedro Pérez, Juan Pérez, Carlos López, Beatriz López, Ana Gómez]</strong></em></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="listiterator.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ordenacin_de_mapas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

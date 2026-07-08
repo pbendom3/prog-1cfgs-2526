@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>junit </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="patricia benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="junit" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">junit</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">4.3. Introducción a las pruebas unitarias con JUnit</a></li>
+   <li><a href="validacin_de_la_entrada_tipo_int_trycatch.html" class="no-ch">Validación de la entrada tipo int (try-catch)</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="validacin_de_la_entrada_tipo_int_trycatch.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3. Introducción a las pruebas unitarias con JUnit</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Como ya te habrás dado cuenta, en el desarrollo de software las pruebas son una parte fundamental para garantizar la calidad y fiabilidad de nuestras aplicaciones. Una de las herramientas más populares y potentes para realizar pruebas unitarias en <em>Java</em> es <em><strong>JUnit</strong></em>, un marco de trabajo que nos permite escribir y ejecutar pruebas de manera sencilla y eficiente.</p>
+<p style="text-align: justify;"> </p>
+<h5 style="text-align: justify;">Tutorial de iniciación a <em>JUnit</em></h5>
+<p style="text-align: justify;">1. Detecta en tu proyecto la carpeta llamada <em><strong>test</strong> </em>y comprueba que contiene una carpeta verde, llamada <em><strong>java</strong></em>:</p>
+<p style="text-align: justify;"><img src="img0.png" width="598" height="445" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">2. Crea o ubica alguna clase que contenga algún ejercicio sencillo que tengas en tu proyecto. Por ejemplo, el siguiente programa calcula el resultado de una división:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.Scanner;
+
+public class Dividir {
+
+    static Scanner teclado;
+
+    public static void main (String[] args){
+
+        teclado = new Scanner(System.in);
+
+        System.out.println("Dame el dividendo: ");
+        float dividendo = teclado.nextInt();
+        System.out.println("Dame el divisor: ");
+        float divisor = teclado.nextInt();
+
+        boolean ok = comprobarDivisor(divisor);
+
+        if (ok){
+            float resultado = dividir(dividendo,divisor);
+            System.out.println("El resultado es " + resultado);
+        }
+
+    }
+
+    public static float dividir(float dividendo, float divisor){
+
+        return dividendo / divisor;
+    }
+
+    public static boolean comprobarDivisor(float divisor){
+
+        if (divisor==0){
+            System.out.println("No se puede dividir entre 0.");
+            return false;
+        }
+
+        return true;
+
+    }
+
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">3. Sitúa tu ratón en la cabecera de la definición de la clase, y ubica la bombilla típica que activa <em>IntelliJ IDEA</em>:</p>
+<p><img src="img1.png" width="200" height="70" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p> </p>
+<p>4. Haz <em>click</em> sobre ella y elige la opción <em><strong>Create test</strong></em>:</p>
+<p><img src="img2.png" width="724" height="249" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">5. En la siguiente pantalla elegiremos los métodos que queremos testear y aceptamos:</p>
+<p><img src="img3.png" width="443" height="486" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;">6. Se creará una clase nueva que se abrirá automáticamente. Observa que crea un método para cada método que le hemos dicho que vamos a testear, con el mismo nombre:</p>
+<p><img src="img4.png" width="720" height="497" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p> </p>
+<p>8. Es hora de empezar a rellenar nuestros tests...</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class DividirTest {
+
+    @Test
+    void dividir() {
+
+        assertAll(() -&gt; assertEquals(1, Dividir.dividir(2, 2)),
+                () -&gt; assertEquals(-1, Dividir.dividir(2, -2)),
+                () -&gt; assertEquals(-5, Dividir.dividir(-10, 2)),
+                () -&gt; assertEquals(12.5, Dividir.dividir(25, 2)));
+
+    }
+
+    @Test
+    void comprobarDivisor() {
+
+        assertAll(() -&gt; assertTrue(Dividir.comprobarDivisor(2)),
+                () -&gt; assertFalse(Dividir.comprobarDivisor(0)),
+                () -&gt; assertTrue(Dividir.comprobarDivisor(-7)));
+
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">9. Para ejecutarlos, simplemente deberemos hacer <em>click</em> sobre la carpeta verde vista anteriormente, y ejecutar la opción <em><strong>Run All Tests</strong></em>:</p>
+<p><img src="img5.png" width="432" height="285" alt="9" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img6.png" width="604" height="229" alt="10" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="validacin_de_la_entrada_tipo_int_trycatch.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

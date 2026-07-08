@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejercicios de colecciones haciendo uso de objetos | 7.1. Colecciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.1. Colecciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.1. Colecciones (interfaz Collection&lt;E&gt;)</a></li>
+   <li><a href="711_listas_list.html" class="daddy">7.1.1. Listas (List)</a>
+   <ul class="other-section">
+      <li><a href="pilas_stack.html" class="no-ch">Pilas (Stack)</a></li>
+   </ul>
+   </li>
+   <li><a href="712_colas_queue.html" class="daddy">7.1.2. Colas (Queue)</a>
+   <ul class="other-section">
+      <li><a href="clase_linkedlist.html" class="no-ch">Clase LinkedList</a></li>
+   </ul>
+   </li>
+   <li><a href="713_conjuntos_set__sin_duplicados.html" class="daddy">7.1.3. Conjuntos (Set) - sin duplicados</a>
+   <ul class="other-section">
+      <li><a href="clase_hashset.html" class="no-ch">Clase HashSet</a></li>
+   </ul>
+   </li>
+   <li><a href="714_mtodos_equals_y_hashcode_de_un_objeto.html" class="daddy">7.1.4. Métodos equals() y hashCode() de un objeto</a>
+   <ul class="other-section">
+      <li><a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="no-ch">Un ejemplo de lo que ocurre, paso por paso</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="ejercicios_de_colecciones_haciendo_uso_de_objetos.html" class="active no-ch">Ejercicios de colecciones haciendo uso de objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Ejercicios de colecciones haciendo uso de objetos</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id27">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1: impresora online</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta27_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">Implementa una clase <em>Java</em> para gestionar una impresora online, que puede recibir peticiones de impresión desde diferentes ordenadores.</p>
+<p style="text-align: justify;">Las peticiones serán impresas por orden de llegada. Cada <strong><em>Petición</em> </strong>incluye la siguiente información:</p>
+<ul style="text-align: justify;">
+<li><em><strong>id</strong></em> de la máquina que solicita la impresión (por ejemplo, “<em>PC3493</em>”). Haz que sea constante para el usuario que ejecuta el programa.</li>
+<li><em><strong>nombre</strong> </em>del fichero a imprimir (por ejemplo, "<em>file1.pdf"</em>). <span style="background-color: #ffff99;">Al crear una nueva petición, se debe comprobar que el formato del fichero es siempre <em><strong>.pdf</strong></em></span>.<span style="background-color: #ffff99;"> Si no tiene este formato, reportaremos un error y no se creará la petición. Usa el método <span style="color: #0000ff;"><em><strong>nombreArchivo.endsWith(".pdf")</strong></em></span>.</span></li>
+</ul>
+<p style="text-align: justify;">El programa debe implementar los siguientes métodos:</p>
+<ul style="text-align: justify;">
+<li><em><strong>añadirDocumento()</strong></em>: recibe una petición de impresión como entrada y la añade al conjunto de peticiones pendientes de imprimirse. <strong>En caso de que alguna petición pendiente ya contenga el archivo que se intenta imprimir (por <em>id</em> y <em>nombre</em>), no se insertará de nuevo y se informará al usuario de que l<em>a petición de impresión ya existe</em>. </strong></li>
+</ul>
+<p style="padding-left: 60px;">Ejemplo:</p>
+<p><strong><img src="img0.15.png" width="991" height="424" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<ul style="text-align: justify;">
+<li><em><strong>imprimirDocumento()</strong></em>: coge la primera petición y muestra el nombre del fichero por consola (únicamente simula la impresión de la petición). La petición debe ser eliminada del conjunto de peticiones al finalizar.</li>
+<li><em><strong>getNumPeticiones()</strong></em>: devuelve el número total de peticiones pendientes de imprimir.</li>
+<li><em><strong>verTodo()</strong></em>: muestra todas las peticiones que no han sido impresas.</li>
+<li><em><strong>imprimirTodo()</strong></em>: imprime todas las peticiones pendientes. Después de procesar cada petición, esta debe ser eliminada.</li>
+</ul>
+<p style="text-align: justify;">Escribe un <em><strong>main</strong> </em>que incluya las llamadas necesarias para validar todos los métodos descritos anteriormente.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>    public static void main(String[] args) {
+
+        System.out.println("**** BIENVENIDO A TU IMPRESORA ONLINE ****");
+        anyadirDocumento("hola.txt");
+        anyadirDocumento("doc.pdf");
+        anyadirDocumento("doc2.pdf");
+        anyadirDocumento("doc2.pdf");
+        anyadirDocumento("doc3.pdf");
+        anyadirDocumento("doc4.pdf");
+        imprimirDocumento();
+        System.out.println("Quedan " + getNumPeticiones() + " documentos en la cola.");
+        verTodo();
+        imprimirTodo();
+
+    }</code></pre>
+</div>
+</div>
+<p><img src="img2.3.png" width="991" height="310" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id29">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2: recaudación del cine</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta29_130_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">Un cine de un pueblo pequeño nos propone hacer una aplicación para controlar las personas de una cola de un cine en los grandes estrenos de películas. Las personas esperarán la cola para sacar una entrada, y tendremos que calcular el importe a pagar según la edad de la persona (mínimo 3 años):</p>
+<table border="1" style="width: 50.9736%; height: 92px;">
+<tbody>
+<tr style="height: 23px;">
+<td style="width: 35.686%; text-align: center; height: 23px;">Edad</td>
+<td style="width: 15.2854%; text-align: center; height: 23px;">Precio</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 35.686%; text-align: center; height: 23px;">Entre 3 y 10 años</td>
+<td style="width: 15.2854%; text-align: center; height: 23px;">1€</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 35.686%; text-align: center; height: 23px;">Entre 11 y 17 años</td>
+<td style="width: 15.2854%; text-align: center; height: 23px;">2,5€</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 35.686%; text-align: center; height: 23px;">Mayores de edad (18 años en adelante)</td>
+<td style="width: 15.2854%; text-align: center; height: 23px;">3,5€</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Para probar, programaremos un método donde el número <em>N</em> de personas de la cola se elige al azar entre 0 y 250. Estas N personas se generan aleatoriamente con una edad entre 3 y 100 años. Se debe crear una clase <em>Persona</em> (<em>edad</em>) e implementar un método <em><strong>generarCola()</strong></em> que se invoque desde el programa principal para generar <em>N</em> <i>personas </i>en la cola con su respectiva edad.</p>
+<p style="text-align: justify;">Al final del programa, deberemos mostrar la cantidad total recaudada por el cine. Recuerda que la lista debe quedar vacía (una vez que una persona paga su entrada ya no está en la cola).</p>
+<p><img src="img0.16.png" width="991" height="110" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id30">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3: las tareas del funcionario</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_131_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">Un amigo funcionario nos pide que le hagamos una <em>app </em>para ordenar sus tareas de generación de informes. Debemos gestionar cada <em><strong>Informe</strong>,</em> que estará formado por un <em><strong>código</strong> </em>numérico y una tarea con una <em><strong>descripción</strong> </em>que puede ser de <em><strong>tipo</strong> ADMINISTRATIVO, EMPRESARIAL y PERSONAL</em>. Debe comprobarse que la tarea es de alguno de estos tipos sí o sí. Además, <span style="text-decoration: underline;"><strong>las tareas se pueden duplicar</strong></span>, ya que el trabajo de este funcionario es muy monótono y se suelen repetir siempre las mismas durante el día. </p>
+<p>Nuestro amigo quiere que seamos capaces de añadir y eliminar informes en forma de pila (el último en entrar, es el primero en salir).</p>
+<p>Realiza un <em>main</em> de prueba para añadir 5 informes, donde:</p>
+<p style="padding-left: 30px;">- se muestre su contenido y se despachen todos en orden de salida,</p>
+<p style="padding-left: 30px;">- se añadan de nuevo 3 informes y se muestre el orden de salida.</p>
+<p style="text-align: justify;">Nuestro amigo nos pide, además, que aunque las tareas se puedan repetir, necesita una funcionalidad para saber en cualquier momento cuántos tipos de tareas (por <em>código</em> y <em>tipo</em>) debe realizar. Añádela a tu programa.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Exportación (generar .exe) | 8_2_bbdd_relacionales </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8_2_bbdd_relacionales</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.2. Bases de datos relacionales. MySQL/MariaDB.</a></li>
+   <li><a href="821_instalacin_de_xampp.html" class="no-ch">8.2.1. Instalación de XAMPP</a></li>
+   <li><a href="822_configuracin_del_entorno_conector_jdbc_y_prueba_de_conexin_desde_java.html" class="no-ch">8.2.2. Configuración del entorno (conector JDBC) y prueba de conexión desde Java</a></li>
+   <li><a href="823_primeras_consultas_sql_select.html" class="no-ch">8.2.3. Primeras consultas SQL (select)</a></li>
+   <li><a href="824_acciones_dml_insert_update_delete.html" class="no-ch">8.2.4. Acciones DML (insert, update, delete)</a></li>
+   <li><a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="no-ch">8.2.5. Cargar datos de una tabla en una lista de objetos</a></li>
+   <li class="current-page-parent"><a href="prctica_2_mi_primer_crud_mostrar_y_manipular_datos_desde_una_tableview_de_javafx.html" class="current-page-parent daddy">Práctica 2. Mi primer CRUD: mostrar y manipular datos desde una TableView de JavaFX</a>
+   <ul>
+      <li id="active"><a href="exportacin_generar_exe.html" class="active no-ch">Exportación (generar .exe)</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="prctica_2_mi_primer_crud_mostrar_y_manipular_datos_desde_una_tableview_de_javafx.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Exportación (generar .exe)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id11">
+<div class="iDevice emphasis0" >
+<div id="ta11_127_2" class="block iDevice_content">
+<div class="exe-text"><p>Para exportar tu aplicación <em>JavaFX</em> a un archivo ejecutable, como un .exe (para Windows), seguiremos los siguientes pasos.</p>
+<h5>Paso 1: Construir un archivo JAR de tu aplicación</h5>
+<p><strong>Configura el archivo .jar:</strong></p>
+<ul>
+<li>Ve a <strong><em>File &gt; Project Structure</em></strong>.</li>
+<li>En <em><strong>Artifacts</strong></em>, haz clic en el ícono de más (+) y selecciona <em><strong>JAR &gt; From modules with dependencies</strong></em>.</li>
+<li>En la ventana que aparece, selecciona el módulo que contiene tu clase principal.</li>
+<li>En el campo "<em>Main Class</em>", selecciona la clase que contiene el método main (por ejemplo, org.example.Main).</li>
+<li>Haz clic en OK para cerrar el cuadro de configuración.</li>
+</ul>
+<p><strong>Generar el archivo .jar:</strong></p>
+<ul>
+<li>Ve a <strong><em>Build &gt; Build Artifacts &gt; MiApp &gt; Build</em></strong>.</li>
+</ul>
+<p style="padding-left: 30px;">IntelliJ IDEA generará el archivo .jar y lo guardará en la carpeta <em><strong>out/artifacts</strong></em>.</p>
+<p style="padding-left: 30px;"><img src="img0.4.png" width="396" height="342" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h5>Paso 2. Usar <em>Launch4j</em>.</h5>
+<p><em>Launch4j</em> es una herramienta que se usa para crear ejecutables <em>.exe</em> para aplicaciones <em>Java</em>. </p>
+<p><img src="img1.5.png" width="289" height="70" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;">Descárgala aquí: <a href="https://launch4j.sourceforge.net/">Launch4j</a></p>
+<p>Abre la aplicación y configura los campos como sigue:</p>
+<ul>
+<li><em><strong>Jar File</strong></em>: Tu archivo .jar generado anteriormente.</li>
+<li><em><strong>Output File</strong></em>: El nombre y la ruta del archivo .exe que deseas generar (por ejemplo, MiAplicacion.exe).</li>
+<li><em><strong>Main Class</strong></em>: La clase principal de tu aplicación (por ejemplo, <em>org.example.Main</em>).</li>
+<li>Haz clic en <em><strong>Build Wrapper</strong></em> para generar el<em><strong> .exe</strong></em>.</li>
+</ul></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="prctica_2_mi_primer_crud_mostrar_y_manipular_datos_desde_una_tableview_de_javafx.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

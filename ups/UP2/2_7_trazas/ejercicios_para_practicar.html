@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejercicios para practicar | 5. Trazas </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente Domenech" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">5. Trazas</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5. Trazas de código</a></li>
+   <li id="active"><a href="ejercicios_para_practicar.html" class="active no-ch">Ejercicios para practicar</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Ejercicios para practicar</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id1">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejercicios de trazas en Java</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="text-decoration: underline;"><strong>Ejercicio 1</strong></span>. Realiza la traza de los siguientes códigos:</p>
+<p>a) Para los siguientes valores de las variables a y b: a = 24 y b = 6 | a = 25 y b = 7 | a = 7 y b = 25.</p>
+<div class="highlighted-code code-style-2 language-java">
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>int a, b, c = 0, d; 
+ 
+if(a &gt;= b){
+     do{
+        a = a - b;
+        c++;
+     }while(a &gt;= b);
+  }
+
+  d = a;
+
+  System.out.println (c + " " + d); </code></pre>
+</div>
+</div>
+<pre></pre>
+</div>
+<p>b) </p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>  int a = 2, n = 5, i;
+
+  for(i = 1; i &lt;= n; i++){
+      System.out.println(i);                                
+      a = a * i;
+      System.out.println(a);
+  }</code></pre>
+</div>
+</div>
+<p>c) </p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>int n = 2, s = 0, k;
+k = 2 * n – 1;
+
+while(k &gt;= 1){                                             
+       s = s + k;
+       k = k – 2;
+ }
+
+ System.out.println(s);</code></pre>
+</div>
+</div>
+<p>d) Realiza dos trazas de este código para los valores de n: 2 y -2.</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>int n, m=0, x;
+do{
+    m+=n;
+    n--;
+    x = m – n;
+    System.out.println(x);                                  
+}while(x &gt;= 0);</code></pre>
+</div>
+</div>
+<p>e) Realiza la traza de este código java para los siguientes valores de la variable<em><strong> a</strong></em>: a = 1, a = 2, a = 3. En total debes realizar tres trazas, una para cada valor de la variable <em><strong>a.</strong></em></p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>int a, b, i, j;
+b = 0;
+
+for(i = -1; i &lt;= a; i+=2){                                
+      b = b + i;
+  }
+
+for(j = a; j &lt;= i; j++){
+      b = b + j;
+}
+
+System.out.println (b);</code></pre>
+</div>
+</div>
+<p><span style="text-decoration: underline;"><strong></strong></span></p>
+<p><span style="text-decoration: underline;"><strong>Ejercicio 2</strong></span>. Realiza dos trazas de este código, suponiendo que se introducen por teclado los siguientes valores para la variable a: 2, 4, 6, 8, 10, 0.</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>int a, b, c, d;
+
+Scanner sc = new Scanner(System.in);                       
+a = sc.nextInt();
+b = 0;
+c = 1;
+
+while(a!=0){
+       b++;
+       c = c * a / b;
+       a = sc.nextInt();
+ }
+
+ d = b + c;
+
+ System.out.println(d);</code></pre>
+</div>
+</div>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

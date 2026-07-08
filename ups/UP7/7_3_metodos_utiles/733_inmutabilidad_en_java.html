@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.3.3. Inmutabilidad en Java | 7.3. Métodos útiles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.3. Métodos útiles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.3. Métodos útiles para la manipulación de colecciones</a></li>
+   <li><a href="731_iteradores.html" class="daddy">7.3.1. Iteradores</a>
+   <ul class="other-section">
+      <li><a href="listiterator.html" class="no-ch">ListIterator</a></li>
+   </ul>
+   </li>
+   <li><a href="732_comparadores.html" class="daddy">7.3.2. Comparadores</a>
+   <ul class="other-section">
+      <li><a href="ordenacin_de_mapas.html" class="no-ch">Ordenación de mapas</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="733_inmutabilidad_en_java.html" class="active no-ch">7.3.3. Inmutabilidad en Java</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ordenacin_de_mapas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.3.3. Inmutabilidad en Java</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_129_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Si nuestras clases tienen una lista (<em>List, Map, Set, etc.</em>), <span style="background-color: #ffff99;"><strong>debemos asegurarnos de devolver copias o versiones inmutables</strong> para evitar modificaciones externas</span> en caso de que no debamos permitirlas.</p>
+<p style="padding-left: 30px; text-align: justify;">Por ejemplo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Grupo {<br />
+    private final List&lt;String&gt; miembros = new ArrayList&lt;&gt;();
+
+    public List&lt;String&gt; getMiembros() {
+        return miembros; // peligroso! Se puede modificar desde fuera
+    }
+}
+</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Grupo g = new Grupo();
+g.getMiembros().add("Juan"); // modifica la lista
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">devolviendo una lista inmutable con <em><strong>Collections.unmodificableList()</strong></em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.*;
+
+final class Grupo {<br />
+    private final List&lt;String&gt; miembros;
+
+    public Grupo(List&lt;String&gt; miembros) {
+        this.miembros = new ArrayList&lt;&gt;(miembros);  // se almacena una copia
+    }
+
+    public List&lt;String&gt; getMiembros() {
+        return Collections.unmodifiableList(miembros);  // se devuelve una versión inmutable
+    }
+}
+</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Grupo g = new Grupo(Arrays.asList("Ana", "Luis"));
+g.getMiembros().add("Pedro"); // error: UnsupportedOperationException</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code></code></pre>
+</div>
+</div>
+<hr />
+<p><strong>A estas alturas estarás pensando... ¿si lo declaro como <em>final</em> cómo es posible que esté pudiendo manipular una lista?</strong></p>
+<p><span style="background-color: #ffff99;">Una lista declarada como <em>final</em> en <em>Java</em> puede ser modificada en cuanto a su contenido, pero no se puede reasignar a otra instancia</span>. Es decir, <em>final</em> sólo evita que la variable apunte a otra instancia:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>final List&lt;String&gt; nombres = new ArrayList&lt;&gt;();
+nombres = new ArrayList&lt;&gt;(); // error: no se puede reasignar una lista "final"
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Pero sí podríamos hacer:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        final List&lt;String&gt; nombres = new ArrayList&lt;&gt;();
+        
+        nombres.add("Juan");  // se puede modificar la lista
+        nombres.add("Ana");
+
+        System.out.println(nombres); // [Juan, Ana]
+
+        nombres.set(1, "Luis");  // se puede modificar un elemento
+        System.out.println(nombres); // [Juan, Luis]
+
+        nombres.remove("Juan");  // se puede eliminar elementos
+        System.out.println(nombres); // [Luis]
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p><strong>¿Cómo hacer que la lista sea completamente inmutable?</strong></p>
+<p>Haciendo uso igualmente de <em><strong>Collections.unmodifiableList()</strong></em>, pero en el momento de la creación de la lista (<em><strong>new</strong></em>):</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>List&lt;String&gt; nombres = Collections.unmodifiableList(new ArrayList&lt;&gt;(Arrays.asList("Juan", "Ana")));
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">De esta forma no se podrán modificar los elementos, ni añadir o eliminar nuevos.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ordenacin_de_mapas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

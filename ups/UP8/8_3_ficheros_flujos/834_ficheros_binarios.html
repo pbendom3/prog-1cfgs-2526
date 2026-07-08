@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.3.4. Ficheros binarios | Ficheros </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="dadsa" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Ficheros</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.3. Ficheros y flujos en Java</a></li>
+   <li><a href="831_clase_file.html" class="no-ch">8.3.1. Clase File</a></li>
+   <li><a href="832_filereader_y_bufferedreader_para_leer_archivos_de_texto.html" class="no-ch">8.3.2. FileReader y BufferedReader (para leer archivos de texto)</a></li>
+   <li><a href="833_filewriter_y_bufferedwriter_para_escribir_archivos_de_texto.html" class="no-ch">8.3.3. FileWriter y BufferedWriter (para escribir archivos de texto)</a></li>
+   <li id="active"><a href="834_ficheros_binarios.html" class="active no-ch">8.3.4. Ficheros binarios</a></li>
+   <li><a href="prctica_3_manejo_de_ficheros_en_java.html" class="no-ch">Práctica 3. Manejo de ficheros en Java</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="833_filewriter_y_bufferedwriter_para_escribir_archivos_de_texto.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_3_manejo_de_ficheros_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.3.4. Ficheros binarios</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_131_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Un <strong>fichero binario</strong> almacena datos en formato no legible para humanos. A diferencia de los ficheros de texto, donde los datos se guardan como caracteres, en los binarios se almacenan en forma de bytes. Este formato es más compacto y eficiente en términos de espacio y tiempo de procesamiento, ya que no requiere conversiones adicionales. </p>
+<p>Para trabajar en <em>Java</em> con ficheros binarios, se usan estas clases:</p>
+<ul>
+<li><span style="color: #008000;"><em><strong>DataOutputStream</strong></em></span>: para escribir datos binarios.</li>
+<li><span style="color: #008000;"><em><strong>DataInputStream</strong></em></span>: para leer datos binarios.</li>
+</ul>
+<p style="padding-left: 30px;">Estas clases se usan sobre un <em>FileOutputStream</em> / <em>FileInputStream</em>.</p>
+<p><strong><span style="text-decoration: underline;"> Para lectura o escritura de fichero binario:</span></strong></p>
+<p style="padding-left: 30px; text-align: justify;">1. Crear un <em><strong>File</strong> </em>con el origen/destino de datos.<br />2. Envolverlo en un <em>FileInputStream/FileOutputStream</em> para crear un flujo de datos <em>desde/hacia</em> el fichero.<br />3. Envolver el objeto anterior en un <em>DataInputStream/DataOutputStream</em> para poder <em>leer/escribir</em> tipos de datos primitivos del flujo de datos.<br />4. Usar métodos del estilo <em>writeInt(), writeDouble(), readInt(), readDouble(),</em> etc.).</p>
+<p style="text-align: justify;"><strong>Ejemplo: escribir datos binarios</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.io.*;
+
+public class EscribirBinario {
+    public static void main(String[] args) throws IOException {
+        DataOutputStream out = new DataOutputStream(new FileOutputStream("datos.bin"));
+
+        out.writeInt(42);          // escribe un int
+        out.writeDouble(3.14);     // escribe un double
+        out.writeUTF("Hola");      // escribe una cadena
+        out.writeBoolean(true);    // escribe un booleano
+
+        out.close();
+        System.out.println("Datos binarios guardados.");
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;"><strong>Ejemplo: leer datos binarios</strong></p>
+<p style="text-align: justify;">Para poder leer el contenido de un fichero binario, debemos conocer la estructura interna del fichero. Es decir, debemos saber cómo se han escrito: si hay <em>enteros, long</em>, etc. y en qué orden están escritos en el fichero.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.io.*;
+
+public class LeerBinario {
+    public static void main(String[] args) throws IOException {
+        DataInputStream in = new DataInputStream(new FileInputStream("datos.bin"));
+
+        int numero = in.readInt();
+        double decimal = in.readDouble();
+        String texto = in.readUTF();
+        boolean bandera = in.readBoolean();
+
+        in.close();
+
+        System.out.println("Número: " + numero);
+        System.out.println("Decimal: " + decimal);
+        System.out.println("Texto: " + texto);
+        System.out.println("Booleano: " + bandera);
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Si no se conoce su estructura, podemos leerlo <em>byte</em> a <em>byte</em> con el método <span style="color: #008000;"><strong>.</strong></span><em><span style="color: #008000;"><strong>read()</strong></span>. </em>Lee un <em>byte</em> y lo devuelve como <em>int </em>(<em>entre 0 y 255 </em>porque un <em>byte</em> es de 8 bits). Si no puede leer, devuelve un -1.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>String fileName = "datos.bin";
+ // leer datos desde el archivo binario
+ try {
+     FileInputStream fis = new FileInputStream(fileName);
+     int byteLeido;
+     System.out.println("Datos leídos desde el archivo binario:");
+     while ((byteLeido= fis.read()) != -1){ 
+          System.out.print((char) byteLeido); // convertimos byte a carácter      
+     }
+     fis.close();
+ } catch (IOException e) { System.err.println("Error al leer");  }</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Para guardar información de objetos completos, lo mejor es usar <span style="color: #008000;"><strong>serialización</strong></span>. La vemos en el siguiente apartado del tema.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="833_filewriter_y_bufferedwriter_para_escribir_archivos_de_texto.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="prctica_3_manejo_de_ficheros_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

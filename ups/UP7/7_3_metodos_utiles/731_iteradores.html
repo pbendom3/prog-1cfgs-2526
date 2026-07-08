@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.3.1. Iteradores | 7.3. Métodos útiles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.3. Métodos útiles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.3. Métodos útiles para la manipulación de colecciones</a></li>
+   <li id="active"><a href="731_iteradores.html" class="active daddy">7.3.1. Iteradores</a>
+   <ul>
+      <li><a href="listiterator.html" class="no-ch">ListIterator</a></li>
+   </ul>
+   </li>
+   <li><a href="732_comparadores.html" class="daddy">7.3.2. Comparadores</a>
+   <ul class="other-section">
+      <li><a href="ordenacin_de_mapas.html" class="no-ch">Ordenación de mapas</a></li>
+   </ul>
+   </li>
+   <li><a href="733_inmutabilidad_en_java.html" class="no-ch">7.3.3. Inmutabilidad en Java</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="listiterator.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.3.1. Iteradores</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div id="ta5_130_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Hasta ahora, para recorrer nuestras colecciones (da igual el tipo) hemos usado principalmente dos estructuras: <em>for-each</em> y <em>while</em> <em>(!coleccion.isEmpty)</em>.</p>
+<p style="text-align: justify;">En el caso del <em>while</em>, vimos que no nos quedaba más remedio que introducirlo para eliminar elementos de pilas (hacer <em>pop()</em>) y colas (hacer <em>poll()</em>), ya que, mediante el <em>for-each Java</em> se volvía loco al eliminar "cosas" mientras se recorre esa misma la lista (obteniendo una excepción <span style="color: #ff0000;"><em><strong>ConcurrentModificationException</strong></em></span>). Por otro lado, <em>for-each</em> nos servía para recorrer nuestras listas con un cierto orden, cosa que con <em><strong>while (!coleccion.isEmpty)</strong> </em>no podemos hacer a no ser que vayamos borrando elementos y modificando la lista sobre la marcha. Como ves, con ambas estructuras estamos limitados para realizar según qué cosas.</p>
+<p style="text-align: justify;">Para dar solución a los problemas de cada estructura, tenemos disponible la <em><strong>interfaz Iterable&lt;E&gt; y su método iterator()</strong> </em>que implementan todo tipo de clases que desciendan de <strong><em>Collection</em></strong>.</p>
+<p><img src="img0.png" width="521" height="266" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img2.png" width="825" height="264" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 30px;">Por ejemplo, para <em><strong>ArrayList</strong></em>:</p>
+<p><img src="img1.png" width="179" height="490" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>La forma de utilizar el método <strong><em>iterator()</em> </strong>es creando un objeto de tipo <em><strong>Iterator&lt;E&gt;</strong></em>, que es el único método abstracto que contiene la interfaz <em><strong>Iterable</strong></em>:</p>
+<p><img src="img3.png" width="701" height="252" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList&lt;String&gt; nombres = new ArrayList&lt;&gt;(Arrays.asList("Patri","Pedro","Luis","Paula"));
+        Iterator&lt;String&gt; it = nombres.iterator();
+
+    }
+}</code></pre>
+</div>
+</div>
+<p>Este objeto permite recorrer elementos de una colección uno por uno, haciendo uso de los métodos <em>.hasNext(), .next()</em> y <em>.remove()</em>:</p>
+<p><img src="iterador2.gif" width="410" height="259" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li style="text-align: justify;"><em><strong>next() </strong></em>- devuelve el siguiente elemento en la colección. Si no existe próximo elemento y se invoca, se produce una<em><strong><span style="color: #ff0000;"> NoSuchElementException</span>. </strong></em></li>
+<li style="text-align: justify;"><em><strong>hasNext()</strong></em> - devuelve <em><strong>true</strong> </em>si existe un próximo objeto a retornar a través de la llamada a la función <em>next()</em>. </li>
+<li style="text-align: justify;"><em><strong>remove()</strong></em> -  Elimina el último objeto retornado por la función <em>next()</em>. Si no se invoca <em>next() </em>antes de <em>remove()</em> o se invoca dos veces a <em>remove()</em> después de <em>next()</em>, se produce una <strong><em><span style="color: #ff0000;">IllegalStateException</span></em></strong>.</li>
+</ul>
+<p>La forma de usar el iterador también es a través de un <em><strong>while</strong></em>, pero modificaremos la condición: </p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList&lt;String&gt; nombres = new ArrayList&lt;&gt;(Arrays.asList("Patri","Pedro","Luis","Paula"));
+        Iterator&lt;String&gt; it = nombres.iterator();
+
+        while (it.hasNext()) {
+            String elemento = it.next();
+            System.out.println(elemento);
+        }
+
+    }
+
+}</code></pre>
+</div>
+</div>
+<p><img src="img5.png" width="340" height="164" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Y dirás... Pero esto es lo mismo que el<em> for-each</em>. Eso es porque todavía no ha entrado en acción el método <em>remove()</em>, el cual nos va a permitir eliminar elementos sin que salte una excepción de error:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList&lt;String&gt; nombres = new ArrayList&lt;&gt;(Arrays.asList("Patri","Pedro","Luis","Paula"));
+        Iterator&lt;String&gt; it = nombres.iterator();
+
+        while (it.hasNext()) {
+            String elemento = it.next();
+            System.out.println(elemento);
+
+            if (elemento.equals("Patri")) {
+                it.remove();
+            }
+
+        }
+
+        System.out.println(nombres); // [Pedro, Luis, Paula]
+
+    }
+
+}</code></pre>
+</div>
+</div>
+<hr />
+<h5>Uso de <em>Iterator</em> con clases personalizadas</h5>
+<p>También se puede usar un <em><strong>Iterator</strong> </em>para recorrer listas de objetos en <em>Java</em>. Ejemplo con una lista de objetos de una clase <em>Persona</em>...</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>class Persona {
+    String nombre;
+    int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + " (" + edad + " años)";
+    }
+}
+</code></pre>
+</div>
+</div>
+<p>Uso de <em>Iterator</em> con objetos <em>Persona:</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.ArrayList;
+import java.util.Iterator;
+
+public class IteratorObjetos {
+    public static void main(String[] args) {
+      
+        ArrayList&lt;Persona&gt; listaPersonas = new ArrayList&lt;&gt;();
+        listaPersonas.add(new Persona("Juan", 25));
+        listaPersonas.add(new Persona("Ana", 30));
+        listaPersonas.add(new Persona("Luis", 22));
+
+        Iterator&lt;Persona&gt; iterador = listaPersonas.iterator();
+
+        while (iterador.hasNext()) {
+            Persona persona = iterador.next();
+            System.out.println(persona);
+
+            // eliminar personas menores de 25 años
+            if (persona.edad &lt; 25) {
+                iterador.remove();
+            }
+        }
+
+        System.out.println("Lista final después de eliminar menores de 25 años:");
+        for (Persona p : listaPersonas) {
+            System.out.println(p);
+        }
+    }
+}
+</code></pre>
+</div>
+</div>
+<p><img src="img6.png" width="507" height="150" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<h5>Para estructuras Map...</h5>
+<p>En <em>Java</em>, <em>HashMap&lt;K, V&gt;</em> no implementa <em>Iterable</em> directamente, pero podemos usar <em>Iterator</em> para recorrer sus claves, valores o pares clave-valor.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class IterarHashMapPares {
+    public static void main(String[] args) {
+
+        HashMap&lt;Integer, String&gt; mapa = new HashMap&lt;&gt;();
+        mapa.put(1, "Ana");
+        mapa.put(2, "Luis");
+        mapa.put(3, "Carlos");
+
+        Iterator&lt;Map.Entry&lt;Integer, String&gt;&gt; iterador = mapa.entrySet().iterator();
+
+        while (iterador.hasNext()) {
+            Map.Entry&lt;Integer, String&gt; entrada = iterador.next();
+            System.out.println("Clave: " + entrada.getKey() + ", Valor: " + entrada.getValue());
+
+        }
+    }
+}
+</code></pre>
+</div>
+</div>
+<hr />
+<h5>Cuidado con modificar la lista después de inicializar <em>Iterator</em>: <span style="color: #ff0000;"><em>ConcurrentModificationException</em></span></h5>
+<p><span style="color: #000000;"><span style="color: #333333;">Para la lista declarada previamente, realizar una operación como la siguiente no lanzará ninguna excepción:</span></span></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList&lt;String&gt; nombres = new ArrayList&lt;&gt;(Arrays.asList("Patri","Pedro","Luis","Paula"));
+        Iterator&lt;String&gt; it = nombres.iterator();
+        nombres.set(1,"Juan");
+
+        while (it.hasNext()) {
+            String elemento = it.next();
+            System.out.println(elemento);
+
+            if (elemento.equals("Patri")) {
+                it.remove();
+            }
+
+        }
+
+        System.out.println(nombres); // [Juan, Luis, Paula]
+
+    }
+
+}</code></pre>
+</div>
+</div>
+<p><img src="img7.png" width="364" height="192" alt="8" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Esto es porque modificar un elemento existente con <em><strong>set()</strong></em> no cambia la estructura de la lista, sólo reemplaza un valor. Sin embargo, añadir un nuevo elemento después de inicializar el <em>Iterator</em> generará una <em><span style="color: #ff0000;">ConcurrentModificationException</span></em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList&lt;String&gt; nombres = new ArrayList&lt;&gt;(Arrays.asList("Patri","Pedro","Luis","Paula"));
+        Iterator&lt;String&gt; it = nombres.iterator();
+        nombres.add("Juan");
+
+        while (it.hasNext()) {
+            String elemento = it.next(); // aquí se lanza ConcurrentModificationException
+            System.out.println(elemento); 
+
+            if (elemento.equals("Patri")) {
+                it.remove();
+            }
+
+        }
+
+        System.out.println(nombres); // [Pedro, Luis, Paula]
+
+    }
+
+}</code></pre>
+</div>
+</div>
+<p><img src="img8.png" width="858" height="153" alt="8" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Cualquier modificación estructural en la lista (como <em>add()</em> o <em>remove()</em>) después de crear el <em>Iterator</em> rompe la sincronización y dispara una <em>ConcurrentModificationException</em>. Por eso, <strong><span style="background-color: #ffff99;">es importante usar siempre <em>iterator.remove()</em></span></strong>.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="listiterator.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

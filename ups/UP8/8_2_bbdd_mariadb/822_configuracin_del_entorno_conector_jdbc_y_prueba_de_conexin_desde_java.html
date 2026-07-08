@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.2.2. Configuración del entorno (conector JDBC) y prueba de conexión desde Java | 8_2_bbdd_relacionales </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8_2_bbdd_relacionales</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.2. Bases de datos relacionales. MySQL/MariaDB.</a></li>
+   <li><a href="821_instalacin_de_xampp.html" class="no-ch">8.2.1. Instalación de XAMPP</a></li>
+   <li id="active"><a href="822_configuracin_del_entorno_conector_jdbc_y_prueba_de_conexin_desde_java.html" class="active no-ch">8.2.2. Configuración del entorno (conector JDBC) y prueba de conexión desde Java</a></li>
+   <li><a href="823_primeras_consultas_sql_select.html" class="no-ch">8.2.3. Primeras consultas SQL (select)</a></li>
+   <li><a href="824_acciones_dml_insert_update_delete.html" class="no-ch">8.2.4. Acciones DML (insert, update, delete)</a></li>
+   <li><a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="no-ch">8.2.5. Cargar datos de una tabla en una lista de objetos</a></li>
+   <li><a href="prctica_2_mi_primer_crud_mostrar_y_manipular_datos_desde_una_tableview_de_javafx.html" class="daddy">Práctica 2. Mi primer CRUD: mostrar y manipular datos desde una TableView de JavaFX</a>
+   <ul class="other-section">
+      <li><a href="exportacin_generar_exe.html" class="no-ch">Exportación (generar .exe)</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="821_instalacin_de_xampp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="823_primeras_consultas_sql_select.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.2.2. Configuración del entorno (conector JDBC) y prueba de conexión desde Java</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_130_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Para conectar un proyecto <em>Java</em> con <em>MySQL/MariaDB</em>, deberemos añadir al archivo <em><strong>pom.xml</strong></em> la dependencia para que se infiera el <a href="https://mariadb.com/kb/en/mariadb-connector-j/">JDBC</a>.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        &lt;dependency&gt;
+            &lt;groupId&gt;org.mariadb.jdbc&lt;/groupId&gt;
+            &lt;artifactId&gt;mariadb-java-client&lt;/artifactId&gt;
+            &lt;version&gt;3.3.2&lt;/version&gt;
+        &lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">C<span style="font-size: 1.05em;">rearemos un nuevo proyecto Java <em>Maven</em> y se la añadimos: </span></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;org.example&lt;/groupId&gt;
+    &lt;artifactId&gt;bases_datos_mariadb&lt;/artifactId&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+    &lt;properties&gt;
+        &lt;maven.compiler.source&gt;23&lt;/maven.compiler.source&gt;
+        &lt;maven.compiler.target&gt;23&lt;/maven.compiler.target&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;/properties&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.mariadb.jdbc&lt;/groupId&gt;
+            &lt;artifactId&gt;mariadb-java-client&lt;/artifactId&gt;
+            &lt;version&gt;3.3.2&lt;/version&gt;
+        &lt;/dependency&gt;
+
+    &lt;/dependencies&gt;
+
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px; text-align: justify;">--&gt; Recuerda actualizar las dependencias <em>Maven</em> para que vuelva a cargar todos los cambios desde el <em>pom.xml</em>.</p>
+<p style="text-align: justify;">Para probar que funciona, vamos a la clase <em>Main</em> y creamos un nuevo método de tipo <strong><em>Connection</em> </strong>para conectarnos a la BD llamado <strong><em>conexion()</em></strong>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        Connection bd = conexion();
+
+    }
+
+    public static Connection conexion() {
+        Connection conexion;
+        String host = "jdbc:mariadb://localhost:3307/";
+        String user = "root";
+        String psw = "";
+        String bd = "prueba";
+        System.out.println("Conectando...");
+
+        try {
+            conexion = DriverManager.getConnection(host+bd,user,psw);
+            System.out.println("Conexión realizada con éxito.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
+        }
+
+        return conexion;
+    }
+
+}</code></pre>
+</div>
+</div>
+<p><img src="img5.1.png" width="639" height="191" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Esto que ves:</p>
+<p style="padding-left: 30px;"><strong><em>SLF4J: No SLF4J providers were found.</em></strong><br /><strong><em>SLF4J: Defaulting to no-operation (NOP) logger implementation</em></strong></p>
+<p style="text-align: justify;">no es un error crítico. Es sólo una advertencia, porque el conector <em>MariaDB</em> puede usar <em>SLF4J</em> para logs si queremos, pero si no lo instalamos, simplemente no loguea mensajes. No afecta a la conexión ni al funcionamiento de la aplicación.</p>
+<p style="text-align: justify;"> </p>
+<h5 style="text-align: justify;">Cerrar conexión</h5>
+<p style="text-align: justify;">No debemos dejar conexiones abiertas, por lo que es una buena práctica tener otro método para cerrar la conexión cuando finalizamos el programa. Vamos a declarar otro método <em><strong>desconectar()</strong></em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        Connection bd = conexion();
+        System.out.println("Realizando consultas...");
+        desconectar(bd);
+
+    }
+
+    public static Connection conexion() {
+        Connection conexion;
+        String host = "jdbc:mariadb://localhost:3307/";
+        String user = "root";
+        String psw = "";
+        String bd = "prueba";
+        System.out.println("Conectando...");
+
+        try {
+            conexion = DriverManager.getConnection(host+bd,user,psw);
+            System.out.println("Conexión realizada con éxito.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
+        }
+
+        return conexion;
+    }
+
+    public static void desconectar(Connection conexion){
+
+        System.out.println("Desconectando...");
+
+        try {
+            conexion.close();
+            System.out.println("Conexión finalizada.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
+        }
+    }
+
+}</code></pre>
+</div>
+</div>
+<p><img src="img1.1.png" width="629" height="257" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="821_instalacin_de_xampp.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="823_primeras_consultas_sql_select.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

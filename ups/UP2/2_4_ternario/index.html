@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>BONUS: el operador ternario en Java </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente Domenech" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="Ternario" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">BONUS: el operador ternario en Java</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">BONUS: el operador ternario en Java</a></li>
+   <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">BONUS: el operador ternario en Java</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">El operador ternario</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p>Existe un formato de condición adicional, que permite comprobar si se cumple una condición y devolver un cierto valor según si dicha condición se cumple o no. Es lo que se conoce como el "operador ternario" <em>( ? )</em>.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>variable = condicion ? resultado_si_cierto : resultado_si_falso</code></pre>
+</div>
+</div>
+<p>Es decir, se indica la condición seguida por una interrogación, después el valor que hay que devolver si se cumple la condición (<em>true</em>), a continuación un símbolo de "dos puntos" (:) y finalmente el resultado que hay que devolver si no se cumple la condición (<em>false</em>).</p>
+<p></p>
+<p>Es frecuente emplearlo en <strong>asignaciones</strong> (aunque <span style="color: #ff0000; background-color: #ffff99;"><strong>algunos autores desaconsejan su uso</strong></span> porque puede resultar menos legible que un "<em>if</em>"), como en este ejemplo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>x = a == 10 ? b*2 : a ;</code></pre>
+</div>
+</div>
+<p>En este caso, si "a" vale 10, la variable "x" tomará el valor de b*2, y en caso contrario, tomará el valor de "a". Esto también se podría haber escrito de la siguiente forma, más larga pero más legible:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>if (a == 10){
+    x = b*2;
+}else{
+    x = a;<br />}</code></pre>
+</div>
+</div>
+<p>Podemos concatenar ternarias en ambos resultados. Por ejemplo,</p>
+<p style="padding-left: 30px;">- si lo hacemos en la parte del <em>true</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int a = 10, b = 10, x;
+x = a == 10 ? b == 10 ? 100 : 1 : a ; //100</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">- si lo hacemos en la parte del <em>false</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int a = 1, b = 10, x;
+x = a == 10 ? b*2 : b == 10 ? 100 : a; //100</code></pre>
+</div>
+</div>
+<p>Siguiendo este formato, podemos concatenar todas las ternarias que necesitemos:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int a = 1, b = 2, c = 3;
+
+boolean condicion = a == 1 ? true : false;
+
+if (condicion) System.out.println("a vale 1");
+else System.out.println("a no vale 1");
+
+condicion = a == 3 ? true :
+            b == 3 ? true :
+            c == 3 ? true : false;
+
+if (condicion) System.out.println("Alguna variable vale 3");
+else System.out.println("Ninguna variable vale 3");
+
+a = a != 0 ? 2 : 3; //a vale 2
+
+b = a == c ? 2 : 1; //b vale 1</code></pre>
+</div>
+</div>
+<p></p>
+<p>Otro uso común es <strong>formatear frases a mostrar por pantalla</strong> que tengan 2 posibles salidas:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>System.out.println("La letra A ha aparecido " + cantidad + " " +(cantidad == 1 ? "vez" : "veces"));
+</code></pre>
+</div>
+</div>
+<p></p>
+<hr />
+<h5><span style="text-decoration: underline;"><strong>EJERCICIO 1</strong></span>: intenta calcular el valor de "<em>resultado</em>" y haciendo un seguimiento de <em>a</em>, <em>b</em> y <em>c</em> en cada uno de los siguientes casos:</h5>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Caso 1</span>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>//caso 1
+int a = 1, b = 2, c = 3;
+int resultado = a++ == 2 &amp;&amp; c &gt; b++ ? a += b :
+                    a &gt; 0 &amp;&amp; a == b ? a += c :
+                                a == c ? a++ : a--;</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Caso 2:</span></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>//caso 2<br />a = 1; b = 2; c = 3;
+
+resultado = a++ == 1 &amp;&amp; a &gt; b++ ? a += b :
+                a &gt; 0 &amp;&amp; a == b ? a += c :
+                            a == c ? a++ : a--; </code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Caso 3:</span></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>//caso 3
+a = 1; b = 2; c = 3;
+
+resultado = a++ == 1 &amp;&amp; a &gt; b++ ? a += b :
+                a &gt; 0 &amp;&amp; a == b ? a += c :
+                            b == c ? a++ : a--; </code></pre>
+</div>
+</div>
+<hr />
+<h5><span style="text-decoration: underline;">EJERCICIO 2</span>: escribe un pequeño programa que utilice el operador ternario (similar a los anteriores) y pásaselo a alguno de tus compañeros para que intente resolverlo.</h5></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

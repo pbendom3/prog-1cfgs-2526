@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2. Funciones que infieren el control de excepciones | 2. Control de excepciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">2. Control de excepciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Control de excepciones (nivel 2)</a></li>
+   <li><a href="21_estructura_de_las_excepciones.html" class="no-ch">2.1. Estructura de las excepciones</a></li>
+   <li id="active"><a href="22_funciones_que_infieren_el_control_de_excepciones.html" class="active no-ch">2.2. Funciones que infieren el control de excepciones</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_estructura_de_las_excepciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2. Funciones que infieren el control de excepciones</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">No todo es malo...</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="exe-text"><p>Como ya hemos comentado, el control que nosotros hemos hecho hasta ahora ha sido de formato de números enteros. Podríamos seguir implementando un <em>try-catch</em> cada vez que lo necesitemos, pero... hay una buena noticia.</p>
+<p>Existe un método asociado a la clase <em>Scanner</em> llamado <em>.hasNextInt(),</em> el cual infiere el <em>try-catch</em> dentro de él y podemos usarlo en nuestros programas de la siguiente forma:</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>if (scanner.hasNextInt()) {
+
+   int numero = scanner.nextInt();
+
+   System.out.println("Número entero: " + numero);
+
+} else {
+
+   System.out.println("No es un entero válido.");
+
+}</code></pre>
+</div>
+</div>
+<p>Este método verifica si la siguiente entrada que se va a leer es un entero (<em>int</em>). Además, la condición devuelve un <em>booleano</em>: si el valor introducido puede ser interpretado como un entero, devuelve <em>true</em>. Si no, devuelve <em>false</em>.</p>
+<p>Si vamos a ver cómo está programado el método, podemos comprobar que se trata de un bloque <em>try-catch</em> como el que implementábamos nosotros:</p>
+<p><img src="img0.png" width="631" height="347" alt="metodo hasNextInt()" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<p><span style="color: #ff0000; background-color: #ffff00;"><strong>(!) Siento decir, que si se trata de un valor erróneo y queremos seguir pidiendo el número, no tenemos más remedio que seguir utilizando el bucle <em>while </em>como hasta ahora.</strong></span></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_estructura_de_las_excepciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

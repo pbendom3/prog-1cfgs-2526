@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Clase LinkedList | 7.1. Colecciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.1. Colecciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.1. Colecciones (interfaz Collection&lt;E&gt;)</a></li>
+   <li><a href="711_listas_list.html" class="daddy">7.1.1. Listas (List)</a>
+   <ul class="other-section">
+      <li><a href="pilas_stack.html" class="no-ch">Pilas (Stack)</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="712_colas_queue.html" class="current-page-parent daddy">7.1.2. Colas (Queue)</a>
+   <ul>
+      <li id="active"><a href="clase_linkedlist.html" class="active no-ch">Clase LinkedList</a></li>
+   </ul>
+   </li>
+   <li><a href="713_conjuntos_set__sin_duplicados.html" class="daddy">7.1.3. Conjuntos (Set) - sin duplicados</a>
+   <ul class="other-section">
+      <li><a href="clase_hashset.html" class="no-ch">Clase HashSet</a></li>
+   </ul>
+   </li>
+   <li><a href="714_mtodos_equals_y_hashcode_de_un_objeto.html" class="daddy">7.1.4. Métodos equals() y hashCode() de un objeto</a>
+   <ul class="other-section">
+      <li><a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="no-ch">Un ejemplo de lo que ocurre, paso por paso</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios_de_colecciones_haciendo_uso_de_objetos.html" class="no-ch">Ejercicios de colecciones haciendo uso de objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="712_colas_queue.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="713_conjuntos_set__sin_duplicados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Clase LinkedList</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div id="ta7_134_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Como ya sabemos, los <em>ArrayList</em> son una implementación de <em>List</em> basada en un <em>array</em> dinámico. Proporciona acceso rápido y constante en tiempo de ejecución a elementos por índice, pero puede ser ineficiente en operaciones de inserción y eliminación en el medio de la lista. Por ello nacen los <em>LinkedList: </em>una estructura de datos dinámica que implementa las interfaces <em>List&lt;E&gt;</em> y <em>Queue&lt;E&gt;</em>, lo que significa que puede actuar tanto como una lista enlazada y como una cola. También implementa métodos de la interfaz <em>Deque&lt;E&gt;</em> (cola doble), la cual solamente usaremos aquí.</p>
+<p><img src="img0.4.png" width="469" height="335" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><strong><span style="background-color: #ffff99;">Métodos implementados por <em>LinkedList</em> a partir de la interface <em>Deque</em></span>: </strong></p>
+<ul>
+<li><em><strong>boolean offerFirst(E e)</strong></em>: inserta el elemento al principio de la lista.</li>
+<li><em><strong>boolean offerLast(E e)</strong></em>: inserta el elemento al final de la lista (similar a add(E e)).</li>
+<li><em><strong>pollFirst()</strong></em>: elimina y devuelve el primer elemento de la lista, o <strong><em>null</em> </strong>si la lista está vacía.</li>
+<li><em><strong>pollLast()</strong></em>: elimina y devuelve el último elemento de la lista, o <em><strong>null</strong> </em>si la lista está vacía.</li>
+<li><em><strong>peekFirst()</strong></em>: devuelve el primer elemento de la lista sin eliminarlo, o <strong><em>null</em> </strong>si la lista está vacía.</li>
+<li><em><strong>peekLast()</strong></em>: devuelve el último elemento de la lista sin eliminarlo, o <strong><em>null</em> </strong>si la lista está vacía.</li>
+<li><em><strong>getFirst()</strong></em>: devuelve el primer elemento de la lista sin eliminarlo.</li>
+<li><em><strong>getLast()</strong></em>: devuelve el último elemento de la lista sin eliminarlo.</li>
+<li><em><strong>removeFirst()</strong></em>: elimina y devuelve el primer elemento de la lista.</li>
+<li><em><strong>removeLast()</strong></em>: elimina y devuelve el último elemento de la lista.</li>
+</ul>
+<p style="padding-left: 30px;"><em>getFirst(), getLast(), removeFirst() y removeLast()</em> lanzan <span style="color: #ff0000;"><strong><em>NoSuchElementException</em> </strong></span>si está vacía.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.Deque;
+import java.util.LinkedList;
+
+public class EjemploDequeLinkedList {
+    public static void main(String[] args) {
+
+        Deque&lt;String&gt; deque = new LinkedList&lt;&gt;();
+
+        // insertamos elementos al inicio y al final
+        deque.addFirst("Inicio");
+        deque.addLast("Medio");
+        deque.addLast("Final");
+
+        // mostramos el contenido actual
+        System.out.println("Deque: " + deque); // [Inicio, Medio, Final]
+
+        // obtenemos elementos sin eliminarlos
+        System.out.println("Primer elemento: " + deque.peekFirst()); // Inicio
+        System.out.println("Último elemento: " + deque.peekLast());   // Final
+
+        // eliminamos elementos de los extremos
+        System.out.println("Eliminando primero: " + deque.removeFirst()); // Inicio
+        System.out.println("Eliminando último: " + deque.removeLast());   // Final
+
+        // mostramos el estado final del Deque
+        System.out.println("Deque después de eliminaciones: " + deque); // [Medio]
+    }
+}
+
+</code></pre>
+</div>
+</div>
+<hr />
+<p><strong>Uso de <em>LinkedList</em> con todo tipo de interfaces:</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>LinkedList&lt;Alumno&gt; dam = new LinkedList&lt;&gt;();
+
+ //métodos interface Collection
+dam.add(new Alumno("Pep", "222A", 25)); 
+dam.add(new Alumno("Tom", "111A", 20)); 
+dam.add(new Alumno("Jon", "444A", 21));
+dam.add(new Alumno("Tim", "333A", 19)); 
+dam.add(new Alumno("Ada", "555A", 18)); 
+dam.add(new Alumno("Sam", "666A", 18));       
+        
+//métodos interface List
+dam.set(2,new Alumno("Ana", "777A",20));   
+dam.add(2,new Alumno("Bil", "777A",20));   
+
+//métodos interfaces Queue y Deque
+dam.pollFirst();  
+dam.pollLast();  
+dam.offerFirst(new Alumno("Jud", "888A", 24)); 
+dam.offerLast(new Alumno("Kim", "999A", 28));  
+System.out.println(dam.removeFirst()); 
+System.out.println(dam.removeLast()); </code></pre>
+</div>
+</div>
+<p><img src="img1.2.png" width="942" height="447" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<p><strong>Cuándo usar <em>LinkedList</em></strong></p>
+<p style="padding-left: 30px;"><span style="color: #008000;">✔</span>  Cuando necesitemos modificar datos frecuentemente y realizar muchas inserciones y eliminaciones de la lista. Rapidísimo en los extremos.</p>
+<p style="padding-left: 30px;">❌ Menos eficiente que <em>ArrayList</em> para acceso aleatorio de datos y acceso frecuente a elementos por índice.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id15">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta15_133_2" class="block iDevice_content">
+<div class="pbl-task-description"><ol style="list-style-type: lower-alpha;">
+<li>Crea una cola de letras (<em>Queue&lt;Character&gt; cola = new LinkedList&lt;&gt;()</em>).</li>
+<li>Inserta 5 letras a la cola (<em>offer()</em>).</li>
+<li>Comprueba si la cola está vacía (<em>.isEmpty()</em>).</li>
+<li>Muestra cuántos elementos hay en la cola (<em>size()</em>).</li>
+<li>Muestra el primer elemento sin eliminarlo (peek()).</li>
+<li>Extrae y muestra las letras una por una (<em>poll()</em>).</li>
+</ol></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id16">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_134_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Simula una cola de trabajos de impresión donde dichos trabajos son procesados en orden FIFO<em> (First In, First Out)</em>.</p>
+<p style="text-align: left;"><img src="ZmJkOWUucG5n.png" width="245" height="245" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><span style="text-decoration: underline;">Instrucciones</span>:</p>
+<ul>
+<li>Los trabajos de impresión son tareas como "<em>Imprimir documento 1</em>", "<em>Imprimir documento 2</em>", etc, y se procesan en el orden en que fueron insertados a la cola.</li>
+<li>El programa debe mostrar el estado inicial de la impresora, antes de empezar a procesar trabajos.</li>
+<li>El programa debe mostrar el estado de la cola antes y después de procesar cada trabajo.</li>
+</ul>
+<p><img src="img0.7.png" width="991" height="264" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id17">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta17_135_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Simula la reproducción de una <em>playlist</em> de Spotify musical usando una cola. Los temas se reproducen en el orden en que se insertan a la cola (<em>FIFO</em>).</p>
+<p><img src="4899380.png" width="237" height="237" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><span style="text-decoration: underline;">Instrucciones</span>:</p>
+<ol style="list-style-type: lower-alpha;">
+<li>Crea una cola de canciones (<em>Queue&lt;String&gt; playlist = new LinkedList&lt;&gt;()</em>).</li>
+<li>Añade varias canciones a la cola como si fueran canciones en una lista de reproducción.</li>
+<li>Simula la reproducción de canciones: la primera canción en la cola debe ser la que se reproduce.</li>
+<li>Después de reproducir una canción, se elimina de la cola y se reproduce la siguiente canción.</li>
+<li>Muestra la canción que se está reproduciendo en cada momento y el estado de la lista de reproducción después de cada canción.</li>
+</ol>
+<p><img src="img0.8.png" width="991" height="275" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id18">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 4: la lista de la compra</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_127_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">Como en cualquier lista de la compra, las acciones que más vamos a realizar sobre la lista es añadir o borrar elementos, por lo que deberemos implementar una <em>LinkedList</em> para que todo sea más eficiente.</p>
+<p style="text-align: justify;">La aplicación debe tener un menú interactivo donde el usuario pueda realizar diferentes operaciones sobre la lista, como añadir productos al final, eliminar productos, buscar productos, mostrar la lista, etc.</p>
+<p style="text-align: justify;"><span style="text-decoration: underline;"><strong>Requisitos</strong></span>:</p>
+<ol style="text-align: justify;">
+<li>El usuario podrá añadir productos al final de la lista utilizando la opción "<strong>Añadir producto al final</strong>" (<strong><em>offerLast(String producto)</em></strong>)</li>
+<li>El usuario podrá eliminar el primer producto de la lista (<em><strong>pollFirst()</strong></em>).</li>
+<li>El usuario podrá eliminar un producto específico de la lista (por su nombre) utilizando la opción "<strong>Eliminar producto</strong>" (<em><strong>remove(Object producto)</strong></em>). Si el producto a eliminar no se encuentra en la lista, se debe informar al usuario (<em><strong>contains(Object producto)</strong></em>).</li>
+<li>El usuario podrá ver el primer producto de la lista utilizando la opción "<strong>Ver primer producto</strong>" (<em><strong>peekFirst()</strong></em>).</li>
+<li>El usuario podrá buscar si un producto específico está en la lista utilizando la opción "<strong>Buscar producto</strong>". Si el producto a buscar no se encuentra en la lista, se debe informar al usuario.</li>
+<li>El usuario podrá ver la lista completa de compras en cualquier momento utilizando la opción "<strong>Mostrar lista actual</strong>".</li>
+<li>Si la lista está vacía, se deben manejar los intentos de eliminar o acceder a elementos con mensajes adecuados (<strong><em>isEmpty()</em></strong>).</li>
+</ol>
+<p><img src="img1.3.png" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Para mostrar la lista actual (opción 5), se debe <strong>obtener la posición que ocupa cada elemento de la lista (<em>indexOf(String producto)+1</em>)</strong> y mostrarlo junto a su descripción.</p>
+<p><img src="img1.3.png" width="316" height="356" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id31">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 5: palíndromos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta31_132_2" class="block iDevice_content">
+<div class="pbl-task-description"><p><br />Un palíndromo es una palabra que se lee igual en ambos sentidos, como por ejemplo <em><strong>radar</strong></em>. Diseña una función en <em>Java</em> que determine si una palabra definida como una lista doblemente enlazada (<em>Deque</em>) de caracteres (<em>Character</em>) es palíndroma o no.</p>
+<p><img src="palindromo-mini.png" width="348" height="220" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="712_colas_queue.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="713_conjuntos_set__sin_duplicados.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

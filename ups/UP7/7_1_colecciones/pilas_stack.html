@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Pilas (Stack) | 7.1. Colecciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.1. Colecciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.1. Colecciones (interfaz Collection&lt;E&gt;)</a></li>
+   <li class="current-page-parent"><a href="711_listas_list.html" class="current-page-parent daddy">7.1.1. Listas (List)</a>
+   <ul>
+      <li id="active"><a href="pilas_stack.html" class="active no-ch">Pilas (Stack)</a></li>
+   </ul>
+   </li>
+   <li><a href="712_colas_queue.html" class="daddy">7.1.2. Colas (Queue)</a>
+   <ul class="other-section">
+      <li><a href="clase_linkedlist.html" class="no-ch">Clase LinkedList</a></li>
+   </ul>
+   </li>
+   <li><a href="713_conjuntos_set__sin_duplicados.html" class="daddy">7.1.3. Conjuntos (Set) - sin duplicados</a>
+   <ul class="other-section">
+      <li><a href="clase_hashset.html" class="no-ch">Clase HashSet</a></li>
+   </ul>
+   </li>
+   <li><a href="714_mtodos_equals_y_hashcode_de_un_objeto.html" class="daddy">7.1.4. Métodos equals() y hashCode() de un objeto</a>
+   <ul class="other-section">
+      <li><a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="no-ch">Un ejemplo de lo que ocurre, paso por paso</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios_de_colecciones_haciendo_uso_de_objetos.html" class="no-ch">Ejercicios de colecciones haciendo uso de objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="711_listas_list.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="712_colas_queue.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Pilas (Stack)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id5">
+<div class="iDevice emphasis0" >
+<div id="ta5_132_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: center;"><img src="img3.2.png" width="183" height="347" alt="1" />       <img src="img4.1.png" width="565" height="243" alt="2" /></p>
+<p style="text-align: justify; padding-left: 60px;">donde <em><strong>Vector</strong></em>:</p>
+<p><img src="img3.1.png" width="751" height="218" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Una pila es una estructura <em>LIFO (Last In, First Out)</em>: "último en entrar, primero en salir". Esto significa que el último elemento que se inserta en la pila es el primer elemento que se elimina de la pila.</p>
+<p style="text-align: justify;">   <strong><span style="background-color: #ffff99;">Tiene las siguientes operaciones principales</span></strong>:</p>
+<ul>
+<li style="text-align: justify;"><em><strong>push</strong> </em>(empujar) → inserta un nuevo elemento a la pila.</li>
+<li style="text-align: justify;"><em><strong>pop</strong> </em>(sacar) → elimina el último elemento insertado.</li>
+<li style="text-align: justify;"><em><strong>peek()</strong></em> → devuelve el elemento superior sin eliminarlo.</li>
+<li style="text-align: justify;"><em><strong>isEmpty()</strong></em> → indica si la pila está vacía.</li>
+</ul>
+<p><img src="img0.2.png" width="747" height="193" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<p><strong>Vale... ¿y en Java?</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.Stack;
+
+public class EjemploStack {
+    public static void main(String[] args) {
+        Stack&lt;Integer&gt; pila = new Stack&lt;&gt;();
+        pila.push(10);
+        pila.push(20);
+        pila.push(30);
+
+        System.out.println(pila.peek()); // 30 (tope de la pila)
+        System.out.println(pila.pop());  // 30 (último en entrar, primero en salir)
+        System.out.println(pila.peek()); // 20 (el nuevo tope de la pila)
+    }
+}
+</code></pre>
+</div>
+</div>
+<hr />
+<p style="text-align: justify;"><strong>Uso de pilas</strong></p>
+<ul>
+<li style="text-align: justify;">Las pilas son útiles en <strong>situaciones en las que se necesitan realizar operaciones en un orden específico</strong>, como en la evaluación de expresiones aritméticas (por ejemplo, primero se multiplica y luego se suma). Las calculadoras y compiladores usan pilas para evaluar expresiones matemáticas sin paréntesis:</li>
+</ul>
+<p style="padding-left: 60px;">Por ejemplo, para evaluar <em><strong>(</strong><strong>3+4)*2</strong></em>, el compilador lo traducirá a <em><strong>3 4 + 2 * </strong></em>(notación postfija, donde el operador aparece después de los operandos), lo almacenará en un vector y usará una pila de la siguiente manera para resolverlo:</p>
+<p style="padding-left: 90px;">1. Insertamos <em><strong>3</strong></em> y <em><strong>4</strong></em> en la pila. <strong><em>Pila actual: [3, 4]</em></strong><br />2. Encontramos <em><strong>+</strong></em>, sacamos <em><strong>3</strong></em> y <em><strong>4</strong>, </em>sumamos con resultado <em><strong>7</strong></em>, y lo metemos de nuevo en la pila. <strong><em>Pila actual: [7]</em></strong><br />3. Insertamos<em><strong> 2</strong></em>. <em><strong>Pila actual: [7, 2]</strong></em><br />4. Encontramos <em><strong>*</strong></em>, sacamos <em><strong>7</strong></em> y <em><strong>2</strong></em>, multiplicamos con resultado <em><strong>1</strong><strong>4</strong></em>. <em><strong>Pila final: [14]</strong></em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="padding-left: 30px;">
+<div style="padding-left: 30px;">
+<pre style="padding-left: 30px;"><code>import java.util.Stack;
+
+public class EvaluacionOperadores {
+    public static int evaluar(String expresion) {
+        Stack&lt;Integer&gt; pila = new Stack&lt;&gt;();
+        for (String token : expresion.split(" ")) {
+            if (token.matches("\\d+")) {  // si es un número, se apila
+                pila.push(Integer.parseInt(token));
+            } else {  // si es un operador, sacamos dos valores y operamos
+                int b = pila.pop();
+                int a = pila.pop();
+                switch (token) {
+                    case "+": pila.push(a + b); break;
+                    case "-": pila.push(a - b); break;
+                    case "*": pila.push(a * b); break;
+                    case "/": pila.push(a / b); break;
+                }
+            }
+        }
+        return pila.pop();  // el resultado final está en lo más alto de la pila
+    }
+
+    public static void main(String[] args) {
+        String expresion = "3 4 + 2 *";  // representa (3 + 4) * 2 en notación postfija
+        System.out.println(evaluar(expresion));  // 14
+    }
+}
+</code></pre>
+</div>
+</div>
+<ul>
+<li style="text-align: justify;">Otro uso común es la implementación de<em><strong> "Deshacer" </strong></em>y<em><strong> "Rehacer"</strong></em> para gestionar el historial de acciones en editores de texto.</li>
+</ul>
+<p style="text-align: justify; padding-left: 60px;">1. Cada vez que el usuario escribe algo, se guarda en una pila.<br />2. Si el usuario presiona "<em>Deshacer</em>", se saca el último elemento (<em>pop()</em>).<br />3. Si el usuario quiere "<em>Rehacer</em>", se almacena en otra pila y se restaura (<em>push()</em>).</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.Stack;
+
+public class UndoRedo {
+    public static void main(String[] args) {
+        Stack&lt;String&gt; acciones = new Stack&lt;&gt;();
+        acciones.push("Escribir 'Hola'");
+        acciones.push("Borrar 'Hola'");
+        acciones.push("Escribir 'Mundo'");
+
+        System.out.println("Última acción: " + acciones.pop());  // "Escribir 'Mundo'"
+    }
+}
+</code></pre>
+</div>
+</div>
+<ul>
+<li style="text-align: justify;">También se utilizan en la implementación de algoritmos recursivos y en la gestión de llamadas a funciones en una pila de llamadas, ambas vistas en el Tema 4.</li>
+</ul></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id11">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_129_2" class="block iDevice_content">
+<div class="pbl-task-description"><ol style="list-style-type: lower-alpha;">
+<li>Crea una pila de letras (<em>Stack&lt;Character&gt;</em>).</li>
+<li>Inserta 5 letras a la pila.</li>
+<li>Comprueba si la pila está vacía (<em>.isEmpty()</em>).</li>
+<li>Muestra cuántos elementos hay en la pila (<em>size()</em>).</li>
+<li>Muestra el último elemento sin eliminarlo (<em>peek()</em>).</li>
+<li>Extrae y muestra las letras una por una (<em>pop()</em>).</li>
+</ol></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id12">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_130_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Usa una pila para invertir el orden de 3 números introducidos por el usuario.</p>
+<p><img src="img0.6.png" width="300" height="150" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id13">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_131_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Usa una pila para verificar si una expresión matemática tiene paréntesis bien cerrados.</p>
+<p style="padding-left: 30px;">Ejemplo:</p>
+<p style="padding-left: 60px;">✅ Correcto: "<em>((2+3)*(5-1))</em>" <br />❌ Incorrecto: "<em>(2+3))+(5-1)(</em>" </p>
+<ol style="list-style-type: lower-alpha;">
+<li>Implementa un método <strong><em>esBalanceado(String expresion)</em> </strong>que devuelva <strong><em>true</em> </strong>si los paréntesis están bien cerrados.</li>
+<li>Usa una pila de tipo <em>Stack&lt;Character&gt;</em> para manejar los paréntesis.</li>
+</ol>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;"><strong>Pistas</strong></span>:</p>
+<ul>
+<li>Recorre la cadena carácter por carácter.</li>
+<li>Si encuentras un '(', insértalo a la pila.</li>
+<li>Si encuentras un ')', verifica si hay un '(' en la pila para hacer <em>pop()</em>.</li>
+<li>Al final, la pila debe estar vacía si la expresión es correcta.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="711_listas_list.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="712_colas_queue.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

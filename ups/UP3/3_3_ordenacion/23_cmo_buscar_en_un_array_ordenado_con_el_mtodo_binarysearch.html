@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.3. Cómo buscar en un array ordenado con el método binarySearch() | 2. Ordenación de arrays </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">2. Ordenación de arrays</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Ordenación de arrays</a></li>
+   <li><a href="21_otros_algoritmos_de_ordenacin.html" class="no-ch">2.1. Otros algoritmos de ordenación</a></li>
+   <li><a href="22_cmo_ordenar_arrays_en_java_con_el_mtodo_sort_de_la_clase_arrays.html" class="no-ch">2.2. Cómo ordenar arrays en Java con el método sort() de la clase Arrays</a></li>
+   <li id="active"><a href="23_cmo_buscar_en_un_array_ordenado_con_el_mtodo_binarysearch.html" class="active no-ch">2.3. Cómo buscar en un array ordenado con el método binarySearch()</a></li>
+   <li><a href="actividad_eliminar_duplicados_de_un_array.html" class="no-ch">Actividad. Eliminar duplicados de un array</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="22_cmo_ordenar_arrays_en_java_con_el_mtodo_sort_de_la_clase_arrays.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividad_eliminar_duplicados_de_un_array.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.3. Cómo buscar en un array ordenado con el método binarySearch()</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_130_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Como ya hemos ido comentando hasta ahora, cuando el <em>array</em> está ordenado, la búsqueda es mucho más eficiente. Partiendo de que el <em>array</em> ya está ordenado usando alguna de las opciones explicadas en los puntos anteriores, la forma más fácil de realizar la búsqueda es utilizar el método <em><strong>binarySearch()</strong></em> de la clase <em><strong>Arrays</strong></em>.</p>
+<p style="text-align: justify;">El método <em>binarySearch()</em> de la clase <em>Arrays</em> realiza una búsqueda binaria. Este tipo de búsqueda reduce las iteraciones que se realizan para encontrar el dato, puesto que va acotando los elementos del <em>array</em> en función del dato a buscar. Un ejemplo,</p>
+<p style="text-align: justify;"><img src="img1.3.png" width="575" height="87" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Como se puede apreciar, son 10 elementos de tipo entero ordenados de manera ascendente.</p>
+<p style="text-align: justify;"><span style="background-color: #ffff99;"><strong>Vamos a suponer que buscamos el elemento 45</strong></span>. Nuestro algoritmo necesitará 3 variables de control:</p>
+<ul style="text-align: justify;">
+<li>Una variable llamada «limiteInferior». Esta variable la utilizaremos para delimitar desde qué elementos empezamos a buscar, empezando por el valor 0. En cada iteración el valor de esta variable puede cambiar. </li>
+<li>Una variable llamada «limiteSuperior». Esta variable la utilizaremos para delimitar desde qué elementos empezamos a buscar empezando por el valor número de elementos - 1. En cada iteración el valor de esta variable puede cambiar.</li>
+<li>Una variable llamada «indice». Esta variable será el elemento que buscaremos en cada iteración. Sí, se trata de un algoritmo iterativo. En cada iteración el valor de esta variable cambiará.</li>
+</ul>
+<p style="text-align: justify;"><strong>Empezamos a buscar...</strong></p>
+<ol style="text-align: justify;">
+<li>Seleccionaremos como «limiteInferior» la posición 0 de nuestro <em>array</em>.</li>
+<li>Seleccionaremos como «limiteSuperior» la última posición de nuestro <em>array</em>. En este caso 9.</li>
+<li>Calcularemos el valor de nuestra variable índice. «indice» = («limiteInferior» + «limiteSuperior») / 2. En este caso (0 + 9) / 2 = 4.5, al ser un entero se redondea a 4.</li>
+</ol>
+<p style="text-align: justify;"><img src="img2.2.png" width="564" height="155" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ol style="text-align: justify;">
+<li style="text-align: justify;">Comprueba si «v[indice]» es igual al elemento buscado. Recordad que estamos buscando el elemento «45».</li>
+<li style="text-align: justify;">Como «v[4]» tiene un valor de «57», nuestro número, en caso de estar en el <em>array</em> tiene que estar hacia la izquierda de «v[4]», porque «v[4]=57» es mayor que «45».</li>
+<li style="text-align: justify;">Cambiamos el valor del «límiteSuperior» al valor de «indice» de la iteración anterior restando 1. En este caso, 4-1 = 3.</li>
+<li style="text-align: justify;">«límiteInferior» se queda como está.</li>
+<li style="text-align: justify;">Calcularemos el nuevo valor de nuestra variable índice. «indice» = («limiteInferior» + «limiteSuperior») / 2. En este caso (0+3) / 2 = 1.5, al ser un entero se redondea a 1.</li>
+</ol>
+<p style="text-align: justify;"><img src="img3.2.png" width="589" height="196" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ol style="text-align: justify;">
+<li>Comprueba si «v[indice]» es igual al elemento buscado. Recordad que estamos buscando el elemento «45».</li>
+<li>Como «v[1]» tiene un valor de «33», nuestro número en caso de estar en nuestro <em>array</em> tiene que estar hacia la derecha de «v[1]», porque «45» es mayor que «v[1]=33».</li>
+<li>Cambiamos el valor del «limiteInferior» al valor de «indice» de la iteración anterior sumando 1. En este caso 1 + 1 = 2.</li>
+<li>«limiteSuperior» se queda como está, en 3.</li>
+<li>Calcularemos de nuevo el valor de nuestra variable índice. «indice» = («limiteInferior» + «limiteSuperior») / 2. En este caso (2 + 3) / 2 = 2.5, al ser un entero se redondea a 2.</li>
+</ol>
+<p style="text-align: justify;"><img src="img4.2.png" width="525" height="221" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Venga, que en esta iteración ya vamos a encontrar el elemento buscado...</p>
+<ol style="text-align: justify;">
+<li>Comprueba si «v[indice]» es igual al elemento buscado. Recordad que estamos buscando el elemento «45». </li>
+<li>En este caso «v[indice]», que es «v[2]» tiene un valor de «45», que es el número que estamos buscando, por lo tanto, aquí acaba nuestro algoritmo.</li>
+</ol>
+<hr />
+<p style="text-align: justify;"><span style="background-color: #ffff99;"><strong><span style="text-decoration: underline;"><img src="792917.png" width="20" height="20" alt="1" /></span> <span style="text-decoration: underline;">ACTIVIDAD</span>. Busca en <em>Internet</em> algún algoritmo programado en <em>Java</em> que implemente la búsqueda binaria de forma "casera".</strong></span></p>
+<hr />
+<p style="text-align: justify;">¡No te asustes! Aunque la lógica es bastante más compleja que la de una búsqueda normal, <em>Java</em> ya nos lo da hecho. Sólo tendremos que llamar al método <em>binarySearch()</em> para que haga la búsqueda binaria por nosotros. Ejemplo de cómo utilizarlo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>/* Declaraciones necesarias: */
+int n = 9;
+int [] nums = {2,2,4,4,7,9};
+int pos = -1;
+ 
+
+/* Búsqueda: */ 
+int pos = Arrays.binarySearch(nums, n);
+ 
+/* Comprobación del resultado: */
+if(pos &gt;= 0){
+    System.out.println("Número encontrado en la posición " + pos);
+}else{
+    System.out.println("No se ha encontrado el número");
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 60px; text-align: justify;">Necesitaremos tres variables:</p>
+<p style="padding-left: 90px; text-align: justify;">1. El dato a buscar (variable <em><strong>n</strong></em>).</p>
+<p style="padding-left: 90px; text-align: justify;">2. El <em>array</em> sobre el que realizar la búsqueda, que tendrá que estar ordenado (variable <em><strong>nums</strong></em>).</p>
+<p style="padding-left: 90px; text-align: justify;">3. Un entero en el que guardar la posición que ocupa el dato en caso de existir en el <em>array</em> (variable <em><strong>pos</strong></em>).</p>
+<p style="text-align: justify;">La lógica es la misma que en el caso de la búsqueda normal: si el valor existe en el <em>array,</em> la variable <em><strong>pos</strong> </em>tomará el valor de la primera posición en la que se encuentre dicho valor. En caso contrario, la variable <strong><em>pos</em> </strong>tomará un valor negativo.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="22_cmo_ordenar_arrays_en_java_con_el_mtodo_sort_de_la_clase_arrays.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividad_eliminar_duplicados_de_un_array.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

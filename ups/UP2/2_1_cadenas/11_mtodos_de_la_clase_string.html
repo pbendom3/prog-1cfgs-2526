@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1. Métodos de la clase String | Trabajando con cadenas de caracteres en Java  </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente " />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Trabajando con cadenas de caracteres en Java </div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Trabajando con cadenas de caracteres en Java (textos)</a></li>
+   <li id="active"><a href="11_mtodos_de_la_clase_string.html" class="active no-ch">1.1. Métodos de la clase String</a></li>
+   <li><a href="12_ejemplo_de_todos_los_mtodos_de_string.html" class="no-ch">1.2. Ejemplo de todos los métodos de String</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_ejemplo_de_todos_los_mtodos_de_string.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.1. Métodos de la clase String</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">1.1. Métodos de la clase String</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="exe-text"><p>La clase <em>String </em>contiene varios métodos típicos que operan con cadenas de texto. Su comportamiento es el siguiente:</p>
+<ul>
+<li><em>int length()</em>: devuelve la cantidad de caracteres del <em>String.</em></li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>"Javadesdecero".lenght(); //retorna 13</code></pre>
+</div>
+</div>
+<ul>
+<li><em>Char charAt(int i)</em>: devuelve el carácter que se encuentre en la posición <em>i</em>.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>System.out.println("Javadesdecero.es".charAt(3)); //retorna 'a'</code></pre>
+</div>
+</div>
+<ul>
+<li><em>String substring(int i)</em>: devuelve la subcadena desde la posición <em>i</em> hasta el final.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>"Javadesdecero.es".substring(4); //retorna 'desdecero.es'</code></pre>
+</div>
+</div>
+<ul>
+<li><em>String substring (int i, int j)</em>: devuelve la subcadena desde la posición <em>i</em> hasta la posición<em> j - 1</em>.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>"Javadesdecero.es".substring(4,9); //devuelve 'desde'</code></pre>
+</div>
+</div>
+<ul>
+<li><em>String concat (String palabra)</em>: concatena la cadena especificada al final de esta cadena.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>String s1 = "Java";
+
+String s2 = "desdecero.es"
+
+String salida = s1.concat(s2) // retorna 'Javadesdecero.es'</code></pre>
+</div>
+</div>
+<ul>
+<li><em>int indexOf (String s)</em>: devuelve la posición dentro de la cadena de la primera aparición de la cadena especificada.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>String s = "Java desde cero";
+
+int salida = s.indexOf("cero"); // retorna 11</code></pre>
+</div>
+</div>
+<ul>
+<li><em>int indexOf (String s, String i)</em>: devuelve la posición de la primera aparición de la cadena especificada, comenzando desde una posición específica.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>String s = "Java desde cero";
+
+int salida = s.indexOf("a", 3); // retorna 3</code></pre>
+</div>
+</div>
+<ul>
+<li><em>int lastIndexOf (int ch)</em>: devuelve la posición de la última aparición de la cadena especificada.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>String s = "Java desde cero";
+
+int salida = s.lastIndexOf("a"); // retorna 3</code></pre>
+</div>
+</div>
+<ul>
+<li><em>String toUpperCase()</em>: convierte todos los caracteres de <em>String</em> a mayúsculas.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>String palabra = "hoLa";
+
+String palabra2 = palabra.toUpperCase(); // retorna 'HOLA'</code></pre>
+</div>
+</div>
+<ul>
+<li>
+<p><em>String toLowerCase()</em>: convierte todos los caracteres de <em>String</em> a minúsculas.</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>String palabra = "hOLa";
+
+String palabra2 = palabra.toLowerCase(); // retorna 'hola'</code></pre>
+</div>
+</div>
+</li>
+<li><em>String trim()</em>: retorna la copia de la cadena, eliminando espacios en blanco en ambos extremos. Se usa principalmente para leer valores desde bases de datos, cuyas tablas tienen atributos normalmente sobredimensionados y rellenos con espacios a la derecha de su valor. <strong>No afecta a espacios en blanco en medio.</strong></li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>String palabra1 = " Java desde cero ";
+
+String palabra2 = palabra1.trim(); // devuelve 'Java desde cero'</code></pre>
+</div>
+</div>
+<ul>
+<li><em>String replace(char 'antiguo_valor, char 'nuevo_valor')</em>: devuelve una cadena tras reemplazar el valor antiguo en la cadena por el nuevo.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>String palabra1 = "yava desde cero";
+
+String palabra2 = palabra1.replace('y', 'j'); // devuelve 'java desde cero'</code></pre>
+</div>
+</div>
+<ul>
+<li><em>boolean equals(Objeto otroObjeto)</em>: compara este String con el objeto especificado. </li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>boolean salida = "Java".equals("Java") // retorna 'true'
+
+boolean salida = "Java".equals("java") // retorna 'false'</code></pre>
+</div>
+</div>
+<ul>
+<li><em>boolean equalsIgnoreCase(String otroString)</em>: compara dos cadenas ignorando las diferencias entre mayúsculas y minúsculas.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>boolean salida = "Java".equalsIgnoreCase("Java") // retorna 'true'
+
+boolean salida = "Java".equalsIgnoreCase("java") // retorna 'true'</code></pre>
+</div>
+</div>
+<ul>
+<li><em>int compareTo(String otroString)</em>: compara dos cadenas lexicográficamente. Esto es, siempre utiliza el valor <em>Unicode</em> de cada carácter de la cadena para compararlos (no el tamaño/posiciones).</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>int salida = s1.compareTo(s2); // donde s1 y s2 son dos cadenas que se comparan
+
+Esto devuelve la diferencia s1-s2. Si:
+
+- salida &lt; 0 // s1 es menor que s2
+
+- salida = 0 // s1 y s2 son iguales
+
+- salida &gt; 0 // s1 es mayor que s2</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>String str1 = "Java compareTo() method example";
+String str2 = "this is Java compareTo() method example";
+System.out.println(str1.compareTo(str2)); //devuelve '-42'
+
+Al comparar str1 y str2 devuelve un valor negativo 42 porque la cadena comparada str1 es lexicográficamente más pequeña, por lo que es negativa y según el valor Unicode tiene una diferencia de 42, por lo que se devuelve un valor -42.</code></pre>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_ejemplo_de_todos_los_mtodos_de_string.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

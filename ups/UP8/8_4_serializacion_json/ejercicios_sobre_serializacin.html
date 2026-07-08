@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejercicios sobre serialización | 8.4. Serialización de objetos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8.4. Serialización de objetos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.4. Serialización de objetos.</a></li>
+   <li id="active"><a href="ejercicios_sobre_serializacin.html" class="active no-ch">Ejercicios sobre serialización</a></li>
+   <li><a href="ficheros_json.html" class="daddy">Ficheros JSON.</a>
+   <ul class="other-section">
+      <li><a href="librera_gson.html" class="no-ch">Librería GSON.</a></li>
+      <li><a href="bonus_consumiendo_apis_externas_desde_java.html" class="no-ch">BONUS. Consumiendo APIs externas desde Java.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ficheros_json.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Ejercicios sobre serialización</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_127_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>a) Crea una clase nueva (con el nombre y atributos que quieras).</p>
+<p>b) Serializa una lista del tipo de la clase que hayas creado <strong><em>ArrayList&lt;TipoNuevo&gt;</em></strong> en el fichero <strong><em>clase_prueba<strong>.s</strong>er</em></strong> y luego recupérala (deserializa). </p>
+<p>c) Al deserializar, recorre la lista y muestra todos sus elementos junto a los valores de cada atributo.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id3">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>a) Añade un atributo <strong><em>transient</em> </strong>a tu clase (del tipo que quieras).</p>
+<p>b) Comprueba que el nuevo atributo no se serializa y que tiene valor <strong><em>null</em></strong> al recuperar al objeto.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id4">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_129_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">a) Maneja bien excepciones al deserializar un fichero que no existe o está dañado. Captura <em>FileNotFoundException y</em> <em>IOException.</em></p>
+<p style="text-align: justify;">b) Si falla, se debe crear el archivo con datos por defecto. Usa el formato de la clase que te hayas creado para los ejercicios anteriores.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 4</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_131_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>a) Serializa un <strong><em>HashMap&lt;String, TipoNuevo&gt;</em></strong> con varios objetos.</p>
+<p>b) Guárdalo en <em><strong>mapa.ser.</strong></em></p>
+<p>c) Recupéralo y muéstralo ordenado por claves.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id7">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 5</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_132_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>a) Crea una jerarquía con clases <em><strong>Empleado</strong> </em>y <em><strong>Jefe</strong> </em>(que extiende de <em>Empleado </em>con los atributos <strong><em>nombre</em> </strong>y <strong><em>salario</em></strong>). La clase <em>Jefe</em> añadirá el atributo <strong><em>departamento</em></strong>. <span style="background-color: #ffff99;">Implementa <em>Serializable</em> sólo en la superclase.</span></p>
+<p>b) Serializa una lista que contenga empleados y jefes.</p>
+<p>c) Recupera la lista e imprime su contenido.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ficheros_json.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

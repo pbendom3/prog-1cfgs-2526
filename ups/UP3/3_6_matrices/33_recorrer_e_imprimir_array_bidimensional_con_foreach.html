@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3. Recorrer e imprimir array bidimensional con forEach | 3. Matrices </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">3. Matrices</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Matrices (arrays bidimensionales)</a></li>
+   <li><a href="31_inicializar_una_matriz.html" class="no-ch">3.1. Inicializar una matriz</a></li>
+   <li><a href="32_recorrer_una_matriz.html" class="no-ch">3.2. Recorrer una matriz</a></li>
+   <li id="active"><a href="33_recorrer_e_imprimir_array_bidimensional_con_foreach.html" class="active no-ch">3.3. Recorrer e imprimir array bidimensional con forEach</a></li>
+   <li><a href="batera_de_ejercicios_sobre_matrices_nivel_1.html" class="no-ch">Batería de ejercicios sobre matrices (nivel 1)</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="32_recorrer_una_matriz.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="batera_de_ejercicios_sobre_matrices_nivel_1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3. Recorrer e imprimir array bidimensional con forEach</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_127_2" class="block iDevice_content">
+<div class="exe-text"><p>Como ya vimos con vectores, existen formas alternativas de recorrerlos. Para <em>arrays</em> de 2 dimensiones podemos hacerlo de forma abreviada de la siguiente manera:</p>
+<p><img src="img0.3.png" width="511" height="193" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int[][] array3 = {{1,4,5},{6,7,8},{3,8}};
+for(int[] fila : array3) {
+    for(int columna : fila) {
+       System.out.print(columna);
+    }
+} //14567838</code></pre>
+</div>
+</div>
+<h5>Imprimir matriz</h5>
+<p>Si lo que queremos es imprimir el contenido de una matriz podemos hacerlo usando el método <em>.toString()</em> de la clase <em>Arrays</em>, pero recorriendo las filas previamente:</p>
+<p><img src="img1.2.png" width="829" height="129" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int[][] array4 = {{3,8,5},{4,1,8,4},{5,2}};
+for(int[] fila : array4) {
+    System.out.println(Arrays.toString(fila));
+}
+</code></pre>
+</div>
+</div>
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="32_recorrer_una_matriz.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="batera_de_ejercicios_sobre_matrices_nivel_1.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

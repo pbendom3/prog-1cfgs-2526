@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8_2_bbdd_relacionales </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="8.2. Bases de datos relacionales." />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8_2_bbdd_relacionales</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">8.2. Bases de datos relacionales. MySQL/MariaDB.</a></li>
+   <li><a href="821_instalacin_de_xampp.html" class="no-ch">8.2.1. Instalación de XAMPP</a></li>
+   <li><a href="822_configuracin_del_entorno_conector_jdbc_y_prueba_de_conexin_desde_java.html" class="no-ch">8.2.2. Configuración del entorno (conector JDBC) y prueba de conexión desde Java</a></li>
+   <li><a href="823_primeras_consultas_sql_select.html" class="no-ch">8.2.3. Primeras consultas SQL (select)</a></li>
+   <li><a href="824_acciones_dml_insert_update_delete.html" class="no-ch">8.2.4. Acciones DML (insert, update, delete)</a></li>
+   <li><a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="no-ch">8.2.5. Cargar datos de una tabla en una lista de objetos</a></li>
+   <li><a href="prctica_2_mi_primer_crud_mostrar_y_manipular_datos_desde_una_tableview_de_javafx.html" class="daddy">Práctica 2. Mi primer CRUD: mostrar y manipular datos desde una TableView de JavaFX</a>
+   <ul class="other-section">
+      <li><a href="exportacin_generar_exe.html" class="no-ch">Exportación (generar .exe)</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="821_instalacin_de_xampp.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.2. Bases de datos relacionales. MySQL/MariaDB.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id9">
+<div class="iDevice emphasis0" >
+<div id="ta9_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Una <strong>Base de Datos (BD)</strong> es un conjunto de datos relacionados, que se encuentran agrupados o estructurados. Por otro lado tenemos los <strong>Sistemas Gestores de Bases de Datos (</strong><em><strong>SGBD)</strong></em>, que proporcionan una interfaz entre los datos y los programas de aplicación que acceden a ellos. Se usan para guardar, organizar y acceder a estos datos de forma rápida y segura.</p>
+<p><img src="img0.png" width="486" height="276" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Ejemplos de <em>SGBD</em>:</p>
+<ul>
+<li><em>MySQL</em></li>
+<li><em>MariaDB</em></li>
+<li><em>PostgreSQL</em></li>
+<li><em>Oracle Database</em></li>
+<li><em>SQL Server</em></li>
+</ul>
+<p style="text-align: justify; padding-left: 30px;"><em><strong>MySQL</strong> </em>fue creado en los años 90 y es uno de los gestores de bases de datos más usados en el mundo, sobre todo para aplicaciones web. Sobre este tipo de <em>SGBD</em> corre, por ejemplo, cualquier sitio creado en <em>Wordpress</em>.</p>
+<p style="text-align: justify; padding-left: 30px;"><em><strong>MariaDB</strong> </em>es una versión mejorada de <em>MySQL </em>(literalmente, es un fork del <a href="https://github.com/mysql/mysql-server">repositorio de GitHub de</a><em><a href="https://github.com/mysql/mysql-server"> MySQL</a>)</em>. Fue creada por los mismos desarrolladores originales de <em>MySQL</em> cuando Oracle compró <em>MySQL</em>. Es 100% compatible con <em>MySQL</em> y además es gratuita y de código abierto. Ambos funcionan usando el lenguaje SQL (<em>Structured Query Language</em>).</p>
+<p><img src="mariadb-logo-vert_blue-transparent.png" width="235" height="192" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><a href="https://mariadb.org/">MariaDB Foundation - MariaDB.org</a></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="821_instalacin_de_xampp.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

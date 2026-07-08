@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>ListIterator | 7.3. Métodos útiles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.3. Métodos útiles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.3. Métodos útiles para la manipulación de colecciones</a></li>
+   <li class="current-page-parent"><a href="731_iteradores.html" class="current-page-parent daddy">7.3.1. Iteradores</a>
+   <ul>
+      <li id="active"><a href="listiterator.html" class="active no-ch">ListIterator</a></li>
+   </ul>
+   </li>
+   <li><a href="732_comparadores.html" class="daddy">7.3.2. Comparadores</a>
+   <ul class="other-section">
+      <li><a href="ordenacin_de_mapas.html" class="no-ch">Ordenación de mapas</a></li>
+   </ul>
+   </li>
+   <li><a href="733_inmutabilidad_en_java.html" class="no-ch">7.3.3. Inmutabilidad en Java</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="731_iteradores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="732_comparadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">ListIterator</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div id="ta7_132_2" class="block iDevice_content">
+<div class="exe-text"><p><em><strong>ListIterator</strong> </em>es una versión mejorada de <em>Iterator</em> que permite recorrer una <em>List</em> en ambas direcciones (hacia adelante y hacia atrás), además de modificar la lista de forma segura durante la iteración con algunos métodos añadidos.</p>
+<p>En este caso, los métodos<em> next() </em>y <em>hasNext()</em> se reemplazan por <em><strong>previous()</strong> </em>y <em><strong>hasPrevious()</strong></em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class ListIteratorEjemplo {
+    public static void main(String[] args) {
+
+        List&lt;String&gt; frutas = new ArrayList&lt;&gt;(Arrays.asList("Manzana", "Banana", "Cereza"));
+
+        ListIterator&lt;String&gt; listIterator = frutas.listIterator();
+
+        System.out.println("Recorriendo hacia adelante:");
+        while (listIterator.hasNext()) {
+            System.out.println(listIterator.next());
+        }
+
+        System.out.println("Volviento hacia atrás:");
+        while (listIterator.hasPrevious()) {
+            System.out.println(listIterator.previous());
+        }
+    }
+}
+</code></pre>
+</div>
+</div>
+<p><img src="img3.2.png" width="312" height="249" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Si no hubiéramos iniciado el recorrido hacia adelante y solamente queremos recorrer la lista hacia atrás, deberemos iniciar el iterador en la última posición:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>ListIterator&lt;String&gt; listIterator = frutas.listIterator(frutas.size()); // posiciona al final</code></pre>
+</div>
+</div>
+<p>Para <strong>modificar elementos</strong> tenemos disponible el método <em><strong>ListIterator.set()</strong></em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class ListIteratorEjemplo {
+    public static void main(String[] args) {
+
+        List&lt;String&gt; frutas = new ArrayList&lt;&gt;(Arrays.asList("Manzana", "Banana", "Cereza"));
+
+        ListIterator&lt;String&gt; listIterator = frutas.listIterator();
+
+        System.out.println("Recorriendo hacia adelante:");
+        while (listIterator.hasNext()) {
+            System.out.println(listIterator.next());
+            listIterator.set("Mango"); // modifica la lista de forma segura
+        }
+
+        System.out.println("Recorriendo hacia atrás:");
+        while (listIterator.hasPrevious()) {
+            System.out.println(listIterator.previous());
+        }
+
+        System.out.println("Lista modificada: " + frutas);
+
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img1.1.png" width="410" height="33" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Añadir elementos con <em><strong>.add()</strong></em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class AgregarEliminarConListIterator {
+    public static void main(String[] args) {
+
+        List&lt;String&gt; frutas = new ArrayList&lt;&gt;(Arrays.asList("Manzana", "Banana", "Cereza"));
+
+        ListIterator&lt;String&gt; listIterator = frutas.listIterator();
+
+        while (listIterator.hasNext()) {
+            String fruta = listIterator.next();
+            
+            if (fruta.equals("Banana")) {
+                listIterator.add("Sandía"); // inserta después de "Banana"
+            }
+            
+            if (fruta.equals("Cereza")) {
+                listIterator.remove(); // elimina "Cereza" de forma segura
+            }
+        }
+
+        System.out.println("Lista final: " + frutas); // [Manzana, Banana, Sandía]
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;"><span style="text-decoration: underline;"><span style="color: #ff0000; text-decoration: underline;"><strong>OJO</strong></span></span>: cuando utilizamos el método <em>add()</em>, el elemento se inserta en la posición actual del cursor, y el cursor se mueve después del elemento insertado.</span></p>
+<p>Y además, <em>ListIterator </em>nos permite <strong>obtener los índices</strong> con <em><strong>nextIndex() </strong></em>(devuelve el índice del próximo elemento en la lista) y <em><strong>previousIndex() </strong></em>(devuelve el índice del elemento anterior en la lista).</p>
+<ul>
+<li>Ejemplo iterando hacia adelante (<em>nextIndex()</em>):</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.*;
+
+public class ListIteratorIndices {
+    public static void main(String[] args) {
+
+        List&lt;String&gt; frutas = new ArrayList&lt;&gt;(Arrays.asList("Manzana", "Banana", "Cereza"));
+
+        ListIterator&lt;String&gt; listIterator = frutas.listIterator();
+
+        while (listIterator.hasNext()) {
+            int actualIndex = listIterator.nextIndex();
+            System.out.println("Antes de avanzar: nextIndex = " + actualIndex);
+            
+            String fruta = listIterator.next(); // avanza al siguiente elemento
+            
+            System.out.println("Elemento: " + fruta + ", previousIndex = " + listIterator.previousIndex());
+            System.out.println("---------------------------");
+        }
+    }
+}
+</code></pre>
+</div>
+</div>
+<p><img src="img2.1.png" width="374" height="187" alt="9" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li>Ejemplo iterando hacia atrás (.previousIndex()):</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class ListIteratorReverso {
+    public static void main(String[] args) {
+
+        List&lt;String&gt; frutas = new ArrayList&lt;&gt;(Arrays.asList("Manzana", "Banana", "Cereza"));
+
+        ListIterator&lt;String&gt; listIterator = frutas.listIterator(frutas.size()); // posiciona al final
+
+        while (listIterator.hasPrevious()) {
+            int actualIndex = listIterator.previousIndex();
+            System.out.println("Antes de retroceder: previousIndex = " + actualIndex);
+
+            String fruta = listIterator.previous(); // retrocede un elemento
+
+            System.out.println("Elemento: " + fruta + ", nextIndex = " + listIterator.nextIndex());
+            System.out.println("---------------------------");
+        }
+    }
+}
+</code></pre>
+</div>
+</div>
+<p><em><strong><img src="img3.1.png" width="387" height="190" alt="9" style="display: block; margin-left: auto; margin-right: auto;" /></strong></em></p>
+<ul>
+<li>Otro ejemplo:<em><strong></strong></em></li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class EjemploListIterator {
+    public static void main(String[] args) {
+
+        List&lt;String&gt; frutas = new ArrayList&lt;&gt;(Arrays.asList("Manzana", "Banana", "Cereza"));
+        ListIterator&lt;String&gt; iter = frutas.listIterator();
+
+        System.out.println("Al inicio:");
+        System.out.println("nextIndex(): " + iter.nextIndex()); // 0 (porque el cursor está antes del primer elemento)
+        System.out.println("previousIndex(): " + iter.previousIndex()); // -1 (porque no hay elementos antes)
+
+        System.out.println("Avanzamos con next():");
+        System.out.println("Elemento: " + iter.next()); // Manzana
+        System.out.println("nextIndex(): " + iter.nextIndex()); // 1
+        System.out.println("previousIndex(): " + iter.previousIndex()); // 0
+
+        System.out.println("Avanzamos otra vez con next():");
+        System.out.println("Elemento: " + iter.next()); // Banana
+        System.out.println("nextIndex(): " + iter.nextIndex()); // 2
+        System.out.println("previousIndex(): " + iter.previousIndex()); // 1
+
+        System.out.println("Retrocedemos con previous():");
+        System.out.println("Elemento: " + iter.previous()); // Banana
+        System.out.println("nextIndex(): " + iter.nextIndex()); // 1
+        System.out.println("previousIndex(): " + iter.previousIndex()); // 0
+
+    }
+}</code></pre>
+</div>
+</div></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_127_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>María está aprendiendo mecanografía y usa un editor de texto muy básico. Sin embargo, este editor tiene algunas teclas especiales que afectan la forma en que se escriben los textos.</p>
+<p>Dado un conjunto de pulsaciones de teclas, ¿cuál será el texto final que María escribirá en el editor?</p>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Teclas especiales</span>:</p>
+<p style="padding-left: 60px;"> <em><strong>&lt;</strong></em> → Mueve el cursor una posición a la izquierda (si es posible).<br /><em><strong> &gt;</strong></em> → Mueve el cursor una posición a la derecha (si es posible).<br /> <em><strong>#</strong></em> → Borra el carácter a la izquierda del cursor (como la tecla "retroceso").<br /> Cualquier otra tecla se escribe en la posición actual del cursor.</p>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Ejemplo de entradas y salidas</span>:</p>
+<p style="padding-left: 60px;"><em><strong>hola - Salida: hola</strong></em><br /><em><strong>ho&lt;la - Salida: hlao</strong></em><br /><em><strong>holla# - Salida: holl</strong></em><br /><em><strong>h#o&lt;l&gt;a&gt; - Salida: loa</strong></em></p>
+<p style="padding-left: 30px;">Como <span style="text-decoration: underline;">salida se imprime el texto final resultante</span> después de procesar todas las pulsaciones:<em><strong></strong></em></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id8">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Acepta el reto: Teclado estropeado (144)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_133_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: center;"><a href="https://aceptaelreto.com/problem/statement.php?id=144&amp;cat=18">Teclado estropeado - ¡Acepta el reto!</a></p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="731_iteradores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="732_comparadores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

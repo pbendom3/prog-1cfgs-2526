@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Actividades sobre recursividad [entregable] | 4.4. Recursividad </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">4.4. Recursividad</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4.4. Recursividad</a></li>
+   <li><a href="441_la_pila_de_llamadas_bsica.html" class="no-ch">4.4.1. La pila de llamadas (básica)</a></li>
+   <li><a href="442_la_pila_de_llamadas_recursividad.html" class="no-ch">4.4.2. La pila de llamadas (recursividad)</a></li>
+   <li><a href="443_ampliacin_sobre_recursividad.html" class="no-ch">4.4.3. Ampliación sobre recursividad</a></li>
+   <li><a href="soluciones.html" class="no-ch">Soluciones</a></li>
+   <li id="active"><a href="actividades_sobre_recursividad_entregable.html" class="active no-ch">Actividades sobre recursividad [entregable]</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="soluciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Actividades sobre recursividad [entregable]</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id18">
+<div class="iDevice emphasis0" >
+<div id="ta18_128_2" class="block iDevice_content">
+<div class="exe-text"><p>Crea un programa principal que muestre un menú de opciones y permita ejecutar cualquiera de los ejercicios que realices a continuación. Por ejemplo:</p>
+<p> <img src="img0.4.png" width="462" height="231" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Una vez ejecutado el ejercicio deseado, debemos preguntar siempre al usuario si quiere volver al menú principal o salir del programa. Por ejemplo:</p>
+<p><img src="img1.3.png" width="303" height="122" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Usa el método:</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>public static void borrar() throws IOException, InterruptedException {
+    new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+}</code></pre>
+</div>
+</div>
+<p>para limpiar la pantalla antes de imprimir de nuevo el menú principal.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id19">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta19_129_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea un método que obtenga la cantidad de dígitos de un número N mayor que cero. Se debe pasar como parámetro el número N. </p>
+<p style="padding-left: 30px;">⚠️<span style="text-decoration: underline;"><span style="color: #ff0000; text-decoration: underline;"><strong>OJO</strong></span></span>: no vale pasarlo a <em>String </em>y calcular el tamaño con la función<em> length()</em>!!!</p>
+<ul>
+<li>Si ese número N es 0, devuelvo 0.</li>
+<li>Si N no es 0, recorremos del número dividiéndolo entre 10 hasta llegar a 0. </li>
+<li>Cada vez que dividamos entre 10, aumentamos en 1 nuestro contador.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id20">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta20_130_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea un método que obtenga el resultado de elevar un número a otro. Ambos números se deben pasar como parámetros. Los números deben ser positivos. </p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id22">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_132_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea un método que dado un número positivo, lo imprima invertido por pantalla. </p>
+<ul>
+<li>Haz lo mismo pero con una cadena de texto como entrada. Usa el método<em> .toCharArray()</em>.</li>
+<li>En el programa principal de este ejercicio se deberá preguntar al usuario si quiere invertir una cadena o un número, y llamar al método que corresponda.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id23">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 4</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta23_133_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea un método que compruebe si un número es binario. Un número binario está formado únicamente por ceros y unos. </p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id24">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 5</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta24_134_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea un método que obtenga el número binario de un número N pasado como parámetro. </p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id25">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 6</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta25_135_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea un método que compruebe si una palabra está ordenada alfabéticamente. </p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id26">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 7</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_136_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea un método que obtenga la suma de los números naturales desde 1 hasta N. Se debe pasar como parámetro el número N, siempre mayor que cero. Se debe imprimir toda la cadena por consola. Por ejemplo, para N=4:</p>
+<p style="text-align: center;"><em><strong>1+2+3+4 = 10</strong></em></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="soluciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

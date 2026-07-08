@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ampliación split() y uso de asList() </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia " />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="asda" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Ampliación split() y uso de asList()</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">Ampliación split()</a></li>
+   <li><a href="uso_de_aslist.html" class="no-ch">Uso de asList()</a></li>
+   <li><a href="actividad_la_ruleta_del_casino_aslist__return.html" class="no-ch">Actividad. La ruleta del casino (asList() + return)</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="uso_de_aslist.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Ampliación split()</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><h4>El método<em><strong> split()</strong></em></h4>
+<p>Como ya hemos visto en la práctica de los samuráis, el método <strong><em>split()</em></strong> es muy útil cuando necesitamos trocear un <em>String</em> para guardarnos sus valores separados en un array. </p>
+<p>Este método divide una cadena utilizando un delimitador definido, como por ejemplo <em>\ ^ $ . | ? * + ( ) [ { - /</em>. También espacios. </p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>String cadena = "Hola,Soy,Una,Cadena";
+String[] subcadenas = cadena.split(",");
+System.out.println(Arrays.toString(subcadenas));</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;"><strong>IMPORTANTE</strong></span>. Este método solamente se puede aplicar a variables de tipo <em>String</em>. </p>
+<p>Ejecutando el código anterior, observaremos que las subcadenas resultado de dividir la cadena principal se guardan en un <em>array</em> de la siguiente forma:</p>
+<p><img src="img0.png" width="338" height="100" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Es decir, ha troceado la frase teniendo el delimitador (,) como referencia y ha guardado cada palabra obtenida en una posición distinta del array. El tamaño del array resultado será la cantidad de subcadenas obtenidas.</p>
+<h5 style="padding-left: 30px;">Para practicar...</h5>
+<p style="padding-left: 30px;">Queremos hacer un programa que muestre nuestra alegría de que llega la NAVIDAD y permita imprimir esa palabra con distinta cantidad de letras. Tendremos como entrada 7 números enteros, que indicarán el número de "N"s, el número de "A"s, el número de "V"s, el número de "I"s, etc.</p>
+<p style="padding-left: 60px;"><br />Por ejemplo, si los números son:</p>
+<p style="padding-left: 90px;">n = 2</p>
+<p style="padding-left: 90px;">a = 1</p>
+<p style="padding-left: 90px;">v = 3</p>
+<p style="padding-left: 90px;">i = 2</p>
+<p style="padding-left: 90px;">d = 4</p>
+<p style="padding-left: 90px;">a = 5</p>
+<p style="padding-left: 90px;">d = 1</p>
+<p style="padding-left: 60px;">deberemos escribir la palabra NNAVVVIIDDDDAAAAAD que tiene 2 "N"s, 1 "A", 3 "V"s y 2 "I"s,... Es decir, leeremos esos 7 números y tendremos que escribir correctamente la palabra resultante.</p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 330px;"><span style="text-decoration: underline;">Ejemplo de entrada</span>:</p>
+<p><img src="img2.png" width="480" height="92" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 330px;"><span style="text-decoration: underline;">Ejemplo de salida</span>:</p>
+<p><img src="img1.png" width="496" height="167" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<p style="text-align: right;">[Ejercicio adaptado de la <a href="https://oicv.org/valencia/wp-content/uploads/2023/02/olimpiadas_2023_es.pdf">Olimpiada Informática</a>]</p>
+<hr />
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="uso_de_aslist.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

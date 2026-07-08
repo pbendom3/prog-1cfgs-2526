@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Batería de ejercicios sobre clases y objetos | Introducción a la POO </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Introducción a la POO</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.1. Introducción a la POO</a></li>
+   <li><a href="511_clases_y_objetos.html" class="no-ch">5.1.1. Clases y objetos</a></li>
+   <li><a href="512_constructores.html" class="no-ch">5.1.2. Constructores</a></li>
+   <li><a href="513_visibilidad.html" class="no-ch">5.1.3. Visibilidad</a></li>
+   <li><a href="514_encapsulamiento_getterssetters.html" class="no-ch">5.1.4. Encapsulamiento (getters/setters)</a></li>
+   <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+   <li id="active"><a href="batera_de_ejercicios_sobre_clases_y_objetos.html" class="active no-ch">Batería de ejercicios sobre clases y objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Batería de ejercicios sobre clases y objetos</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">CLASE TELEVISOR</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_127_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>1. Crea una clase de tipo <em><strong>Televisor </strong></em>que cumpla con el siguiente diagrama:</p>
+<p><img src="img0.3.png" width="289" height="258" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>y teniendo en cuenta que el televisor tiene entre 1 y 99 canales.</p>
+<p> <br />2. Amplía la clase <em>Televisor </em>con un atributo adicional para el volumen (<em>int</em>). Añade también los getters y los setters.</p>
+<p>3. Cuando creemos una instancia de <em>Televisor</em>, esta ya tendrá el volumen por defecto en el nivel 5, y el canal por defecto en el 1. </p>
+<p>4. Por lo que respecta a la implementación de los métodos que modifican el canal y el volumen, no tendremos en cuenta los valores negativos ni tampoco el valor máximo(100). Deberemos controlar dichos métodos para que no hagan nada en esos casos concretos.</p>
+<p>5. Al modificar tanto el volumen como el canal se deben mostrar mensajes indicando el nuevo nivel de volumen o el nuevo número de canal. Por ejemplo, en caso de modificar el volumen:</p>
+<p style="text-align: center;"><em>"Volumen: valorVolumen" </em></p>
+<p style="text-align: left;">o en caso de retroceder un canal:</p>
+<p style="text-align: center;"><em>“Canal: valorCanal”</em></p>
+<p><br /> 6. Para comprobar el funcionamiento, desde una clase principal <em><strong>AplicacionTv </strong></em>tenemos que: </p>
+<p style="padding-left: 30px;">- Crear instancias (objetos) de <em>Televisor</em>. <br />- Cambia los canales y el volumen para comprobar que todo funciona de forma correcta, y que cada objeto de tipo <em>Televisor </em>tiene su propio estado.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id10">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">CLASE PACIENTE</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea una clase llamada <em><strong>Paciente </strong></em>que cumpla las siguientes condiciones:</p>
+<p style="text-align: justify;">1. Sus atributos son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura. Si quieres añadir algún atributo puedes hacerlo. OJO: recuerda que no queremos que se acceda directamente a ellos. </p>
+<p>2. Todos los atributos menos el DNI podrán admitir valores nulos según su tipo (0 números, cadena vacía para String, etc.). Sexo será "X". Usa una constante para ello. </p>
+<p>3. Método <strong><em>generarDNI()</em></strong>: genera un número aleatorio de 8 cifras, y a partir de este número, su letra correspondiente. La forma de calcularlo es la siguiente:</p>
+<p style="padding-left: 30px;">- El número del DNI obtenido aleatoriamente se divide entre 23, y se coge el resto de esa división. </p>
+<p style="padding-left: 30px;">- Cada resto tiene asignada una letra específica según una tabla predeterminada. Usa el siguiente vector como referencia para el orden:</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>letras[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y',
+'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z',
+'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};</code></pre>
+</div>
+</div>
+<p>Este método será invocado cuando se construya el objeto. No debe ser visible al exterior, ya que se trata de un cálculo interno cada vez que se instancia un objeto desde otra clase.</p>
+<p>4. Se implantarán varios constructores:</p>
+<ul>
+<li>Un constructor con todos los atributos como parámetros.</li>
+<li>Un constructor por defecto.</li>
+</ul>
+<p style="padding-left: 30px;">Prueba de estas dos formas...</p>
+<p style="padding-left: 30px;"><img src="img0.4.png" width="278" height="172" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px;">¿Funciona igual? ¿Por qué?</p>
+<ul>
+<li>Un constructor con el nombre, edad y sexo, el resto por defecto.</li>
+</ul>
+<p>5. Los métodos que se implementarán son:</p>
+<ul>
+<li> <em><strong>calcularIMC()</strong></em>: calculará si la persona esta en su peso ideal (peso en kg)/(altura^2 en metros). Usa el método Math.pow</li>
+</ul>
+<p style="padding-left: 60px;">- Si esta fórmula devuelve un valor menor que 20, la función devuelve un -1.<br />- Si devuelve un número entre 20 y 25 (incluidos), significa que esta por debajo de su peso ideal la función devuelve un 0 y,<br />- Si devuelve un valor mayor que 25 significa que tiene sobrepeso, la función devuelve un 1. </p>
+<p style="padding-left: 60px;"><span style="text-decoration: underline;">Usa constantes para devolver estos valores.</span></p>
+<ul>
+<li><strong><em>esMayorDeEdad()</em></strong>: indica si es mayor de edad, devuelve un booleano.</li>
+<li><strong><em>comprobarSexo(char sexo)</em></strong>: comprueba que el sexo introducido es correcto. Si no es correcto, será "X". No será visible al exterior.</li>
+<li><strong><em>mostrarInfoPaciente()</em></strong>: devuelve toda la información del objeto.</li>
+<li>Métodos <strong><em>get/set</em></strong> de cada parámetro, excepto del atributo DNI. </li>
+</ul>
+<p>6. Ahora, crea una clase ejecutable que haga lo siguiente: </p>
+<ul>
+<li>Pide por teclado el nombre, la edad, sexo, peso y altura.</li>
+<li>Crea 3 objetos de la clase anterior:</li>
+</ul>
+<p style="padding-left: 60px;">- El primer objeto obtendrá las anteriores variables pedidas por teclado.</p>
+<p style="padding-left: 60px;">- El segundo objeto obtendrá todos los anteriores menos el peso y la altura. </p>
+<p style="padding-left: 60px;">- El último por defecto. Para este último, utiliza los métodos set para darle un valor a los atributos después de crearlo.</p>
+<ul>
+<li>Para cada objeto, el programa principal deberá comprobar si está en su peso ideal, tiene sobrepeso o por debajo de su peso ideal con un mensaje.</li>
+<li>Indicar para cada objeto si es mayor de edad.</li>
+<li>Por último, mostrar la información de cada objeto.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2. Cómo ordenar arrays en Java con el método sort() de la clase Arrays | 2. Ordenación de arrays </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">2. Ordenación de arrays</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Ordenación de arrays</a></li>
+   <li><a href="21_otros_algoritmos_de_ordenacin.html" class="no-ch">2.1. Otros algoritmos de ordenación</a></li>
+   <li id="active"><a href="22_cmo_ordenar_arrays_en_java_con_el_mtodo_sort_de_la_clase_arrays.html" class="active no-ch">2.2. Cómo ordenar arrays en Java con el método sort() de la clase Arrays</a></li>
+   <li><a href="23_cmo_buscar_en_un_array_ordenado_con_el_mtodo_binarysearch.html" class="no-ch">2.3. Cómo buscar en un array ordenado con el método binarySearch()</a></li>
+   <li><a href="actividad_eliminar_duplicados_de_un_array.html" class="no-ch">Actividad. Eliminar duplicados de un array</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_otros_algoritmos_de_ordenacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_cmo_buscar_en_un_array_ordenado_con_el_mtodo_binarysearch.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2. Cómo ordenar arrays en Java con el método sort() de la clase Arrays</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_131_2" class="block iDevice_content">
+<div class="exe-text"><p>Como ya sabemos, existe una clase en <em>Java</em> llamada <em>Arrays </em>que tiene algunos métodos ya implementados con funcionalidades útiles para trabajar con <em>arrays</em>. Uno de ellos es el método <em><strong>sort()</strong></em>. Esta forma de ordenar <em>arrays</em> es mucho más sencilla y automática que las anteriores, y además no tenemos que hacer prácticamente nada: <em>Java</em> lo hace todo por nosotros.</p>
+<p>Si buscamos un poco en alguno de nuestros proyectos, podemos ver que método <em><strong>sort()</strong></em> utiliza internamente el algoritmo <em><strong>Mergesort</strong></em>, </p>
+<p><img src="img0.png" width="739" height="168" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img1.png" width="599" height="404" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<p>Bueno, vamos al grano. ¿Cómo se usa?</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int [] array = {4,6,2,8,7};
+Arrays.sort(array);</code></pre>
+</div>
+</div>
+<p>Simplemente con eso, el <em>array</em> quedará ordenado de forma ascendente. Basta decirle el <em>array</em> que queremos ordenar al método <em>sort(),</em> y el cambio quedará hecho sobre el propio <em>array</em>.</p>
+<p>Podemos comprobar que ha funcionado mostrando el <em>array</em> por pantalla tras la ejecución de <em>sort():</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>for (int i = 0; i &lt; array.length; i++) {
+    System.out.println(array[i]);
+}</code></pre>
+</div>
+</div>
+<p>Si lo que buscamos es <span style="font-size: 14pt;"><strong>ordenarlo de forma descendente (de mayor a menor)</strong></span> debemos decirle al método<em> sort()</em> que lo ordene al revés, pero <span style="color: #ff0000; font-size: 18pt;"><strong>OJO</strong></span>.</p>
+<p style="padding-left: 30px;"><strong>Este proceso sólo funciona con <em>arrays</em> de objetos, no con <em>arrays</em> de tipos primitivos (como nos sucede con el método <em>.asList()</em>). Por tanto, si lo que buscamos es ordenar descendentemente el <em>array</em> del ejemplo (<em>int</em>), tenemos que cambiar el tipo y usar <span style="text-decoration: underline;"><span style="font-size: 18pt;"><em>Integer</em></span></span><span style="font-size: 18pt;"> </span>en vez de <em>int</em> de la siguiente forma:</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Integer [] array = {4,6,2,8,7};
+Arrays.sort(array, Collections.reverseOrder());</code></pre>
+</div>
+</div>
+<p>Como puedes comprobar, además del <em>array</em>, le debemos indicar <strong><em>Collections.reverseOrder()</em></strong>. De esta forma, la ordenación se realizará en orden inverso.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_otros_algoritmos_de_ordenacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_cmo_buscar_en_un_array_ordenado_con_el_mtodo_binarysearch.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.3.2. Asociaciones bidireccionales | 5.3. Relaciones simples entre clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">5.3. Relaciones simples entre clases</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.3. Relaciones simples entre clases</a></li>
+   <li><a href="531_asociacionesagregaciones.html" class="no-ch">5.3.1. Asociaciones/agregaciones</a></li>
+   <li id="active"><a href="532_asociaciones_bidireccionales.html" class="active no-ch">5.3.2. Asociaciones bidireccionales</a></li>
+   <li><a href="bonus_paso_por_valor_y_por_referencia.html" class="no-ch">BONUS: Paso por valor y por referencia</a></li>
+   <li><a href="533_composiciones.html" class="no-ch">5.3.3. Composiciones</a></li>
+   <li><a href="534_asociaciones_reflexivas.html" class="no-ch">5.3.4. Asociaciones reflexivas</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="531_asociacionesagregaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bonus_paso_por_valor_y_por_referencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.3.2. Asociaciones bidireccionales</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_129_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">En el caso del ejercicio anterior, donde la clase <em>Estudiante</em> no contiene información sobre los libros que tiene prestados, la relación es una asociación unidireccional desde <em>Libro</em> hacia <em>Estudiante</em>. Esto significa que la clase <em>Libro</em> conoce a la clase <em>Estudiante</em> mediante el atributo <em>estudiantePrestado</em>, pero sin embargo, la clase <em>Estudiante</em> no sabe qué libros tiene asociados. Sólo almacena su propia información (<em>nombre, curso, nia, email</em>).<strong></strong></p>
+<h5 style="text-align: justify;"><strong> </strong><strong>Teniendo en cuenta esto... ¿es correcto que <em>Estudiante</em> no contenga info de <em>Libro</em>?</strong></h5>
+<p style="text-align: justify;">Pues depende del diseño y los requisitos del sistema.</p>
+<ul style="text-align: justify;">
+<li>Será correcto si sólo necesitamos saber qué estudiante tiene un libro prestado (vista desde el lado de <em>Libro</em>). Es decir, queremos mantener la simplicidad y no estamos preocupados por mostrar todos los libros que un estudiante tiene prestados.</li>
+</ul>
+<ul>
+<li style="text-align: justify;">No, no es correcto si lo que queremos es que el <em>Estudiante</em> pueda rastrear los libros que tiene prestados. <span style="text-decoration: underline;">En este caso tendríamos que hacer una asociación bidireccional</span>.</li>
+</ul>
+<h5>¿Cómo cambiar a una relación a bidireccional?</h5>
+<p style="text-align: justify;">Si lo que queremos es que la relación sea bidireccional (el estudiante también conoce los libros que tiene prestados), podemos añadir un atributo <em><strong>libroPrestado</strong> </em>de tipo <em>Libro a</em> la clase <em>Estudiante</em>, junto a sus correspondientes <em>getters/setters:</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>private Libro libroPrestado;
+
+public Libro getLibroPrestado() {
+    return libroPrestado;
+}
+
+public void setLibroPrestado(Libro libroPrestado) {
+    this.libroPrestado = libroPrestado;
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">y en la clase <em>Libro</em>, añadir lógica al método <em><strong>prestar(Estudiante estudiante)</strong></em> para controlar si el estudiante al que le estamos intentando asignar un libro ya tiene alguno reservado (suponemos que solamente puede reservar uno).</p>
+<p style="text-align: justify; padding-left: 30px;">Por ejemplo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public void prestar(Estudiante estudiante) {
+    if (prestado) {
+        System.out.println("El libro ya está prestado a " + estudiantePrestado.getNombre());
+    } else if (estudiante.getLibroPrestado() != null) {
+        System.out.println("El estudiante ya tiene un libro prestado.");
+    } else {
+        this.prestado = true;
+        this.estudiantePrestado = estudiante;
+        estudiante.setLibroPrestado(this); // Relación bidireccional
+        System.out.println("El libro '" + titulo + "' ha sido prestado a " + estudiante.getNombre());
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Ahora, tanto <em>Libro</em> como <em>Estudiante</em> están vinculados, por lo que ya podremos consultar la información desde ambos lados.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id4">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_130_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>a) Actualiza las clases <em>Estudiante</em> y <em>Libro</em> para incorporar la relación de bidireccionalidad.</p>
+<p>b) Modifica también el diagrama de relación entre ambas clases.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_131_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>a) Crea una nueva clase llamada <em>Editorial (nombre, pais)</em>. </p>
+<p>b) Esta nueva clase puede representar la <em>Editorial</em> que publica los libros, por lo tanto, crea una asociación donde cada <em>Libro</em> "conozca" a su editorial.</p>
+<p>c) Añade la clase <em>Editorial</em> al diagrama de relación.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3 (asociaciones ternarias)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_132_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;"><span style="background-color: #ffff99;"><strong>Una clase <em>Prestamo</em> podría modelar la relación entre un <em>Libro</em> y un <em>Estudiante</em> cuando se presta un libro. Esto introduce lo que llamamos una asociación ternaria (entre tres clases).</strong></span></p>
+<p style="text-align: justify;">a) Crea una nueva clase <em>Prestamo</em> con los siguientes atributos: uno de tipo <em>Estudiante</em>, otro de tipo <em>Libro</em> y, por último, una de tipo <em>LocalDateTime</em> que contenga la <em>fecha</em> del préstamo realizado. Solamente debe haber un constructor que reciba todos los atributos necesarios por parámetro.</p>
+<p style="text-align: justify;">b) Modifica el método <strong><em>prestar()</em></strong> de la clase <em>Libro</em> para que se cree un objeto de tipo <em>Prestamo</em> cada vez que se realice uno. Inicializa el parámetro <em>fecha</em> con la función <em>LocalDate.now()</em>.</p>
+<p style="text-align: justify;">c) Añade la clase <em>Prestamo</em> al diagrama de relación entre clases.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="531_asociacionesagregaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bonus_paso_por_valor_y_por_referencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

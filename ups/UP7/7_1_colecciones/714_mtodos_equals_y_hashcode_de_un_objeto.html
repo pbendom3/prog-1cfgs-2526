@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.1.4. Métodos equals() y hashCode() de un objeto | 7.1. Colecciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.1. Colecciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.1. Colecciones (interfaz Collection&lt;E&gt;)</a></li>
+   <li><a href="711_listas_list.html" class="daddy">7.1.1. Listas (List)</a>
+   <ul class="other-section">
+      <li><a href="pilas_stack.html" class="no-ch">Pilas (Stack)</a></li>
+   </ul>
+   </li>
+   <li><a href="712_colas_queue.html" class="daddy">7.1.2. Colas (Queue)</a>
+   <ul class="other-section">
+      <li><a href="clase_linkedlist.html" class="no-ch">Clase LinkedList</a></li>
+   </ul>
+   </li>
+   <li><a href="713_conjuntos_set__sin_duplicados.html" class="daddy">7.1.3. Conjuntos (Set) - sin duplicados</a>
+   <ul class="other-section">
+      <li><a href="clase_hashset.html" class="no-ch">Clase HashSet</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="714_mtodos_equals_y_hashcode_de_un_objeto.html" class="active daddy">7.1.4. Métodos equals() y hashCode() de un objeto</a>
+   <ul>
+      <li><a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="no-ch">Un ejemplo de lo que ocurre, paso por paso</a></li>
+   </ul>
+   </li>
+   <li><a href="ejercicios_de_colecciones_haciendo_uso_de_objetos.html" class="no-ch">Ejercicios de colecciones haciendo uso de objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="clase_hashset.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.1.4. Métodos equals() y hashCode() de un objeto</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id20">
+<div class="iDevice emphasis0" >
+<div id="ta20_129_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Como ya sabes, la clase <em>Object</em> es una superclase predeterminada de todas las clases. Es decir, todas las clases de <em>Java</em> directa o indirectamente heredan de la clase <em>Object</em>.</p>
+<p style="text-align: justify;">La clase <em>Object</em> define una serie de métodos que están disponibles en todas las clases en <em>Java</em>, por ejemplo, el famoso <em>toString()</em>. Pero en este punto <span style="background-color: #ffff99;"><strong>hay dos métodos más que debemos conocer</strong></span>:</p>
+<ul>
+<li style="text-align: justify;"><em><strong>hashCode(): </strong></em>se utiliza para obtener un valor numérico único que representa a un objeto. La función <em>hash</em> está diseñada para mapear la entrada de manera eficiente a un valor <em>hash</em> único y consistente. Esto lo hace especialmente útil en la búsqueda de datos y la optimización de rendimiento. </li>
+<li style="text-align: justify;"><strong><em> equals()</em>:</strong> se utiliza para comparar dos objetos y determinar si son iguales. Esta función es importante porque los objetos en <em>Java</em> se comparan por referencia, es decir, si dos objetos tienen la misma referencia (es decir, apuntan a la misma dirección de memoria), se consideran iguales.</li>
+</ul>
+<p style="text-align: justify;">Los métodos <em>equals()</em> y <em>hashCode()</em> son importantes porque permiten que los objetos se comparen y se indexen correctamente en las colecciones de <em>Java</em>. La implementación correcta de estos métodos es esencial para garantizar que las colecciones funcionen correctamente y produzcan resultados esperados.</p>
+<hr />
+<h5 style="text-align: justify;"><strong>Ejemplo de uso de <em>equals()</em> y <em>hashCode()</em> con <em>HashSet</em></strong></h5>
+<p style="text-align: justify;">Si la clase <em>Alumno</em> no tuviera implementados los métodos <em>equals()</em> y <em>hashCode()</em>, se podrían insertar elementos duplicados (mismos valores de los atributos). Esto se debe a que, por defecto, los métodos <em>equals()</em> y <em>hashCode()</em> heredados de la clase <em>Object</em> están basados en las referencias de los objetos y no en su estado.</p>
+<p><img src="img0.10.png" width="940" height="310" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Para verificar la existencia de duplicados en un <em>HashSet</em>, primero se compara el resultado del método <em>hashCode()</em>. Si los <em>hash</em> son diferentes, se considera que los objetos son diferentes y no se verifica más. Sin embargo, si los <em>hash</em> son iguales, se procede a utilizar el método <em>equals()</em> para determinar si los objetos son realmente iguales.</p>
+<p><img src="img1.4.png" width="938" height="309" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<h5 style="text-align: justify;"><strong>Cuándo es necesario implementar <em>equals()</em> y <em>hashCode()</em></strong></h5>
+<ul>
+<li style="text-align: justify;">Si no sobreescribimos <em>equals()</em> y <em>hashCode()</em>, el comportamiento por defecto (heredado de <em>Object</em>) puede no funcionar correctamente <span style="background-color: #ffff99;"><strong>si usamos objetos personalizados</strong></span>.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.HashSet;
+
+class Persona {
+    String nombre;
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        HashSet&lt;Persona&gt; set = new HashSet&lt;&gt;();
+        set.add(new Persona("Ana"));
+        set.add(new Persona("Ana")); // se espera que no se duplique, pero sí lo hará
+
+        System.out.println("Tamaño del conjunto: " + set.size()); // resultado: 2 (problema)
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px; text-align: justify;">El <span style="text-decoration: underline; background-color: #ffff99;"><strong>problema</strong></span>: como <em>equals()</em> y <em>hashCode()</em> no están sobrescritos, los objetos <em>new Persona("Ana")</em> se consideran diferentes aunque el atributo nombre sea el mismo (por defecto, sólo se mira la referencia en memoria).</p>
+<p style="padding-left: 30px; text-align: justify;">Sobrescribimos <em>equals()</em> y <em>hashCode() </em>en la clase<em> Persona</em> (siempre se hace igual):</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.Objects;
+import java.util.HashSet;
+
+class Persona {
+    String nombre;
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Persona persona = (Persona) obj;
+        return Objects.equals(nombre, persona.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        HashSet&lt;Persona&gt; set = new HashSet&lt;&gt;();
+        set.add(new Persona("Ana"));
+        set.add(new Persona("Ana")); // ahora no se duplica
+
+        System.out.println("Tamaño del conjunto: " + set.size()); // resultado: 1
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Ahora <em>HashSet</em> funciona correctamente y evita duplicados, ya que, además de la referencia en memoria, ahora el método <em>Equals</em> compara también el valor de los nombres:<em> Objects.equals(nombre, persona.nombre)</em>.</p>
+<p style="padding-left: 30px;"></p>
+<ul>
+<li style="text-align: justify;"><span style="background-color: #ffff99;"><strong>Si usamos tipos primitivos o clases estándar (String, Integer, etc.) NO es necesario</strong></span>. <em>String</em> y las clases de la API de <em>Java</em> ya implementan correctamente <em>equals()</em> y <em>hashCode()</em>.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.HashSet;
+
+public class EjemploTiposPrimitivos {
+    public static void main(String[] args) {
+        // HashSet con Strings
+        HashSet&lt;String&gt; nombres = new HashSet&lt;&gt;();
+        nombres.add("Juan");
+        nombres.add("Ana");
+        nombres.add("Pedro");
+        nombres.add("Juan");  // no se añadirá porque ya existe
+
+        System.out.println("Nombres en el HashSet: " + nombres);
+        System.out.println("¿Contiene 'Ana'?: " + nombres.contains("Ana")); // true
+
+        // HashSet con Integer
+        HashSet&lt;Integer&gt; numeros = new HashSet&lt;&gt;();
+        numeros.add(10);
+        numeros.add(20);
+        numeros.add(30);
+        numeros.add(10);  // no se añadirá porque ya existe
+
+        System.out.println("Números en el HashSet: " + numeros);
+        System.out.println("¿Contiene 20?: " + numeros.contains(20)); // true
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<ul>
+<li>Si sólo comparamos por referencia y no por contenido. Es decir, si usamos objetos sólo como identificadores únicos en memoria, no necesitaremos sobrescribir nada.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Persona p1 = new Persona("Carlos");
+Persona p2 = p1;  // ambas variables apuntan al mismo objeto en memoria
+System.out.println(p1 == p2); // true
+</code></pre>
+</div>
+</div>
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="clase_hashset.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="un_ejemplo_de_lo_que_ocurre_paso_por_paso.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

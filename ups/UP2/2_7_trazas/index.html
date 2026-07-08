@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5. Trazas </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente Domenech" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="trazas" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">5. Trazas</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">5. Trazas de código</a></li>
+   <li><a href="ejercicios_para_practicar.html" class="no-ch">Ejercicios para practicar</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios_para_practicar.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5. Trazas de código</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Trazas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p>La <strong>traza de un programa</strong> sirve para comprobar si el código que hemos escrito funciona como se espera o no. </p>
+<p>Realizar una traza de un programa o de un bloque de instrucciones consiste en obtener el valor que van tomando las variables según se ejecutan las instrucciones, e indicar lo que se va mostrando por pantalla. Lo que se hace realmente es ejecutar las instrucciones del programa a mano, por lo tanto, las trazas de código normalmente se realizan en papel. </p>
+<h4>¿Cómo se hace una traza?</h4>
+<p>Para realizar una traza se crea una tabla con todas las variables que intervienen en el código, con sus respectivos valores iniciales. Por ejemplo:</p>
+<table border="1" style="width: 19.7787%; height: 96px;" height="54">
+<tbody>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; text-align: center; height: 26px;">a</td>
+<td style="width: 33.3333%; text-align: center; height: 26px;">b</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; text-align: center; height: 26px;">1</td>
+<td style="width: 33.3333%; text-align: center; height: 26px;">0</td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 33.3333%; text-align: center; height: 21px;"></td>
+<td style="width: 33.3333%; text-align: center; height: 21px;"></td>
+</tr>
+</tbody>
+</table>
+<p>Debajo de cada variable se escriben los valores que va tomando según se van ejecutando las instrucciones. Si el código muestra algo por pantalla, además, tendremos una columna donde se irá escribiendo lo que se va mostrando.</p>
+<table border="1" style="width: 39.1524%;" height="127">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;">a</td>
+<td style="width: 33.3333%; text-align: center;">b</td>
+<td style="width: 33.3333%; text-align: center;">salida</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">1</td>
+<td style="width: 33.3333%; text-align: center;">0</td>
+<td style="width: 33.3333%; text-align: center;">El resultado es 2</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Por ejemplo, vamos a realizar la traza del siguiente bloque de instrucciones:</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>int a = 10, i;
+for(i = a; i &lt;= 20; i+=3){
+     System.out.println(i*2);                               
+ }</code></pre>
+</div>
+</div>
+<p>Para empezar, haremos una tabla con tantas columnas como variables intervienen en el código. En este caso, tenemos las variables <strong><em>a</em></strong>,<em></em><strong><em> i</em></strong>. Además, se muestran datos por pantalla, por lo que tendremos una columna llamada <em><strong>salida </strong></em>donde iremos mostrando la salida por pantalla de este código.</p>
+<table border="1" style="width: 31.9879%; height: 52px;" height="54">
+<tbody>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; text-align: center; height: 26px;">a</td>
+<td style="width: 33.3333%; text-align: center; height: 26px;">i</td>
+<td style="width: 33.3333%; text-align: center; height: 26px;">salida</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 33.3333%; height: 26px;"></td>
+<td style="width: 33.3333%; height: 26px;"></td>
+<td style="width: 33.3333%; height: 26px;"></td>
+</tr>
+</tbody>
+</table>
+<p>Una vez preparada la tabla, empezamos a "ejecutar" el código a mano.</p>
+<p>En la primera instrucción se asigna a la variable <strong>a</strong> el valor 10. Por lo tanto, tenemos que colocar en la tabla este valor debajo de la variable <strong>a</strong>:</p>
+<table border="1" style="width: 25.328%; height: 96px;" height="88">
+<tbody>
+<tr style="height: 32px;">
+<td style="width: 33.3333%; text-align: center; height: 32px;">a</td>
+<td style="width: 33.3333%; text-align: center; height: 32px;">i</td>
+<td style="width: 33.3333%; text-align: center; height: 32px;">salida</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 33.3333%; text-align: center; height: 32px;">10</td>
+<td style="width: 33.3333%; text-align: center; height: 32px;"></td>
+<td style="width: 33.3333%; text-align: center; height: 32px;"></td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 33.3333%; text-align: center; height: 32px;"></td>
+<td style="width: 33.3333%; text-align: center; height: 32px;"></td>
+<td style="width: 33.3333%; text-align: center; height: 32px;"></td>
+</tr>
+</tbody>
+</table>
+<p>A continuación, se empieza a ejecutar el bucle <em><strong>for</strong></em>. Al inicio del bucle se asigna a <em><strong>i</strong></em> el valor de <em><strong>a</strong></em>. En la tabla tenemos que colocar en la columna de la variable <em><strong>i</strong></em> el valor que toma, en este caso 10:</p>
+<table border="1" style="width: 24.6216%; height: 101px;" height="96">
+<tbody>
+<tr style="height: 36px;">
+<td style="width: 33.3333%; text-align: center; height: 36px;">a</td>
+<td style="width: 33.3333%; text-align: center; height: 36px;">i</td>
+<td style="width: 33.3333%; text-align: center; height: 36px;">salida</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 33.3333%; text-align: center; height: 36px;">10</td>
+<td style="width: 33.3333%; text-align: center; height: 36px;">10</td>
+<td style="width: 33.3333%; text-align: center; height: 36px;"></td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 33.3333%; height: 29px;"></td>
+<td style="width: 33.3333%; height: 29px;"></td>
+<td style="width: 33.3333%; height: 29px;"></td>
+</tr>
+</tbody>
+</table>
+<p>Lo siguiente es comprobar si la condición del <em><strong>for</strong></em> se cumple. En este caso, el valor de <em><strong>i</strong> </em>es 20 (que es &lt;= 20) por lo que se ejecuta la instrucción que contiene el <em><strong>for</strong></em>.</p>
+<p>La instrucción dentro del <em><strong>for</strong></em> muestra por pantalla el valor de<em><strong> i</strong></em> multiplicado por 2. En la columna <em><strong>salida</strong> </em>escribimos 20:</p>
+<table border="1" style="width: 23.2089%; height: 114px;" height="107">
+<tbody>
+<tr style="height: 41px;">
+<td style="width: 33.3333%; text-align: center; height: 41px;">a</td>
+<td style="width: 33.3333%; text-align: center; height: 41px;">i</td>
+<td style="width: 33.3333%; text-align: center; height: 41px;">salida</td>
+</tr>
+<tr style="height: 41px;">
+<td style="width: 33.3333%; text-align: center; height: 41px;">10</td>
+<td style="width: 33.3333%; text-align: center; height: 41px;">10</td>
+<td style="width: 33.3333%; text-align: center; height: 41px;">20</td>
+</tr>
+<tr style="height: 32px;">
+<td style="width: 33.3333%; height: 32px;"></td>
+<td style="width: 33.3333%; height: 32px;"></td>
+<td style="width: 33.3333%; height: 32px;"></td>
+</tr>
+</tbody>
+</table>
+<p>El siguiente paso es incrementar en 3 el valor de la variable <em><strong>i</strong></em>. En la columna de la variable <em><strong>i</strong></em> escribimos su nuevo valor:</p>
+<table border="1" style="width: 25.5298%;" height="89">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;">a</td>
+<td style="width: 33.3333%; text-align: center;">i</td>
+<td style="width: 33.3333%; text-align: center;">salida</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">10</td>
+<td style="width: 33.3333%; text-align: center;">10</td>
+<td style="width: 33.3333%; text-align: center;">20</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">13</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Se comprueba que la condición del <em><strong>for</strong></em> se sigue cumpliendo, y se muestra por pantalla<em><strong> i * 2</strong></em>. Ahora se muestra por pantalla <em>26</em>. Escribimos <em>26</em> en la columna correspondiente a la salida por pantalla:</p>
+<table border="1" style="width: 24.5207%; height: 109px;" height="115">
+<tbody>
+<tr style="height: 28px;">
+<td style="width: 33.3333%; text-align: center; height: 28px;">a</td>
+<td style="width: 33.3333%; text-align: center; height: 28px;">i</td>
+<td style="width: 33.3333%; text-align: center; height: 28px;">salida</td>
+</tr>
+<tr style="height: 28px;">
+<td style="width: 33.3333%; text-align: center; height: 28px;">10</td>
+<td style="width: 33.3333%; text-align: center; height: 28px;">10</td>
+<td style="width: 33.3333%; text-align: center; height: 28px;">20</td>
+</tr>
+<tr style="height: 28px;">
+<td style="width: 33.3333%; text-align: center; height: 28px;"></td>
+<td style="width: 33.3333%; text-align: center; height: 28px;">13</td>
+<td style="width: 33.3333%; text-align: center; height: 28px;">26</td>
+</tr>
+<tr style="height: 25px;">
+<td style="width: 33.3333%; height: 25px;"></td>
+<td style="width: 33.3333%; height: 25px;"></td>
+<td style="width: 33.3333%; height: 25px;"></td>
+</tr>
+</tbody>
+</table>
+<p>Volvemos a la siguiente iteración del bucle, y se repite el proceso. Cuando el bucle <em><strong>for</strong></em> termine, la traza del código será esta:</p>
+<table border="1" style="width: 24.3189%;" height="173">
+<tbody>
+<tr>
+<td style="width: 33.3333%; text-align: center;">a</td>
+<td style="width: 33.3333%; text-align: center;">i</td>
+<td style="width: 33.3333%; text-align: center;">salida</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;">10</td>
+<td style="width: 33.3333%; text-align: center;">10</td>
+<td style="width: 33.3333%; text-align: center;">20</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">13</td>
+<td style="width: 33.3333%; text-align: center;">26</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">16</td>
+<td style="width: 33.3333%; text-align: center;">32</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">19</td>
+<td style="width: 33.3333%; text-align: center;">38</td>
+</tr>
+<tr>
+<td style="width: 33.3333%; text-align: center;"></td>
+<td style="width: 33.3333%; text-align: center;">22</td>
+<td style="width: 33.3333%; text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong></strong></p>
+<p><strong>Cuando se está empezando a programar es muy recomendable que dediquemos tiempo a hacer ejercicios de trazas, porque nos va a ayudar a entender mejor el funcionamiento de las estructuras de control: especialmente las condicionales y repetitivas.</strong></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios_para_practicar.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

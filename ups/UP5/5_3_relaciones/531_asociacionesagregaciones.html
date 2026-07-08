@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.3.1. Asociaciones/agregaciones | 5.3. Relaciones simples entre clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">5.3. Relaciones simples entre clases</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.3. Relaciones simples entre clases</a></li>
+   <li id="active"><a href="531_asociacionesagregaciones.html" class="active no-ch">5.3.1. Asociaciones/agregaciones</a></li>
+   <li><a href="532_asociaciones_bidireccionales.html" class="no-ch">5.3.2. Asociaciones bidireccionales</a></li>
+   <li><a href="bonus_paso_por_valor_y_por_referencia.html" class="no-ch">BONUS: Paso por valor y por referencia</a></li>
+   <li><a href="533_composiciones.html" class="no-ch">5.3.3. Composiciones</a></li>
+   <li><a href="534_asociaciones_reflexivas.html" class="no-ch">5.3.4. Asociaciones reflexivas</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="532_asociaciones_bidireccionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.3.1. Asociaciones/agregaciones</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">El tipo de relación más frecuente es la <strong>asociación</strong>, que <span style="font-size: 1.05em;">es un tipo de relación entre clases que se podría definir como "</span><strong style="font-size: 1.05em;"><em>tener un</em></strong><span style="font-size: 1.05em;">". </span></p>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">En el ejemplo anterior, cada </span><em style="font-size: 1.05em;">Alumno</em><span style="font-size: 1.05em;"> inscrito en el centro educativo tiene unas asignaturas matriculadas. Por lo tanto, se puede dar una asociación entre la clase </span><em style="font-size: 1.05em;">Alumno</em><span style="font-size: 1.05em;"> y la clase </span><em style="font-size: 1.05em;">Asignatura</em><span style="font-size: 1.05em;">, que básicamente se plasmaría añadiendo en una de las dos clases (o en las dos, dependiendo de lo que nos interese) un atributo del tipo de la otra.</span></p>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">Lo mismo para el <em>Tutor</em> y el <em>Grupo </em>visto anteriormente. </span><span style="font-size: 1.05em;"></span><span style="font-size: 1.05em;">Un ejemplo en <em>Java</em>:</span></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Tutor {
+    private String nombre;
+    private String especialidad;
+    private Grupo grupo;
+
+}
+
+public class Grupo {
+    private String nombre_grupo;
+
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;"><span style="font-size: 1.05em;">ò al revés:</span></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Tutor {
+    private String nombre;
+    private String especialidad;
+
+}
+
+public class Grupo {
+    private String nombre_grupo;
+    private Tutor tutor;
+
+}
+
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">Dada la asociación, </span></p>
+<p><span style="font-size: 1.05em;"><img src="img0.png" width="598" height="101" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">se debe especificar:</span></p>
+<p style="padding-left: 30px; text-align: justify;"><span style="font-size: 1.05em;">→ En el centro, el nombre de la asociación.</span></p>
+<p style="padding-left: 30px; text-align: justify;"><span style="font-size: 1.05em;">→ Con una flecha se especifica la navegabilidad. Partiendo del nombre de la asociación y los métodos de las clases, se debe poder establecer cuál es la clase origen y cuál el destino.</span></p>
+<p style="padding-left: 30px; text-align: justify;"><span style="font-size: 1.05em;">→ La navegabilidad indica el sentido de las interacciones entre objetos: a qué clase pertenecen los objetos que pueden llamar operaciones y a qué clase los objetos que reciben estas llamadas.</span></p>
+<p style="padding-left: 30px; text-align: justify;"><span style="font-size: 1.05em;">→ Si no se especifica navegabilidad (sin flecha) se tratará de una asociación bidireccional, y ambas clases podrán llamar a métodos de la otra. La vemos en el siguiente apartado.<br /></span></p>
+<p style="padding-left: 30px; text-align: justify;"><span style="font-size: 1.05em;">→ En cada extremo se indica la cardinalidad (como en BBDD), que debe especificar con cuantas instancias de una de las clases puede estar enlazada una instancia de la otra clase en un momento determinado de la ejecución del programa.</span></p>
+<p style="padding-left: 30px;"><img src="img1.png" width="699" height="261" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li>Por lo tanto, un objeto de la clase <em>Tutor</em> siempre tiene un objeto de la clase <em>Grupo</em> enlazado (ya que un tutor siempre tutoriza a un grupo).</li>
+<li>No se puede dar el caso de que un tutor no tutorice a ningún grupo. La inversa también es cierta, todo grupo es tutorizado por algún tutor.</li>
+<li>El tutor puede llamar operaciones sobre el grupo, pero no al revés. Esto tiene sentido, ya que es el tutor el que controla al grupo.</li>
+</ul>
+<hr />
+<p style="text-align: justify;">Como ves, <span style="background-color: #ffff99;">la <strong>navegabilidad</strong> y la <strong>cardinalidad</strong> son imprescindibles</span>, ya que la decisión que se tome en estos aspectos dentro de la etapa de diseño tendrá implicaciones directas sobre la implementación.</p>
+<p style="padding-left: 30px;">Más ejemplos:</p>
+<p style="padding-left: 30px;"><img src="img2.png" width="597" height="102" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">Con el siguiente símbolo ya se dice cuál es la relación entre los objetos de ambas clases, por lo que se pueden omitir el nombre y la función en los descriptores de la asociación.</p>
+<p style="padding-left: 30px;"><img src="img4.png" width="457" height="102" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li>Una instancia cualquiera de la clase <em>Página</em> puede enlazar hasta un número indeterminado de objetos diferentes de la clase <em>Cita</em>.</li>
+<li>Dado un objeto cualquiera de la clase <em>Cita</em>, sólo estará enlazado a un único objeto <em>Página</em>. Por lo tanto, no se puede tener una misma cita en dos páginas diferentes (pero sí tener dos citas diferentes y de contenido idéntico, con los mismos valores para los atributos, cada una a una página diferente).</li>
+<li>Tampoco puede haber citas que no estén escritas en ninguna página.</li>
+</ul>
+<hr />
+<p><img src="img3.png" width="581" height="100" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Dado un cliente, este puede estar registrado en más de una sucursal, pero al menos siempre lo estará en una. Nunca se puede dar el caso de un cliente dado de alta en el sistema pero que no esté registrado en ninguna sucursal.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">Crea una relación entre la clase <em>Estudiante</em> y la clase <em>Libro</em> implementadas anteriormente. Hazlo así:</p>
+<p style="text-align: justify;">a) Crea un atributo de tipo Estudiante llamado <strong><em>estudiantePrestado</em> </strong>para almacenar al estudiante que tiene el libro prestado. Cuando se crea un libro, este atributo tendrá un valor nulo.</p>
+<p style="text-align: justify;">b) Los métodos <strong><em>prestar()</em> </strong>y <strong><em>devolver()</em></strong> gestionarán esta relación. </p>
+<p style="text-align: justify; padding-left: 30px;">- En el caso de <em>prestar()</em>, deberemos añadir un parámetro a recibir por el método para poder guardar la info en el atributo <em>estudiantePrestado</em>.</p>
+<p style="text-align: justify; padding-left: 30px;">- En el caso de <em>devolver()</em>, no modificaremos los parámetros y volveremos a poner el valor del atributo <em>estudiantePrestado</em> a nulo.</p>
+<p><img src="img0.1.png" width="568" height="61" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>c) Dibuja el diagrama de la relación creada.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="532_asociaciones_bidireccionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.2.2. Métodos y atributos estáticos (static) | tostring y static </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">tostring y static</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.2. El método toString() y uso de static en la POO</a></li>
+   <li><a href="521_el_mtodo_tostring.html" class="no-ch">5.2.1. El método toString()</a></li>
+   <li id="active"><a href="522_mtodos_y_atributos_estticos_static.html" class="active no-ch">5.2.2. Métodos y atributos estáticos (static)</a></li>
+   <li><a href="ejercicio_de_ampliacin_sobre_clasesobjetos_y_mtodos_static.html" class="no-ch">Ejercicio de ampliación sobre clases/objetos y métodos static</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="521_el_mtodo_tostring.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_de_ampliacin_sobre_clasesobjetos_y_mtodos_static.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.2.2. Métodos y atributos estáticos (static)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_130_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">En <em>Java</em>, la palabra reservada <em>static</em> se utiliza para declarar atributos o métodos que <strong><span style="background-color: #ffff99;">pertenecen a la clase, pero no a las instancias de la clase</span></strong>. Los elementos estáticos son compartidos por todas las instancias de la clase, y no es necesario crear un objeto para acceder a ellos.</p>
+<h5 style="text-align: justify;">Atributos estáticos</h5>
+<p style="text-align: justify;">Teniendo en cuenta lo que acabamos de comentar, podemos decir que un atributo estático pertenece a la clase y no a los objetos creados a partir de la clase. Por lo tanto, <strong><span style="background-color: #ffff99;">cambiar el valor de un atributo estático afecta a todas las instancias de la clase</span></strong>.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Contador {
+
+    public static int contador = 0; 
+
+    Contador() {
+        contador++;
+    }
+
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Contador obj1 = new Contador();
+        Contador obj2 = new Contador();
+        Contador obj3 = new Contador();
+
+        System.out.println("Objetos creados: " + Contador.contador); // Salida: 3
+
+    }
+}</code></pre>
+</div>
+</div>
+<h5 style="text-align: justify;">Métodos estáticos</h5>
+<p style="text-align: justify;">Como ya sabemos del tema anterior, un método estático puede ser invocado sin crear una instancia (objeto) de la clase. Pero en la <em>POO</em>, deberemos cumplir ciertas reglas si queremos crearlos como <em>static</em>:</p>
+<ul>
+<li style="text-align: justify;">No deben acceder a atributos o métodos de instancia directamente.</li>
+<li style="text-align: justify;">Sólo pueden usar atributos y métodos estáticos (o parámetros, si es que reciben alguno).</li>
+<li style="text-align: justify;">No pueden usar la palabra clave <em>this</em>.</li>
+</ul>
+<p><img src="img0.1.png" width="954" height="481" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>En resumen, <strong><span style="background-color: #ffff99;">solamente se usan como veníamos haciendo hasta ahora: sin aplicar ni usar nada característico de la <em>POO</em></span></strong>.</p>
+<h5>Cuándo usar <em>static...</em></h5>
+<ul>
+<li><span style="text-decoration: underline;">Atributos estáticos</span>: cuando se necesita compartir un valor común entre todas las instancias de la clase. Por ejemplo: contadores, variables globales para valores por defecto, etc.</li>
+<li><span style="text-decoration: underline;">Métodos estáticos</span>: cuando el método no depende de atributos de instancia. Por ejemplo, métodos de utilidad como cálculos matemáticos, manipulación de fechas, etc.</li>
+<li><span style="text-decoration: underline;">Constantes</span>: cuando los valores deben ser fijos y accesibles globalmente.</li>
+</ul></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id4">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio de ejemplo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_131_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea una clase <em><strong>Estudiante</strong> </em>con:</p>
+<ul>
+<li>Un atributo estático <strong><em>contadorEstudiantes</em> </strong>para contar cuántos estudiantes han sido creados.</li>
+<li><strong>Atributos</strong>: <em>nombre, curso, NIA</em> y <em>email</em>. El NIA se debe generar automáticamente de forma correlativa cada vez que se cree o instancie un estudiante nuevo.</li>
+<li>Dos constructores: uno parametrizado con todos los atributos (menos el NIA) y otro que solamente reciba <em>nombre</em>.</li>
+<li>Un método estático <strong><em>obtenerTotalEstudiantes</em>()</strong> que devuelva el valor del contador.</li>
+<li>Un método estático <strong><em>validarCorreo()</em></strong> para validar el formato del correo electrónico. </li>
+</ul>
+<p style="padding-left: 60px;">Usa la siguiente instrucción: </p>
+<p style="text-align: center;"><span style="background-color: #ffff99;"><strong><em>correo.matches("^[A-Za-z0-9+_.-]+@alu.edu.gva.es$")</em></strong></span></p>
+<p style="text-align: justify; padding-left: 60px;">donde:</p>
+<p style="text-align: justify; padding-left: 90px;">- <em>^ </em>: indica el inicio de la cadena.<br />- <em>[A-Za-z0-9+_.-]+ </em>: acepta letras (mayúsculas y minúsculas), números, y los caracteres +, _, ., y -.<br />- El + al final significa "una o más veces".<br />- <em>@alu.edu.gva.es</em>: especifica que el correo debe terminar exactamente con este dominio.<br />- <em>$ </em>: indica el final de la cadena.</p>
+<ul>
+<li>Crea una constante <em><strong>CORREO_FORMAT</strong> </em>de tipo <em>static</em> con el contenido del <em>matches</em> anterior y actualízalo para usar la nueva constante. </li>
+<li>Sobrescribe el método <strong><em>toString</em>()</strong> para mostrar la info de cada estudiante.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="521_el_mtodo_tostring.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_de_ampliacin_sobre_clasesobjetos_y_mtodos_static.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

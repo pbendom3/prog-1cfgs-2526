@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>BONUS: Paso por valor y por referencia | 5.3. Relaciones simples entre clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">5.3. Relaciones simples entre clases</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.3. Relaciones simples entre clases</a></li>
+   <li><a href="531_asociacionesagregaciones.html" class="no-ch">5.3.1. Asociaciones/agregaciones</a></li>
+   <li><a href="532_asociaciones_bidireccionales.html" class="no-ch">5.3.2. Asociaciones bidireccionales</a></li>
+   <li id="active"><a href="bonus_paso_por_valor_y_por_referencia.html" class="active no-ch">BONUS: Paso por valor y por referencia</a></li>
+   <li><a href="533_composiciones.html" class="no-ch">5.3.3. Composiciones</a></li>
+   <li><a href="534_asociaciones_reflexivas.html" class="no-ch">5.3.4. Asociaciones reflexivas</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="532_asociaciones_bidireccionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="533_composiciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">BONUS: Paso por valor y por referencia</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div id="ta7_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Como has podido observar al modificar la clase <em>Libro</em>, hemos necesitado pasar como parámetro a un objeto de tipo <em>Estudiante</em> para poder prestar y devolver libros mediante la relación de bidireccionalidad. Pero, ¿te has dado cuenta de lo que realmente hemos hecho?</p>
+<p style="text-align: justify;"><strong>Igual que nos pasaba con los <em>arrays</em>, cuando pasamos un <em>Objeto</em> por parámetro <span style="color: #ff0000;">NO</span> estamos realizando una copia, sino que se pasa por referencia (dirección de memoria): es decir, que <span style="background-color: #ffff99;">voy a afectar directamente al objeto</span></strong> y no a una copia.</p>
+<p style="text-align: justify;">En nuestro caso, hemos modificado el objeto de tipo <em>Estudiante</em> original para "<em>setear</em>" su atributo relacionado con el <em>Libro</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public void prestar(Estudiante estudiante){
+
+        if(disponible &amp;&amp; estudiante.getLibroPrestado() == null) {
+            disponible = false;
+            System.out.println("El libro " + getTitulo() + " ha sido prestado con éxito " + " a " + estudiante.getNombre() + ".");
+            librosDisponibles--;
+            estudiantePrestado = estudiante;
+            estudiante.setLibroPrestado(this); // MODIFICAMOS EL OBJETO ORIGINAL QUE HA ENTRADO POR PARÁMETRO 
+        } else if (estudiante.getLibroPrestado() != null) {
+                System.out.println("El estudiante " + estudiante.getNombre() + " ya tiene un libro prestado.");
+        }else{
+                System.out.println("El libro " + getTitulo() + " no se puede prestar (no disponible).");
+        }
+
+    }</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">Por lo tanto:</p>
+<ul style="text-align: justify;">
+<li>En <em>Java</em>, los tipos primitivos (int, char, boolean,...) siempre se pasan por valor a los métodos.</li>
+<li>Los objetos y <em>arrays</em> siempre se pasan por referencia a los métodos.</li>
+</ul>
+<hr />
+<h5 style="text-align: justify;">Clases inmutables</h5>
+<p style="text-align: justify;">Por otra parte, existen casos especiales como los <em>Strings</em>, ya que estos siguen siendo objetos, pero de tipo inmutables. Es decir, una vez se ha creado una <em>String</em>, no se pueden modificar ninguno de sus caracteres sin crear una nueva instancia. Cualquier operación que se realice en un objeto <em>String</em>, como concatenar, cambiar mayúsculas o minúsculas, etc, genera un nuevo objeto <em>String</em> con los cambios realizados.</p>
+<p><img src="img1.1.png" width="781" height="78" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">En <em>Java</em> existen dos formas de crear un objeto de la clase <em>String</em>: mediante una asignación literal, y mediante el uso del constructor <em><strong>new String()</strong></em>:</p>
+<p><img src="img2.1.png" width="491" height="76" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">La principal diferencia entre estas dos formas es que, cuando se crea una <em>String</em> mediante una asignación literal, la JVM busca en su pool de <em>Strings</em> si existe una <em>String</em> igual y, si existe, retorna su dirección en memoria. Si no existe, la JVM crea una nueva <em>String</em> en el <br />pool de <em>Strings</em> y retorna su dirección en memoria.</p>
+<p style="text-align: justify;">En cambio, cuando se crea una <em>String</em> mediante el constructor <em>new String()</em>, se crea un nuevo objeto <em>String</em> en la memoria, independientemente de si existe o no una <em>String</em> igual en el pool de <em>Strings</em>. Por lo tanto, <span style="background-color: #ffff99;">es recomendable utilizar asignaciones literales para crear <em>Strings</em> porque son más eficientes</span>, ya que evitan la creación de objetos innecesarios.</p>
+<p><img src="img0.2.png" width="907" height="431" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="532_asociaciones_bidireccionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="533_composiciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

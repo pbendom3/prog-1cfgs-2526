@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2. Ejemplo de todos los métodos de String | Trabajando con cadenas de caracteres en Java  </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente " />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Trabajando con cadenas de caracteres en Java </div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Trabajando con cadenas de caracteres en Java (textos)</a></li>
+   <li><a href="11_mtodos_de_la_clase_string.html" class="no-ch">1.1. Métodos de la clase String</a></li>
+   <li id="active"><a href="12_ejemplo_de_todos_los_mtodos_de_string.html" class="active no-ch">1.2. Ejemplo de todos los métodos de String</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_mtodos_de_la_clase_string.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2. Ejemplo de todos los métodos de String</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id3">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">5.2. Ejemplo de todos los métodos de String</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_127_2" class="block iDevice_content">
+<div class="exe-text"><p>Copia y pega el siguiente código fuente en tu IDE y ejecútalo para ver el comportamiento de los distintos métodos que componen la clase S<em>tring</em> y sus funcionalidades asociadas.</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>// Código Java para ilustrar diferentes constructores y métodos
+// de la clase String.
+
+class DemoMetodosString {
+
+public void demoString() {
+
+String s= "JavadesdeCero";
+// o String s= new String ("JavadesdeCero");
+
+// Devuelve la cantidad de caracteres en la Cadena.
+System.out.println("String length = " + s.length());
+
+// Devuelve el carácter en el índice i.
+System.out.println("Character at 3rd position = "
++ s.charAt(3));
+
+// Devuelve la subcadena del carácter índice i-ésimo
+// al final de la cadena
+System.out.println("Substring " + s.substring(3));
+
+// Devuelve la subcadena del índice i a j-1.
+System.out.println("Substring = " + s.substring(2,5));
+
+// Concatena string2 hasta el final de string1.
+String s1 = "Java";
+String s2 = "desdeCero";
+System.out.println("String concatenado = " +
+s1.concat(s2));
+
+// Devuelve el índice dentro de la cadena de
+// la primera aparición de la cadena especificada.
+String s4 = "Java desde Cero";
+System.out.println("Índice de Cero: " +
+s4.indexOf("Cero"));
+
+// Devuelve el índice dentro de la cadena de
+// la primera aparición de la cadena especificada,
+// comenzando en el índice especificado.
+System.out.println("Índice de a = " + s4.indexOf('a',3));
+
+// Comprobando la igualdad de cadenas
+Boolean out = "Java".equals("java");
+System.out.println("Comprobando la igualdad: " + out);
+out = "Java".equals("Java");
+System.out.println("Comprobando la igualdad: " + out);
+
+out = "Java".equalsIgnoreCase("jaVA ");
+System.out.println("Comprobando la igualdad: " + out);
+
+int out1 = s1.compareTo(s2);
+System.out.println("Si s1 = s2: " + out);
+
+// Conversión de cases
+String palabra1 = "JavadesdeCero";
+System.out.println("Cambiando a minúsculas: " +
+palabra1.toLowerCase());
+
+// Conversión de cases
+String palabra2 = "JavadesdeCero";
+System.out.println("Cambiando a MAYÚSCULAS: " +
+palabra1.toUpperCase());
+
+// Recortando la palabra
+String word4 = " JavadesdeCero ";
+System.out.println("Recortando la palabra: " + word4.trim());
+
+// Reemplazar caracteres
+String str1 = "YavadesdeCero";
+System.out.println("String Original: " + str1);
+String str2 = "YavadesdeCero".replace('Y' ,'J') ;
+System.out.println("Reemplazando Y por J -&gt; " + str2);<br />
+}<br /><br />}</code></pre>
+</div>
+</div>
+<p><br /><br /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_mtodos_de_la_clase_string.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

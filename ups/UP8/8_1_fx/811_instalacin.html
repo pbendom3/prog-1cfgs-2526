@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.1.1. Instalación | Introducción a JavaFX </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Introducción a JavaFX</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.1. Introducción a las aplicaciones JavaFX y Scene Builder</a></li>
+   <li id="active"><a href="811_instalacin.html" class="active no-ch">8.1.1. Instalación</a></li>
+   <li><a href="812_conociendo_el_entorno_y_primeros_ejemplos.html" class="no-ch">8.1.2. Conociendo el entorno y primeros ejemplos</a></li>
+   <li><a href="813_objetos_modelo.html" class="no-ch">8.1.3. Objetos (modelo)</a></li>
+   <li><a href="814_moverse_entre_pantallas_scene.html" class="no-ch">8.1.4. Moverse entre pantallas (Scene)</a></li>
+   <li><a href="815_manipular_info_desde_formularios.html" class="no-ch">8.1.5. Manipular info desde formularios</a></li>
+   <li><a href="816_imprimir_contenido_en_tablas.html" class="no-ch">8.1.6. Imprimir contenido en tablas</a></li>
+   <li><a href="prctica_1_entrega_tutorial_app_pruebas_en_javafx.html" class="no-ch">Práctica 1. Entrega tutorial: App pruebas en JavaFX</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="812_conociendo_el_entorno_y_primeros_ejemplos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.1.1. Instalación</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="exe-text"><p>Para ponerlo todo a punto de forma fácil y rápida, utilizaremos los instaladores de <em>IntellliJ IDEA</em> como ayuda. Sigue los siguientes pasos:</p>
+<p style="padding-left: 30px;">1. Crea un nuevo proyecto de tipo <em>JavaFX</em>,</p>
+<p><img src="img6.1.png" width="629" height="497" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img7.2.png" width="623" height="498" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img7.1.png" width="302" height="487" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">2. <em>OpenJFX</em> dispone de una API que proporciona clases e interfaces que son el núcleo para crear aplicaciones. Esta API está basada en MVC, que es el acrónimo de Model-View-Controller (Modelo-Vista-Controlador), un patrón de diseño de software que divide una aplicación en tres componentes interconectados. Este patrón es particularmente útil en aplicaciones con interfaces gráficas de usuario, como las desarrolladas con JavaFX.</p>
+<p style="padding-left: 60px;">La que vemos a continuación es la <strong>clase principal (Stage)</strong> → lanza la aplicación y carga el FXML (vista).</p>
+<p><img src="img2.png" width="656" height="298" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px; text-align: justify;"></p>
+<p style="padding-left: 60px; text-align: justify;"><strong>FXML (<em>Scene</em>)</strong> → define la interfaz.</p>
+<p style="padding-left: 30px;"><img src="img4.png" width="657" height="288" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px; text-align: justify;">Y nos queda el <strong>Controlador <em>Java (Node)</em></strong> → la clase que maneja los eventos (clics, acciones...). Es el intermediario entre el modelo y la vista. Siempre debe estar asociado a un archivo <em>FXML</em>. Utiliza anotaciones para enlazar los componentes de la interfaz de usuario con variables y métodos.</p>
+<p style="padding-left: 60px;"><img src="img5.png" width="656" height="215" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<p style="padding-left: 30px;">3. Si ejecutamos la aplicación, el proyecto de ejemplo que nos proporciona <em>IntelliJ IDEA</em> tiene la siguiente forma:</p>
+<p><img src="img6.png" width="633" height="372" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px;">Si clickamos en el botón, aparecerá el texto dándonos la bienvenida a <em>JavaFX</em>:</p>
+<p style="text-align: center;"><img src="img7.png" width="329" height="278" alt="8" /></p>
+<hr />
+<h5 style="text-align: justify;">Instalar <em>Scene Builder</em></h5>
+<p style="text-align: justify; padding-left: 30px;">Descárgalo desde:<br />           👉 <a href="https://gluonhq.com/products/scene-builder/">https://gluonhq.com/products/scene-builder/</a></p>
+<p style="text-align: left; padding-left: 30px;">e instálalo como cualquier programa.</p>
+<p style="text-align: left; padding-left: 30px;"></p>
+<p style="text-align: left;">Al finalizar, anota la ruta del ejecutable, por ejemplo: <em>C:\Program Files\SceneBuilder\SceneBuilder.exe</em></p>
+<ul>
+<li>Ve a  <em><strong>File &gt; Settings</strong></em>.</li>
+<li>Busca  <em><strong>Languages &amp; Frameworks &gt; JavaFX</strong></em></li>
+<li>En el campo <strong><em>"Path to SceneBuilder"</em></strong>, pega la ruta del ejecutable que acabas de copiarte.</li>
+</ul>
+<p></p>
+<p>A partir de ese momento, quedará habilitada la vista más amigable del <em>FMXL</em> desde la pestaña <em>Scene Builder</em>:</p>
+<p><img src="img8.png" width="991" height="528" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Aunque si lo prefieres, puedes usar directamente la aplicación desde fuera del IDE (suele ser más fluida):</p>
+<p><img src="img9.png" width="991" height="527" alt="2" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="812_conociendo_el_entorno_y_primeros_ejemplos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

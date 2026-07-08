@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.1.2. Conociendo el entorno y primeros ejemplos | Introducción a JavaFX </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Introducción a JavaFX</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.1. Introducción a las aplicaciones JavaFX y Scene Builder</a></li>
+   <li><a href="811_instalacin.html" class="no-ch">8.1.1. Instalación</a></li>
+   <li id="active"><a href="812_conociendo_el_entorno_y_primeros_ejemplos.html" class="active no-ch">8.1.2. Conociendo el entorno y primeros ejemplos</a></li>
+   <li><a href="813_objetos_modelo.html" class="no-ch">8.1.3. Objetos (modelo)</a></li>
+   <li><a href="814_moverse_entre_pantallas_scene.html" class="no-ch">8.1.4. Moverse entre pantallas (Scene)</a></li>
+   <li><a href="815_manipular_info_desde_formularios.html" class="no-ch">8.1.5. Manipular info desde formularios</a></li>
+   <li><a href="816_imprimir_contenido_en_tablas.html" class="no-ch">8.1.6. Imprimir contenido en tablas</a></li>
+   <li><a href="prctica_1_entrega_tutorial_app_pruebas_en_javafx.html" class="no-ch">Práctica 1. Entrega tutorial: App pruebas en JavaFX</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="811_instalacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="813_objetos_modelo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.1.2. Conociendo el entorno y primeros ejemplos</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id2">
+<div class="iDevice emphasis0" >
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="exe-text"><p>Para dar nuestros primeros pasos en JavaFX iremos a lo más fácil y básico. Vamos a dirigirnos a la vista (archivo .fxml), y observamos que tenemos dos componentes: una etiqueta (<em>Label</em>) y un botón (<em>Button</em>):</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;?import javafx.geometry.*?&gt;
+&lt;?import javafx.scene.control.*?&gt;
+&lt;?import javafx.scene.layout.*?&gt;
+
+&lt;VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.demo.HelloController"&gt;
+    &lt;padding&gt;
+        &lt;Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /&gt;
+    &lt;/padding&gt;
+
+    &lt;Label fx:id="welcomeText" /&gt;
+    &lt;Button onAction="#onHelloButtonClick" text="Hello!" textAlignment="CENTER" /&gt;
+&lt;/VBox&gt;</code></pre>
+</div>
+</div>
+<p>Cada componente define unas características. Vamos a centrarnos primero en el botón.</p>
+<p style="padding-left: 30px;"><strong>1. Botones. </strong></p>
+<p style="text-align: justify;">La propiedad <em>text</em> hace referencia al texto que aparecerá en el botón. Por otro lado, en este caso se aplica además la propiedad <em>textAligment</em> para centrarlo, y nos queda la propiedad más importante: <em>onAction,</em> que es en la que nos vamos a parar. </p>
+<p style="text-align: justify; padding-left: 30px;">La propiedad <em>onAction</em> define el nombre del método que se lanzará cuando hagamos <em>click</em> en el botón. Este método deberemos escribirlo en el controlador del <em>fxml</em>, que en nuestro caso es <em>HelloController</em>. Vamos a verlo.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
+public class HelloController {
+    @FXML
+    private Label welcomeText;
+
+    @FXML
+    protected void onHelloButtonClick() {
+        welcomeText.setText("Welcome to JavaFX Application!");
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">Por un lado, el controlador define una variable de tipo etiqueta (<em>Label</em>). El cuerpo del método del botón que acabamos de mencionar hace uso de dicha variable, que representa a la etiqueta, y le aplica el método <em>setText</em> para que en cuanto hagamos <em>click</em> se lance el evento y se modifique el texto.</p>
+<p style="text-align: justify; padding-left: 60px;">                     Antes de hacer <em>click</em>:                                               Después de hacer <em>click</em>:</p>
+<p style="text-align: justify; padding-left: 90px;"><img src="img0.png" width="325" height="277" alt="2" />           <img src="img3.1.png" width="325" height="276" alt="19" /></p>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;">Esta forma de lanzar eventos con botones tiene otra variedad, que no necesariamente tiene que definir un método para realizar acciones sobre él. Para probar esta segunda opción, crearemos un nuevo botón en nuestro fxml:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;?import javafx.geometry.*?&gt;
+&lt;?import javafx.scene.control.*?&gt;
+&lt;?import javafx.scene.layout.*?&gt;
+
+&lt;VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.demo.HelloController"&gt;
+    &lt;padding&gt;
+        &lt;Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /&gt;
+    &lt;/padding&gt;
+
+    &lt;Label fx:id="welcomeText" /&gt;
+    &lt;Button onAction="#onHelloButtonClick" text="Hello!" textAlignment="CENTER" /&gt;
+    &lt;Button fx:id="boton" text="Pulsa!" textAlignment="CENTER" /&gt;
+&lt;/VBox&gt;</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">En este caso, le modificamos el texto y borramos la propiedad <em>onAction. Además,</em> le creamos un <em><strong>id</strong></em>, al que haremos referencia definiendo una variable de tipo <em>Button</em> desde el controlador. Vamos a ello:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+public class HelloController {
+    @FXML
+    private Label welcomeText;
+    @FXML
+    private Button boton;
+
+    @FXML
+    protected void onHelloButtonClick() {
+        welcomeText.setText("Welcome to JavaFX Application!");
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Ahora, crearemos el método <span style="color: #008000;"><strong><em>initialize()</em></strong></span>. Este método se lanza automáticamente cuando iniciamos la aplicación, y estará escuchando constantemente para que cuando se produzca algún evento, se lance.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+public class HelloController {
+    @FXML
+    private Label welcomeText;
+    @FXML
+    private Button boton;
+    
+    @FXML
+    public void initialize(){
+        boton.setOnAction(e -&gt; System.out.println("Hola"));
+    }
+
+    @FXML
+    protected void onHelloButtonClick() {
+        welcomeText.setText("Welcome to JavaFX Application!");
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">En nuestro caso, al botón le hemos creado un evento <em>setOnAction</em>, que imprimirá <em>"Hola"</em> en la consola cuando hagamos <em>click</em> en él.</p>
+<p style="text-align: justify; padding-left: 30px;">Vamos a probarlo:</p>
+<p style="text-align: center;"><img src="img2.1.png" width="325" height="278" alt="6" /></p>
+<p style="text-align: justify; padding-left: 30px;">Y si hacemos <em>click</em> en "<em>Pulsa!</em>":</p>
+<p style="text-align: justify; padding-left: 30px;"><img src="img3.png" width="961" height="302" alt="7" /></p>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id3">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejemplo. Contador que aumenta cada vez que se pulsa un botón</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_130_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Supongamos un simple contador. Reutilizaremos el botón "<em>Pulsa!</em>" creado en el ejemplo anterior.</p>
+<p>Modificaremos las propiedades de dicho botón desde el <em>fxml</em> para adaptarlo al contador:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;?import javafx.geometry.*?&gt;
+&lt;?import javafx.scene.control.*?&gt;
+&lt;?import javafx.scene.layout.*?&gt;
+
+&lt;VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.demo.HelloController"&gt;
+    &lt;padding&gt;
+        &lt;Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /&gt;
+    &lt;/padding&gt;
+
+    &lt;Label fx:id="welcomeText" /&gt;
+    &lt;Button onAction="#onHelloButtonClick" text="Hello!" textAlignment="CENTER" /&gt;
+    &lt;Button fx:id="contador" text="Contar" textAlignment="CENTER" /&gt;
+&lt;/VBox&gt;
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Desde el controlador también deberemos modificar la referencia que teníamos, ya que ahora el id de nuestro botón es "<em>contador</em>". Además, ahora por consola ya no imprimiremos "Hola", sino que tendremos que contar: 1, 2, 3, 4,... Para ello, crearemos también una variable estática en la clase. Quedaría de la siguiente manera:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+public class HelloController {
+    
+    static int cont;
+    @FXML
+    private Label welcomeText;
+    @FXML
+    private Button contador;
+
+    @FXML
+    public void initialize(){
+        contador.setOnAction(e -&gt; System.out.println(++cont));
+    }
+
+    @FXML
+    protected void onHelloButtonClick() {
+        welcomeText.setText("Welcome to JavaFX Application!");
+    }
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Lo probamos:</p>
+<p><img src="img0.1.png" width="956" height="392" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Para no depender de la consola, iremos imprimiendo el valor del contador también en la pantalla. Introduciremos una nueva etiqueta en el <em>fxml</em> para ello:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;?import javafx.geometry.*?&gt;
+&lt;?import javafx.scene.control.*?&gt;
+&lt;?import javafx.scene.layout.*?&gt;
+
+&lt;VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.demo.HelloController"&gt;
+    &lt;padding&gt;
+        &lt;Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /&gt;
+    &lt;/padding&gt;
+
+    &lt;Label fx:id="welcomeText" /&gt;
+    &lt;Button onAction="#onHelloButtonClick" text="Hello!" textAlignment="CENTER" /&gt;
+    &lt;Button fx:id="contador" text="Contar" textAlignment="CENTER" /&gt;
+    &lt;Label fx:id="contando" /&gt;
+&lt;/VBox&gt;
+</code></pre>
+</div>
+</div>
+<p><img src="img1.png" width="890" height="459" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Nos toca modificar el controlador de nuevo. Ahora, el método <em>setOnAction</em> del botón no va a realizar un <em>println</em>, sino un <em>setText</em> en la nueva etiqueta:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>package org.example.demo;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
+public class HelloController {
+
+    static int cont;
+    @FXML
+    private Label welcomeText;
+    @FXML
+    private Button contador;
+    @FXML
+    private Label contando;
+
+    @FXML
+    public void initialize(){
+        contador.setOnAction(e -&gt; contando.setText(Integer.toString(++cont)));
+    }
+
+    @FXML
+    protected void onHelloButtonClick() {
+        welcomeText.setText("Welcome to JavaFX Application!");
+    }
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Lo probamos de nuevo:</p>
+<p><img src="img2.2.png" width="327" height="267" alt="10" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="811_instalacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="813_objetos_modelo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

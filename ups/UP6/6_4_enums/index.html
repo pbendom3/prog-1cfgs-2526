@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>BONUS. Enums </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="BONUS. Enums" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">BONUS. Enums</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">BONUS. Tipos enumerados (enum)</a></li>
+   <li><a href="enums_en_el_proyecto_del_festival.html" class="daddy">Enums en el proyecto del Festival</a>
+   <ul class="other-section">
+      <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="enums_en_el_proyecto_del_festival.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">BONUS. Tipos enumerados (enum)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">En <em>Java</em>, las clases tipo <strong><em>enum</em> </strong>(enumeración) se utilizan para definir un conjunto fijo de valores. Es decir, <span style="background-color: #ffff99;"><strong><span style="text-decoration: underline;">definen tipos de datos que sólo pueden tener un conjunto específico de valores</span></strong></span>, como por ejemplo los días de la semana (<em>LUNES, MARTES, MIÉRCOLES, JUEVES, VIERNES</em>), meses del año (<em>ENERO, FEBRERO, MARZO, ABRIL,...</em>), los estados de un pedido (<em>RECIBIDO, PROCESANDO, COMPLETADO, ENTREGADO</em>), los tipos de entradas en un concierto (GENERAL, PISTA, VIP), los roles de un organizador (<em>SEGURIDAD, PRENSA, PROMOTOR</em>), etc.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public enum identificadorValores { 
+    //posibles valores 
+} </code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Ejemplo para los días de la semana:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public enum DiaSemana {
+ LUNES,
+ MARTES,
+ MIÉRCOLES,
+ JUEVES,
+ VIERNES,
+ SÁBADO,
+ DOMINGO;
+}
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">🚨 <span style="text-decoration: underline;">A tener en cuenta:</span> no podemos crear objetos del tipo enumerado con la sentencia <em><strong>new. </strong></em><strong><span style="background-color: #ffff99;">C</span></strong><span style="background-color: #ffff99;"><strong>ada uno de estos valores (<em>LUNES, MARTES, etc.</em>) ya son instancias de <em>DiaSemana</em>.</strong></span></p>
+<p style="padding-left: 30px;">Para usar el conjunto de días de la semana desde un programa principal <em>main...</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class AppTipoEnumerados {
+
+    public static void main(String[] args) {
+
+        DiasSemana diaActual = DiasSemana.JUEVES;
+        System.out.println("Hoy es " + diaActual);
+
+    }
+}</code></pre>
+</div>
+</div>
+<p><em><img src="img0.png" width="351" height="68" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></em></p>
+<p style="padding-left: 30px;">Además, tenemos disponible el <span style="background-color: #ffff99;">método <strong>.</strong></span><em><span style="background-color: #ffff99;"><strong>values()</strong></span>,</em> que devuelve un <em>array</em> con todos los valores del <em>enum</em> en el orden en que son declarados:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class AppTipoEnumerados {
+
+    public static void main(String[] args) {
+
+        DiasSemana diaActual = DiasSemana.JUEVES;
+        System.out.println("Hoy es " + diaActual);
+
+        for (DiasSemana dia : DiasSemana.values()){
+            System.out.print(dia + " ");
+        }
+
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img1.png" width="501" height="107" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<h5>Métodos y constructores en clases de tipo <em>enum</em></h5>
+<p style="text-align: justify;">Las clases tipo <em>enum</em> también pueden tener métodos y constructores definidos. Por ejemplo, con una clase <em>enum</em> como la siguiente que contiene las meses del año:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public enum Mes {
+
+ ENERO(31),
+ FEBRERO(28),
+ MARZO(31),
+ ABRIL(30),
+ MAYO(31),
+ JUNIO(30),
+ JULIO(31),
+ AGOSTO(31),
+ SEPTIEMBRE(30),
+ OCTUBRE(31),
+ NOVIEMBRE(30),
+ DICIEMBRE(31);
+
+private final int dias;
+
+Mes(int dias) { 
+    this.dias = dias; 
+}
+
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">La clase <em><strong>Mes</strong> </em>define 12 constantes de enumeración que representan los meses del año. Además, la clase tiene un campo <em><strong>dias</strong> </em>que se utiliza para almacenar el número de días en cada mes. La clase también tiene un constructor que se utiliza para inicializar el campo <em>dias</em>.</p>
+<p style="text-align: justify; padding-left: 30px;">También se podría añadir un método <em><strong>getDias()</strong></em> para obtener el número de días en un mes específico:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public enum Mes {
+ ENERO(31),
+ FEBRERO(28),
+ MARZO(31),
+ ABRIL(30),
+ MAYO(31),
+ JUNIO(30),
+ JULIO(31),
+ AGOSTO(31),
+ SEPTIEMBRE(30),
+ OCTUBRE(31),
+ NOVIEMBRE(30),
+ DICIEMBRE(31);
+
+private final int dias;
+
+Mes(int dias) { 
+   this.dias = dias; 
+}
+
+public int getDias() {
+   return dias; 
+}
+
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">Para probar las nuevas funcionalidades, añadiremos la siguiente lógica a nuestro programa principal:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class AppTipoEnumerados {
+
+    public static void main(String[] args) {
+
+        DiasSemana diaActual = DiasSemana.JUEVES;
+        System.out.println("Hoy es " + diaActual);
+
+        for (DiasSemana dia : DiasSemana.values()){
+            System.out.print(dia + " ");
+        }
+
+        System.out.println();
+        
+        Mes mesActual = Mes.ENERO;
+        System.out.println(mesActual + " tiene " + mesActual.getDias() + " días");
+
+    }
+
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px; text-align: center;"><img src="img2.png" width="572" height="120" alt="3" /></p>
+<hr />
+<h5 style="text-align: justify;">De consola a <em>enum</em></h5>
+<p style="text-align: justify;">En ocasiones, puede que debamos recibir información por consola y almacenarla como tipo enumerado. Para ello, deberemos guardar en un <em>String</em> un valor compatible con algún valor de tipo enum en cuestión, y luego hacer una conversión.</p>
+<p style="text-align: justify;">Haremos dicha conversión a través del método <em><strong>valueOf(String cadena)</strong></em> que contienen todas las clases de tipo <em>enum. </em>Este método recibirá un <em>String</em> con un posible valor de tipo enumerado.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class AppTipoEnumerados {
+
+    static Scanner teclado = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        DiasSemana diaActual = DiasSemana.JUEVES;
+        System.out.println("Hoy es " + diaActual);
+
+        for (DiasSemana dia : DiasSemana.values()){
+            System.out.print(dia + " ");
+        }
+
+        System.out.println();
+
+        Mes mesActual = Mes.ENERO;
+        System.out.println(mesActual + " tiene " + mesActual.getDias() + " días");
+
+        System.out.println();
+
+        System.out.println("Dime un mes " + Arrays.toString(Mes.values()));
+        String mes = teclado.next();
+        Mes mes_enum = Mes.valueOf(mes); // mes → deberá ser un tipo enumerado válido
+        System.out.println(mes_enum + " tiene " + mesEnum.getDias() + " días");
+
+    }
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;"><strong><span style="text-decoration: underline;"><span style="color: #ff0000; text-decoration: underline;"><img src="img3.png" width="961" height="200" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></span></span></strong></span></p>
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;"><strong><span style="text-decoration: underline;"><span style="color: #ff0000; text-decoration: underline;">OJO</span></span>. Si el valor del <em>String</em> no es válido, se produc<span style="background-color: #ffff99;">irá un error en ejecución</span></strong>. Además, deberemos tener en cuenta que <span style="text-decoration: underline;">se diferencia entre mayúsculas y minúsculas</span>.</span></p>
+<p><img src="img4.png" width="991" height="253" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<h5>Otros métodos útiles en los <em>enum</em></h5>
+<ul>
+<li><em><strong>ordinal() </strong></em>: devuelve la posición (índice) de la constante buscada en el <em>enum</em>.</li>
+<li><em><strong>name() </strong></em>: devuelve el nombre de la constante como <em>String</em>.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>package org.example.enums;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class AppTipoEnumerados {
+
+    static Scanner teclado = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        DiasSemana diaActual = DiasSemana.JUEVES;
+        System.out.println("Hoy es " + diaActual);
+
+        for (DiasSemana dia : DiasSemana.values()){
+            System.out.print(dia + " ");
+        }
+
+        System.out.println();
+
+        Mes mesActual = Mes.ENERO;
+        System.out.println(mesActual + " tiene " + mesActual.getDias() + " días");
+
+        System.out.println();
+
+        System.out.println("Dime un mes " + Arrays.toString(Mes.values()));
+        String mes = teclado.next();
+        Mes mes_enum = Mes.valueOf(mes); // mes → deberá ser un tipo enumerado válido
+        System.out.println(mes_enum + " tiene " + mes_enum.getDias() + " días");
+
+        System.out.println();
+        int posicion = diaActual.ordinal();
+        System.out.println("Posición para " + diaActual + ": " + posicion);
+        String valor = mesActual.name();
+        System.out.println("Valor del enum para " + mesActual + ": " + valor);
+        
+    }
+}
+</code></pre>
+</div>
+</div>
+<p><img src="img5.png" width="991" height="251" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="enums_en_el_proyecto_del_festival.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

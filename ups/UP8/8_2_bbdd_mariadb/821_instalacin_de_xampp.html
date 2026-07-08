@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.2.1. Instalación de XAMPP | 8_2_bbdd_relacionales </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8_2_bbdd_relacionales</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.2. Bases de datos relacionales. MySQL/MariaDB.</a></li>
+   <li id="active"><a href="821_instalacin_de_xampp.html" class="active no-ch">8.2.1. Instalación de XAMPP</a></li>
+   <li><a href="822_configuracin_del_entorno_conector_jdbc_y_prueba_de_conexin_desde_java.html" class="no-ch">8.2.2. Configuración del entorno (conector JDBC) y prueba de conexión desde Java</a></li>
+   <li><a href="823_primeras_consultas_sql_select.html" class="no-ch">8.2.3. Primeras consultas SQL (select)</a></li>
+   <li><a href="824_acciones_dml_insert_update_delete.html" class="no-ch">8.2.4. Acciones DML (insert, update, delete)</a></li>
+   <li><a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="no-ch">8.2.5. Cargar datos de una tabla en una lista de objetos</a></li>
+   <li><a href="prctica_2_mi_primer_crud_mostrar_y_manipular_datos_desde_una_tableview_de_javafx.html" class="daddy">Práctica 2. Mi primer CRUD: mostrar y manipular datos desde una TableView de JavaFX</a>
+   <ul class="other-section">
+      <li><a href="exportacin_generar_exe.html" class="no-ch">Exportación (generar .exe)</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="822_configuracin_del_entorno_conector_jdbc_y_prueba_de_conexin_desde_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.2.1. Instalación de XAMPP</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id2">
+<div class="iDevice emphasis0" >
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><em>XAMPP</em> es un paquete de software que incluye todo lo necesario para crear un servidor web local en nuestro equipo.</p>
+<p><img src="que-es-xampp.png" width="332" height="194" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><em>XAMPP</em> incluye:</p>
+<ul>
+<li><em>Apache</em> → el servidor web.</li>
+<li><em>MySQL o MariaDB</em> → el SGBD.</li>
+<li><em>PHP</em> → lenguaje de programación del lado del servidor.</li>
+<li><em>phpMyAdmin</em> → una aplicación web para gestionar bases de datos fácilmente desde el navegador.</li>
+</ul>
+<p> </p>
+<p><strong>Vale, pero... ¿qué tiene que ver XAMPP?</strong></p>
+<p style="text-align: justify;">Haremos uso de esta herramienta para gestionar nuestras bases de datos con <em>MySQL/MariaDB</em>, ya que, además de proporcionarnos este servicio, también tendremos disponible <strong><em>Apache</em> </strong>para mejoras futuras en cuanto a servidor para implementar otro tipo de apps web (como las de IA con <em>TensorFlow</em> y <em>JS</em>).</p>
+<p style="text-align: justify;">Otra alternativa es instalar directamente el servicio de <em>MariaDB</em> <a href="https://mariadb.org/download/">descargándolo desde su sitio web.</a></p>
+<p style="text-align: justify;"> </p>
+<h5 style="text-align: justify;">Instalación y configuración de <em>XAMPP</em></h5>
+<p style="padding-left: 30px;">Descarga e instala: <a href="https://www.apachefriends.org/es/index.html">XAMPP Installers and Downloads for Apache Friends</a></p>
+<p><img src="img1.png" width="670" height="438" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify; padding-left: 30px;">Una vez dentro, observa que aparecen los servicios y sus respectivos puertos. Por defecto, <strong>Apache usa el puerto 80, y MySQL/MariaDB el 3306</strong> (el mismo que usaría el SGBD sin XAMPP). Para evitar problemas por si se decide instalar un servicio de <em>MySQL/MariaDB</em> aislado de XAMPP en el futuro, <span style="background-color: #ffff00;"><strong>vamos a modificar el puerto por el 3307.</strong></span></p>
+<p style="text-align: justify; padding-left: 30px;">Para ello, <strong>ejecutamos <em>XAMPP</em> <span style="text-decoration: underline;">como administrador</span></strong> y nos dirigimos a <em><strong>Config --&gt; Serve and Port Settings</strong></em> . En la pestaña de <em>MySQL</em> modificamos el puerto:</p>
+<p><img src="img2.png" width="676" height="466" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">Inicia el servicio y comprueba que se conecta al puerto correcto (3307):</p>
+<p><img src="img3.png" width="671" height="438" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">Podremos consultar el archivo de configuración principal del servicio <em><strong>my.ini</strong></em> desde el botón <strong><em>Config</em></strong>:</p>
+<p style="padding-left: 30px;"><img src="img5.png" width="761" height="389" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">Por último, consultamos a través del <strong><em>Shell</em> </strong>la versión instalada de <em>MySQL</em> para comprobar que ya estamos actualizados con <em>MariaDB</em>:</p>
+<p style="padding-left: 30px;"><img src="img4.png" width="761" height="154" alt="6" /></p>
+<p> </p>
+<h5>Conexión con el servidor de <em>MariaDB</em> </h5>
+<p style="text-align: justify;">Antes de irnos a un software externo, probaremos el acceso desde el mismo XAMPP. Se nos habrá creado un usuario <em><strong>root</strong> </em>con contraseña vacía.</p>
+<p>Desde el mismo <em>Shell</em>, tecleamos el siguiente comando para acceder a <em>MariaDB</em> por consola:</p>
+<div class="highlighted-code code-style-2 language-processing line-numbers">
+<div>
+<pre><code>mysql -u root -p<br /></code></pre>
+</div>
+</div>
+<p style="padding-left: 30px; text-align: justify;">Con el parámetro <em><strong>-u</strong></em> le indicamos el usuario y con el parámetro <strong><em>–p</em></strong> la contraseña. Al no indicarle esta última, <i>MySQL </i>nos pedirá que la introduzcamos, pero como el servidor no tiene contraseña, deberemos pulsar <em>enter</em> directamente.</p>
+<p><img src="img6.png" width="791" height="281" alt="8" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Una vez dentro, ya podremos consultar tablas y realizar cualquier operación con SQL de las que ya conocemos. Por hacer algo, crearemos una nueva base de datos llamada <em><strong>prueba</strong> </em>y consultaremos las BBDD que trae por defecto <em>MariaDB</em> para configuración:</p>
+<div class="highlighted-code code-style-2 language-processing line-numbers">
+<div>
+<pre><code>create database prueba;
+show databases;</code></pre>
+</div>
+</div>
+<p><img src="img7.png" width="791" height="377" alt="9" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<h5>Conexión desde software GUI externo</h5>
+<p style="text-align: justify;">Una vez comprobado que el servicio funciona, vamos a conectarnos desde algún software externo para hacer más amigable la interacción con nuestra base de datos. Elige el que quieras o el que estés acostumbrado (<em>HeidiSQL, sqlDeveloper, SQLWorkbench, etc</em>.).</p>
+<p>Como el nativo de <em>MariaDB</em> es <a href="https://www.heidisql.com/">HeidiSQL</a>, para los ejemplos usaremos ese.</p>
+<p> </p>
+<p style="text-align: justify;">Creamos una nueva conexión a nuestro servidor de <em>MariaDB</em> desde <em>HeidiSQL</em>. Por defecto, el nombre del host es siempre <strong><em>localhost</em> </strong>(o la ip <em><strong>127.0.0.1</strong></em>):</p>
+<p><img src="img8.png" width="722" height="485" alt="9" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Si todo va bien, nos cargará el entorno de nuestra conexión y las bases de datos consultadas anteriormente a través de la consola aparecerán a la izquierda de la pantalla:</p>
+<p><img src="img9.png" width="791" height="422" alt="10" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="822_configuracin_del_entorno_conector_jdbc_y_prueba_de_conexin_desde_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Práctica 2. Mi primer CRUD: mostrar y manipular datos desde una TableView de JavaFX | 8_2_bbdd_relacionales </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8_2_bbdd_relacionales</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.2. Bases de datos relacionales. MySQL/MariaDB.</a></li>
+   <li><a href="821_instalacin_de_xampp.html" class="no-ch">8.2.1. Instalación de XAMPP</a></li>
+   <li><a href="822_configuracin_del_entorno_conector_jdbc_y_prueba_de_conexin_desde_java.html" class="no-ch">8.2.2. Configuración del entorno (conector JDBC) y prueba de conexión desde Java</a></li>
+   <li><a href="823_primeras_consultas_sql_select.html" class="no-ch">8.2.3. Primeras consultas SQL (select)</a></li>
+   <li><a href="824_acciones_dml_insert_update_delete.html" class="no-ch">8.2.4. Acciones DML (insert, update, delete)</a></li>
+   <li><a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="no-ch">8.2.5. Cargar datos de una tabla en una lista de objetos</a></li>
+   <li id="active"><a href="prctica_2_mi_primer_crud_mostrar_y_manipular_datos_desde_una_tableview_de_javafx.html" class="active daddy">Práctica 2. Mi primer CRUD: mostrar y manipular datos desde una TableView de JavaFX</a>
+   <ul>
+      <li><a href="exportacin_generar_exe.html" class="no-ch">Exportación (generar .exe)</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="exportacin_generar_exe.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Práctica 2. Mi primer CRUD: mostrar y manipular datos desde una TableView de JavaFX</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id8">
+<div class="iDevice emphasis0" >
+<div id="ta8_135_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><strong><em>CRUD</em> </strong>es el acronimo de <em>Create, Read, Update and Delete</em> (Crear, Leer, Actualizar y Borrar), que se usa para referirse a las funciones básicas en bases de datos.</p>
+<p style="text-align: justify; padding-left: 30px;">a) Debes crear para <em><strong>Estudiantes</strong> </em>una pantalla de mantenimiento similar a la realizada anteriormente en la Práctica 1 con <em>JavaFX</em>, donde almacenábamos la info escrita en dos <em>TextField</em> en una lista mediante el botón <em>Guardar </em>y la mostrábamos en una <em>TableView</em>. </p>
+<p style="padding-left: 30px;"><img src="img2.3.png" width="602" height="432" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px; text-align: center;">La fecha de nacimiento es un elemento <em>FXML</em> de tipo <em><strong>DatePicker</strong></em>, y el tipo de dato <em><strong>LocalDate.</strong></em></p>
+<p style="padding-left: 60px; text-align: justify;">La diferencia es que ahora cuando <em>clickemos</em> en <em><strong>Guardar</strong> </em>tendremos que almacenar a los estudiantes en una tabla de BD, y no en una lista estática (se cambia el <em>.add()</em> por un <em>INSERT</em>). </p>
+<p style="text-align: justify; padding-left: 30px;">b) Para mostrar los datos de los estudiantes guardados en una <em>TableView</em>, realizaremos una consulta (<em>select</em>) a la BD, almacenaremos los resultados en una lista <strong><em>ObservableList</em> </strong>(como en el apartado 8.2.5.) y se la devolveremos a la tabla para que la imprima.</p>
+<p style="text-align: justify; padding-left: 60px;">Para mostrar el formato correcto de <span style="background-color: #ffff99;"><strong>la columna de la fecha de nacimiento debe configurarse</strong></span> en el método <em><strong>initialize()</strong></em> de la siguiente manera:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        columnaFechaNac.setCellValueFactory(data -&gt;
+                new ReadOnlyObjectWrapper&lt;&gt;(data.getValue().getFecha_nacimiento())
+        );</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">c) Cámbiale el nombre al botón <em><strong>Guardar</strong></em>: llámalo <em><strong>Insertar</strong></em>. Añade tres botones más a tu app: <strong><i>Actualizar, </i></strong><strong><em>Eliminar </em></strong>y <em></em><strong><em>Guardar </em></strong>(que ahora servirá para otra cosa). </p>
+<p style="padding-left: 30px;"><img src="img1.4.png" width="603" height="603" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 90px;">El botón <em><strong>Guardar</strong> </em>estará inhabilitado por defecto. </p>
+<p style="text-align: justify; padding-left: 30px;">d) El botón <em><strong>Eliminar</strong> </em>debe lanzar una instrucción a la BD de tipo DELETE, con los valores de los campos a eliminar del registro de la tabla que esté seleccionado.</p>
+<p style="text-align: justify; padding-left: 60px;">Para obtener los valores de la fila seleccionada y poder construir el <em>WHERE</em> del <em>DELETE</em>, usa este código de referencia:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        Estudiante seleccionado = tablaEstudiantes.getSelectionModel().getSelectedItem();
+
+        if (seleccionado != null) {
+            Mantenimiento.borrar(bd,seleccionado);
+        }else{
+            System.out.println("No hay ninguna fila seleccionada.");
+        }</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">e) Además, al seleccionar una fila en la <em>TableView </em>y hacer <em>click </em>en <strong><em>Editar</em></strong>, se cargarán los datos visiblemente en los <em>TextField</em> y <em>DatePicker</em> para poder editarlos.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>       Estudiante seleccionado = tablaEstudiantes.getSelectionModel().getSelectedItem();
+
+        if (seleccionado != null) {
+            niaTextField.setText(String.valueOf(seleccionado.getNia()));
+            nombreTextField.setText(seleccionado.getNombre());
+            fechaNacPicker.setValue(seleccionado.getFecha_nacimiento());
+        }else{
+            System.out.println("No hay ninguna fila seleccionada.");
+        }</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><img src="img2.2.png" width="603" height="565" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify; padding-left: 30px;">Se habilitará el botón <em><strong>Guardar</strong> </em>y se inhabilitará el botón <em><strong>Insertar</strong> </em>mientras dure la edición. Usa esto para modificar la propiedad de habilitar / inhabilitar los botones:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>boton.setDisable(true);</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;"><code></code></p>
+<p style="text-align: justify; padding-left: 30px;">f) El <em>click</em> en el botón <em><strong>Guardar</strong> </em>hará un <em>UPDATE</em> a la tabla de la BD con los valores que tengan los <em>TextField</em> y <em>DatePicker</em> en el momento de ser presionado. Cuando finalice la edición, se debe volver a inhabilitar el botón <em><strong>Guardar</strong> </em>y restablecer como habilitado el botón <em><strong>Insertar</strong></em>.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="exportacin_generar_exe.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

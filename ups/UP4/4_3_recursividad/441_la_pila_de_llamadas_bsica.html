@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.1. La pila de llamadas (básica) | 4.4. Recursividad </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">4.4. Recursividad</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4.4. Recursividad</a></li>
+   <li id="active"><a href="441_la_pila_de_llamadas_bsica.html" class="active no-ch">4.4.1. La pila de llamadas (básica)</a></li>
+   <li><a href="442_la_pila_de_llamadas_recursividad.html" class="no-ch">4.4.2. La pila de llamadas (recursividad)</a></li>
+   <li><a href="443_ampliacin_sobre_recursividad.html" class="no-ch">4.4.3. Ampliación sobre recursividad</a></li>
+   <li><a href="soluciones.html" class="no-ch">Soluciones</a></li>
+   <li><a href="actividades_sobre_recursividad_entregable.html" class="no-ch">Actividades sobre recursividad [entregable]</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="442_la_pila_de_llamadas_recursividad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4.1. La pila de llamadas (básica)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id2">
+<div class="iDevice emphasis0" >
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="exe-text"><p>La pila de llamadas se aloja en la memoria RAM, y está compuesta por los denominados <span style="text-decoration: underline;"><strong>registros de activación</strong></span>. Cada uno de estos registros...</p>
+<ul>
+<li>Tiene asociada una llamada dada a un método, la del <em>main</em> incluida.</li>
+<li>Contiene las variables locales del método y sus parámetros, junto con el valor que se les ha asignado a estos últimos al realizar la llamada (parámetros actuales).</li>
+</ul>
+<p><img src="img0.png" width="673" height="333" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img1.png" width="681" height="334" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img3.png" width="244" height="367" alt="4" style="float: left;" /> <img src="img2.png" width="247" height="374" alt="3" style="font-size: 16.8px;" /> <img src="img4.png" width="250" height="375" alt="5" style="float: left;" /><span style="font-size: 16.8px;"></span></p>
+<p style="text-align: left;"><img src="img5.png" width="245" height="370" alt="6" /> <img src="img6.png" width="246" height="369" alt="7" /> <img src="img7.png" width="245" height="369" alt="8" /></p>
+<p style="text-align: left;"><img src="img8.png" width="246" height="369" alt="9" /><img src="img9.png" width="248" height="368" alt="10" /></p>
+<p style="text-align: left;">Un método sólo puede usar:</p>
+<ul>
+<li style="text-align: left;">La información contenida en su correspondiente registro de activación de la pila de llamadas.</li>
+<li style="text-align: left;">Los datos contenidos en las variables globales.</li>
+</ul>
+<p></p>
+<h4>Más ejemplos...</h4>
+<p><strong>Pila de llamadas con 3 métodos</strong></p>
+<p><strong><img src="img10.png" width="726" height="360" alt="11" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img11.png" width="729" height="363" alt="12" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img12.png" width="725" height="360" alt="13" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img13.png" width="716" height="358" alt="14" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img14.png" width="716" height="358" alt="15" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img15.png" width="720" height="360" alt="16" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img16.png" width="725" height="365" alt="17" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img17.png" width="725" height="359" alt="18" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img18.png" width="721" height="361" alt="19" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img19.png" width="721" height="361" alt="20" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img20.png" width="721" height="360" alt="21" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img21.png" width="732" height="363" alt="22" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img22.png" width="732" height="366" alt="23" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img23.png" width="731" height="362" alt="24" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img24.png" width="727" height="365" alt="25" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img25.png" width="727" height="364" alt="26" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img26.png" width="730" height="361" alt="28" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img27.png" width="730" height="365" alt="29" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img28.png" width="730" height="365" alt="30" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<p><strong><img src="img29.png" width="236" height="348" alt="31" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">EJERCICIO</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_136_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Imita la pila de llamadas que ejecutará la JVM con estos 3 métodos:</p>
+<p><img src="img0.2.png" width="588" height="436" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="442_la_pila_de_llamadas_recursividad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

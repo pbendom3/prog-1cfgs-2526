@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1. Otros algoritmos de ordenación | 2. Ordenación de arrays </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">2. Ordenación de arrays</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Ordenación de arrays</a></li>
+   <li id="active"><a href="21_otros_algoritmos_de_ordenacin.html" class="active no-ch">2.1. Otros algoritmos de ordenación</a></li>
+   <li><a href="22_cmo_ordenar_arrays_en_java_con_el_mtodo_sort_de_la_clase_arrays.html" class="no-ch">2.2. Cómo ordenar arrays en Java con el método sort() de la clase Arrays</a></li>
+   <li><a href="23_cmo_buscar_en_un_array_ordenado_con_el_mtodo_binarysearch.html" class="no-ch">2.3. Cómo buscar en un array ordenado con el método binarySearch()</a></li>
+   <li><a href="actividad_eliminar_duplicados_de_un_array.html" class="no-ch">Actividad. Eliminar duplicados de un array</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_cmo_ordenar_arrays_en_java_con_el_mtodo_sort_de_la_clase_arrays.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1. Otros algoritmos de ordenación</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>¿Qué es un algoritmo de ordenación?</strong></p>
+<p style="padding-left: 30px;">→ Es una forma estructurada que indica cómo ordenar los elementos que hay dentro.</p>
+<p><strong>¿Son todos los algoritmos iguales?</strong></p>
+<p style="padding-left: 30px;"><strong>→ </strong>No, algunos son más eficientes que otros.</p>
+<hr />
+<h4>Algoritmos '<em>in-place</em>' y algoritmos '<em>no in-place</em>'</h4>
+<p style="text-align: justify;">Un algoritmo «<em>no in-place</em>» es un algoritmo que no puede realizarse sin utilizar un espacio adicional para guardar datos mientras se procesa. Por ejemplo, si se tiene una lista de números y se quiere ordenar utilizando un algoritmo «no in-place», se necesitaría un <em>array</em> adicional para almacenar los números mientras se van ordenando, ya que no puede realizar la operación de ordenación sin modificar los datos originales y, por lo tanto, necesita un lugar donde almacenarlos mientras los procesa. </p>
+<p style="text-align: justify;">En cambio, un algoritmo «<em>in-place</em>» es un algoritmo que puede realizar una operación sin necesidad de espacio adicional (puede procesar los datos directamente en el lugar donde se almacenan, sin necesidad de utilizar una estructura de datos adicional).</p>
+<hr />
+<p><span style="background-color: #ffff00;"><strong>ACTIVIDAD. ¿Qué tipo de algoritmo es el método por <em>Selección</em> visto en el apartado anterior?</strong></span></p>
+<hr />
+<p style="text-align: justify;">Los algoritmos «in-place» son más eficientes en términos de espacio, ya que no requieren espacio adicional para realizar la operación. Sin embargo, algunos algoritmos «no in-place» pueden ser más eficientes en términos de tiempo o pueden tener otras ventajas que los hagan más adecuados para ciertas tareas. </p>
+<hr />
+<h4>El método burbuja (<em>Bubble Sort</em>)</h4>
+<p style="text-align: justify;">El algoritmo de la burbuja es uno de los métodos de ordenación más conocidos, y de los primeros en ser usados. Consiste en comparar pares de elementos adyacentes en un <em>array,</em> y si están desordenados, intercambiar las posiciones hasta que terminen todos ordenados.</p>
+<p style="text-align: justify;">En cada iteración se comprueban los elementos adyacentes, de este modo, el máximo lo acabaremos situando a la derecha del <em>array. </em>Seguiremos haciendo lo mismo para el resto del <em>array</em>, pero hasta una posición menos con cada iteracción.</p>
+<p style="text-align: justify; padding-left: 30px;">El código <em>Java</em> para la ordenación burbuja, de forma ascendente: </p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code> int aux;
+ for (int i = 0; i &lt; vector.length; i++) {
+     for (int j = 0; j &lt; vector.length - i - 1; j++) { 
+     //El valor máximo lo más a la derecha posible
+       if (vector[j] &gt; vector[j + 1]) { 
+         aux = vector[j];
+         vector[j] = vector[j + 1];
+         vector[j + 1] = aux;
+       }
+     }
+ }
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">En el siguiente ejemplo se puede observar un ejemplo de cómo se guarda en la última posición el valor máximo. Luego, se repetirá el proceso descartando mirar dicho elemento (recorriendo hasta <em>length - 1</em>), y así sucesivamente:</p>
+<p><img src="img0.2.png" width="261" height="480" alt="17" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">Supongamos que tenemos el siguiente <em>array</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int vector[] = {5, 3, 8, 4, 2};</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">El algoritmo realizará las siguientes comparaciones y cambios:</p>
+<p style="padding-left: 60px;">- <strong>Primera iteración (i = 0)</strong>:</p>
+<p style="padding-left: 90px;">Compara 5 y 3, intercambia → {3, 5, 8, 4, 2}<br />Compara 5 y 8, no hace nada.<br />Compara 8 y 4, intercambia → {3, 5, 4, 8, 2}<br />Compara 8 y 2, intercambia → {3, 5, 4, 2, 8}</p>
+<p style="padding-left: 60px;">- <strong>Segunda iteración (i = 1)</strong>:</p>
+<p style="padding-left: 90px;">Compara 3 y 5, no hace nada.<br />Compara 5 y 4, intercambia → {3, 4, 5, 2, 8}<br />Compara 5 y 2, intercambia → {3, 4, 2, 5, 8}</p>
+<p style="padding-left: 60px;">- <strong>Tercera iteración (i = 2)</strong>:</p>
+<p style="padding-left: 90px;">Compara 3 y 4, no hace nada.<br />Compara 4 y 2, intercambia → {3, 2, 4, 5, 8}</p>
+<p style="padding-left: 60px;">- <strong>Cuarta iteración (i = 3):</strong></p>
+<p style="padding-left: 90px;">Compara 3 y 2, intercambia → {2, 3, 4, 5, 8}</p>
+<p style="padding-left: 30px;"><strong>Al final del proceso, el <em>array</em> estará ordenado: {2, 3, 4, 5, 8}.</strong></p>
+<hr />
+<h4>Algoritmo de ordenación rápida - Quicksort</h4>
+<p><em>Quicksort</em> es uno de los algoritmos de ordenación más rápidos que existe, y hace uso de la estrategia <em><strong>divide y vencerás</strong></em>. Trabaja de la siguiente forma:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int nums[] = {4, 7, 5, 6, 2, 3, 1, 9, 8};
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Elegimos como pivote el elemento de más a la izquierda. A partir de ahí, colocamos a su izquierda los menores, y a su derecha los mayores:</p>
+<p><img src="img1.2.png" width="495" height="306" alt="18" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<pre style="text-align: center;">Repetimos el mismo proceso con las 2 sublistas de la izquierda y de la derecha; y así sucesivamente sobre cada una de las sublistas, mientras las sublistas tengan más de un elemento.</pre>
+<p style="text-align: justify;">La eficiencia de este algoritmo depende de la posición en la que termine el pivote elegido. En el <strong>mejor caso</strong>, el pivote termina en el centro de la lista, dividiéndola en dos sublistas de igual tamaño. <span style="background-color: #ffff99;">En el <strong>peor caso</strong>, el pivote termina en un extremo de la lista</span>.</p>
+<p style="padding-left: 30px;">Ejemplo detallado de cómo ordenar este <em>array</em>: <em><strong>[4, 2, 7, 11, 1, 3, 10, 0, 9, 8, 6, 5]</strong> </em>:</p>
+<p style="padding-left: 60px;">1. Seleccionamos un pivote: por ejemplo, el primer elemento de la lista, el 4 (podría ser cualquiera otra posición, incluso aleatoria).</p>
+<p style="padding-left: 60px;">2. Partimos la lista en dos sublistas: una con los elementos menores que 4 y otra con los elementos mayores que 4. La nueva lista se divide en dos sublistas, <em>[2, 1, 3, 0]</em> y <em>[7, 11, 10, 9, 8, 6, 5]</em>.</p>
+<p style="padding-left: 60px;">3. Ordenamos cada sublista hasta que todos los elementos estén ordenados:</p>
+<p style="padding-left: 90px;">a. Ordenamos la sublista<em> [2, 1, 3, 0]</em> siguiendo los mismos pasos. Seleccionamos el primer elemento, 2, como pivote. Particionamos de nuevo la lista en <em>[1, 0] </em>y <em>[3]</em> y ordenamos re nuevo cada sublista hasta que todos los elementos estén ordenados.</p>
+<p style="padding-left: 90px;">b. Ordenamos la sublista <em>[7, 11, 10, 9, 8, 6, 5] </em>siguiendo los mismos pasos. Seleccionamos el primer elemento, 7, como pivote. Dividimos la lista en dos sublistas más <em>[4, 6, 5] </em>y <em>[11, 10, 9, 8]</em>. Continuamos ordenando cada sublista hasta que todos los elementos estén ordenados.</p>
+<p style="padding-left: 60px;">4. Una vez que todas las sublistas estén ordenadas, se combinan entre ellas para formar la lista completa ordenada: <em>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</em>.</p>
+<p style="text-align: justify;"><em></em></p>
+<p style="text-align: justify;"><em>Quicksort</em> es un algoritmo «in-place», lo que significa que no requiere espacio adicional para ordenar los datos. Además, suele tener un rendimiento excepcional en la mayoría de los casos. Es <strong>especialmente adecuado en entornos con restricciones de espacio y en situaciones en las que se necesita un algoritmo rápido y eficiente</strong> para ordenar los datos. Sin embargo, es importante tener en cuenta que <strong><em>Quicksort</em> no es un algoritmo estable</strong> y que puede tener un rendimiento peor en casos concretos, como cuando el pivote seleccionado es muchas veces el elemento más pequeño o más grande del conjunto de datos. </p>
+<hr />
+<h4>Otros algoritmos de ordenación</h4>
+<p style="text-align: justify;">Existen otros algoritmos de ordenación que son igual de rápidos que <em>Quicksort</em>, incluso a veces mejorando el peor caso de <em>Quicksort</em>. Sin embargo, en la práctica <em>Quicksort</em> suele ser el mejor para <em>arrays</em> medianos o grandes. Entre los más conocidos están <em>Mergesort</em> y <em>Heapsort</em>.</p>
+<p><img src="img2.1.png" width="856" height="133" alt="18" /></p>
+<p><img src="img3.1.png" width="857" height="135" alt="19" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img4.1.png" width="861" height="132" alt="20" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img5.1.png" width="861" height="133" alt="21" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_cmo_ordenar_arrays_en_java_con_el_mtodo_sort_de_la_clase_arrays.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

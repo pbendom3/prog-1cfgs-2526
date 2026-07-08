@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.3. Ampliación sobre recursividad | 4.4. Recursividad </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">4.4. Recursividad</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4.4. Recursividad</a></li>
+   <li><a href="441_la_pila_de_llamadas_bsica.html" class="no-ch">4.4.1. La pila de llamadas (básica)</a></li>
+   <li><a href="442_la_pila_de_llamadas_recursividad.html" class="no-ch">4.4.2. La pila de llamadas (recursividad)</a></li>
+   <li id="active"><a href="443_ampliacin_sobre_recursividad.html" class="active no-ch">4.4.3. Ampliación sobre recursividad</a></li>
+   <li><a href="soluciones.html" class="no-ch">Soluciones</a></li>
+   <li><a href="actividades_sobre_recursividad_entregable.html" class="no-ch">Actividades sobre recursividad [entregable]</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="442_la_pila_de_llamadas_recursividad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="soluciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4.3. Ampliación sobre recursividad</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_131_2" class="block iDevice_content">
+<div class="exe-text"><p>A estas alturas estará pensando... <strong>¿pero esto no es como usar bucles? </strong></p>
+<p>La realidad es que prácticamente todos los programas que se resuelven mediante bucles pueden resolverse también con recursividad de forma más eficiente, pero la complejidad de la lógica a implementar de forma recursiva no siempre lo permite.</p>
+<p style="padding-left: 60px;">Por ejemplo, crear un triángulo:</p>
+<p><img src="img0.3.png" width="553" height="364" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static void tri(int contB, int contA, int n){
+ 
+	 if (contB &lt; contA) {
+		 System.out.print("* ");
+		 tri(contB + 1, contA, n); 
+	 } else {
+	 	 System.out.println();
+		 if (contA &lt; n)
+		 	tri(0, contA + 1, n);
+	 }
+}
+
+public static void main(String[] args){
+	 int altura = 3;
+	 tri(0, 0, altura); 
+}</code></pre>
+</div>
+</div>
+<hr />
+<p>Otro ejemplo típico cuando se cuenta recursividad es la llamada <em><strong>serie de Fibonacci</strong></em>:</p>
+<p><img src="img1.2.png" width="317" height="293" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Aplicando los mismos pasos del factorial, necesitaremos una condición para que la función tenga una salida recursiva y otra no recursiva. En nuestro caso, sabemos que cuando N sea &lt; 2 (para 0 y 1) devolveremos siempre N.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static int fibonacci(int n){
+ 
+	 if (n&lt;2) {
+		 return n; 
+	 } else {
+	 	 return fibonacci(n-1) + fibonacci(n-2);
+	 }
+	 
+}</code></pre>
+</div>
+</div>
+<p>Si quisiéramos imprimir los 10 primeros números de la serie de Fibonacci, implementaríamos el siguiente programa principal que llama a la función anterior:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>   public static void main(String[] args){
+        for (int i = 0; i &lt;= 10; i++) {
+            System.out.println("fib(" + i + ") = " + fibonacci(i));
+        }
+    }</code></pre>
+</div>
+</div>
+<p><img src="img2.2.png" width="459" height="282" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<p><strong>El algoritmo QuickSort...</strong></p>
+<p style="text-align: justify;">Tal y como vimos en el tema 3, Quicksort es uno de los algoritmos de ordenación más rápidos que existe haciendo uso de la estrategia <em><strong>divide y vencerás</strong></em>. </p>
+<p style="text-align: justify;">Por recordar cómo se comportaba...</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div style="text-align: justify;">
+<pre><code>int nums[] = {4, 7, 5, 6, 2, 3, 1, 9, 8};</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Teniendo en cuenta el vector anterior, debíamos elegir como pivote el elemento de más a la izquierda (4). A partir de ahí, colocábamos a su izquierda los menores, y a su derecha los mayores. Repetimos el mismo proceso con las 2 sublistas de la izquierda y de la derecha; y así sucesivamente sobre cada una de las sublistas, mientras las sublistas tengan más de un elemento:</p>
+<p><img src="img3.2.png" width="508" height="315" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Como ves, el problema se va haciendo cada vez más "pequeño", y ahora conociendo la recursividad, es posible sospechar que la forma de implementarlo sea usando una función recursiva... Y de hecho, así es.</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id10">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_137_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Busca en Internet alguna implementación del algoritmo <em>QuickSort</em> y comprueba que usa la recursividad para solucionarlo.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id11">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_138_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Imprime los números de 1 a N sin usar bucles.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id16">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta16_131_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Implementa un programa que sume los números del 1 al 10 sin usar bucles.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="442_la_pila_de_llamadas_recursividad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="soluciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

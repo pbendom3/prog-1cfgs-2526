@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Ordenación de arrays </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="wwe" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">2. Ordenación de arrays</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">2. Ordenación de arrays</a></li>
+   <li><a href="21_otros_algoritmos_de_ordenacin.html" class="no-ch">2.1. Otros algoritmos de ordenación</a></li>
+   <li><a href="22_cmo_ordenar_arrays_en_java_con_el_mtodo_sort_de_la_clase_arrays.html" class="no-ch">2.2. Cómo ordenar arrays en Java con el método sort() de la clase Arrays</a></li>
+   <li><a href="23_cmo_buscar_en_un_array_ordenado_con_el_mtodo_binarysearch.html" class="no-ch">2.3. Cómo buscar en un array ordenado con el método binarySearch()</a></li>
+   <li><a href="actividad_eliminar_duplicados_de_un_array.html" class="no-ch">Actividad. Eliminar duplicados de un array</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_otros_algoritmos_de_ordenacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2. Ordenación de arrays</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ordenar Arrays en JAVA</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>¿Por qué ordenar los datos? </strong></p>
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;"><strong>→</strong> Es mucho más eficiente trabajar con datos ordenados.</span></p>
+<p><strong>¿Qué podemos ordenar? </strong></p>
+<p style="padding-left: 30px;"><strong>→</strong> Cualquier estructura con elementos ordenables, ya sean números, caracteres u objetos.</p>
+<hr />
+<p>Los problemas más comunes en la informática son la búsqueda y la ordenación. En este caso, el proceso de ordenar un <em>array</em> consiste en recolocar los elementos que lo componen (ya sea de mayor a menor o viceversa), con el fin de acelerar la búsqueda posterior de la información.</p>
+<p>En este aspecto, existe una multitud de algoritmos de ordenamiento, como por ejemplo el de <span style="font-size: 12pt;"><em><strong>Intercambio/Selección</strong></em></span>, que se comporta de la siguiente manera.</p>
+<h4>Cómo ordenar <em>arrays</em> en Java con bucles y variables auxiliares</h4>
+<p>Esta opción es la más manual, puesto que tendremos que programar todo el algoritmo, pero es una buena práctica que nos ayudará a comprender mejor el manejo de <em>arrays</em>. El <span style="font-size: 18pt;"><strong>algoritmo de Selección</strong></span> es el algoritmo más sencillo que podemos utilizar a la hora de ordenar <em>arrays</em>. Básicamente, consiste en intercambiar elementos dentro del <em>array</em> hasta conseguir que este quede ordenado.</p>
+<p>La idea es recorrer el <em>array</em> y comparar cada elemento con todos los siguientes para buscar el apropiado con el que intercambiarlo. Si ordenamos de forma ascendente (de menor a mayor), entonces buscaremos elementos menores para hacer el intercambio. Por el contrario, si ordenamos de forma descendente (de mayor a menor), buscaremos elementos mayores para intercambiar.</p>
+<p>Vamos a verlo directamente con un ejemplo para que lo entendamos mejor. Utilizaremos el siguiente array:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int array[] = {4,6,2,8,7};</code></pre>
+</div>
+</div>
+<p><img src="img0.1.png" width="438" height="150" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h5>- De forma ascendente (de menor a mayor)</h5>
+<p style="padding-left: 30px;">Lo vamos a ordenar de forma ascendente (de menor a mayor) utilizando el siguiente código:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>for (int i = 0; i &lt; array.length-1; i++) {
+    for (int j = i+1; j &lt; array.length ; j++) {
+        if (array[j]&lt;array[i]){
+            int aux = array[j];
+            array[j] = array[i];
+            array[i] = aux;
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Vamos a analizarlo paso a paso:</p>
+<p style="padding-left: 60px;">- Como puedes comprobar hay dos bucles <em>for </em>y un <em>if</em> anidados.</p>
+<p style="padding-left: 60px; text-align: justify;">- El <em>for</em> externo nos permite recorrer todos los elementos del <em>array</em> desde el primero (posición 0) hasta el penúltimo, por eso en la condición hemos puesto <em>array.length-1</em>. Está hecho así intencionadamente, puesto que queremos comparar cada elemento con todos los siguientes (todos los que están a su derecha). El último elemento no tiene más elementos detrás, por lo que no tiene sentido compararlo con nada. El dato que se encuentre en la posición <em>i</em> será el dato de referencia en cada iteración de este bucle.</p>
+<p style="padding-left: 60px; text-align: justify;">- El bucle <em>for</em> interno sirve para recorrer todos los elementos que se encuentran posicionados después del dato de referencia, es decir, todos los que están a la derecha de la posición <em>i</em>. Cada uno de estos elementos los tenemos que comparar con el dato que se encuentra en la posición <em>i</em>, es decir, con el dato de referencia.</p>
+<p style="padding-left: 60px; text-align: justify;">- De esto se encarga la instrucción <em>if</em>. Si encontramos en la posición <em>j</em> algún dato con valor menor al de referencia, lo intercambiamos con el que está en la posición <em>i. </em>Si no, no hacemos nada. Por eso la condición del <em>if</em> es <em>array[j]&lt;array[i]</em>. Si se cumple la condición, se ejecutan las instrucciones de las líneas 4, 5 y 6, que básicamente realizan el intercambio con ayuda de una variable auxiliar. Si se produce un intercambio, entonces el valor de referencia cambia, puesto que se ha sustituido lo que había en la posición <em>i</em>. </p>
+<p style="padding-left: 60px; text-align: justify;"> </p>
+<p style="padding-left: 30px;">Vamos a ver la <span style="background-color: #ffff99;"><strong>ejecución paso a paso</strong></span> y cómo se va modificando el <em>array</em> en cada iteración de los bucles...</p>
+<p style="padding-left: 60px;"><em>-<span style="text-decoration: underline;"><strong> Iteración 1</strong></span></em><strong>: Primera iteración del <em>for</em> externo.</strong></p>
+<p style="padding-left: 120px;">La variable<em> i</em> toma valor 0.<br />El <em>for</em> interno también comienza y la variable <em>j</em> toma valor <em>i+1</em>, es decir <em>1</em>.</p>
+<p style="padding-left: 30px;"><img src="img1.1.png" width="422" height="170" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 90px; text-align: justify;">Ahora es el turno del <em>if</em>. Comparamos<em> array[j]&lt;array[i]</em>. En este caso, la condición no es cierta porque <em>array[j]</em> tiene valor 6, y <em>array[i]</em> tiene valor 4. No se cumple que <em>array[j]</em> sea menor, por lo que no se ejecuta el cuerpo del <em>if</em>. y por lo tanto de momento no se realiza ningún intercambio.</p>
+<p style="padding-left: 90px;">El <em>for</em> interno avanza. El valor de <em>j</em> se incrementa una unidad (<em>j++</em>) y como sigue siendo menor que length (<em>j &lt; array.length</em>), continúa su ejecución.</p>
+<p style="padding-left: 120px;">La variable <em>i</em> sigue siendo 0.<br />La variable <em>j</em> ahora es 2.</p>
+<p style="padding-left: 90px;"><img src="img2.png" width="420" height="173" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px; text-align: justify;">Se ejecuta de nuevo la instrucción<em> if,</em> y en este caso la condición es verdadera (<em>array[j]&lt;array[i]</em>) puesto que el dato que se encuentra en la posición <em>j</em> (2) es menor que el almacenado en la posición <em>i</em> (4). En este caso sí se ejecuta el cuerpo del <em>if,</em> y se produce un intercambio:</p>
+<p style="padding-left: 90px;">1. Se copia en la variable <em>aux</em> lo que hay en <em>array[j]</em> (2)<br />2. Se copia en<em> array[j]</em> lo que hay en <em>array[i]</em> (4)<br />3. Se copia en <em>array[i]</em> lo que hay en la variable <em>aux</em> (2)</p>
+<p style="padding-left: 30px;"><img src="img3.png" width="791" height="240" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px;">El <em>for</em> interno avanza de nuevo, incrementando el valor de<em> j</em> en una unidad. Ahora <em>j</em> tiene valor 3 y se repite de nuevo la comprobación del <em>if</em>.</p>
+<p style="padding-left: 90px;">La variable i sigue siendo 0.<br />La variable j ahora vale 3.</p>
+<p style="padding-left: 60px;"><img src="img4.png" width="425" height="173" alt="8" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px;">En este caso no se cumple la condición <em>array[j]&lt;array[i],</em> puesto que 8 no es menor que 2. No se ejecuta ninguna de las instrucciones del cuerpo del <em>if</em> ,y el <em>for</em> interno avanza de nuevo incrementando el valor de <em>j</em>.</p>
+<p style="padding-left: 90px;">La i sigue siendo 0.<br />La j ahora es 4.</p>
+<p style="padding-left: 90px;"><img src="img5.png" width="420" height="172" alt="9" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px; text-align: justify;">En este caso ocurre lo mismo. El valor que hay en la posición <em>j</em> no es menor al que se encuentra en la posición <em>i,</em> por lo que la condición del <em>if</em> no se cumple y no se ejecuta nada.</p>
+<p style="padding-left: 60px; text-align: justify;">El <em>for</em> interno incrementa de nuevo el valor de <em>j</em> en una unidad, por lo que pasa a valer 5. Como <em>length</em> en este ejemplo también es 5, el bucle interno se detiene. Ha completado todas sus iteraciones.</p>
+<p style="padding-left: 60px;"><strong>¿Qué hemos conseguido hasta aquí?</strong> Comparar el dato de referencia (posición 0) con todos los demás e intercambiarlo por otro menor siempre que ha sido posible. Ahora toca avanzar el bucle externo.</p>
+<p style="padding-left: 60px;"> </p>
+<p style="padding-left: 60px;">- <strong><span style="text-decoration: underline;">Iteración 2</span>: Segunda iteración del <em>for</em> externo</strong>.</p>
+<p style="padding-left: 120px;">La variable<em> i</em> se incrementa en una unidad (<em>i++</em>) y pasa a valer 1.<br />El <em>for</em> interno empieza de nuevo. La <em>j</em> toma valor <em>i+1</em>, es decir 2.</p>
+<p style="padding-left: 120px;"><img src="img6.png" width="417" height="163" alt="10" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 90px;">¿Qué ocurre si ahora comprobamos la condición del <em>if</em>: <em>array[j]&lt;array[i]</em>? Pues que es cierta, porque 4 es menor que 6. En este caso, se ejecutan las instrucciones del <em>if</em> y se intercambian los valores de las dos posiciones:</p>
+<p style="padding-left: 120px;">1. El valor 4 que se encuentra en la posición <em>j</em> se copia en la variable <em>aux</em>.<br />2. El valor 6 de la posición <em>i</em> se copia en la posición <em>j</em>.<br />3. Por último el valor de <em>aux</em>, que es 4, se copia en la posición <em>i</em>.</p>
+<p style="padding-left: 90px;"><img src="img7.png" width="781" height="244" alt="11" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 90px;">Las dos iteraciones que quedan del bucle interno no van a producir intercambios, puesto que 8 y 7 son mayores que 4, que es el valor de referencia actual, por lo que este bucle interno completará sus iteraciones sin más cambios.</p>
+<p style="padding-left: 90px;"> </p>
+<p style="padding-left: 60px;">- <strong><span style="text-decoration: underline;">Iteración 3</span>: Tercera iteración del <em>for</em> externo.</strong></p>
+<p style="padding-left: 90px;">El <em>for</em> externo avanza de nuevo incrementando el valor de <em>i</em> en una unidad y el <em>for</em> interno comienza de nuevo desde la posición <em>i+1</em>.</p>
+<p style="padding-left: 120px;">La variable <em>i</em> ahora vale 2.<br />La variable <em>j </em>ahora vale 3.</p>
+<p style="padding-left: 90px;"><img src="img8.png" width="420" height="173" alt="12" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 90px;">Como puedes comprobar, <span style="text-decoration: underline;">en esta iteración no se realizará ningún intercambio</span> puesto que el valor que hay en la posición 2 (6) es menor que todos los elementos siguientes: 8 y 7. El bucle interno completará sus iteraciones sin cambios.</p>
+<p style="padding-left: 90px;"> </p>
+<p style="padding-left: 60px;"><strong>- <span style="text-decoration: underline;">Iteración 4</span>: Cuarta y última iteración del <em>for</em> externo.</strong></p>
+<p style="padding-left: 90px; text-align: justify;">Hemos llegado a la última iteración del <em>for</em> externo. El valor de <em>i</em> se incrementa pasando a valer 3, y el <em>for</em> interno comienza de nuevo inicializando el valor de <em>j</em> a <em>i+1</em>.</p>
+<p style="padding-left: 120px; text-align: justify;">El valor de<em> i</em> ahora es 3.<br />El valor de <em>j</em> ahora es 4.</p>
+<p style="padding-left: 90px;"><img src="img9.png" width="422" height="169" alt="14" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 90px;">Supongo que ya te habrás dado cuenta. El valor que hay en la posición <em>j</em> (7) es menor que el valor que hay en la posición <em>i</em> (8), por tanto, la condición del <em>if</em> (<em>array[j]&lt;array[i]</em>) se cumple y se produce el intercambio entre ambas posiciones:</p>
+<p style="padding-left: 120px;">1. El valor 7 de la posición 4 se copia en la variable <em>aux</em>.<br />2. El valor 8 de la posición 3 se copia en la posición 4.<br />3. El valor 7 almacenado en <em>aux</em> se copia en la posición 3.</p>
+<p style="padding-left: 90px;"><img src="img10.png" width="774" height="218" alt="15" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px;">El bucle interno finaliza sus iteraciones y el bucle externo también, puesto que ha alcanzado la penúltima posición (tal y como vimos al principio). La ejecución termina y el <em>array</em> queda ordenado de menor a mayor. Compruébalo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>for (int i = 0; i &lt; array.length; i++) {
+    System.out.println(array[i]);
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 90px;"> </p>
+<h5>- De forma descendente (de mayor a menor)</h5>
+<p>¿Cómo sería el algoritmo si lo que buscamos es ordenar el <em>array</em> de forma descendente? Pues exactamente igual, la única diferencia es que la comprobación que tenemos que hacer en el <em>if</em> ahora es: <em>array[j]&gt;array[i]</em> en vez de <em>array[j]&lt;array[i]</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>for (int i = 0; i &lt; array.length-1; i++) {
+    for (int j = i+1; j &lt; array.length ; j++) {
+        if (array[j]&gt;array[i]){
+            int aux = array[j];
+            array[j] = array[i];
+            array[i] = aux;
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">De esta forma, el intercambio se produce cuando el valor de la posición <em>j</em> sea menor que el valor de referencia de la posición<em> i</em>. Así conseguimos que quede ordenado de mayor a menor. </p>
+<hr />
+<p><span style="background-color: #ffff00;"><strong>ACTIVIDAD. Analiza paso a paso el algoritmo descendente de la misma forma que lo hemos hecho en el caso anterior.</strong></span></p>
+<hr />
+<p style="padding-left: 30px;"></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_otros_algoritmos_de_ordenacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

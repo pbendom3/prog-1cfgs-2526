@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>BONUS. Consumiendo APIs externas desde Java. | 8.4. Serialización de objetos. </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8.4. Serialización de objetos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.4. Serialización de objetos.</a></li>
+   <li><a href="ejercicios_sobre_serializacin.html" class="no-ch">Ejercicios sobre serialización</a></li>
+   <li class="current-page-parent"><a href="ficheros_json.html" class="current-page-parent daddy">Ficheros JSON.</a>
+   <ul>
+      <li><a href="librera_gson.html" class="no-ch">Librería GSON.</a></li>
+      <li id="active"><a href="bonus_consumiendo_apis_externas_desde_java.html" class="active no-ch">BONUS. Consumiendo APIs externas desde Java.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="librera_gson.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">BONUS. Consumiendo APIs externas desde Java.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id10">
+<div class="iDevice emphasis0" >
+<div id="ta10_129_2" class="block iDevice_content">
+<div class="exe-text"><p><img src="14982659.png" width="227" height="227" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><em><strong>API</strong></em> significa <em>Application Programming Interface</em>, o en español, <strong><em>Interfaz de Programación de Aplicaciones</em></strong>. Es una forma estandarizada de que dos programas o servicios se comuniquen entre sí.</p>
+<p style="text-align: justify;">Una API define cómo pedir datos o enviar instrucciones a otro programa o servicio, sin tener que saber cómo funciona por dentro (caja negra). Los datos que se intercambian son principalmente <em>JSON</em>, que como ya hemos comentado, es un formato de texto ligero y bastante descriptivo.</p>
+<p style="text-align: justify;"><span style="text-decoration: underline;"><strong>Tipos comunes de APIs</strong></span></p>
+<ul>
+<li style="text-align: justify;"><strong>REST APIs</strong>: usan HTTP (como páginas web) y JSON. Son las más comunes, y las que veremos nosotros.</li>
+<li style="text-align: justify;"><strong>SOAP APIs</strong>:mMás antiguas, basadas en XML.</li>
+<li style="text-align: justify;"><strong>WebSockets/APIs</strong> en tiempo real: para juegos, chat, etc.</li>
+</ul>
+<hr />
+<h5>Uso de <em>Postman</em> para explorar APIs</h5>
+<p><span style="color: #008000;"><strong><em>Postman</em> </strong></span>es una herramienta para probar <em>APIs REST</em>, ver respuestas <em>JSON</em> y explorar <em>endpoints</em> en general.</p>
+<p><img src="images.png" width="237" height="213" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: center;"><a href="https://www.postman.com/downloads/">Download Postman | Get Started for Free</a></p>
+<p style="text-align: justify;">Crearemos una nueva <em><strong>Colección y petición</strong></em>:</p>
+<p><img src="img2.2.png" width="991" height="453" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Por defecto, nos aparece una petición de tipo <em><strong>GET</strong></em>, pero podríamos usar cualquiera de las que hay disponibles:</p>
+<p><img src="img3.2.png" width="991" height="290" alt="8" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Usaremos GET con la siguiente URL: <a href="https://v2.jokeapi.dev/joke/Programming?type=single&amp;lang=es">https://v2.jokeapi.dev/joke/Programming?type=single&amp;lang=es</a></p>
+<p><img src="img4.2.png" width="927" height="322" alt="9" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Se trata de una API que devuelve chistes sobre Programación. Probamos a lanzarla:</p>
+<p><img src="img5.png" width="935" height="616" alt="10" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Si devuelve un <span style="color: #000000; background-color: #00ff00;">estatus 200</span> OK, es que nuestra petición ha sido correcta.</p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>{
+    "error": false,
+    "category": "Programming",
+    "type": "single",
+    "joke": "No te despedirán del trabajo, si nunca comentas tu código y además eres el único que sabe cómo funciona",
+    "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+    },
+    "safe": true,
+    "id": 3,
+    "lang": "es"
+}</code></pre>
+</div>
+</div>
+<p>Para poder invocar APIs, es muy importante saber qué parámetros acepta el <em>endpoint</em>. En nuestro caso, le hemos pedido chistes en Español (lang=es). Prueba a mandar un idioma inventado y observa lo que pasa:</p>
+<p><img src="img6.1.png" width="938" height="581" alt="12" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Nos devuelve un status <span style="background-color: #ff6600; color: #000000;">400 bad request</span>, por lo que saber cómo interactuar con las APIs es muy importante. Para eso, deberemos consultar la información de cada API en su documentación de referencia. Por ejemplo, la de <strong><em>jokeapi</em></strong>: <a href="https://sv443.net/jokeapi/v2/">JokeAPI - Documentation</a></p>
+<p><img src="img7.2.png" width="991" height="427" alt="14" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<h5>Vale, ya lo he visto en Postman, pero... ¿cómo usamos una API desde <em>Java</em>?</h5>
+<p><strong>1. Creamos la clase que represente la estructura del JSON.</strong></p>
+<p>Usaremos la herramienta <a href="https://json2csharp.com/code-converters/json-to-pojo">JSON to POJO Object Online Converter - Json2CSharp Toolkit</a></p>
+<p><img src="img8.1.png" width="991" height="457" alt="20" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">¿Y si hay campos que no me interesan? Puedes ignorarlos, <em>Gson</em> no se quejará si hay campos extra. Nosotros, eliminaremos el atributo <em>Flags</em>.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Chistes {
+
+    public boolean error;
+    public String category;
+    public String type;
+    public String joke;
+    public boolean safe;
+    public int id;
+    public String lang;
+
+}</code></pre>
+</div>
+</div>
+<p><strong>2. Hacemos una solicitud HTTP (con <em>HttpURLConnection</em>):</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>            String apiUrl = "https://v2.jokeapi.dev/joke/Programming?type=single&amp;lang=es";
+
+            URL url = new URL(apiUrl);
+            HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
+            conexion.setRequestMethod("GET");</code></pre>
+</div>
+</div>
+<p><strong>3. Recibimos una respuesta en <em>JSON</em>.</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>            BufferedReader in = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
+            StringBuilder json = new StringBuilder();
+            String line;
+            while ((line = in.readLine()) != null) {
+                json.append(line);
+            }
+            in.close();</code></pre>
+</div>
+</div>
+<p><strong>4. Usamos una librería como <em>Gson</em> para convertir ese <em>JSON</em> en objetos <em>Java</em>.</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>            Gson gson = new Gson();
+            Chistes chiste = gson.fromJson(json.toString(), Chistes.class);</code></pre>
+</div>
+</div>
+<p><strong>5. Mostramos o procesamos los datos.</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>            System.out.println("Chiste:");
+            System.out.println(chiste.joke);</code></pre>
+</div>
+</div>
+<p>Programa completo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class APIchistes {
+
+    public static void main(String[] args) {
+
+        try {
+
+            String apiUrl = "https://v2.jokeapi.dev/joke/Programming?type=single&amp;lang=es";
+
+            URL url = new URL(apiUrl);
+            HttpURLConnection conexion = (HttpURLConnection) url.openConnection();
+            conexion.setRequestMethod("GET");
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(conexion.getInputStream()));
+            StringBuilder json = new StringBuilder();
+            String line;
+            while ((line = in.readLine()) != null) {
+                json.append(line);
+            }
+            in.close();
+
+            Gson gson = new Gson();
+            Chistes chiste = gson.fromJson(json.toString(), Chistes.class);
+
+            System.out.println("Chiste:");
+            System.out.println(chiste.joke);
+
+        } catch (Exception e) {
+            System.out.println("Algo ha ido mal.");
+            e.printStackTrace();
+        }
+
+    }
+}</code></pre>
+</div>
+</div>
+<hr />
+<h5>Otro ejemplo: API del clima</h5>
+<p><a href="https://open-meteo.com/">Open-Meteo</a> es una API gratuita de pronóstico del tiempo, sin autenticación. </p>
+<p><img src="img9.1.png" width="991" height="520" alt="30" style="font-size: 16.8px;" /></p>
+<p>Ejemplo de llamada:</p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>https://api.open-meteo.com/v1/forecast?latitude=38.41921088667074&amp;longitude=-0.4464988854601825&amp;current_weather=true</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Mutxamel: 38.41974886121347, -0.4482154992747586</p>
+<p>Puedes consultar toda su info aquí: <a href="https://open-meteo.com/en/docs">Docs | Open-Meteo.com</a></p>
+<hr />
+<p>Vamos a <em>Postman</em> para probar el <em>endpoint</em>:</p>
+<p><img src="img10.png" width="937" height="622" alt="21" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Como funciona, le damos el JSON de retorno a json2csharp.com para que nos cree las clases en Java:</p>
+<p><img src="img11.png" width="991" height="537" alt="22" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Sólo vamos a quedarnos con la clase <em><strong>CurrentWeather</strong></em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class CurrentWeather{
+    public String time;
+    public int interval;
+    public double temperature;
+    public double windspeed;
+    public int winddirection;
+    public int is_day;
+    public int weathercode;
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Pero como vamos a obtener la estructura de la clase <em>Root (</em>para nosotros, se llamará <em><strong>ElTiempo</strong>)</em>, crearemos una clase estática dentro de ella para simplificar la estructura:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class ElTiempo {
+    public double latitude;
+    public double longitude;
+    public double generationtime_ms;
+    public int utc_offset_seconds;
+    public String timezone;
+    public String timezone_abbreviation;
+    public double elevation;
+    CurrentWeather current_weather;
+
+    static class CurrentWeather{
+        public String time;
+        public int interval;
+        public double temperature;
+        public double windspeed;
+        public int winddirection;
+        public int is_day;
+        public int weathercode;
+
+    }
+}</code></pre>
+</div>
+</div>
+<p>Ahora, seguiremos el mismo patrón del programa principal usado para los chistes:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Clima {
+    public static void main(String[] args) {
+        try {
+
+            String apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=38.41921088667074&amp;longitude=-0.4464988854601825&amp;current_weather=true";
+
+            URL url = new URL(apiUrl);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            StringBuilder response = new StringBuilder();
+            String line;
+            while ((line = in.readLine()) != null) {
+                response.append(line);
+            }
+            in.close();
+            
+            Gson gson = new Gson();
+            ElTiempo weather = gson.fromJson(response.toString(), ElTiempo.class);
+
+            System.out.println("Clima actual en Mutxamel:");
+            System.out.println("Temperatura: " + weather.current_weather.temperature + "°C");
+            System.out.println("Viento: " + weather.current_weather.windspeed + " km/h");
+            System.out.println("Hora del dato: " + weather.current_weather.time);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img12.png" width="468" height="208" alt="24" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id11">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Práctica (2)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_130_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Replica los pasos anteriores para consumir la API que tú quieras. Si no se te ocurre cuál, usa alguna de estas:</p>
+<ul>
+<li><em><strong>CoinGecko API – Criptomonedas</strong></em>. Consulta precios de <em>Bitcoin, Ethereum</em>, etc. en tiempo real.</li>
+</ul>
+<p style="padding-left: 60px;">URL ejemplo:<br /><a href="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&amp;vs_currencies=usd,eur">https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&amp;vs_currencies=usd,eur</a><br /><br /></p>
+<ul>
+<li><em><strong>Open Trivia DB</strong></em>. Preguntas de trivial por categoría, dificultad, etc.</li>
+</ul>
+<p style="padding-left: 60px;">URL ejemplo:</p>
+<p style="padding-left: 60px;"><a href="https://opentdb.com/api.php?amount=1&amp;category=18">https://opentdb.com/api.php?amount=1&amp;category=18</a><br /><br /></p>
+<p>Webs para encontrar APIs:</p>
+<ul>
+<li><a href="https://rapidapi.com/hub">RapidAPI</a></li>
+<li><a href="https://public-apis.io/">https://public-apis.io/</a></li>
+<li><a href="https://github.com/public-apis/public-apis">GitHub - public-apis/public-apis: A collective list of free APIs</a></li>
+<li><a href="https://apilist.fun/">https://apilist.fun/</a></li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="librera_gson.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

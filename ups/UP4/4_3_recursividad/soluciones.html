@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Soluciones | 4.4. Recursividad </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">4.4. Recursividad</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4.4. Recursividad</a></li>
+   <li><a href="441_la_pila_de_llamadas_bsica.html" class="no-ch">4.4.1. La pila de llamadas (básica)</a></li>
+   <li><a href="442_la_pila_de_llamadas_recursividad.html" class="no-ch">4.4.2. La pila de llamadas (recursividad)</a></li>
+   <li><a href="443_ampliacin_sobre_recursividad.html" class="no-ch">4.4.3. Ampliación sobre recursividad</a></li>
+   <li id="active"><a href="soluciones.html" class="active no-ch">Soluciones</a></li>
+   <li><a href="actividades_sobre_recursividad_entregable.html" class="no-ch">Actividades sobre recursividad [entregable]</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="443_ampliacin_sobre_recursividad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividades_sobre_recursividad_entregable.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Soluciones</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id13">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static void imprimir(int cont, int fin){
+
+        if (cont&lt;=fin) {
+            System.out.println(cont);
+            cont++;
+            imprimir(cont,fin);
+        }
+
+    }
+
+    public static void main(String[] args){
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce el número N hasta el que quieres contar: ");
+        int n = teclado.nextInt();
+        imprimir(1,n);
+    }</code></pre>
+</div>
+</div>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id14">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_129_2" class="block iDevice_content">
+<div class="pbl-task-description"><div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static void main(String[] args){
+        int n = 10;
+        System.out.println("Suma = " + contar(1,n));
+    }
+
+    public static int contar(int cont, int fin){
+
+        if (cont&lt;fin){
+            return cont + contar(cont+1,fin);
+        }
+
+        return cont;
+    }</code></pre>
+</div>
+</div>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="443_ampliacin_sobre_recursividad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividades_sobre_recursividad_entregable.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

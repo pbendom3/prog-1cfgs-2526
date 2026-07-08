@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.2.4. Acciones DML (insert, update, delete) | 8_2_bbdd_relacionales </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">8_2_bbdd_relacionales</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.2. Bases de datos relacionales. MySQL/MariaDB.</a></li>
+   <li><a href="821_instalacin_de_xampp.html" class="no-ch">8.2.1. Instalación de XAMPP</a></li>
+   <li><a href="822_configuracin_del_entorno_conector_jdbc_y_prueba_de_conexin_desde_java.html" class="no-ch">8.2.2. Configuración del entorno (conector JDBC) y prueba de conexión desde Java</a></li>
+   <li><a href="823_primeras_consultas_sql_select.html" class="no-ch">8.2.3. Primeras consultas SQL (select)</a></li>
+   <li id="active"><a href="824_acciones_dml_insert_update_delete.html" class="active no-ch">8.2.4. Acciones DML (insert, update, delete)</a></li>
+   <li><a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="no-ch">8.2.5. Cargar datos de una tabla en una lista de objetos</a></li>
+   <li><a href="prctica_2_mi_primer_crud_mostrar_y_manipular_datos_desde_una_tableview_de_javafx.html" class="daddy">Práctica 2. Mi primer CRUD: mostrar y manipular datos desde una TableView de JavaFX</a>
+   <ul class="other-section">
+      <li><a href="exportacin_generar_exe.html" class="no-ch">Exportación (generar .exe)</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="823_primeras_consultas_sql_select.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.2.4. Acciones DML (insert, update, delete)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Para realizar las operaciones DML básicas de SQL (<em>insert, update </em>y<em> delete</em>) seguiremos necesitando una variable de tipo <strong><em>Statement</em></strong>, pero nos ahorramos el resultado (<em><strong>ResultSet</strong></em>), ya que no nos interesa la respuesta del SGBD (solamente queremos que realice la acción). <span style="background-color: #ffff99;"><strong>El método que usaremos para todas es <em>.executeUpdate(query)</em>.</strong></span></p>
+<h5>Insertar datos (<em>INSERT</em>)</h5>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static void insertar(Connection conexion){
+
+        String query = "INSERT INTO estudiantes (nia, nombre, fecha_nacimiento) VALUES (43214321, 'Patricia', '1900-04-19');";
+
+        Statement stmt;
+
+        try {
+            stmt = conexion.createStatement();
+            stmt.executeUpdate(query);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
+        }
+
+
+    }</code></pre>
+</div>
+</div>
+<p>Modificamos el <em>main</em> para consultar los datos antes y después de insertar:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>    public static void main(String[] args) {
+
+        Connection bd = conexion();
+        System.out.println("Realizando consultas...");
+        consulta(bd);
+        insertar(bd);
+        consulta(bd);
+        desconectar(bd);
+
+    }</code></pre>
+</div>
+</div>
+<p><img src="img0.2.png" width="565" height="339" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify; padding-left: 30px;"><span style="text-decoration: underline;"><strong>NOTA</strong></span>: Lo normal será pedir los valores al usuario y formar la <em>query</em> dinámicamente concatenando los valores en un <em>StringBuilder</em>.</p>
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;"><span style="color: #ff0000;"><strong>(!)</strong></span> <strong>Cuidado cuando vuelvas a lanzar este método. ¡Si no modificas los datos del INSERT fallará por error de clave duplicada!</strong></span></p>
+<h5>Modificar datos (<em>UPDATE</em>)</h5>
+<p>Es exactamente igual que el insert anterior, pero modificando el contenido de la <em>query</em>.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code> public static void modificar(Connection conexion){
+
+        System.out.println("Modificando...");
+
+        String query = "UPDATE estudiantes SET nombre = 'Patri' WHERE nombre = 'Patricia'";
+
+        Statement stmt;
+
+        try {
+            stmt = conexion.createStatement();
+            stmt.executeUpdate(query);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
+        }
+
+    }</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>    public static void main(String[] args) {
+        Connection bd = conexion();
+        System.out.println("Realizando consultas...");
+        consulta(bd);
+        modificar(bd);
+        consulta(bd);
+        desconectar(bd);
+    }</code></pre>
+</div>
+</div>
+<p><img src="img1.3.png" width="648" height="494" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h5>Borrar datos (<em>DELETE</em>)</h5>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>  public static void borrar(Connection conexion){
+
+        System.out.println("Borrando...");
+
+        String query = "DELETE FROM estudiantes WHERE nombre = 'Patri'";
+
+        Statement stmt;
+
+        try {
+            stmt = conexion.createStatement();
+            stmt.executeUpdate(query);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
+        }
+
+}</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>    public static void main(String[] args) {
+        Connection bd = conexion();
+        System.out.println("Realizando consultas...");
+        consulta(bd);
+        borrar(bd);
+        consulta(bd);
+        desconectar(bd);
+    }</code></pre>
+</div>
+</div>
+<p><img src="img2.1.png" width="629" height="490" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="823_primeras_consultas_sql_select.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="825_cargar_datos_de_una_tabla_en_una_lista_de_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

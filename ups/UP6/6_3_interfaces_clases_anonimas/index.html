@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.4. Interfaces </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="6.4. Interfaces" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.4. Interfaces</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">6.4. Interfaces</a></li>
+   <li><a href="polimorfismo_cuando_usamos_interfaces_instanceof.html" class="no-ch">Polimorfismo cuando usamos interfaces (instanceOf)</a></li>
+   <li><a href="ejercicio.html" class="no-ch">Ejercicio</a></li>
+   <li><a href="diagrama_uml_con_elementos_de_tipo_interface.html" class="no-ch">Diagrama UML con elementos de tipo interface</a></li>
+   <li><a href="clases_annimas.html" class="no-ch">Clases anónimas</a></li>
+   <li><a href="mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html" class="no-ch">Mejora con clases anónimas el proyecto de Dispositivos Inteligentes</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="polimorfismo_cuando_usamos_interfaces_instanceof.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.4. Interfaces</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Si las clases abstractas se comportaban como un "<strong>molde</strong>", las interfaces van un poco más allá: son un "<strong>contrato</strong>" que las clases que implementen una interfaz deben cumplir. O dicho de otra forma, <span style="background-color: #ffff00;"><strong>una interfaz se implementa en una clase para que esta sepa qué tiene que hacer, pero no el cómo</strong></span>.</p>
+<p style="text-align: justify;">Para crear una interfaz, si seguimos con el ejemplo del <em>Festival</em>, escribiremos una interfaz con el siguiente formato:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>//interfaz para quienes organizan el evento
+public interface Organizable {
+    void organizarEvento();
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px; text-align: justify;"><span style="text-decoration: underline;"><strong><img src="img2.png" width="16" height="16" alt="" /></strong></span><strong> </strong><span style="text-decoration: underline;"><strong>FÍJATE:</strong></span></p>
+<ul style="text-align: justify;">
+<li><strong>Los métodos son implícitamente públicos y abstractos SIN INDICARLO</strong><strong>.</strong></li>
+<li><strong>No puede tener constructores, ya que no se pueden instanciar directamente. En cuanto a los atributos o variables, sólo podría tener constantes estáticas y finales (<em>public static final</em>).</strong></li>
+</ul>
+<p style="text-align: justify;"> La forma de implementar una interfaz es usando la palabra reservada <em><strong>implements</strong></em>, de la siguiente manera:</p>
+<p style="text-align: justify;"><img src="img0.png" width="974" height="273" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Igual que nos pasaba con los métodos abstractos, nada más indicar en la clase que queremos usar la interfaz nos mostrará el <span style="color: #ff0000;"><strong>ERROR</strong> </span>y nos obligará a implementar los métodos que dice el "contrato", es decir, los métodos que tenga la interfaz.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>class Organizador extends Persona implements Organizable {
+    
+    private String rol; // Ejemplo: "Seguridad", "Producción", "Prensa"
+
+    public Organizador(String nombre, int edad, String rol) {
+        super(nombre, edad);
+        this.rol = rol;
+    }
+
+    public void mostrarInfo() {
+        super.mostrarInfo();
+        System.out.println("Rol en el festival: " + rol);
+    }
+
+
+    public void accederEvento(){
+        System.out.println("Accediendo como Organizador: Coordinando el evento.");
+    }
+
+    public void organizarEvento() {
+        System.out.println("Organizando...");
+    }
+}</code></pre>
+</div>
+</div>
+<hr />
+<h5 style="text-align: justify;">Herencia múltiple</h5>
+<p style="text-align: justify;">Como ves, la clase <em>Organizador</em> hasta ahora tiene dos referencias: por un lado, hereda las propiedades de una clase abstracta como lo es <em>Persona</em>, y por otra, implementa los métodos de la interfaz <em>Organizable</em> que acabamos de crear. <span style="background-color: #ffff00;"><strong>Este es uno de los principales usos de las interfaces: permitir la "herencia" múltiple</strong></span>, porque como ya te habrás dado cuenta, no se permite heredar (o "extender") clases hijas de varias superclases:</p>
+<p style="text-align: justify;"><img src="img1.png" width="649" height="205" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">pero en cambio, sí podemos implementar varias interfaces. Por ejemplo, si creamos otra interfaz llamada <strong><em>Promocionable</em></strong> como la siguiente:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>public interface Promocionable {
+
+    void promocionar();
+
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Podríamos implementarla también desde la clase <em>Organizador</em> de la siguiente manera:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>class Organizador extends Persona implements Organizable, Promocionable {
+    private String rol; // Ejemplo: "Seguridad", "Producción", "Prensa"
+
+    public Organizador(String nombre, int edad, String rol) {
+        super(nombre, edad);
+        this.rol = rol;
+    }
+
+    public void mostrarInfo() {
+        super.mostrarInfo();
+        System.out.println("Rol en el festival: " + rol);
+    }
+
+
+    public void accederEvento(){
+        System.out.println("Accediendo como Organizador: Coordinando el evento.");
+    }
+
+    public void organizarEvento() {
+        System.out.println("Organizando...");
+    }
+
+    public void promocionar() {
+        System.out.println("Promocionando...");
+    }
+
+}</code></pre>
+</div>
+</div>
+<table border="1" style="width: 100%; background-color: #144dc7; border-color: #000000;">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><span style="color: #ffffff;">Clases abstractas</span></td>
+<td style="width: 50%; text-align: center;"><span style="color: #ffffff;">Interfaces</span></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span style="color: #ffffff;">Se usa para compartir comportamiento común entre clases relacionadas.</span></td>
+<td style="width: 50%;"><span style="color: #ffffff;">Se usa para definir un "contrato" que múltiples clases deben cumplir.</span></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span style="color: #ffffff;">Puede tener métodos abstractos (sin cuerpo) y métodos tradicionales (con cuerpo).</span></td>
+<td style="width: 50%;"><span style="color: #ffffff;">Desde Java 8 puede tener métodos abstractos, métodos default (con cuerpo) y métodos estáticos, aunque será raro que los lleguemos a implementar.</span></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span style="color: #ffffff;">Puede tener atributos</span></td>
+<td style="width: 50%;"><span style="color: #ffffff;">Sólo puede tener constantes estáticas y finales (public static final).</span></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span style="color: #ffffff;">Puede tener constructores, aunque no se pueden instanciar directamente.</span></td>
+<td style="width: 50%;"><span style="color: #ffffff;">No puede tener constructores.</span></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span style="color: #ffffff;">Una clase sólo puede extender una clase abstracta (herencia simple).</span></td>
+<td style="width: 50%;"><span style="color: #ffffff;">Una clase puede implementar múltiples interfaces (herencia múltiple).</span></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span style="color: #ffffff;">Los métodos pueden tener cualquier modificador de acceso (public, protected, private).</span></td>
+<td style="width: 50%;"><span style="color: #ffffff;">Los métodos son implícitamente públicos  (aunque desde Java 9 se permiten métodos privados para ayuda interna).</span></td>
+</tr>
+</tbody>
+</table>
+<h5 style="text-align: justify;">¿Cuándo usar cuál?</h5>
+<ul>
+<li style="text-align: justify;">Usaremos <span style="text-decoration: underline;">clase abstractas</span> si hay una relación fuerte entre clases y se comparten atributos y código común. Ejemplo: <em>Animal → Perro, Gato.</em></li>
+<li style="text-align: justify;">Usaremos <span style="text-decoration: underline;">interfaces</span> cuando necesitemos implementar herencia múltiple y definir comportamientos que pueden aplicarse a clases no relacionadas. Ejemplo: <em>Volador → Pájaro, Avión, Superhéroe.</em></li>
+</ul></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="polimorfismo_cuando_usamos_interfaces_instanceof.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

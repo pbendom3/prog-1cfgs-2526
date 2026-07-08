@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>7.2. Mapas</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="7.2. Mapas" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-single-page"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<header id="header">
+<div id="headerContent">
+<h1>7.2. Mapas</h1>
+</div>
+</header>
+<section id="main">
+<article class="node level-1-node" id="exe-node-0">
+<header class="nodeDecoration">
+<h1 id="exenode_0_72Mapasodiccionarios" class="nodeTitle">7.2. Mapas o diccionarios</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id0-0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Interfaz Map --> (clave-valor)</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Como ya vimos durante la introducción a las estructuras del tema, un mapa es una estructura de datos que almacena información en forma de pares <em>clave-valor,</em> y es muy útil cuando necesitamos acceder a elementos de forma rápida. Es como un "diccionario" o una "agenda", donde cada entrada tiene dos partes: una clave (que es única) y un valor (que puede ser cualquier dato).</p>
+<p>La estructura que usa <em>Java</em> para implementar los mapas es <em><strong>HashMap</strong></em>, </p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>import java.util.HashMap;
+
+public class EjemploHashMap {
+
+    public static void main(String[] args) {
+
+        HashMap&lt;String, Integer&gt; edades = new HashMap&lt;&gt;();
+
+        edades.put("Juan", 25);
+        edades.put("Ana", 30);
+        edades.put("Pedro", 28);
+
+        System.out.println("Edad de Juan: " + edades.get("Juan"));
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">En este ejemplo, las claves son los nombres (<em>"Juan", "Ana", "Pedro"</em>) y los valores son las edades (<em>25, 30, 28</em>). La clave se convierte en un índice mediante una función <em>hash,</em> y cada valor se almacena en una celda de una <em><strong>tabla hash </strong></em>(<em>una "lista" muy grande con muchas "casillas" donde se guardan las claves y los valores de forma súper eficiente)</em>. La pregunta es, ¿cómo encontramos la casilla correcta para guardar o buscar un dato? Lo vemos en el siguiente apartado.</p>
+<p>Los métodos principales de <em><strong>HashMap </strong></em>en<em> Java </em>son:</p>
+<ul>
+<li><em><strong>put(K, V)</strong></em>: para insertar un par<em> clave-valor</em>. <span style="text-decoration: underline;">En caso de que una clave ya exista, pisaremos el valor antiguo por el nuevo</span>.</li>
+<li><em><strong>get(K)</strong></em>: para obtener el valor a partir de una clave.</li>
+<li><em><strong>remove(K)</strong></em>: eliminar un valor a partir de su clave. También se puede usar <em><strong>remove(K key, V value)</strong></em> para eliminar sólo si el valor coincide.</li>
+<li><em><strong>containsKey(K)</strong></em>: verifica si la clave existe.</li>
+<li><em><strong>containsValue(V value)</strong></em>: verifica si existe un valor.</li>
+<li><strong><em>keySet()</em></strong>: devuelve una lista con las claves. También sirve para iterar sólo con claves.</li>
+<li><em><strong>values()</strong></em>: devuelve una lista con los valores. También sirve para iterar sólo con valores.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>HashMap&lt;String, Integer&gt; edades = new HashMap&lt;&gt;();
+edades.put("Juan", 25);
+edades.put("Ana", 30);
+edades.put("Pedro", 28);
+
+System.out.println(edades); // {Juan=25, Ana=30, Pedro=28}
+
+System.out.println(edades.get("Juan")); // 25
+System.out.println(edades.get("Carlos")); // null
+
+System.out.println(edades.containsKey("Ana")); // true
+System.out.println(edades.containsKey("Carlos")); // false
+
+System.out.println(edades.containsValue(30)); // true
+System.out.println(edades.containsValue(40)); // false
+
+edades.remove("Pedro");
+System.out.println(edades);  // {Juan=25, Ana=30}
+
+edades.remove("Ana", 29); // no elimina nada porque el valor no coincide
+System.out.println(edades); // {Juan=25, Ana=30}
+
+for (String clave : edades.keySet()) {
+    System.out.println("Clave: " + clave); //Clave: Juan
+                                           // Clave: Ana
+                                                             
+}
+
+for (Integer valor : edades.values()) {
+    System.out.println("Valor: " + valor); //Valor: 25
+                                           //Valor: 30
+}
+
+edades.remove("Ana", 30); // elimina Ana porque el valor coincide
+System.out.println(edades); // {Juan=25}</code></pre>
+</div>
+</div>
+<p><em><strong><img src="img0.5.png" width="428" height="382" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></strong></em></p>
+<ul>
+<li><em><strong>getOrDefault(key, defaultValue): </strong></em>es un método que permite obtener un valor asociado a una clave específica, pero si la clave no existe en el mapa, devuelve un valor por defecto en su lugar.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>HashMap&lt;String, Integer&gt; edades = new HashMap&lt;&gt;();
+
+        edades.put("Ana", 9);
+        edades.put("Luis", 7);
+
+        // obtener la edad de Ana (existe en el HashMap)
+        System.out.println(edades.getOrDefault("Ana", 18)); // salida: 9
+
+        // obtener la edad de Pedro (no existe, usa el valor predeterminado 18)
+        System.out.println(edades.getOrDefault("Pedro", 18)); // salida: 18</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Es útil cuando trabajamos con conteos o acumulaciones, como en el problema <a href="https://aceptaelreto.com/problem/statement.php?id=152">Va de modas... de Acepta el Reto</a>.</p>
+<hr />
+<h5>Método de iteración en un <em>HashMap</em></h5>
+<p style="text-align: justify;">Hasta ahora, hemos visto los métodos <em>keySet()</em> y <em>values()</em> para obtener claves y valores por separado. Pero si necesitamos interaccionar con nuestro mapa para obtener claves y valores a la vez, usaremos un <strong><em>for-each</em> con</strong> <span style="font-size: 14pt;"><strong>.<em>entrySet()</em></strong></span> <em>(clave-valor):</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>for (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) {
+    System.out.println("Clave: " + entry.getKey() + ", Valor: " + entry.getValue());
+}
+
+// Clave: Juan, Valor: 25
+// Clave: Ana, Valor: 30
+// Clave: Pedro, Valor: 28
+</code></pre>
+</div>
+</div>
+<p>Si has probado los iteradores anteriores, te habrás dado cuenta de algo importante: <span style="background-color: #ffff99;">las estructuras <em>HashMap</em>, igual que pasaba con los <em>HashSet</em>, no mantienen el orden de inserción. Si necesitamos orden, usaremos <em><strong><span style="color: #008000; font-size: 18pt; background-color: #ffff99;">LinkedHashMap </span></strong></em></span>(aunque su uso no es muy común).</p>
+<hr />
+<h5><strong>Asociar clave con múltiples valores</strong></h5>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>HashMap&lt;String, List&lt;String&gt;&gt; amigos = new HashMap&lt;&gt;();
+
+// añadimos los amigos de Juan
+amigos.put("Juan", new ArrayList&lt;&gt;());
+amigos.get("Juan").add("Pedro");
+amigos.get("Juan").add("Ana");
+
+System.out.println(amigos); //{Juan=[Pedro, Ana]}
+</code></pre>
+</div>
+</div>
+<hr />
+<h5>Uso de mapas manipulando archivos <em>JSON</em></h5>
+<p style="text-align: justify;">El uso principal de los <em>HashMap</em> actualmente es la manipulación de archivos tipo <em>JSON</em> característicos de las <em>APIs</em> y microservicios. También en acceso a bases de datos <em>NoSQL</em> (<em>MongoDB</em>).</p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>{
+    "nombre": "Juan",
+    "edad": 25
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">Otro ejemplo:</p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code></code><code>{
+    "usuario": {
+        "nombre": "Carlos",
+        "edad": 32,
+        "activo": true,
+        "hobbies": ["fútbol", "lectura", "música"],
+        "direccion": {
+            "ciudad": "Madrid",
+            "pais": "España"
+        }
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Aquí tenemos:</p>
+<ul>
+<li style="text-align: justify;">Un objeto "<em>usuario</em>".</li>
+<li style="text-align: justify;">Claves con valores de distintos tipos (<em>String, Number, Boolean</em>).</li>
+<li style="text-align: justify;">Un <em>array</em> "<em>hobbies</em>".</li>
+<li style="text-align: justify;">Otro objeto anidado "direccion".</li>
+</ul>
+<p>Una librería típica para manipular <em>JSON</em> es <em>Gson (com.google.gson.Gson)</em>, de <em>Google</em>. Aquí tienes un ejemplo con <em>Gson</em> para convertir <em>JSON</em> a un objeto <em>Java</em>:</p>
+<div class="highlighted-code code-style-2 language-json line-numbers">
+<div>
+<pre><code>import com.google.gson.Gson;
+
+class Usuario {
+    String nombre;
+    int edad;
+    boolean activo;
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        String json = "{ \"nombre\": \"Carlos\", \"edad\": 32, \"activo\": true }";
+
+        Gson gson = new Gson();
+        Usuario usuario = gson.fromJson(json, Usuario.class);
+
+        System.out.println("Nombre: " + usuario.nombre);
+        System.out.println("Edad: " + usuario.edad);
+        System.out.println("Activo: " + usuario.activo);
+
+    }
+}</code></pre>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id3-0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h2 class="iDeviceTitle">Ejercicio 1</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_127_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Dado un texto introducido por el usuario, cuenta cuántas veces aparece cada palabra y muestra el resultado.</p>
+<p style="padding-left: 60px;"><span style="text-decoration: underline;">Entrada de ejemplo</span>: </p>
+<p style="padding-left: 180px; text-align: left;"><em><strong>hola mundo hola java hola código</strong></em><span style="text-decoration: underline;"></span></p>
+<p style="padding-left: 180px; text-align: left;"><em><strong></strong></em></p>
+<p style="padding-left: 60px;"><span style="text-decoration: underline;">Salida esperada</span>:</p>
+<p style="text-align: justify; padding-left: 180px;"><img src="img0.1.png" width="106" height="92" alt="1" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id4-0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h2 class="iDeviceTitle">Ejercicio 2: contador de caracteres</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p> Dada una palabra, cuenta cuántas veces aparece cada carácter.</p>
+<p style="padding-left: 60px;"><span style="text-decoration: underline;">Entrada de ejemplo</span>:</p>
+<p style="padding-left: 240px;"><em><strong>banana</strong></em></p>
+<p style="padding-left: 60px;"><span style="text-decoration: underline;">Salida esperada</span>:</p>
+<p style="padding-left: 240px;"><em><strong><img src="img0.2.png" width="64" height="73" alt="2" /></strong></em></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id6-0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h2 class="iDeviceTitle">Ejercicio 3. Registro de temperaturas por ciudad</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_130_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">Con todo el lío de la DANA, los negacionistas del cambio climático se están replanteando sus creencias y han decidido implementar un sistema sencillo que registre la temperatura en diferentes ciudades para ver si todo lo que se dice por parte de la comunidad científica es verdad. Como no se fían de los sensores automáticos, ellos mismos medirán la temperatura con un termómetro e irán insertando los datos a mano mediante una <em>app</em>.</p>
+<ul>
+<li style="text-align: justify;">Cada ciudad tendrá una temperatura registrada.</li>
+<li style="text-align: justify;">El usuario podrá <em><strong>insertar, actualizar</strong></em> y <em><strong>consultar</strong> </em>temperaturas por ciudad.</li>
+<li style="text-align: justify;">También podrá <em><strong>mostrar</strong> </em>un listado de todas las temperaturas registradas en todas las ciudades.</li>
+</ul>
+<p style="text-align: left; padding-left: 60px;">Ejemplo de ejecución:</p>
+<p><img src="img0.4.png" width="780" height="434" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id7-0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h2 class="iDeviceTitle">Ejercicio 4. Evitando el pucherazo</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_131_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">En los cursos de ciclos formativos del instituto se está llevando a cabo la elección de delegado, en la que cada estudiante escribe el nombre de su candidato en un papel. Como la mayoría de los estudiantes son de informática y no se fían del proceso de votación, deciden aprovechar sus conocimientos de programación para crear una pequeña app que contabilice los votos y determine cuántos votos recibe cada candidato de forma objetiva.</p>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Entrada</span>:</p>
+<ul>
+<li>Se escriben nombres de candidatos, uno por línea.</li>
+<li>Para finalizar la votación, se escribe la palabra "<em>fin</em>".</li>
+</ul>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Entrada</span>:</p>
+<p style="padding-left: 90px;"><img src="img0.6.png" width="65" height="154" alt="1" /></p>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Salida</span>: </p>
+<p style="padding-left: 60px;"><img src="img1.1.png" width="152" height="95" alt="2" /></p>
+<p style="text-align: justify; padding-left: 30px;"></p>
+<p style="text-align: justify; padding-left: 90px;"></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-1">
+<header class="nodeDecoration">
+<h1 id="exenode_1_TablasHash" class="nodeTitle">Tablas Hash</h1>
+</header>
+<article class="iDevice_wrapper textIdevice" id="id1-1">
+<div class="iDevice emphasis0" >
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Una tabla <em>hash</em> es simplemente una estructura de datos que organiza los elementos en "celdas" usando una función matemática llamada función <em>hash</em>. Esta función convierte las claves (como "<em>Juan</em>") en números, que se usan como índices para colocar los valores en en un <em>array</em> o lista.</p>
+<p><img src="img4.2.png" width="621" height="426" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Funciona de la siguiente manera:</p>
+<p style="padding-left: 30px; text-align: justify;"><strong>1. Se aplica una función <em>hash</em> a la clave</strong></p>
+<p style="padding-left: 60px; text-align: justify;">Ejemplo: si la clave es "<em>Juan</em>", la función <em>hash</em> genera un número (índice en el <em>array</em> a guardar el valor). Por ejemplo, <em><strong>8</strong></em>.</p>
+<p style="padding-left: 30px; text-align: justify;"><strong>2. Se almacena el valor en la posición del array indicada por la función hash</strong></p>
+<p style="padding-left: 60px; text-align: justify;">Si <em>hash("Juan") = 8</em>, entonces <em>"Juan" → 25"</em> se guarda en la <strong><em>posición 8</em></strong> de la tabla.</p>
+<p style="padding-left: 60px;"><img src="img2.png" width="230" height="328" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px; text-align: justify;"><strong>3. Cuando queremos acceder a un valor, la función <em>hash</em> coge la clave ("<em>Juan</em>"), calcula el número de índice y encuentra rápidamente la casilla que corresponde</strong></p>
+<p style="padding-left: 60px; text-align: justify;">Cuando hacemos <strong><em>get("Juan")</em></strong>, la función <em>hash</em> obtiene el índice 8 y recupera el valor <em><strong>25</strong></em>.</p>
+<hr />
+<h5>¿Y si con claves distintas se obtiene la misma posición?</h5>
+<p>Cuando dos claves diferentes producen el mismo índice, <span style="background-color: #ffff99;">ocurre una <span style="text-decoration: underline; color: #ff0000; font-size: 18pt;"><strong>colisión</strong></span></span>.</p>
+<p style="padding-left: 120px;"><em><strong>hash("Juan") = 8</strong></em><br /><em><strong>hash("Ana") = 8         </strong></em>ambos datos quieren ocupar la misma posición en la tabla.</p>
+<p style="text-align: justify;">Una buena función <em>hash</em> debería generar posiciones aleatorias y uniformemente distribuidas en la tabla para minimizar las <strong>colisiones</strong>: cuando dos elementos diferentes generan la misma posición en la tabla. Si la función <em>hash</em> no es lo suficientemente buena, pueden producirse colisiones frecuentes y disminuir el rendimiento de la tabla <em>hash</em>.</p>
+<p><img src="img4.1.png" width="619" height="292" alt="9" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;"><strong>Soluciones para las colisiones</strong></p>
+<p style="text-align: justify;">Existen dos formas principales para manejar colisiones:</p>
+<ul>
+<li style="text-align: justify;">
+<p><strong>Encadenamiento </strong><em><strong>(Chaining)</strong></em>. Usa una lista en cada índice para almacenar múltiples valores con la misma clave. En <em>Java</em>, <em>HashMap</em> usa internamente listas enlazadas.</p>
+</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>// representación conceptual
+tablaHash[8] -&gt; ["Juan" → 25] -&gt; ["Ana" → 30]
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 60px;"><img src="img3.png" width="332" height="331" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px;">Así, la búsqueda en caso de colisión, revisa la lista enlazada.</p>
+<ul>
+<li style="text-align: justify;">
+<p><strong>Dirección abierta (<em>Open Addressing</em>)</strong>. En lugar de usar una lista, si una posición está ocupada, se busca la siguiente disponible en la tabla.</p>
+</li>
+</ul>
+<p><img src="img4.png" width="339" height="312" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-2">
+<header class="nodeDecoration">
+<h1 id="exenode_2_ImplementacininternadeHashMapcomoTablaHashenJava" class="nodeTitle">Implementación interna de HashMap como Tabla Hash en Java</h1>
+</header>
+<article class="iDevice_wrapper textIdevice" id="id2-2">
+<div class="iDevice emphasis0" >
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="exe-text"><p>En <em>Java</em>, <em>HashMap</em> usa:</p>
+<ul>
+<li><strong>Un array de "buckets"</strong>: cada posición del <em>array</em> es un <em>bucket</em> que almacena un nodo <em>clave-valor</em>.</li>
+<li><em><strong>Nodos (&lt;K, V&gt;)</strong></em>: son pares clave-valor con punteros (--&gt;) a posibles colisiones.</li>
+<li><em><strong>Rehashing</strong></em>: cuando la tabla se llena demasiado (carga ≥ 75%), se duplica su tamaño y se vuelven a ubicar los elementos.</li>
+</ul>
+<p><img src="img0.png" width="289" height="311" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Cuando se inserta una clave:</p>
+<ol>
+<li>Se calcula su <em>hash</em>.</li>
+<li>Se almacena en el <em>bucket</em> correspondiente.</li>
+<li>Si hay colisión, se usa una lista enlazada.</li>
+</ol>
+<p><img src="img1.png" width="347" height="336" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<h5>Ventajas y desventajas de <em>HashMap</em></h5>
+<p style="padding-left: 30px;">✅ Búsqueda rápida.<br /><br />❌ El consumo de memoria puede ser mayor que con otras estructuras.</p>
+<p style="padding-left: 30px;">❌ Riesgo de colisiones que pueden degradar el rendimiento si hay muchas.</p></div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-3">
+<header class="nodeDecoration">
+<h1 id="exenode_3_DiccionarioEspaolIngls" class="nodeTitle">Diccionario Español - Inglés</h1>
+</header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id5-3">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h2 class="iDeviceTitle">Se pide hacer una aplicación Java que gestione un diccionario español-inglés. </h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_129_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">La aplicación cargará en memoria un diccionario con parejas de palabras en español e inglés, y a continuación realizará un simple cuestionario al usuario mostrándole palabras en español y pidiéndole que escriba su correspondiente traducción al inglés.</p>
+<p style="text-align: justify;">Para ello, se tendrá que crear una clase <em><strong>Diccionario</strong> </em>con las siguientes especificaciones:</p>
+<p style="text-align: justify; padding-left: 30px;">- La clase definirá una colección de parejas de palabras en español-inglés. </p>
+<p style="text-align: justify; padding-left: 30px;">- Esta clase tendrá una única propiedad <em><strong>diccionario</strong> </em>que será un <em>HashMap </em>con pares <em>clave-valor,</em> ambos del tipo <em>String</em>. </p>
+<p style="text-align: justify; padding-left: 30px;">- Por defecto, el <em>Diccionario</em> construye la propiedad <em>diccionario</em> como un <em>HashMap</em> vacío.</p>
+<p style="text-align: justify; padding-left: 30px;"><span style="text-decoration: underline;"><strong>Métodos</strong></span></p>
+<ul>
+<li style="text-align: justify;"><em><strong>nuevoPar()</strong> </em>– Este método recibirá una palabra en español y otra en inglés, y las introducirá en el <em>HashMap</em> como nuevo par <em>clave-valor</em>.</li>
+<li style="text-align: justify;"><em><strong>traduce()</strong> </em>– Este método recibirá una palabra en español, la buscará en la propiedad diccionario y devolverá su correspondiente valor en inglés.</li>
+<li style="text-align: justify;"><em><strong>palabraAleatoria()</strong> </em>– Este método no recibirá ningún parámetro. El método devolverá aleatoriamente una de las palabras en español del diccionario.</li>
+<li style="text-align: justify;"><em><strong>primeraLetraTraduccion()</strong> </em>– Este método recibirá una palabra en español y devolverá la primera letra de su correspondiente palabra en inglés.</li>
+</ul>
+<p style="text-align: justify;"><br />El programa principal debe instanciar un objeto de la clase <em>Diccionario</em>, y rellenarlo con parejas de palabras español-inglés. Una vez cargado el objeto <em>Diccionario</em>, el programa iniciará un pequeño cuestionario en el que le preguntará al usuario la traducción de una palabra en español. El usuario escribirá la respuesta en inglés y el programa le dirá si ha acertado o no. </p>
+<p style="text-align: justify;">El programa finaliza cuando el usuario escribe "<em><strong>fin</strong></em>" como respuesta.</p>
+<p style="padding-left: 30px;">La salida del programa será similar a la siguiente:</p>
+<p><img src="img0.3.png" width="345" height="332" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">Se proporciona la primera letra de la palabra en inglés como pista.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+</section>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+
+
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body>
+</html>

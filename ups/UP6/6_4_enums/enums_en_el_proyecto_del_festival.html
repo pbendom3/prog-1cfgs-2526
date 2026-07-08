@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Enums en el proyecto del Festival | BONUS. Enums </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">BONUS. Enums</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">BONUS. Tipos enumerados (enum)</a></li>
+   <li id="active"><a href="enums_en_el_proyecto_del_festival.html" class="active daddy">Enums en el proyecto del Festival</a>
+   <ul>
+      <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Enums en el proyecto del Festival</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_127_2" class="block iDevice_content">
+<div class="exe-text"><p>Podríamos usar <em>enum</em> para definir roles de organizadores o tipos de entrada en nuestro <em>Festival </em>de la siguiente manera:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public enum RolOrganizador {
+    SEGURIDAD, PRODUCCION, PRENSA;
+}</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public enum TipoEntrada {
+    GENERAL, PISTA, VIP;
+}</code></pre>
+</div>
+</div>
+<p>Y podríamos usarlo así en las clases <em>Organizador </em>y<em> Asistente</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>package org.example.herencia_concierto;
+
+class Organizador extends Persona implements Organizable, Promocionable{
+    private RolOrganizador rol; // Ejemplo: "Seguridad", "Producción", "Prensa"
+
+    public Organizador(String nombre, int edad, RolOrganizador rol) {
+        super(nombre, edad);
+        this.rol = rol;
+    }
+
+    public void mostrarInfo() {
+        super.mostrarInfo();
+        System.out.println("Rol en el festival: " + rol);
+    }
+
+
+    public void accederEvento(){
+        System.out.println("Accediendo como Organizador: Coordinando el evento.");
+    }
+
+    @Override
+    public void organizarEvento() {
+        System.out.println("Organizando...");
+    }
+
+    @Override
+    public void promocionar() {
+        System.out.println("Promocionando...");
+    }
+}</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>package org.example.herencia_concierto;
+
+class Asistente extends Persona {
+    private TipoEntrada entrada; //Tipo de entrada (General, VIP, etc.)
+
+    public Asistente(String nombre, int edad, TipoEntrada entrada) {
+        super(nombre, edad); // Llamamos al constructor de la clase Persona
+        this.entrada = entrada;
+    }
+
+    @Override
+    public void mostrarInfo() {
+        super.mostrarInfo(); //Llamamos al método de la clase Persona
+        System.out.println("Tipo de entrada: " + entrada);
+    }
+
+    public void accederEvento(){
+        System.out.println("Accediendo como Asistente: Buscando asiento.");
+    }
+}</code></pre>
+</div>
+</div>
+<p>En el <em>main</em>, a la hora de crear los objetos, lo haremos así:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Concierto {
+    public static void main(String[] args) {
+
+        Asistente asistente = new Asistente("Lucas", 18, TipoEntrada.GENERAL);
+        Organizador organizador = new Organizador("Martín", 30, RolOrganizador.PRENSA);
+
+    }</code></pre>
+</div>
+</div>
+<hr />
+<p>Para añadir un poco de "chicha", vamos a asignar un precio a cada entrada:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public enum TipoEntrada {
+   
+    GENERAL(50), PISTA(75), VIP(250);
+
+    private int precio;
+
+    TipoEntrada(int precio) {  
+        this.precio = precio;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+}</code></pre>
+</div>
+</div>
+<p>Y desde el <em>main</em>, vamos a imprimir cada tipo de entrada disponibles:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Concierto {
+    public static void main(String[] args) {
+
+        Persona asistente = new Asistente("Lucas", 18, TipoEntrada.GENERAL);
+        Persona organizador = new Organizador("Martín", 30, RolOrganizador.PRENSA);
+
+        for (TipoEntrada entrada : TipoEntrada.values()){
+            System.out.println("Entrada: " + entrada + " con precio " + entrada.getPrecio() + "€");
+        }
+
+    }</code></pre>
+</div>
+</div>
+<p><img src="img0.1.png" width="410" height="102" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

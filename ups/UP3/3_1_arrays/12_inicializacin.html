@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2. Inicialización | Arrays </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Arrays</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">1. Estructura de los vectores (arrays)</a></li>
+   <li><a href="11_creacin_de_vectores_en_java.html" class="no-ch">1.1. Creación de vectores en Java</a></li>
+   <li id="active"><a href="12_inicializacin.html" class="active no-ch">1.2. Inicialización</a></li>
+   <li><a href="13_tratamiento_de_la_informacin_almacenada_en_vectores.html" class="no-ch">1.3. Tratamiento de la información almacenada en vectores</a></li>
+   <li><a href="batera_de_ejercicios_sobre_arrays.html" class="no-ch">Batería de ejercicios sobre arrays</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_creacin_de_vectores_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_tratamiento_de_la_informacin_almacenada_en_vectores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2. Inicialización</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Inicializar y recorrer un Array</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="exe-text"><ul></ul>
+<h5>Inicializar un <em>array</em></h5>
+<p>Dado el siguiente array de caracteres (tipo <em>String</em>),</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>String[] nombres = new String[3];</code></pre>
+</div>
+</div>
+<p>Para insertar el valor “Arturo” en la posición 0, se hace de la siguiente forma:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>nombres[0] = "Arturo";</code></pre>
+</div>
+</div>
+<p>A continuación se muestra una representación visual del array después de insertar el valor “<em>Arturo</em>” en el la posición 0:</p>
+<p><img src="img3.2.png" width="591" height="154" alt="16" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Observa como los índices 1 y 2 contienen <em>null</em>, esto es porque Java otorga esos valores cuando se instancia el <em>array</em>. Por lo tanto, si no inicializamos los elementos de un <em>array</em>, se almacenará el valor por defecto según el tipo de dato:</p>
+<p> </p>
+<p><img src="img1.1.png" width="216" height="265" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<p>También se pueden declarar, instanciar, y asignar elementos a los <em>arrays</em> en una sola línea. Por ejemplo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int[] numeros = {2,4,6,8};</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">observa cómo los elementos con los que se está inicializando el <em>array</em> van entre llaves {2,4,6,8}. Además, en este caso no se debe utilizar la palabra reservada <em>new</em>, ni corchetes junto al tamaño.</p>
+<h5>Excepciones y errores</h5>
+<ul>
+<li>Dado que el tipo de dato del <em>array</em> es <em>String</em>, sólo se pueden insertar elementos de tipo <em>String</em>. <strong>Si se intenta insertar un elemento de otro tipo, <em>Java</em> devuelve un error</strong>.</li>
+</ul>
+<p style="padding-left: 30px;">Por ejemplo, al intentar insertar un <em>número</em> en el <em>array <strong>nombres</strong></em>,</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>nombres[1] = 4;</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">se obtiene un error similar al siguiente,</p>
+<p><img src="img4.1.png" width="766" height="46" alt="17" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<p style="padding-left: 30px;">Y en concreto, <em>IntelliJ</em> <em>IDEA</em> nos lo notifica directamente mediante el intérprete:</p>
+<p><img src="img5.1.png" width="583" height="164" alt="18" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<ul>
+<li>Por otro lado, <strong>si se intenta insertar un elemento en una posición que no existe en el <em>array</em></strong>, <em>Java</em> devolverá una excepción llamada <em>ArrayIndexOutOfBoundsException</em>. Este error puede que lo hayas visto antes, ya que trabajando con cadenas de caracteres puede ser que hayas utilizado alguna función que se comporte igual (como <em>charAt(posicion)</em>).</li>
+</ul>
+<p style="padding-left: 30px;">Por ejemplo, se sabe que el índice 3 no está disponible en el <em>array</em> <strong><em>nombres </em></strong>porque la numeración empieza en 0 y es de tamaño 3, por lo tanto, los índices disponibles son 0, 1, y 2. Si se intenta insertar un elemento en el índice 3:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>nombres[3] = "José";</code></pre>
+</div>
+</div>
+<p style="padding-left: 60px;">se obtiene la siguiente excepción,</p>
+<p><img src="img6.1.png" width="977" height="78" alt="19" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<h5>Recorrer un <em>array</em></h5>
+<p>Para recorrer los elementos de un <em>array</em> podemos hacerlo mediante un bucle <em>for</em>. Al igual que con la clase <em>String</em>, también podremos utilizar la propiedad <strong><em>length</em> </strong>para obtener la cantidad de elementos que forman dicho <em>array</em>:</p>
+<p><img src="img7.png" width="824" height="163" alt="20" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int[] notas = new int[5];
+for(int i = 0; i &lt; notas.length; i++) {
+notas[i] = i*2;
+} //los valores almacenados en el Array serán 0,2,4,6,8</code></pre>
+</div>
+</div>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong><span style="font-size: 18pt;">OJO</span> </strong>con el signo</span> de la condición en el bucle <em>for</em>. Si elegimos<em><strong> i &lt;=</strong></em>, debemos repetir el bucle hasta <em><strong>notas.length - 1</strong></em>.</p>
+<h5>EJEMPLOS</h5>
+<ul>
+<li>Si nos ceñimos al programa del punto anterior, en caso de querer imprimir directamente los valores del <em>array</em> sin haberlos inicializado, obtendríamos valores nulos:</li>
+</ul>
+<p><img src="img2.png" width="656" height="162" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int[] notas = new int[5];
+for(int i = 0; i &lt; notas.length; i++) {
+ System.out.print(notas[i]);
+} //se muestra 00000</code></pre>
+</div>
+</div>
+<ul>
+<li>Podemos inicializar manualmente los valores que tendrá un <em>array</em>, poniéndolos entre llaves y separándolos por comas:</li>
+</ul>
+<p><img src="img3.png" width="903" height="333" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int[] notas = {6,7,8,1,10,5}; //Array de 6 enteros
+for(int i = 0; i &lt; notas.length; i++) {
+ System.out.print(notas[i]);
+} // 6781105</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>String[] nombres = {"Pep", "Tom", "Kal"}; //Array de 3 Strings
+for(int i = 0; i &lt; nombres .length; i++) {
+ System.out.print("[" + nombres[i] +"]");
+} // [Pep][Tom][Kal]</code></pre>
+</div>
+</div>
+<p></p>
+<ul></ul>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_creacin_de_vectores_en_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_tratamiento_de_la_informacin_almacenada_en_vectores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

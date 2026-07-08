@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ordenación de mapas | 7.3. Métodos útiles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.3. Métodos útiles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.3. Métodos útiles para la manipulación de colecciones</a></li>
+   <li><a href="731_iteradores.html" class="daddy">7.3.1. Iteradores</a>
+   <ul class="other-section">
+      <li><a href="listiterator.html" class="no-ch">ListIterator</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="732_comparadores.html" class="current-page-parent daddy">7.3.2. Comparadores</a>
+   <ul>
+      <li id="active"><a href="ordenacin_de_mapas.html" class="active no-ch">Ordenación de mapas</a></li>
+   </ul>
+   </li>
+   <li><a href="733_inmutabilidad_en_java.html" class="no-ch">7.3.3. Inmutabilidad en Java</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="732_comparadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="733_inmutabilidad_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Ordenación de mapas</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id11">
+<div class="iDevice emphasis0" >
+<div id="ta11_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Los mapas (<em>HashMap</em>, <em>TreeMap</em>, etc.) no tienen un orden natural de por sí, pero se pueden ordenar según las claves o los valores utilizando <em>Comparable</em> o <em>Comparator</em>.</p>
+<p style="text-align: justify; padding-left: 30px;">Un <em>TreeMap</em> ya ordena automáticamente sus claves:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class EjemploTreeMap {
+    public static void main(String[] args) {
+
+        Map&lt;String, Integer&gt; treeMap = new TreeMap&lt;&gt;();  // se ordena por clave automáticamente
+        treeMap.put("Juan", 30);
+        treeMap.put("Ana", 25);
+        treeMap.put("Carlos", 35);
+        
+        System.out.println(treeMap);  // {Ana=25, Carlos=35, Juan=30}  (ordenado alfabéticamente por clave)
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">Si las claves son <em>String</em>, <em>Integer</em>, etc., se ordenan por orden natural. Si no, deberemos implementar <em>Comparable</em>. Si necesitamos más de un criterio, crearemos una clase nueva que implemente <em>Comparator</em> con el que necesitemos y lo usaremos en el constructor del <em>TreeMap:</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Map&lt;String, Integer&gt; treeMap = new TreeMap&lt;&gt;(Comparator.reverseOrder());
+treeMap.put("Juan", 30);
+treeMap.put("Ana", 25);
+treeMap.put("Carlos", 35);
+
+System.out.println(treeMap);  // {Juan=30, Carlos=35, Ana=25}  (ordenado en orden inverso)
+</code></pre>
+</div>
+</div>
+<hr />
+<p style="text-align: justify;"><strong>Ordenar un <em>HashMap</em> por valor usando <em>Comparator</em></strong></p>
+<p style="text-align: justify;">Un <em>HashMap</em> no mantiene el orden, así que convertimos sus entradas (<em>entrySet()</em>) en una lista, y luego la ordenamos con <em>Comparator</em>.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class OrdenarHashMap {
+    public static void main(String[] args) {
+
+        Map&lt;String, Integer&gt; hashMap = new HashMap&lt;&gt;();
+        hashMap.put("Juan", 30);
+        hashMap.put("Ana", 25);
+        hashMap.put("Carlos", 35);
+
+        // convertir a lista
+        List&lt;Map.Entry&lt;String, Integer&gt;&gt; lista = new ArrayList&lt;&gt;(hashMap.entrySet());
+        lista.sort(Map.Entry.comparingByValue());  // ordena por valores
+
+        for (Map.Entry&lt;String, Integer&gt; entry : lista) {
+            System.out.println(entry.getKey() + " -&gt; " + entry.getValue());
+        }
+
+        // Ana -&gt; 25
+        // Juan -&gt; 30
+        // Carlos -&gt; 35<br />
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">Y para ordenar al revés:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>lista.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));</code></pre>
+</div>
+</div></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="732_comparadores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="733_inmutabilidad_en_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

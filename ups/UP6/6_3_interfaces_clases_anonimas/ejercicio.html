@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejercicio | 6.4. Interfaces </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.4. Interfaces</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">6.4. Interfaces</a></li>
+   <li><a href="polimorfismo_cuando_usamos_interfaces_instanceof.html" class="no-ch">Polimorfismo cuando usamos interfaces (instanceOf)</a></li>
+   <li id="active"><a href="ejercicio.html" class="active no-ch">Ejercicio</a></li>
+   <li><a href="diagrama_uml_con_elementos_de_tipo_interface.html" class="no-ch">Diagrama UML con elementos de tipo interface</a></li>
+   <li><a href="clases_annimas.html" class="no-ch">Clases anónimas</a></li>
+   <li><a href="mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html" class="no-ch">Mejora con clases anónimas el proyecto de Dispositivos Inteligentes</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="polimorfismo_cuando_usamos_interfaces_instanceof.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="diagrama_uml_con_elementos_de_tipo_interface.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Ejercicio</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id1">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio: Dispositivos Inteligentes</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Vamos a administrar dispositivos inteligentes que podríamos tener en nuestra casa.</p>
+<p>1. Crea una clase abstracta llamada <em><strong>Dispositivo</strong></em>:</p>
+<ul>
+<li>Atributos: nombre (<em>String</em>) y estado (<em>boolean</em>, encendido/apagado).</li>
+<li>Métodos:
+<ul>
+<li><em>encender()</em>: abstracto, cada dispositivo lo implementa de forma diferente.</li>
+<li><em>apagar()</em>: apaga el dispositivo (<em>estado = false</em>) y muestra un mensaje "<em>nombre + apagado."</em>. En caso de que se intente volver a apagar y ya esté en estado apagado, se debe mostrar "<em>nombre + ya está apagado.</em>".</li>
+<li><em>mostrarEstado()</em>: muestra el estado actual (encendido o apagado).</li>
+</ul>
+</li>
+</ul>
+<p>2. Crea una interfaz llamada <em><strong>ControlRemoto</strong> </em>que contenga un método <em>sincronizar()</em>, para dispositivos que usan control remoto.</p>
+<p>3. Otras clases:</p>
+<ul>
+<li><em><strong>Televisor </strong></em>: extiende <em>Dispositivo</em> e implementa <em>ControlRemoto</em>.
+<ul>
+<li>encender(): imprime "<em>Encendiendo televisor...</em>". Si ya está encendido, se debe mostrar "<em>El televisor ya está encendido.</em>"</li>
+<li>sincronizar(): imprime "<em>Sincronizando televisor con control remoto...</em>".</li>
+</ul>
+</li>
+<li><em><strong>ParlanteInteligente </strong></em>: extiende <em>Dispositivo</em>.
+<ul>
+<li>encender(): imprime "<em>Activando parlante con comando de voz...</em>". Si ya está encendido, se debe mostrar "<em>El parlante ya está encendido.</em>"</li>
+</ul>
+</li>
+<li><em><strong>AireAcondicionado </strong></em>: extiende <em>Dispositivo</em> e implementa <em>ControlRemoto</em>.
+<ul>
+<li><em>encender()</em>: imprime "<em>Encendiendo aire acondicionado...</em>". Si ya está encendido, se debe mostrar "<em>El aire acondicionado ya está encendido.</em>"</li>
+<li><em>sincronizar()</em>: imprime "<em>Sincronizando aire acondicionado con control remoto...</em>".</li>
+</ul>
+</li>
+</ul>
+<p>4. Programa principal:</p>
+<ul>
+<li>Crea una lista de dispositivos.</li>
+<li>Recorre la lista para:
+<ul>
+<li>Encender cada dispositivo.</li>
+<li>Sincronizar en caso de que un dispositivo implemente <em>ControlRemoto</em>.</li>
+<li>Mostrar el estado de cada dispositivo.</li>
+<li>Apagar cada dispositivo.</li>
+</ul>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="polimorfismo_cuando_usamos_interfaces_instanceof.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="diagrama_uml_con_elementos_de_tipo_interface.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

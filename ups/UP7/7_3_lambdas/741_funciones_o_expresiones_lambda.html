@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.4.1. Funciones o expresiones lambda | 7_4_lambdas_streams </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7_4_lambdas_streams</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.4. Programación funcional</a></li>
+   <li id="active"><a href="741_funciones_o_expresiones_lambda.html" class="active daddy">7.4.1. Funciones o expresiones lambda</a>
+   <ul>
+      <li><a href="lambdas_con_interfaces_propias_de_java.html" class="no-ch">Lambdas con interfaces propias de Java</a></li>
+   </ul>
+   </li>
+   <li><a href="742_operaciones_intermedias_stream.html" class="no-ch">7.4.2. Operaciones intermedias stream</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="lambdas_con_interfaces_propias_de_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.4.1. Funciones o expresiones lambda</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id1">
+<div class="iDevice emphasis0" >
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="exe-text"><p>Una expresión <em>lambda</em> es un bloque corto de código que toma parámetros y devuelve un valor. </p>
+<p><img src="syntaxLambdaExpresions.png" width="820" height="284" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>La expresión <em>lambda</em> más simple contiene un solo parámetro y una expresión: </p>
+<p style="text-align: center;"><strong><em>parámetro -&gt; expresión</em></strong></p>
+<p>Para usar más de un parámetro, los envolvemos entre paréntesis: </p>
+<p style="text-align: center;"><em><strong>(parámetro1, parámetro2) -&gt; expresión</strong></em></p>
+<p>Para realizar operaciones más complejas, se puede usar un bloque de código con llaves: </p>
+<p style="text-align: center;"><em><strong>(parámetro1, parámetro2) -&gt; {bloque de código}</strong></em></p>
+<p>Y si la expresión <em>lambda</em> necesita devolver un valor, entonces el bloque de código debe tener una declaración <em>return</em>: </p>
+<p style="text-align: left; padding-left: 330px;"><em><strong>(parámetro1, parámetro2) -&gt; {</strong></em></p>
+<p style="text-align: left; padding-left: 360px;"><em><strong>bloque de código </strong></em></p>
+<p style="text-align: left; padding-left: 360px;"><em><strong>return elemento_devuelto;</strong></em></p>
+<p style="text-align: left; padding-left: 330px;"><em><strong>}</strong></em></p>
+<p style="text-align: justify;">Para empezar a implementar ejemplos concretos con las expresiones anteriores, primero deberemos implementar una <span style="color: #008000;"><strong>interfaz funcional</strong></span>. </p>
+<p style="text-align: justify;">Una interfaz funcional es una interfaz que solamente tiene un método abstracto, como podría ser la siguiente:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>@FunctionalInterface
+public interface Ejecutor {
+
+    void ejecutar();
+    
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Una vez que tenemos nuestra interfaz funcional, lo que podemos hacer simplemente con lo que sabemos es crear una clase anónima:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        Ejecutor ej = new Ejecutor(){
+            @Override
+            public void ejecutar() {
+                System.out.println("Hola desde una clase anónima.");
+            }
+        };
+
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">El problema de esto es que tenemos bastante código para solamente traer un método de la interfaz. Sin embargo, lo que podríamos hacer para acortarlo es crear directamente una expresión <em>lambda</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        Ejecutor ej = new Ejecutor(){
+            @Override
+            public void ejecutar() {
+                System.out.println("Hola desde una clase anónima.");
+            }
+        };
+
+        Ejecutor lambda = () -&gt; {
+            System.out.println("Hola desde una lambda");
+        };
+        
+        ej.ejecutar();
+        lambda.ejecutar();
+
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img1.png" width="298" height="124" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">En este caso, como solamente realizamos una instrucción <em>println</em> <strong>no serían necesarias las llaves</strong>, por lo que nuestro código quedaría todavía más simplificado desde la <em>lambda</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Ejecutor lambda = () -&gt; System.out.println("Hola desde una lambda");</code></pre>
+</div>
+</div>
+<hr />
+<p style="text-align: justify;">Para probar las <em>lambdas</em> cuando tenemos <strong>métodos abstractos con parámetros</strong>, vamos a modificar el método <em>ejecutar()</em> de la interfaz para añadirle un parámetro:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>@FunctionalInterface
+public interface Ejecutor {
+
+    void ejecutar(String param1);
+
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">La clase anónima y la <em>lambda</em> se empezarán a quejar tras el cambio, ya que también deben reflejar un parámetro en la llamada a <em>ejecutar()</em>. Las adaptamos:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        Ejecutor ej = new Ejecutor(){
+            @Override
+            public void ejecutar(String param1) {
+                System.out.println("Hola desde " + param1);
+            }
+        };
+
+        Ejecutor lambda = (param1) -&gt; System.out.println("Hola desde " + param1);
+
+        ej.ejecutar("una clase anónima");
+        lambda.ejecutar("una lambda");
+
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img2.png" width="345" height="126" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<p>También podríamos modificar el método <em>ejecutar()</em> de nuestra interfaz para retornar algún tipo de parámetro, por ejemplo un <em>String</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>@FunctionalInterface
+public interface Ejecutor {
+
+    String ejecutar(String param1);
+
+}
+</code></pre>
+</div>
+</div>
+<p>Una vez más, nuestra clase anónima y <em>lambda</em> se quejarán tal y como están implementadas, ya que deben adaptarse al nuevo cambio. Por lo tanto, las adaptamos para retornar un tipo <em>String</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        Ejecutor ej = new Ejecutor(){
+            @Override
+            public String ejecutar(String param1) {
+                System.out.println("Hola desde " + param1);
+                return param1.toUpperCase();
+            }
+        };
+
+        Ejecutor lambda = (param1) -&gt; {
+            System.out.println("Hola desde " + param1);
+            return param1.toUpperCase();
+        };
+
+        String resultadoAnonima = ej.ejecutar("una clase anónima");
+        String resultadoLambda = lambda.ejecutar("una lambda");
+        System.out.println(resultadoAnonima);
+        System.out.println(resultadoLambda);
+
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img3.png" width="333" height="159" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 1</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Modifica la interfaz <em><strong>Ejecutor</strong> </em>para que el método <em>ejecutar()</em> reciba un parámetro de tipo<em> int</em> y retorne un <em>boolean</em>. Este método debe devolver <em>true</em> si el número es mayor a 10, o <em>false</em> en caso contrario.</p>
+<p>Implementa una expresión <em>lambda</em> con un bloque de código que haga esta comprobación. En el método <em>main</em>, prueba con varios números (por ejemplo, 15 y 5) y muestra los resultados.</p>
+<p><img src="img0.png" width="291" height="119" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id3">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 2</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_130_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">Crea una nueva interfaz funcional llamada <em><strong>VerificadorVoto</strong></em> con un único método abstracto <em><strong>boolean puedeVotar(String nombre, int edad)</strong></em>.</p>
+<p style="text-align: justify;">Implementa una expresión <em>lambda</em> para que el método <em>puedeVotar()</em> retorne <em>true</em> si la persona tiene 18 años o más, y <em>false</em> si es menor de 18 años.</p>
+<p><img src="img0.1.png" width="356" height="95" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_131_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Vale... ¿y con objetos?</strong></p>
+<p>Vamos a coger el ejemplo del ejercicio anterior, donde la función <em>lambda</em> devuelve <em>true</em> o <em>false</em> en función de la edad de la persona que recibe por parámetro.</p>
+<p>Crearemos una clase <em>Persona</em> con los atributos <em>nombre</em> (<em>String</em>) y <em>edad</em> (<em>int</em>):</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Persona {
+
+    private String nombre;
+    private int edad;
+
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+}</code></pre>
+</div>
+</div>
+<p>Modificaremos la interfaz funcional llamada <em>VerificadorVoto</em> con un único método abstracto <strong><em>boolean</em> <em>puedeVotar(Persona persona)</em></strong>, que retorne <em>true</em> si la persona tiene 18 años o más.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>@FunctionalInterface
+interface VerificadorVoto {
+    boolean puedeVotar(Persona persona);
+}</code></pre>
+</div>
+</div>
+<p>Desde una clase <em>main</em>, crearemos una lista de personas con diferentes edades:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+       
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+        personas.add(new Persona("Juan", 16));
+        personas.add(new Persona("Ana", 18));
+        personas.add(new Persona("Pedro", 25));
+        personas.add(new Persona("María", 17));
+        personas.add(new Persona("Luis", 30));
+
+    }
+}</code></pre>
+</div>
+</div>
+<p>Usaremos una expresión <em>lambda</em> para verificar si cada persona puede votar y almacenaremos los nombres de las personas que sí pueden votar en una nueva lista:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+       
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+        personas.add(new Persona("Juan", 16));
+        personas.add(new Persona("Ana", 18));
+        personas.add(new Persona("Pedro", 25));
+        personas.add(new Persona("María", 17));
+        personas.add(new Persona("Luis", 30));
+
+        // lambda que verifica si una persona puede votar (18 años o más)
+        VerificadorVoto verificador = persona -&gt; persona.getEdad() &gt;= 18;
+
+        // lista para almacenar los nombres de las personas que pueden votar
+        List&lt;String&gt; personasQuePuedenVotar = new ArrayList&lt;&gt;();
+
+        // verificando si cada persona puede votar usando la lambda
+        for (Persona persona : personas) {
+            if (verificador.puedeVotar(persona)) {
+                personasQuePuedenVotar.add(persona.getNombre());
+            }
+        }
+
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;"><span style="text-decoration: underline; background-color: #ffff99;"><strong>(*) FÍJATE</strong></span>. En <em>Java</em>, cuando una <em>lambda</em> tiene una expresión simple (es decir, sólo una línea de código que se evalúa y retorna directamente), no es necesario escribir explícitamente la palabra <em>return:</em> <em>Java</em> lo hace solo. Sin embargo, si la <em>lambda</em> tuviera un bloque de código más complejo (con llaves {}), entonces sí es necesario usar <em>return</em> para devolver el valor.</p>
+<p>Finalmente, imprimimos los nombres de las personas que pueden votar:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        List&lt;Persona&gt; personas = new ArrayList&lt;&gt;();
+        personas.add(new Persona("Juan", 16));
+        personas.add(new Persona("Ana", 18));
+        personas.add(new Persona("Pedro", 25));
+        personas.add(new Persona("María", 17));
+        personas.add(new Persona("Luis", 30));
+
+        VerificadorVoto verificador = persona -&gt; persona.getEdad() &gt;= 18;
+
+        List&lt;String&gt; personasQuePuedenVotar = new ArrayList&lt;&gt;();
+
+        for (Persona persona : personas) {
+            if (verificador.puedeVotar(persona)) {
+                personasQuePuedenVotar.add(persona.getNombre());
+            }
+        }
+
+        // imprimir los nombres de las personas que pueden votar
+        System.out.println("Personas que pueden votar:");
+        for (String nombre : personasQuePuedenVotar) {
+            System.out.println(nombre); // Ana, Pedro, Luis
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<p></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio 3. Filtrar y procesar una lista de productos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_132_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Crea una clase <em><strong>Producto</strong> </em>que tenga los atributos <em>nombre (String), precio (double)</em> y <em>categoria (String)</em>.</p>
+<p>a) Crea una interfaz funcional llamada <em><strong>FiltroProducto</strong> </em>con un único método abstracto <em><strong>boolean filtrar(Producto producto)</strong></em>, que se encargará de filtrar los productos según algún criterio (por ejemplo, los productos que tienen un precio superior a un valor específico).</p>
+<p>b) Crea una lista de productos con diferentes valores de <em>precio</em> y <em>categoria</em>.</p>
+<p>c) Usa una expresión <em>lambda</em> para <em><strong>filtrar</strong> </em>los productos de la lista que sean de una categoría específica (por ejemplo, "<em>Electrónica</em>") y tengan un precio superior a un valor dado (por ejemplo, 100€).</p>
+<p>d) Crea una nueva Lista para ir almacenando los productos que cumplen con los criterios</p>
+<p>e) Finalmente, imprime la lista filtrada con los nombres y precios de los productos que cumplen con estos criterios.</p>
+<p><img src="img0.2.png" width="450" height="90" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="lambdas_con_interfaces_propias_de_java.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

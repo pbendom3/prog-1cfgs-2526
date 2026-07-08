@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>BONUS. ArrayList de objetos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="BONUS. ArrayList de objetos" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">BONUS. ArrayList de objetos</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">BONUS. ArrayList de objetos</a></li>
+   <li><a href="ejercicios_sobre_arraylist.html" class="no-ch">Ejercicios sobre ArrayList</a></li>
+   <li><a href="actividad_incorporar_arraylist_a_clases_estudiante_y_editorial.html" class="no-ch">Actividad. Incorporar ArrayList a clases Estudiante y Editorial</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios_sobre_arraylist.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">BONUS. ArrayList de objetos</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p>El uso de vectores o <em>arrays</em> no tiene por qué restringirse a elementos de tipo primitivo. Por ejemplo, pueden crearse referencias a <em>arrays</em> de la clase <em>Punto</em>:</p>
+<p><img src="img0.png" width="433" height="101" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img1.png" width="491" height="364" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Pero en la <em>POO</em> no es común ceñirnos a los <em>arrays</em> tradicionales, sino usar otro tipo de listas "dopadas" para manipular mejor nuestros objetos. Estas listas son las llamadas <em><strong>ArrayList</strong></em>.</p>
+<p style="text-align: justify;">Un <em>ArrayList </em>permite almacenar elementos en memoria de manera dinámica. La principal diferencia con los <em>arrays</em> es que <span style="background-color: #ffff99;">el número de elementos que almacena no está limitado por un número fijado al inicio</span>.</p>
+<p style="text-align: justify;">La declaración de un <em>ArrayList</em> se hace según el siguiente formato:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>ArrayList&lt;nombreTipoClase&gt; nombreDeLista = new ArrayList&lt;&gt;();</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Entre <em><strong>&lt; &gt;</strong></em> indicamos la clase o tipos básicos de los objetos que se almacenarán:</p>
+<p><img src="img2.png" width="669" height="177" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>ArrayList&lt;String&gt; listaPaises = new ArrayList&lt;&gt;();
+</code></pre>
+</div>
+</div>
+<hr />
+<h5>Métodos típicos de los <em>ArrayList</em></h5>
+<ul>
+<li>El método <em><span style="color: #800080;"><strong>add</strong> </span></em>posibilita añadir elementos, que se colocan después del último elemento que existiera en el <em>ArrayList.</em></li>
+</ul>
+<p><em><img src="img3.png" width="706" height="147" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>ArrayList&lt;String&gt; listaPaises = new ArrayList&lt;&gt;();
+listaPaises.add("España"); //Ocupa la posición 0
+listaPaises.add("Francia"); //Ocupa la posición 1
+listaPaises.add("Portugal"); //Ocupa la posición 2
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Es posible insertar un elemento en una determinada posición, desplazando el elemento que se encontraba en esa posición, y todos los siguientes, una posición más. Se utiliza el método <em><strong>add</strong> </em>indicando como primer parámetro el número de la posición:</p>
+<p style="padding-left: 30px;"><img src="img4.png" width="709" height="147" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>ArrayList&lt;String&gt; listaPaises = new ArrayList&lt;&gt;();
+listaPaises.add("España");
+listaPaises.add("Francia"); 
+listaPaises.add("Portugal");
+//El orden hasta ahora es: España, Francia, Portugal
+listaPaises.add(1, "Italia");
+//El orden ahora es: España, Italia, Francia, Portugal
+</code></pre>
+</div>
+</div>
+<ul>
+<li>El método <span style="color: #800080;"><em><strong>get</strong> </em></span>permite obtener el elemento almacenado en una determinada posición:</li>
+</ul>
+<p><img src="img5.png" width="706" height="100" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>ArrayList&lt;String&gt; listaPaises = new ArrayList&lt;&gt;();
+listaPaises.add("España");
+listaPaises.add("Francia"); 
+listaPaises.add("Portugal");
+//El orden hasta ahora es: España, Francia, Portugal
+listaPaises.add(1, "Italia");
+//El orden ahora es: España, Italia, Francia, Portugal
+System.out.println(listaPaises.get(3));
+//Siguiendo el ejemplo anterior, mostraría: Portugal
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">Si tuviéramos un <em>ArrayList</em> con otro tipo de datos, como objetos que hayamos creado:</p>
+<p style="padding-left: 30px;"><img src="img6.png" width="706" height="231" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li>Para eliminar un determinado elemento se emplea el método <span style="color: #800080;"><em><strong>remove</strong> </em></span>al que se le puede indicar por parámetro un valor <em>int</em> con la posición a suprimir:</li>
+</ul>
+<p><img src="img7.png" width="569" height="346" alt="8" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>ArrayList&lt;String&gt; listaPaises = new ArrayList();
+listaPaises.add("España");
+listaPaises.add("Francia");
+listaPaises.add("Portugal");
+//listaPaises → España, Francia, Portugal
+listaPaises.add(1, "Italia");
+//listaPaises → España, Italia, Francia, 
+Portugal
+listaPaises.remove(2);
+//listaPaises → España, Italia, Portugal
+listaPaises.remove("Portugal");
+//listaPaises → España, Italia
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">o bien, se puede <strong>especificar el elemento a eliminar</strong> si es encontrado en la lista:</p>
+<p style="padding-left: 30px;"><img src="img8.png" width="385" height="362" alt="9" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li style="text-align: justify;">El método <span style="color: #800080;"><em><strong>indexOf</strong> </em></span>retorna un valor <em>int</em> con la posición que ocupa el elemento que se indica por parámetro. Si no lo encuentra, devuelve <strong>-1</strong>.</li>
+</ul>
+<p><img src="img9.png" width="948" height="190" alt="10" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>ArrayList&lt;String&gt; listaPaises = new ArrayList();
+listaPaises.add("España");
+listaPaises.add("Francia");
+listaPaises.add("Portugal");
+//listaPaises → España, Francia, Portugal
+listaPaises.add(1, "Italia");
+//listaPaises → España, Italia, Francia, 
+Portugal
+listaPaises.remove(2);
+//listaPaises → España, Italia, Portugal
+listaPaises.remove("Portugal");
+//listaPaises → España, Italia
+String paisBuscado = "Francia";
+int pos = listaPaises.indexOf(paisBuscado);
+if(pos != -1) 
+ System.out.println(paisBuscado + " encontrado en la posición: " + pos);
+else System.out.println(paisBuscado + " no se ha encontrado");
+</code></pre>
+</div>
+</div>
+<ul>
+<li>Podemos recorrer un <em>ArrayList</em> con un bucle <span style="color: #800080;"><em><strong>for</strong> </em></span>como lo haríamos con los <em>arrays </em>convencionales. Para obtener el número de elementos, se utiliza el método <span style="color: #800080;"><em><strong>size()</strong></em></span>.</li>
+</ul>
+<p><img src="img10.png" width="629" height="131" alt="11" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>ArrayList&lt;String&gt; listaPaises = new ArrayList();
+listaPaises.add("España");
+listaPaises.add("Francia");
+listaPaises.add("Portugal");
+//listaPaises → España, Francia, Portugal
+listaPaises.add(1, "Italia");
+//listaPaises → España, Italia, Francia, Portugal
+
+for(int i = 0; i &lt; listaPaises.size(); i++) {
+ System.out.println(listaPaises.get(i));
+}
+</code></pre>
+</div>
+</div>
+<p>Como ya sabes, el <span style="color: #800080;"><strong><em>foreach</em> </strong></span>nos permite recorrer los elementos de un <em>array </em>sin utilizar un índice. Aunque la flexibilidad es menor que el bucle <em>for</em> normal, es muy útil para recorrer de forma típica un <em>ArrayList</em>.</p>
+<p><img src="img11.png" width="684" height="196" alt="12" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li><span style="color: #800080;"><em><strong>set (posicion, nuevoValor) </strong></em></span>: modifica un elemento.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        ArrayList&lt;String&gt; listaPaises = new ArrayList();
+        listaPaises.add("España");
+        listaPaises.add("Francia");
+        listaPaises.add("Portugal");
+        listaPaises.add(1, "Italia");
+
+        listaPaises.set(2,"Polonia");
+        System.out.println(listaPaises.get(2));</code></pre>
+</div>
+</div>
+<ul>
+<li><span style="color: #800080;"><em><strong>clear() </strong></em></span>: borra todo el contenido de la lista.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        ArrayList&lt;String&gt; listaPaises = new ArrayList();
+        listaPaises.add("España");
+        listaPaises.add("Francia");
+        listaPaises.add("Portugal");
+        listaPaises.add(1, "Italia");
+
+        listaPaises.clear();
+        System.out.println("El tamaño de la lista es " + listaPaises.size()); //0</code></pre>
+</div>
+</div>
+<ul>
+<li>Object <span style="color: #800080;"><em><strong>clone() </strong></em></span>: retorna una copia de la lista.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        ArrayList&lt;String&gt; listaPaises = new ArrayList();
+        listaPaises.add("España");
+        listaPaises.add("Francia");
+        listaPaises.add("Portugal");
+        listaPaises.add(1, "Italia");
+
+        Object listaPaises_copia = listaPaises.clone();
+        System.out.println(listaPaises_copia.toString());</code></pre>
+</div>
+</div>
+<ul>
+<li>boolean <span style="color: #800080;"><em><strong>contains(Object o) </strong></em></span>: retorna <em>true</em> si se encuentra el elemento en la lista, y <em>false</em> en caso contrario.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        ArrayList&lt;String&gt; listaPaises = new ArrayList();
+        listaPaises.add("España");
+        listaPaises.add("Francia");
+        listaPaises.add("Portugal");
+        listaPaises.add(1, "Italia");
+
+
+        if(listaPaises.contains("Suiza")){
+            System.out.println("Tenemos a Suiza.");
+        }else{
+            System.out.println("No tenemos a Suiza.");
+        }</code></pre>
+</div>
+</div>
+<ul>
+<li><span style="color: #800080;"><em><strong>boolean isEmpty() </strong></em></span>: retorna <em>true</em> si la lista está vacía.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        ArrayList&lt;String&gt; listaPaises = new ArrayList();
+        listaPaises.add("España");
+        listaPaises.add("Francia");
+        listaPaises.add("Portugal");
+        listaPaises.add(1, "Italia");
+
+        //listaPaises.clear();
+
+        if(listaPaises.isEmpty()){
+            System.out.println("La lista está vacía");
+        }else{
+            System.out.println("La lista no está vacía");
+        }</code></pre>
+</div>
+</div>
+<ul>
+<li><span style="color: #800080;"><em><strong>int lastIndexOf(Object o) </strong></em></span>: devuelve el índice de la última ocurrencia del elemento. Si el elemento no se encuentra, devuelve <strong>-1</strong>.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        ArrayList&lt;String&gt; listaPaises = new ArrayList();
+        listaPaises.add("España");
+        listaPaises.add("Francia");
+        listaPaises.add("Portugal");
+        listaPaises.add(1, "Italia");
+
+        System.out.println(listaPaises.lastIndexOf("Francia")); //2
+        System.out.println(listaPaises.lastIndexOf("Suiza")); //-1</code></pre>
+</div>
+</div>
+<ul>
+<li><span style="color: #800080;"><em><strong>addAll(Arrays.asList(elemento1, elemento2, elemento3,...)) </strong></em></span>: añadir más de un elemento a la lista.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        ArrayList&lt;String&gt; listaPaises = new ArrayList();
+        listaPaises.add("España");
+        listaPaises.add("Francia");
+        listaPaises.add("Portugal");
+        listaPaises.add(1, "Italia");
+
+        listaPaises.addAll(Arrays.asList("Polonia","Suiza","Alemania"));
+        System.out.println(listaPaises.toString());</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">También se puede hacer desde un método a parte, usando <em><strong>varargs</strong></em>: </p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        ArrayList&lt;String&gt; listaPaises = new ArrayList();
+        listaPaises.add("España");
+        listaPaises.add("Francia");
+        listaPaises.add("Portugal");
+        listaPaises.add(1, "Italia");
+
+        agregarVariosPaises(listaPaises,"Polonia","Suiza","Alemania");
+        System.out.println(listaPaises.toString());
+        
+    }
+
+    public static void agregarVariosPaises(ArrayList&lt;String&gt; lista, String... paises) {
+        lista.addAll(Arrays.asList(paises));
+    }
+
+}</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="ejercicios_sobre_arraylist.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

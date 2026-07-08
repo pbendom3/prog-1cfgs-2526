@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.3.1. Clase File | Ficheros </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="dadsa" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Ficheros</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">8.3. Ficheros y flujos en Java</a></li>
+   <li id="active"><a href="831_clase_file.html" class="active no-ch">8.3.1. Clase File</a></li>
+   <li><a href="832_filereader_y_bufferedreader_para_leer_archivos_de_texto.html" class="no-ch">8.3.2. FileReader y BufferedReader (para leer archivos de texto)</a></li>
+   <li><a href="833_filewriter_y_bufferedwriter_para_escribir_archivos_de_texto.html" class="no-ch">8.3.3. FileWriter y BufferedWriter (para escribir archivos de texto)</a></li>
+   <li><a href="834_ficheros_binarios.html" class="no-ch">8.3.4. Ficheros binarios</a></li>
+   <li><a href="prctica_3_manejo_de_ficheros_en_java.html" class="no-ch">Práctica 3. Manejo de ficheros en Java</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="832_filereader_y_bufferedreader_para_leer_archivos_de_texto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.3.1. Clase File</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_130_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">La clase <span style="color: #008000;"><em><strong>File</strong> </em></span><strong>no se utiliza para leer o escribir datos</strong> en sí, sino para acceder a la información del archivo o directorio, como la ruta, tamaño, atributos, permisos, etc.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+
+        File archivo = new File("prueba.txt"); // archivo es una referencia a un objeto de tipo File. 
+//No crea físicamente el archivo prueba.txt aún, sólo representa una ruta (relativa o absoluta) en el sistema de archivos.
+
+        try {
+            if (archivo.createNewFile()) {
+                System.out.println("Archivo creado: " + archivo.getName());
+            } else {
+                System.out.println("El archivo " + archivo.getName() + " ya existe.");
+            }
+        } catch (IOException e) {
+            System.out.println("Ha habido algún problema.");
+            e.printStackTrace();
+        }
+
+    }
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: justify; padding-left: 30px;">Como nos interesa saber qué ha ocurrido si se ha producido un error, en lugar de <em>e.getMessage()</em> usaremos <span style="color: #008000;"><em><strong>e.printStackTrace()</strong></em></span> que nos proporciona información sobre el tipo de excepción y la pila de llamadas (<em>stack trace</em>), es decir, el error que ha ocurrido  en el código, línea por línea.</p>
+<p style="text-align: justify; padding-left: 30px;">Por defecto, si no indicamos ruta, nos creará el archivo colgando de la carpeta principal del proyecto:</p>
+<p style="padding-left: 30px;"><img src="img1.1.png" width="374" height="362" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<hr />
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;"><strong><span style="text-decoration: underline; color: #008000;">ACTIVIDAD 1</span>. Modifica el programa para que los archivos se creen en la carpeta <span style="color: #333399;"><em>src/main/resources/</em></span> a partir de ahora. </strong></span></p>
+<hr />
+<p><img src="img0.1.png" width="833" height="427" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        File fichero = new File("src/main/resources/ejemplo1.txt");
+        if(fichero.exists()) System.out.println("El fichero " + fichero.getName() + " existe");
+        else System.out.println("El fichero " + fichero.getName() + " no existe");
+        System.out.println("Nombre: " + fichero.getName());
+        System.out.println("Longitud: " + fichero.length());
+        System.out.println("Ruta absoluta: " + fichero.getAbsolutePath());
+
+        // ejemplo carpeta
+        File carpeta = new File("src/main/resources");
+        if(carpeta.exists()) System.out.println("La carpeta " + carpeta.getName() + " existe");
+        else System.out.println("La carpeta " + carpeta.getName() + " no existe");
+        System.out.println("Nombre: " + carpeta.getName());
+        System.out.println("Longitud: " + carpeta.length());
+        System.out.println("Ruta absoluta: " + carpeta.getAbsolutePath());</code></pre>
+</div>
+</div>
+<p><strong><img src="img2.1.png" width="661" height="235" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<hr />
+<p style="padding-left: 30px; text-align: justify;"><span style="background-color: #ffff99;"><strong><span style="text-decoration: underline;"><span style="color: #008000; text-decoration: underline;">ACTIVIDAD 2</span></span>. Añade lógica al ejemplo anterior para que se cree el fichero "<em>ejemplo1.txt</em>" y observa que cambia la salida porque ahora lo encuentra. </strong></span></p>
+<p style="padding-left: 30px; text-align: justify;"><span style="background-color: #ffff99;"><strong><span style="text-decoration: underline;"><span style="color: #008000; text-decoration: underline;">ACTIVIDAD 3</span></span>. Abre el fichero manualmente, escribe algo y vuelve a ejecutar tu programa. Observa que haya cambiado la longitud según el número de caracteres que hayas escrito.</strong></span></p>
+<hr />
+<p><strong>Crear y borrar ficheros y carpetas</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>File archivo = new File("nuevoArchivo.txt");
+  try {
+    if (archivo.createNewFile())  System.out.println("Archivo creado");
+    else  System.out.println("El archivo ya existe");
+  } catch (IOException e) {     e.printStackTrace();   }
+
+ File directorio = new File("nuevoDirectorio");
+ if (directorio.mkdir())  System.out.println("Directorio creado");
+ else  System.out.println("No se pudo crear el directorio");   
+ 
+File archivoBorrar = new File("archivoParaEliminar.txt");
+ if (archivoBorrar.delete())  System.out.println("Archivo eliminado");
+ else  System.out.println("No se pudo eliminar el archivo");</code></pre>
+</div>
+</div>
+<hr />
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;"><strong><span style="text-decoration: underline;"><span style="color: #008000;">ACTIVIDAD 4</span></span>. Crea un método que debe generar ‘<em>n</em>’ archivos: <em>nombre(1).txt, nombre(2).txt,</em>... <em>nombre(n).txt</em> en la carpeta que se solicite al usuario por pantalla.</strong></span></p>
+<hr />
+<p><strong>Listar archivos de un directorio</strong></p>
+<ul>
+<li>Sólo nombre (<em>String</em>):</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code> File directorio2 = new File(".");
+
+ String[] archivos = directorio2.list();
+ 
+if (archivos != null &amp;&amp; archivos.length &gt; 0){
+     for (String a : archivos){
+          System.out.println(a);
+     }
+}else{
+     System.out.println("No hay archivos en la carpeta");
+}</code></pre>
+</div>
+</div>
+<ul>
+<li>Nombre y + info (<em>File</em>):</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static void main(String[] args) {
+    String rutaCarpeta = ".";
+    listarArchivos(rutaCarpeta);
+ }
+ // método que lista todos los archivos de un carpeta, indicando el tamaño en bytes
+ public static void listarArchivos(String rutaCarpeta) {
+    File carpeta = new File(rutaCarpeta);
+    if (carpeta.isDirectory()) {
+        File[] archivos = carpeta.listFiles();
+        if (archivos != null &amp;&amp; archivos.length &gt; 0) {
+            for (File f : archivos) {
+                if (f.isFile()) {
+                    System.out.println(f.getName() + " - " + f.length() + "bytes");
+                }
+            }
+        }else{
+            System.out.println("No se ha encontrado ningún archivo.");
+        }
+    } else System.err.println("La ruta proporcionada no es una carpeta");
+ }</code></pre>
+</div>
+</div>
+<hr />
+<p style="padding-left: 30px;"><span style="background-color: #ffff99;"><strong><span style="text-decoration: underline;"><span style="color: #008000; text-decoration: underline;">ACTIVIDAD 5</span></span>. Crea un método que reciba una carpeta y liste el contenido de dicha carpeta de aquellos archivos cuya extensión sea <em>.txt</em>. Crea una sobrecarga para que el método pueda recibir también el tipo de archivo a listar (.pdf, .jpg, etc,...).</strong></span></p>
+<hr />
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="832_filereader_y_bufferedreader_para_leer_archivos_de_texto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

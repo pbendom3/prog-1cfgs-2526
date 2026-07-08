@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1. Estructura de las excepciones | 2. Control de excepciones </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">2. Control de excepciones</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">2. Control de excepciones (nivel 2)</a></li>
+   <li id="active"><a href="21_estructura_de_las_excepciones.html" class="active no-ch">2.1. Estructura de las excepciones</a></li>
+   <li><a href="22_funciones_que_infieren_el_control_de_excepciones.html" class="no-ch">2.2. Funciones que infieren el control de excepciones</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_funciones_que_infieren_el_control_de_excepciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1. Estructura de las excepciones</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id1">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Estructura básica try-catch-finally</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta1_128_2" class="block iDevice_content">
+<div class="exe-text"><p>Como ya sabemos, el bloque <em>try</em> se utiliza para envolver el código que puede generar una excepción. Si se produce una excepción dentro del bloque <em>try</em>, se captura en uno o más bloques catch asociados. Por ejemplo,</p>
+<div class="highlighted-code code-style-2 language-java">
+<div style="text-align: left;">
+<pre><code>try {
+   // Código que puede generar una excepción
+   int resultado = 10 / 0; // Esto generará una excepción de división por cero (ArithmeticException)
+} catch (ArithmeticException e) {
+   // Captura de la excepción específica
+   System.out.println("Ocurrió una excepción: " + e.getMessage());
+}</code></pre>
+</div>
+</div>
+<p>          Como puedes comprobar en el ejemplo, podemos imprimir el mensaje que sacaría el error llamando al método <em>getMessage()</em>.<br /><br /></p>
+<p>Por otro lado, el bloque <em>finally</em> se utiliza para lanzar código que debe ejecutarse siempre, independientemente de si se ha producido una excepción o no. Se suele usar para liberar recursos que deben cerrarse, como limpiar el búffer de la entrada de teclado, conexiones a bases de datos o archivos que se quedan abiertos.</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>try {
+   // Código que puede generar una excepción
+   // ...
+} catch (Exception e) {
+   // Captura de cualquier excepción
+   System.out.println("Ocurrió una excepción: " + e.getMessage());
+} finally {
+   // Código que se ejecutará siempre, incluso si se produjo una excepción
+   // Liberar búffer y otros recursos
+}</code></pre>
+</div>
+</div>
+<p>Además, podemos tener varios bloques <em>catch</em> para manejar diferentes tipos de excepciones de manera específica.</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>try {
+   // Código que puede generar una excepción
+   // ...
+} catch (ArithmeticException e) {
+   // Captura de excepción de división por cero
+   System.out.println("Ocurrió una excepción de división por cero: " + e.getMessage());
+} catch (Exception e) {
+   // Captura de cualquier otra excepción
+   System.out.println("Ocurrió una excepción: " + e.getMessage());
+}</code></pre>
+</div>
+</div>
+<p><br /><br /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_funciones_que_infieren_el_control_de_excepciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.5. Excepciones personalizadas </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="6.5. Excepciones personalizadas" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">6.5. Excepciones personalizadas</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">6.5. Excepciones personalizadas</a></li>
+   <li><a href="excepciones_en_nuestro_festival.html" class="no-ch">Excepciones en nuestro Festival</a></li>
+   <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="excepciones_en_nuestro_festival.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.5. Excepciones personalizadas</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Las excepciones en <em>Java</em> son eventos anómalos que pueden ocurrir durante la ejecución de un programa y que alteran el flujo normal de ejecución. Como ya hemos visto durante el curso, estos eventos representan situaciones inesperadas o errores que deben ser manejados de manera adecuada para garantizar que el programa continúe ejecutándose y evitar interrupciones.</p>
+<p style="text-align: justify;">Este manejo de excepciones en una aplicación es muy importante para una buena experiencia de usuario, ya que permite que la aplicación continúe funcionando a pesar de errores predecibles y proporciona información útil al usuario para corregir el problema.</p>
+<hr />
+<h5>Uso de <em>throw</em> para lanzar excepciones manualmente</h5>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class AppExcepciones {
+
+    public static void main(String[] args) {
+
+        int edad = 10;
+
+        if (edad &lt; 18) {
+            throw new IllegalArgumentException("Debes ser mayor de edad.");
+        }
+
+    }
+
+}</code></pre>
+</div>
+</div>
+<h5><img src="img0.png" width="914" height="128" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></h5>
+<hr />
+<h5>Creación de Excepciones personalizadas</h5>
+<p>Hasta ahora, hemos visto excepciones típicas como <em>NullPointerException, ArrayIndexOutOfBoundsException, ArithmeticException</em>,... Pero es posible que un programa requiera una excepción específica que todavía no existe. Para crearla, podemos usar una clase nueva que herede de <em>Exception</em> o <em>RuntimeException:</em></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class MiExcepcion extends Exception {
+    public MiExcepcion(String mensaje) {
+        super(mensaje);
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Y podemos lanzarla desde cualquier método, siempre y cuando incluyamos en la cabecera la palabra "<em><strong>throws</strong></em>" y el nombre de la excepción que puede darse dentro de él. En nuestro caso, <em>MiExcepcion</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class AppExcepciones {
+    
+    public static void main(String[] args) throws MiExcepcion {
+
+        int valor = -15; 
+        if (valor &lt; 0) {
+            throw new MiExcepcion("El valor no puede ser negativo.");
+        }
+
+    }
+    
+}</code></pre>
+</div>
+</div>
+<p><img src="img2.png" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img2.1.png" width="962" height="128" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">Esta forma de crear excepciones nos vale para controlar varios tipos de errores, ya que la excepción lanzará el mensaje que nosotros le pasemos. Pero si por algún motivo quisiéramos tener excepciones separadas, una para cada tipo de error, podríamos no pasar ningún mensaje como parámetro y asignarlo cuando llamemos al constructor de <em>MiExcepcion</em> directamente:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class MiExcepcion extends Exception {
+    public MiExcepcion() {
+        super("El valor no puede ser negativo.");
+    }
+}</code></pre>
+</div>
+</div>
+<p>Y desde el método que provoca la excepción, la llamada no enviaría ningún mensaje:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class AppExcepciones {
+
+    public static void main(String[] args) throws MiExcepcion {
+
+        int valor = -15;
+        if (valor &lt; 0) {
+            throw new MiExcepcion();
+        }
+
+    }
+
+}</code></pre>
+</div>
+</div>
+<hr />
+<h5>Vale... ¿y por qué si lanzo una excepción que ya existe no pongo <em>throws</em> en la cabecera y si lanzo una personalizada sí?</h5>
+<p style="text-align: justify;">La diferencia radica en si la excepción es comprobada (<strong><em>Checked</em></strong>) o no comprobada (<strong><em>Unchecked</em></strong>). Cuando hemos creado la excepción personalizada hemos heredado de <em>Exception</em>, lo que la convierte en una <em>Checked Exception</em> y obliga a usar <em>throws </em>(o controlarla con un <em>try-catch)</em>. Este tipo de excepciones son las que no podemos controlar, como acceso a bases de datos caídas (<em>SQLException</em>) u otros tipos de errores que como programadores sabemos que pueden pasar pero no sabemos cuándo.</p>
+<p style="text-align: justify;">Por otro lado, las <em>Unchecked Exceptions</em> heredan de <em>RuntimeException</em> (errores que pasan durante la ejecución del programa y que normalmente provoca el usuario, como introducir un formato erróneo de algún dato) y no requieren <em>throws</em> en la cabecera del método, porque el compilador no obliga a manejarlas (pero es más que recomendable).</p>
+<p style="text-align: justify;">Por lo tanto, <strong><span style="background-color: #ffff99;">si extendemos <em>Exception</em> (<em>Checked Exception</em>) debemos usar <em>throws</em> en la firma del método. Si extendemos de <em>RuntimeException</em> (<em>Unchecked Exception</em>) no necesitamos <em>throws</em>.</span></strong></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="excepciones_en_nuestro_festival.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

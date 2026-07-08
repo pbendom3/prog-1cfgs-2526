@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1. Funciones y procedimientos | Estructura </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Estructura</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Estructura de un programa Java</a></li>
+   <li id="active"><a href="41_funciones_y_procedimientos.html" class="active no-ch">4.1. Funciones y procedimientos</a></li>
+   <li><a href="42_uso_de_parmetros.html" class="daddy">4.2. Uso de parámetros</a>
+   <ul class="other-section">
+      <li><a href="421_el_famoso_string__args_en_el_main_de_java.html" class="no-ch">4.2.1. El famoso String[ ] args en el main de Java</a></li>
+      <li><a href="422_varargs_en_java.html" class="no-ch">4.2.2. Varargs en Java</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_uso_de_parmetros.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1. Funciones y procedimientos</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_131_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Como ya hemos comentado, el método es el mecanismo de subprogramación que ofrece el lenguaje <em>Java</em>.</p>
+<p style="text-align: justify;">Un método se declara definiendo su cabecera y su cuerpo, dentro de una clase:</p>
+<p style="text-align: justify;"><img src="img0.2.png" width="946" height="450" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">La <strong>cabecera</strong> de un método se define en este orden:</p>
+<ul style="text-align: justify;">
+<li><strong>Acceso</strong>: modificadores de visibilidad (<em>public</em>) y directiva <em>static</em>. </li>
+</ul>
+<p style="padding-left: 60px; text-align: justify;"><span style="background-color: #ffff99; color: #ff0000;"><strong>(*)</strong></span> Por ahora, aunque es opcional, se usará siempre el modificador <em>static</em> para describir el acceso de un método. Los métodos estáticos están asociados a la clase en lugar de una instancia de la clase (objeto). Es decir, que estos métodos definidos como <em>static</em> se pueden invocar directamente sin la necesidad de crear un objeto. <span style="text-decoration: underline;">En temas posteriores se darán más detalles sobre esto</span>.</p>
+<p style="padding-left: 60px; text-align: justify;">En cuanto a la <strong>visibilidad (<em>public</em>/<em>private</em>)</strong>, usaremos siempre <em>public</em>. Cuando no se especifica ningún modificador de acceso, <em>Java</em> utiliza un nivel de acceso predeterminado, a menudo denominado <em>package-private</em> . Esto significa que el miembro sólo es accesible dentro de las clases del mismo paquete.</p>
+<p style="padding-left: 60px; text-align: justify;"><img src="img2.3.png" width="357" height="203" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px; text-align: justify;">Es menos restrictivo que <em>private,</em> pero más restrictivo que <em>public</em>.</p>
+<ul style="text-align: justify;">
+<li><strong>Tipo de dato</strong> de lo que devuelve. Si no devuelve nada, indicamos <em>void</em> como hasta ahora.</li>
+<li><strong>Nombre</strong> (identificador). El nombre de un método y el de sus parámetros siguen las reglas habituales de los identificadores de las variables, constantes, etc.</li>
+<li>Lista de <strong>parámetros</strong>: tipos y nombres de los datos.</li>
+</ul>
+<p style="text-align: justify;"><img src="img3.1.png" width="853" height="91" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify; padding-left: 30px;">Se pueden declarar métodos sin parámetros. En este caso, se utilizarán paréntesis vacíos después del identificador:</p>
+<p style="padding-left: 30px;"><img src="img4.png" width="486" height="61" alt="8" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: justify;">El <strong>cuerpo</strong> es la secuencia de instrucciones que se ejecutan al invocarlo. Puede incluir cualquier tipo de instrucción o bloque de instrucciones: asignación, condicional, bucle, e incluso, llamadas o invocaciones a otros métodos.</p>
+<hr />
+<p style="text-align: justify;">Aquí se muestra un ejemplo de método en <em>Java</em> con su correspondiente invocación:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>public static int suma(int a, int b){
+
+   int resultado = a + b;
+   return resultado;
+
+} </code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>class Main {
+
+	public static void main(String[] args) {
+
+		int valor1 = 1;
+		int valor2 = 2;
+		int c = suma(valor1,valor2);
+
+	}
+
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Otro ejemplo, para estas características:</p>
+<p style="text-align: justify;"><img src="img2.4.png" width="918" height="100" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>public static double areaRectangulo(double base, double altura){
+
+        double area = base*altura/2;
+
+        return area;
+
+}</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+       
+        double base = 4;
+        double altura = 2;
+        double area = areaRectangulo(4,2);
+        System.out.println("El area para un triángulo de base " + base + " y altura " + altura + " es: " + area);
+
+    }
+}</code></pre>
+</div>
+</div>
+<hr />
+<h4 style="text-align: justify;">¿Función o procedimiento? Uso de <em>Return</em></h4>
+<p style="text-align: justify;">Como ya hemos ido comentando, como resultado de su invocación, un método suele devolver unos resultados, denominados valores de retorno. Pero no tiene por qué ser siempre así. Podría ser que un método solamente se llame para realizar alguna acción sin devolvernos nada (por ejemplo, imprimir una matriz).</p>
+<p style="padding-left: 30px; text-align: justify;"><span style="background-color: #ffff99;">El <strong>tipo de retorno de un método puede ser cualquier tipo de dato</strong> en <em>Java</em>: <em>int, double, char, String, boolean</em>, etc. (También pueden devolver objetos). </span></p>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">En </span><span style="font-size: 1.05em;">concreto, en caso de haberlo, el <strong>valor de retorno debe aparecer después de la palabra reservada <em>return.</em></strong> A este tipo de método se les llama <span style="background-color: #ffff99;"><strong>FUNCIONES</strong></span>. </span></p>
+<p style="text-align: justify;"><span style="font-size: 1.05em;">Además, se deben tener en cuenta las siguientes consideraciones:</span></p>
+<ul>
+<li style="text-align: justify;"><span style="font-size: 1.05em;">Como ya sabemos del tema anterior, la ejecución de un método finaliza tras la ejecución de cualquiera de los posibles <em>return</em> que aparecen en su cuerpo y vuelve al programa principal que ha realizado la invocación.</span></li>
+<li style="text-align: justify;"><span style="font-size: 1.05em;">Si un método no devuelve ningún valor, entonces el tipo de su resultado es <em><strong>void</strong></em>. En este caso, se ejecuta “<em>return</em>” implícitamente como última instrucción del método, aunque nosotros no lo vemos. A este tipo de métodos se les llama <span style="background-color: #ffff99;"><strong>PROCEDIMIENTOS</strong>.</span><br /></span></li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>    //FUNCIÓN
+    static double areaCuadrado(double lado){
+        return lado*lado;
+    }
+    
+    //FUNCIÓN
+    static double perimetroCuadrado(double lado){
+        return lado*4;
+    }
+    
+    //PROCEDIMIENTO
+    static void mostrarMenu(){
+        System.out.println("Esto es un método que muestra un menú");
+        System.out.println("1 - Obtener área");
+        System.out.println("2 - Obtener perímetro");
+    }</code></pre>
+</div>
+</div>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public static void main(String[] args) {
+       
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduce el valor del lado del cuadrado: ");
+        double lado = teclado.nextDouble();
+
+        mostrarMenu();
+        int opcion = teclado.nextInt();
+
+        if(opcion==1){
+            double area = areaCuadrado(lado);
+            System.out.println("El área es: " + area);
+        } else if (opcion==2) {
+            double perimetro = perimetroCuadrado(lado);
+            System.out.println("El perímetro es: " + perimetro);
+        }else{
+            System.out.println("No se reconoce la acción.");
+        }
+
+    }</code></pre>
+</div>
+</div>
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_uso_de_parmetros.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

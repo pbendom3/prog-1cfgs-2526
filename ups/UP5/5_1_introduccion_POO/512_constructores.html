@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1.2. Constructores | Introducción a la POO </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Introducción a la POO</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.1. Introducción a la POO</a></li>
+   <li><a href="511_clases_y_objetos.html" class="no-ch">5.1.1. Clases y objetos</a></li>
+   <li id="active"><a href="512_constructores.html" class="active no-ch">5.1.2. Constructores</a></li>
+   <li><a href="513_visibilidad.html" class="no-ch">5.1.3. Visibilidad</a></li>
+   <li><a href="514_encapsulamiento_getterssetters.html" class="no-ch">5.1.4. Encapsulamiento (getters/setters)</a></li>
+   <li><a href="ejercicios.html" class="no-ch">Ejercicios</a></li>
+   <li><a href="batera_de_ejercicios_sobre_clases_y_objetos.html" class="no-ch">Batería de ejercicios sobre clases y objetos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="511_clases_y_objetos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="513_visibilidad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.1.2. Constructores</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_130_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Cuando se construye un objeto es necesario dar un valor inicial a sus atributos. Es por ello que existe un método especial en cada clase, llamado constructor, que es ejecutado de forma automática cada vez que es instanciada una clase (realizamos un <strong><em>new</em></strong>). </p>
+<p style="text-align: justify;"><strong><span style="background-color: #ffff99;">El constructor se llama igual que la clase y no devuelve nunca ningún valor a través del <em>return</em></span></strong>. La invocación al método constructor devolverá una instancia de dicho objeto.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Persona {
+    String nombre; //atributo nombre
+    String dni; //atributo dni
+    int edad; //atributo edad
+
+    //constructor de la clase Persona
+    public Persona(String nombre, String dni, int edad) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.edad = edad;
+    }
+
+}</code></pre>
+</div>
+</div>
+<p>Y desde el <em>main</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+        //creación de dos objetos Persona
+        Persona persona1 = new Persona("Juan Pérez", "12345678A", 30);
+        Persona persona2 = new Persona("Ana García", "87654321B", 25);
+
+        System.out.println(persona1.nombre);
+        System.out.println(persona2.nombre);
+    }
+}</code></pre>
+</div>
+</div>
+<h5> La palabra reservada <em>this</em> en JAVA</h5>
+<p>Dentro de un método o de un constructor, <strong><em>this</em> </strong>hace referencia al objeto actual (instancia actual):</p>
+<p><img src="img2.png" width="879" height="284" alt="8" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p> </p>
+<h5>Sobrecarga de constructores</h5>
+<p style="text-align: justify;">Una clase puede tener varios constructores, que se diferencia por el tipo y su número de parámetros. Igual que pasaba con los métodos, pueden tener la misma cantidad de parámetros, pero como mínimo, uno de ellos tiene que ser de un tipo distinto. O directamente tener parámetros distintos, como en el siguiente caso:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Persona {
+    //atributos con visibilidad protegida
+    String nombre;
+    String dni;
+    int edad;
+
+    //constructor parametrizado de la clase Persona
+    public Persona(String nombre, String dni, int edad) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.edad = edad;
+    }
+
+    //constructor parametrizado pero sin el atributo edad
+    public Persona(String nombre, String dni) {
+        this.nombre = nombre;
+        this.dni = dni;
+    }
+
+}
+</code></pre>
+</div>
+</div>
+<p>Y desde el <em>main</em>:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+        //creación de dos objetos Persona
+        Persona persona1 = new Persona("Juan Pérez", "12345678A", 30);
+        Persona persona2 = new Persona("Ana García", "87654321B", 25);
+        Persona persona_sin_edad = new Persona("Carlos Díaz", "547896514A");
+
+        System.out.println(persona1.nombre);
+        System.out.println(persona2.nombre);
+        System.out.println(persona_sin_edad.nombre + " " + persona_sin_edad.edad);
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img1.2.png" width="322" height="98" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<p>Además, en <em>Java</em> existen los llamados <strong>constructores por defecto </strong>(sin parámetros) que inicializan un objeto a:</p>
+<ul>
+<li>En caso de ser tipos primitivos, a su valor por defecto.</li>
+<li><em>Strings</em> y referencias a objetos a <em>null</em>.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Persona {
+    //atributos con visibilidad protegida
+    String nombre;
+    String dni;
+    int edad;
+
+    //constructor parametrizado de la clase Persona
+    public Persona(String nombre, String dni, int edad) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.edad = edad;
+    }
+
+    //constructor por defecto de la clase Persona
+    public Persona() {
+
+    }
+
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Este constructor por defecto es útil si necesitamos crear objetos de <em>Persona</em> que serán inicializados más tarde, o si los atributos secundarios no son necesarios al momento de la creación del objeto.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+        //creación de dos objetos Persona
+        Persona persona1 = new Persona("Juan Pérez", "12345678A", 30);
+        Persona persona2 = new Persona("Ana García", "87654321B", 25);
+        Persona persona3 = new Persona();
+
+        System.out.println(persona1.nombre);
+        System.out.println(persona2.nombre);
+        System.out.println(persona3.nombre);
+    }
+}</code></pre>
+</div>
+</div>
+<p><img src="img0.2.png" width="291" height="111" alt="6" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="511_clases_y_objetos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="513_visibilidad.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4. Tratamiento de vectores en matrices </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente " />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="4. Tratamiento de vectores en matrices" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">4. Tratamiento de vectores en matrices</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active no-ch main-node">4. Tratamiento de vectores en matrices</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4. Tratamiento de vectores en matrices</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id0">
+<div class="iDevice emphasis0" >
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><h5>Rellenar matriz con vectores</h5>
+<p>Hasta ahora, hemos hablado todo el rato de que una matriz está compuesta de vectores... pero nunca hemos creado una a partir de estos. </p>
+<p>Para poder hacerlo tenemos varias opciones. Desde la más fácil hasta la más difícil...</p>
+<ul>
+<li><strong>Opción fácil</strong>: ya tengo mi vector y sé en qué fila de mi matriz lo quiero introducir.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        int vector[] = {3,5,4,1};
+        int matriz[][] = new int[2][4];
+
+        for (int i = 0; i &lt; matriz[0].length; i++) {
+            matriz[0][i] = vector[i];
+        }
+
+        for (int[] filas : matriz) {
+            for (int columnas : filas){
+                System.out.print(columnas + " ");
+            }
+            System.out.print("\n");
+        }</code></pre>
+</div>
+</div>
+<p><img src="img0.png" width="78" height="48" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 60px;">Sólo nos hace falta un bucle para recorrer las columnas, ya que la fila donde se insertará el vector es fija.</p>
+<p style="padding-left: 60px;"> </p>
+<ul>
+<li><strong>Opción 2</strong>: voy creando vectores y guardándolos en una matriz automáticamente.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>        Scanner teclado =  new Scanner(System.in);
+
+        int matriz[][] =  new int[4][4];
+
+        for(int i=0; i&lt;matriz.length; i++){
+            System.out.print("Ingresa el vector: ");
+            String[] lectura = teclado.next().split(",");
+            for(int j=0; j&lt;matriz[i].length; j++){
+                matriz[i][j] = Integer.parseInt(lectura[j]);
+            }
+        }
+
+        for(int[] filas : matriz){
+            for(int columnas : filas){
+                System.out.print(columnas + " ");
+            }
+            System.out.print("\n");
+        }</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><img src="img1.png" width="237" height="188" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">En este caso tendremos que llevar cuidado, ya que, <span style="background-color: #ffff99;"><strong>si la cadena que introducimos y convertimos en vector con<em> .split()</em> no tiene el mismo tamaño que número de columnas de nuestra matriz, los valores no se insertarán correctamente en la matriz (o directamente aparecerán errores de que está intentando acceder a posiciones que no existen en el vector)</strong></span>.</p>
+<p style="padding-left: 30px;"><img src="img2.png" width="963" height="124" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h5>Comparar valores de un vector con los de una matriz</h5>
+<p>Si necesitamos recorrer una matriz comprobando si los valores en las distintas posiciones coinciden con los de un vector, solamente necesitaremos un bucle (para dejar fija bien la fila o bien la columna). </p>
+<ul>
+<li>Para comparar valores en una fila concreta (horizontalmente),</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>      int vector[] = {1,4,5,8};
+        System.out.println(Arrays.toString(vector));
+
+      int matriz[][] = {{3,2,5,4},{1,4,5,8},{9,4,3,5}};
+
+      for(int[] filas : matriz){
+          for(int columnas : filas){
+              System.out.print(columnas + " ");
+          }
+          System.out.print("\n");
+      }
+
+      System.out.println("Voy a comprobar la fila con índice 1");
+      for (int i = 0; i &lt; matriz[1].length; i++) {
+          if(matriz[1][i]!=vector[i]){
+              System.out.println("No son iguales.");
+              return;
+          }
+      }
+
+      System.out.println("Son iguales.");
+
+    }</code></pre>
+</div>
+</div>
+<p><img src="img4.png" width="237" height="145" alt="5" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li>Para comparar valores en una columna concreta (verticalmente),</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>int vector[] = {4,8,5};
+        System.out.println(Arrays.toString(vector));
+
+      int matriz[][] = {{3,2,5,4},{1,4,5,8},{9,4,3,5}};
+
+      for(int[] filas : matriz){
+          for(int columnas : filas){
+              System.out.print(columnas + " ");
+          }
+          System.out.print("\n");
+      }
+
+      System.out.println("Voy a comprobar la columna con índice 3");
+      for (int i = 0; i &lt; matriz.length; i++) {
+          if(matriz[i][3]!=vector[i]){
+              System.out.println("No son iguales.");
+              return;
+          }
+      }
+
+      System.out.println("Son iguales.");
+
+    }</code></pre>
+</div>
+</div>
+<p><img src="img3.png" width="333" height="145" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

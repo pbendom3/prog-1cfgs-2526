@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Embeber modelo en web (HTML+JS) | BONUS. IA con teachable machine </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">BONUS. IA con teachable machine</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">BONUS. Herramientas IA para la implementación de modelos de aprendizaje automático en aplicaciones (Teachable Machine + Tensorflow).</a></li>
+   <li><a href="creacin_del_modelo_con_teachable_machine.html" class="no-ch">Creación del modelo con Teachable Machine</a></li>
+   <li><a href="exportar_modelo_a_tensorflow_js.html" class="no-ch">Exportar modelo a TensorFlow (.JS)</a></li>
+   <li id="active"><a href="embeber_modelo_en_web_htmljs.html" class="active no-ch">Embeber modelo en web (HTML+JS)</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="exportar_modelo_a_tensorflow_js.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Embeber modelo en web (HTML+JS)</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_130_2" class="block iDevice_content">
+<div class="exe-text"><p>🚨<strong> Muy importante para tu app con <em>Teachable Machine</em></strong>:</p>
+<p style="text-align: justify;">Cuando trabajemos con archivos locales de modelos (.json, .bin) necesitaremos un servidor (aunque sea <em>localhost</em>) porque los navegadores:</p>
+<ul>
+<li style="text-align: justify;">No permiten cargar archivos file:// directos por seguridad.</li>
+<li style="text-align: justify;">No permiten acceso a la cámara en páginas abiertas como file://.</li>
+</ul>
+<p style="padding-left: 30px;">Con <em>XAMPP</em>, solucionamos todo eso.</p>
+<p style="text-align: justify;">Teniendo esto en cuenta, para integrarlo en una app real, el flujo básico sería:</p>
+<p style="text-align: justify; padding-left: 30px;">- Subir el modelo (los .json y los .bin) a un servidor o almacenamiento online (o puedes guardarlo localmente en tu proyecto). Como ya hemos dicho, nosotros usaremos el servidor de <strong><em>Apache</em> </strong>de <em>XAMPP</em>:</p>
+<p><img src="img0.3.png" width="672" height="436" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">- Accede al explorador de archivos de <em>XAMPP </em>y busca la carpeta<strong><em> htdocs</em></strong>:</p>
+<p><img src="img1.2.png" width="814" height="419" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">- Dentro de <em>htdocs</em>, crea una carpeta para tu proyecto. Para este ejemplo la llamaremos<strong><em> tm-tensorflow</em></strong>: </p>
+<p><img src="img2.2.png" width="811" height="420" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">- Dentro de <strong><em>tm-tensorflow</em> </strong>deberemos pegar la carpeta descargada desde <em>Teachable Machine</em>, que contiene el .json y el .bin.</p>
+<p><img src="img3.1.png" width="812" height="201" alt="4" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">- Además, en esa misma carpeta, deberemos añadir un index.<em>HTML</em> que embeba el código <em>Javascript</em> proporcionado también por la herramienta. Puedes usar este de ejemplo:</p>
+<div class="highlighted-code code-style-2 language-markup line-numbers">
+<div>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Teachable Machine con Webcam&lt;/title&gt;
+
+    &lt;!-- Librerías necesarias --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"&gt;&lt;/script&gt;
+
+    &lt;style&gt;
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          margin-top: 50px;
+        }
+        video {
+          margin-top: 20px;
+          border: 2px solid #ccc;
+          border-radius: 10px;
+        }
+        #start-button {
+          padding: 10px 20px;
+          font-size: 18px;
+          margin-bottom: 20px;
+          cursor: pointer;
+        }
+        #prediction {
+          margin-top: 20px;
+          font-size: 20px;
+        }
+        #webcam-container {
+          margin-top: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;Teachable Machine Web App&lt;/h1&gt;
+
+&lt;!-- Botón para iniciar --&gt;
+&lt;button id="start-button" type="button" onclick="init()"&gt;Iniciar Predicción&lt;/button&gt;
+
+&lt;div id="webcam-container"&gt;&lt;/div&gt;
+&lt;div id="label-container"&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+    const URL = "./my_model/"; // Asegúrate que esta sea la ruta correcta a tu modelo
+
+    let model, webcam, labelContainer, maxPredictions;
+
+    // Función para cargar el modelo y configurar la webcam
+    async function init() {
+      const modelURL = URL + "model.json";
+      const metadataURL = URL + "metadata.json";
+
+      // Cargar el modelo y los metadatos
+      model = await tmImage.load(modelURL, metadataURL);
+      maxPredictions = model.getTotalClasses();
+
+      // Configuración de la webcam
+      const flip = true; // voltear la cámara
+      webcam = new tmImage.Webcam(200, 200, flip); // Configurar webcam con un tamaño de 200x200
+      await webcam.setup(); // Solicitar acceso a la webcam
+      await webcam.play();
+      window.requestAnimationFrame(loop);
+
+      // Insertar el video de la cámara en el DOM
+      document.getElementById("webcam-container").appendChild(webcam.canvas);
+
+      // Preparar el contenedor para las predicciones
+      labelContainer = document.getElementById("label-container");
+      for (let i = 0; i &lt; maxPredictions; i++) {
+        labelContainer.appendChild(document.createElement("div"));
+      }
+    }
+
+    // Función para predecir continuamente
+    async function loop() {
+      webcam.update(); // Actualizar el cuadro de la cámara
+      await predict();
+      window.requestAnimationFrame(loop);
+    }
+
+    // Función de predicción usando el modelo
+    async function predict() {
+      const prediction = await model.predict(webcam.canvas); // Ejecutar la predicción sobre el canvas de la cámara
+      for (let i = 0; i &lt; maxPredictions; i++) {
+        const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+        labelContainer.childNodes[i].innerHTML = classPrediction; // Mostrar la predicción en el DOM
+      }
+    }
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;">- Accede desde cualquier navegador a la url de tu servidor (<em>localhost</em>), dirígete a la ruta <em>/tm-tensorflow</em> y comprueba que la app funciona como esperamos.</p>
+<p style="text-align: center;"><a href="http://localhost/mi-app-tm/">http://localhost/tm-tensorflow/</a><br /><br /></p>
+<p><img src="img4.1.png" width="532" height="449" alt="7" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><img src="img5.1.png" width="551" height="447" alt="8" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="exportar_modelo_a_tensorflow_js.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
