@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4. Operadores y expresiones | 4. Fundamentos del lenguaje Java </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">4. Fundamentos del lenguaje Java</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4. Fundamentos del lenguaje Java</a></li>
+   <li><a href="41_estructura_de_proyectos_java.html" class="no-ch">4.1. Estructura de proyectos Java</a></li>
+   <li><a href="42_tipos_bsicos_de_datos.html" class="no-ch">4.2. Tipos básicos de datos</a></li>
+   <li><a href="43_constantes_y_variables.html" class="no-ch">4.3. Constantes y variables</a></li>
+   <li id="active"><a href="44_operadores_y_expresiones.html" class="active no-ch">4.4. Operadores y expresiones</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="43_constantes_y_variables.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4. Operadores y expresiones</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_131_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><em>Java</em> proporciona muchos tipos de operadores que se pueden usar según la necesidad. A continuación, se detalla con ejemplos algunos tipos de operadores que existen. </p>
+<hr />
+<h5><span style="color: #008000;">Operadores aritméticos</span> </h5>
+<p>Se utilizan para realizar operaciones aritméticas simples en tipos de datos primitivos.</p>
+<p style="padding-left: 30px;"><span style="color: #008000;">*</span>: Multiplicación<br /><span style="color: #008000;">/</span>: División<br /><span style="color: #008000;">%</span>: Modulo<br /><span style="color: #008000;">+</span>: Suma<br /><span style="color: #008000;">–</span>: Resta<br /><span style="color: #008000;">++</span>: Operador de incremento, utilizado para incrementar el valor en 1. Hay dos variedades de operador de incremento.<br /><span style="color: #008000;">--</span>: Operador de decremento , usado para decrementar el valor en 1.</p>
+<p>Copia y pega el siguiente programa en tu IDE para ver cómo se comportan los operadores:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>// Programa Java para ilustrar
+// operadores aritméticos
+public class operators
+{
+  public static void main(String[] args)
+  {
+    int a = 20, b = 10, c = 0, d = 20, e = 40, f = 30;
+    String x = "Thank", y = "You";
+    // Operador + y -
+    System.out.println("a + b = "+(a + b));
+    System.out.println("a - b = "+(a - b));
+    // El operador + si se usa con strings
+    // concatena las cadenas dadas.
+    System.out.println("x + y = "+x + y);
+    // Operador * y /
+    System.out.println("a * b = "+(a * b));
+    System.out.println("a / b = "+(a / b));
+    // operador de módulo da el resto
+    // de dividir el primer operando con el segundo
+    System.out.println("a % b = "+(a % b));
+    // si el denominador es 0 en la división
+    // System.out.println(a/c);
+    // lanzaría una java.lang.ArithmeticException
+  }
+}
+</code></pre>
+</div>
+</div>
+<hr />
+<h5><span style="color: #008000;">Operador de asignación (=)</span></h5>
+<p style="text-align: justify;">El operador de asignación se usa para asignar un valor a cualquier variable. Tiene una asociación de derecha a izquierda, es decir, el valor dado en el lado derecho del operador se asigna a la variable de la izquierda y, por lo tanto, el valor del lado derecho debe declararse antes de usarlo o debe ser una constante.</p>
+<p style="padding-left: 30px;"><span style="color: #008000;">+=</span> , para sumar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.<br /><span style="color: #008000;">–=</span> , para restar el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.<br /><span style="color: #008000;">*=</span> , para multiplicar el operando izquierdo con el operando derecho y luego asignándolo a la variable de la izquierda.<br /><span style="color: #008000;">/=</span> , para dividir el operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.<br /><span style="color: #008000;">^=</span> , para aumentar la potencia del operando izquierdo al operando derecho y asignarlo a la variable de la izquierda.<br /><span style="color: #008000;">%=</span> , para asignar el módulo del operando izquierdo con el operando derecho y luego asignarlo a la variable de la izquierda.</p>
+<p>Copia y pega el siguiente programa en tu IDE para ver cómo se comportan los asignadores:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>// Programa Java para ilustrar
+// Operadores de Asignación
+public class operators 
+{
+    public static void main(String[] args) 
+    {
+        int a = 20, b = 10, c, d, e = 10, f = 4, g = 9;
+        // operador de asignación simple
+        c = b;
+        System.out.println("Valor de c = " + c);
+        // Esta siguiente declaración arrojaría una exception
+        // porque el valor del operando derecho debe ser inicializado
+        // antes de la asignación, entonces el programa no
+        // compila.
+        // c = d;
+        // operadores de asignación simples
+        a = a + 1;
+        b = b - 1;
+        e = e * 2;
+        f = f / 2;
+        System.out.println("a,b,e,f = " + a + ","
+                           + b + "," + e + "," + f);
+        a = a - 1;
+        b = b + 1;
+        e = e / 2;
+        f = f * 2;
+ 
+        // operados de asignación compuestos/cortos
+        a += 1;
+        b -= 1;
+        e *= 2;
+        f /= 2;
+        System.out.println("a,b,e,f (usando operadores cortos)= " + 
+                            a + "," + b + "," + e + "," + f);
+    }
+}</code></pre>
+</div>
+</div>
+<hr />
+<h5><span style="color: #008000;">Operadores relacionales </span></h5>
+<p style="text-align: justify;">Estos operadores se utilizan para verificar relaciones como igualdad, mayor que, menor que. Devuelven el resultado booleano después de la comparación y se usan ampliamente en sentencias condicionales <em>if/else</em>.</p>
+<p style="padding-left: 30px;"><span style="color: #008000;"><strong><em>==</em></strong></span>, Igual a: devuelve verdadero si el valor del lado izquierdo es igual al lado derecho.<br /><span style="color: #008000;"><em><strong>! =</strong></em></span>, No igual a: devuelve verdadero si el valor del lado izquierdo no es igual al lado derecho.<br /><span style="color: #008000;"><em><strong>&lt;</strong></em></span>, menos que: el resultado verdadero si el valor del lado izquierdo es inferior al del lado derecho.<br /><span style="color: #008000;"><em><strong>&lt;=</strong></em></span>, menor o igual que: devuelve verdadero si el valor del lado izquierdo es menor o igual que el lado derecho.<br /><span style="color: #008000;"><em><strong>&gt;</strong></em></span>, Mayor que: devuelve verdadero si el valor del lado izquierdo es mayor que el lado derecho.<br /><span style="color: #008000;"><em><strong>&gt;=</strong></em></span>, Mayor que o igual a: regresa verdadero si el valor del lado izquierdo es mayor o igual que el lado derecho.</p>
+<p>Copia y pega el siguiente programa en tu IDE para ver cómo se comportan los relacionales:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>// Programa Java para ilustrar
+// operadores relacionales
+public class operators 
+{
+    public static void main(String[] args) 
+    {
+        int a = 20, b = 10;
+        String x = "Thank", y = "Thank";
+        int ar[] = { 1, 2, 3 };
+        int br[] = { 1, 2, 3 };
+        boolean condicion = true;
+        //varios operadores condicionales
+        System.out.println("a == b :" + (a == b));
+        System.out.println("a &lt; b :" + (a &lt; b));
+        System.out.println("a &lt;= b :" + (a &lt;= b));
+        System.out.println("a &gt; b :" + (a &gt; b));
+        System.out.println("a &gt;= b :" + (a &gt;= b));
+        System.out.println("a != b :" + (a != b));
+        // Los Arrays no se pueden comparar con
+        // operadores relacionales porque los objetos
+        // almacenan referencias, mas no el valor
+        System.out.println("x == y : " + (ar == br));
+        System.out.println("condicion==true :" + (condicion == true));
+    }
+}</code></pre>
+</div>
+</div>
+<hr />
+<h5><span style="color: #008000;">Operadores lógicos</span></h5>
+<p style="text-align: justify;">Estos operadores se utilizan para realizar operaciones “lógicas AND” y “lógicas OR”, y se usa ampliamente para probar varias condiciones para tomar una decisión.</p>
+<p style="padding-left: 30px;"><span style="color: #008000;"><em><strong>&amp;&amp;</strong></em></span>, AND lógico: devuelve verdadero cuando ambas condiciones son verdaderas.<br /><strong><em>|<span style="color: #008000;">|</span></em></strong><span style="color: #008000;">,</span> O lógico: devuelve verdadero si al menos una condición es verdadera.</p>
+<p>Copia y pega el siguiente programa en tu IDE para ver cómo se comportan los operadores lógicos:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>// Programa Java para ilustrar
+// operadores logicos
+import java.util.Scanner;
+public class operators 
+{
+    public static void main(String[] args) 
+    {
+        String x = "java";
+        String y = "desdecero";
+        Scanner s = new Scanner(System.in);
+        System.out.print("Ingrese usuario:");
+        String uuid = s.next();
+        System.out.print("Ingrese contraseña:");
+        String upwd = s.next();
+        // Verifique si el nombre de usuario y la contraseña coinciden o no.
+        if ((uuid.equals(x) &amp;&amp; upwd.equals(y)) || 
+                (uuid.equals(y) &amp;&amp; upwd.equals(x))) {
+            System.out.println("Bienvenido usuario.");
+        } else {
+            System.out.println("ID o Contraseña equivocada");
+        }
+    }
+}</code></pre>
+</div>
+</div></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="43_constantes_y_variables.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

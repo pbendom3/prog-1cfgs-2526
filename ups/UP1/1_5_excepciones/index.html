@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5. Control de excepciones (try-catch) </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente Domenech" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="5. Control de excepciones (try-catch)" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">5. Control de excepciones (try-catch)</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active no-ch main-node">5. Control de excepciones (try-catch)</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5. Control de excepciones (try-catch)</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Nivel básico...</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Hasta ahora, los programas sencillos que hemos hecho y pedían datos numéricos por teclado tenían un "pequeño" error...</p>
+<p style="text-align: justify; padding-left: 30px;">→ Ve a lanzar alguno de los que hemos hecho y comprueba que si introduces un texto cuando nos pide un número, el programa falla:</p>
+<p><img src="image_(2).png" width="611" height="183" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">En este error se informa el nombre de excepción generada: <span style="color: #008000;"><strong><em>java.util.InputMismatchException</em></strong></span>, es decir, se nos informa del nombre de la clase de excepción y el paquete que la contiene: <em>java.util.</em></p>
+<p style="text-align: justify;"><strong><span style="background-color: #ffff99;">Para controlar este tipo de errores se utiliza el famoso "control de excepciones", el cual debemos incluir a partir de ahora en nuestros programas cada vez que pidamos un número y necesitemos que sí o sí sea un valor numérico</span></strong> (porque hacemos operaciones con él).</p>
+<p style="text-align: justify;">Este control de excepciones de <em>Java</em> dispone de un mecanismo para capturar (<em>catch</em>) ciertos tipos de errores que sólo pueden ser detectados en tiempo de ejecución del programa. La estructura para expresar este control de excepciones es la siguiente:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>try {
+    int x = entrada.nextInt();
+} catch (InputMismatchException e) {
+    System.out.println("Introduce un número válido.");
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Para atrapar las excepciones debemos encerrar en un bloque <span style="color: #008000;"><strong><em>try</em></strong></span> las instrucciones que generan excepciones, en nuestro caso, el método '<span style="color: #008000;"><em>nextInt()</em></span>' de la clase <em>Scanner</em>. Además, todo bloque <span style="color: #008000;"><strong><em>try</em></strong></span> requiere que sea seguido por un bloque <span style="color: #008000;"><em><strong>catch</strong></em></span>. <span style="background-color: #ffff99;"><strong>Añade este trozo de código a alguno de tus programas anteriores y comprueba que funciona. </strong></span></p>
+<p>Los ejemplos más comunes para los que podemos nombrar de excepciones son:</p>
+<ul>
+<li>Tratar de convertir a entero un <em>String</em> que no contiene valores numéricos.</li>
+<li>Tratar de dividir por cero.</li>
+<li>Abrir un archivo de texto inexistente o que se encuentra bloqueado por otra aplicación.</li>
+<li>Conectar con un servidor de bases de datos que no se encuentra activo.</li>
+</ul>
+<hr />
+<h5><span style="color: #008000;">En resumen...</span></h5>
+<p style="text-align: justify;">La captura de excepciones nos permite crear programas mucho más robustos y tolerante a errores que ocurren en escasas situaciones, pero en caso de que se presenten, podemos disponer de un algoritmo alternativo para reaccionar a dicha situación (evitando que el programa finalice su ejecución con errores).</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2. Elementos básicos de un lenguaje de programación | Lenguajes de programación </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Lenguajes de programación</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">3. Lenguajes de programación</a></li>
+   <li><a href="31_cmo_funcionan_los_lenguajes_de_programacin.html" class="no-ch">3.1. ¿Cómo funcionan los lenguajes de programación?</a></li>
+   <li id="active"><a href="32_elementos_bsicos_de_un_lenguaje_de_programacin.html" class="active no-ch">3.2. Elementos básicos de un lenguaje de programación</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_cmo_funcionan_los_lenguajes_de_programacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2. Elementos básicos de un lenguaje de programación</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Elementos comunes a todos los lenguajes</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_129_2" class="block iDevice_content">
+<div class="exe-text"><h5><span style="color: #008000;">Tipos de datos</span></h5>
+<p>Los principales tipos de datos usados en los lenguajes de programación son:</p>
+<ul>
+<li><strong>Carácter</strong>: para almacenar caracteres y cadenas de texto. </li>
+<li><strong>Lógicos</strong> o booleanos: del tipo Verdadero/Falso.</li>
+<li><strong>Numéricos</strong>: almacenan números sin decimales (<em>ENTERO</em>) o con decimales (<em>REAL</em>).</li>
+</ul>
+<hr />
+<h5><span style="color: #008000;">Constantes y variables</span></h5>
+<p style="text-align: justify;">En cualquier lenguaje de programación necesitaremos usar <strong>variables y constantes</strong> para almacenar determinados valores (los cuales se guardan internamente en una posición de memoria del ordenador) y así poderlos recuperar posteriormente para usarlos en otra parte del código fuente.</p>
+<p style="text-align: justify;">Las <strong>constantes </strong>generalmente <strong>se declaran al principio del programa (bloque de declaración)</strong>, escribiendo su nombre en mayúsculas, y la diferencia entre ellas es que a las constantes se les puede asignar su valor una sola vez, mientras que el valor de las variables puede ser modificado en cualquier punto del código fuente del programa.</p>
+<p style="text-align: justify;"><strong>Para usar una variable o constante en primer lugar es preciso declararla (crearla) antes de poder inicializarla (darle un valor), pudiéndose hacer ambas cosas en la misma línea del código fuente.</strong></p>
+<p style="text-align: justify;">En cuanto al <strong>ámbito de una variable</strong>, éstas pueden ser <strong>variables globales</strong> (es posible acceder a ellas desde cualquier parte del programa) o <strong>variables locales</strong> (son visibles sólo desde determinadas partes de él): así pues, las creadas dentro de una Función, Procedimiento o sentencia de control existen y son accesibles sólo dentro de dicha porción de código fuente.</p>
+<p style="text-align: justify; padding-left: 30px;">A continuación veamos un ejemplo de cómo declarar variables y declarar constantes en pseudocódigo:</p>
+<p><img src="imagen_(1)_(2).png" width="894" height="407" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>   <strong>Explicación...</strong></p>
+<ol>
+<li style="text-align: justify;">Dentro de <strong><em>CONST </em></strong>declaramos (creamos) la constante '<em>PI</em>' y la inicializamos (le damos un valor). No es necesario indicar un tipo de datos.</li>
+<li style="text-align: justify;">A continuación, dentro de <strong><em>VAR </em></strong>declaramos varias variables de diferentes tipos de datos: a las de la primera y tercera líneas les asignamos un valor dentro del programa en sí (entre <em>INICIO</em> y <em>FIN</em>), mientras que las que se encuentran en la segunda y cuarta líneas las inicializamos en la misma línea en que las creamos.</li>
+</ol>
+<hr />
+<h5><span style="color: #008000;">Operadores</span></h5>
+<p>A continuación, listamos los principales tipos de operadores, teniendo en cuenta que para evaluar una expresión primero se calcula el resultado de lo que se halle entre paréntesis (comenzando desde los más interiores):</p>
+<ul>
+<li><strong>Aritméticos unarios</strong>
+<ul>
+<li>Incremento (+1): <em>++</em></li>
+<li>Decremento (-1): <em>--</em></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Aritméticos binarios</strong>
+<ul>
+<li>Multiplicación: *</li>
+<li>División: /</li>
+<li>Resto: <em>%</em> , <em>MOD</em></li>
+<li>Suma: +</li>
+<li>Resta: -</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Relacionales</strong>
+<ul>
+<li>Menor que: &lt;</li>
+<li>Mayor que: &gt;</li>
+<li>Menor o igual a: &lt;=</li>
+<li>Mayor o igual a: &gt;=</li>
+<li>Igual a: ==</li>
+<li>Diferente de: <em>&lt;&gt;</em> ò <em>!=</em></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Lógicos</strong>
+<ul>
+<li>Negación: <em>NOT (!)</em></li>
+<li>Conjunción: <em>AND (&amp;&amp;) y</em></li>
+<li>Disyunción: <em>OR (||) o</em></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Asignación</strong>
+<ul>
+<li>Suma y asignación: <em>+=</em></li>
+<li>Resta y asignación: <em>-=</em></li>
+<li>Multiplicación y asignación: <em>*=</em></li>
+<li>División y asignación: <em>/=</em></li>
+<li>Módulo (resto) y asignación: <em>%=</em></li>
+</ul>
+</li>
+</ul>
+<p><span style="text-decoration: underline;"><span style="color: #008000;"><strong>NOTA</strong></span></span>: Deberemos tener en cuenta que dentro de los distintos lenguajes de programación existentes puede que estos operadores genéricos tengan alguna diferencia a la hora de escribirlos en el código fuente.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_cmo_funcionan_los_lenguajes_de_programacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
