@@ -8,7 +8,7 @@ Vamos a compilar y ejecutar nuestro primer programa en lenguaje _Java_. Para ell
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a) Si obtienes un **error de comando desconocido**, seguramente sea porque no tienes instalado el paquete _JDK - Java SE Development Kit_ en tu ordenador. Dirígete a [Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/?er=221886#java26) e instala el que necesites en función de tu sistema operativo. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:bangbang: Recuerda reiniciar tu ordenador antes de volver a ejecutar el comando** desde la consola para que los cambios se apliquen correctamente tras la instalación.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:bangbang: Recuerda reiniciar tu ordenador antes de volver a ejecutar el comando** desde la consola para que los cambios se apliquen correctamente tras la instalación.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b) Si ya tenéis _JDK_ instalado, os debe aparecer un mensaje con la versión y alguna info más:
 
