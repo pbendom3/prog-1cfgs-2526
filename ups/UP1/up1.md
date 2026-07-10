@@ -26,7 +26,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 1. Programa “Hola Mundo” (“Hello World!”) en varios lenguajes](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/p1/p1_holamundo.md)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:a:ctividad. Compilar y ejecutar un programa Java desde la consola]()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:a:ctividad. Compilar y ejecutar un programa Java desde la consola](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_compilar/a_compilar.md)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 2. Montando nuestro entorno de desarrollo [IntelliJ IDEA + GitHub + SourceTree]]()
 

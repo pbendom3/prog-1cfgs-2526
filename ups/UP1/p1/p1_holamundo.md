@@ -44,4 +44,4 @@ Y además, cuando vayamos a guardarlo, nos pondrá automáticamente la extensió
 
 ### :outbox_tray: Entrega
 
-Recopila toda la información de los pasos anteriores en un documento de texto y crea una memoria de prácticas. Guárdala en PDF y súbela junto a los scripts guardados desde _SublimeText_ para cada lenguaje.
+Recopila toda la información de los pasos anteriores en un documento de texto y crea una memoria de prácticas. Guárdala en PDF y súbela junto a los scripts guardados desde _SublimeText_ para cada lenguaje a la entrega de AULES disponible.
