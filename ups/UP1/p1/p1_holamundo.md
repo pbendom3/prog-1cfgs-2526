@@ -12,7 +12,8 @@ El programa **_“Hola Mundo”_** (o _“Hello World”_) es el programa por ex
 
 2. Haz uso de **PSeInt** para saber cómo se codificaría el programa _“Hola Mundo”_ en varios lenguajes de programación. Para ello, dirígete a **_Archivo --> Exportar --> Vista previa_**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:warning: **MODIFICACIÓN** :bangbang: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:warning: MODIFICACIÓN** :bangbang: 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En lugar de crear un _"Hola Mundo"_, utilizar el código de alguno de los ejercicios previos realizados con _PSeInt_.
 
 ![](2.png)
