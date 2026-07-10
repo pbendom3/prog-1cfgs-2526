@@ -10,6 +10,8 @@ Permite centrar nuestra atención en los conceptos fundamentales de la algoritmi
 
 ![](image1.png)
 
+--- 
+
 ### :speech_balloon: Comandos disponibles
 
 - **Escribir**: para mostrar mensajes por pantalla a los usuarios (por ejemplo, para indicarles que deben introducir un número).
@@ -38,6 +40,8 @@ Permite centrar nuestra atención en los conceptos fundamentales de la algoritmi
 
     ![](image7.png)
 
+---
+
 ### :pencil: Tareas
 
 a) Reescribe los ejercicios realizados anteriormente al formato de **PSeInt** y ejecútalos para comprobar que se comportan de forma correcta según lo que se pide en el enunciado de cada problema. Añade una línea al principio de cada programa que te dé la bienvenida con tu nombre.
@@ -52,7 +56,9 @@ b) Genera el diagrama de flujo (DFD) a partir del código escrito.
 
 **:warning: Ve recopilando todas las pruebas y diagramas haciendo capturas de pantalla y pegándolas en un documento de texto.**
 
-### :checkered_flag: Entrega
+---
+
+### :outbox_tray: Entrega
 
 Pasa el documento de texto realizado a PDF y súbelo a la de AULES disponible.
 
