@@ -24,7 +24,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:link: Popularidad de los lenguajes de programación: TIOBE Index](https://www.tiobe.com/tiobe-index/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 1. Programa “Hola Mundo” (“Hello World!”) en varios lenguajes](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/p1/p1_holamundo.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 1. Programa “Hola Mundo” (“Hello World!”) en varios lenguajes](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/p1/p1_holamundo.md)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:a:ctividad. Compilar y ejecutar un programa Java desde la consola]()
 
