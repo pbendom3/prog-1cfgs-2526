@@ -44,6 +44,8 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 3. La báscula del feriante de Rabasa:dart::fishing_pole_and_fish::ferris_wheel:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/p3/p3_feriante.md)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 4. Multiplicaciones de 3 cifras:heavy_multiplication_x::x:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/p4/p4_multiplicaciones.md)
+
 --- 
 
 ## :small_red_triangle_down: EXÁMENES
