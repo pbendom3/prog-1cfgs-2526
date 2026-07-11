@@ -30,7 +30,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 2. Montando nuestro entorno de desarrollo [IntelliJ IDEA + GitHub + SourceTree]](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/p2/p2_entorno.md))
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:a:ctividad. Mi primer proyecto de desarrollo. Crear y ejecutar un programa simple en Java con IntelliJ IDEA]()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:a:ctividad. Mi primer proyecto de desarrollo. Crear y ejecutar un programa simple en Java con IntelliJ IDEA](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_primer_proyecto/a_primer.md)
 
 [4. Fundamentos del lenguaje Java](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/1_4_fndamentos_java/index.html) 
 

@@ -1,4 +1,4 @@
-## :triangular_flag_on_post: Práctica 2. Montando nuestro entorno de desarrollo [IntelliJ IDEA + GitHub + SourceTree]
+## :triangular_flag_on_post: Práctica 2. Montando nuestro entorno de desarrollo [_IntelliJ IDEA + GitHub + SourceTree_]
 
 Sigue los pasos indicados en el [documento adjunto](Práctica2_Montando_nuestro_entorno.pdf) para realizar la práctica. A partir de ahora, haz capturas de todo y ve pegándolas en un documento de texto. 
 
