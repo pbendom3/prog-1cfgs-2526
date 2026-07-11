@@ -6,12 +6,12 @@ Vamos a partir del proyecto inicial que nos crea _IntelliJ_ visto en el práctic
 
 Para hacerlo un poco más complicado, vamos a añadir:
 
-- Que el programa nos pregunte el _nombre_.
+- Que el programa nos pregunte el **_nombre_**.
 
-- Que el programa nos pregunte el _curso_ y nos dé la bienvenida a la programación. 
+- Que el programa nos pregunte el **_curso_** y nos dé la bienvenida a la programación. 
 
  
-Ejemplo de funcionamiento:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de funcionamiento :bulb::
 
 ![](1.png)
 
@@ -23,7 +23,7 @@ En _Java_ hay dos clases que siempre -o casi siempre- debemos usar, que son las 
 
 En la práctica anterior ya vimos que la forma de mostrar algo por pantalla es usar la clase `System.out` junto al método que imprime por pantalla `println`.
 
-La siguiente línea haría que el programa muestre por pantalla `¿Cómo te llamas?`
+La siguiente línea haría que el programa muestre por pantalla `¿Cómo te llamas?`:
 
 ![](2.png)
 
@@ -31,7 +31,7 @@ Ahora bien... Para poder contestar a la pregunta y escribir con el teclado, nece
 
 ![](3.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:pushpin: NOTA**. Observa que al escribir esta línea se ha incorporado a la cabecera del programa la siguiente línea: `import java.util.Scanner;`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:pushpin: NOTA**. Observa que al escribir esta línea se ha incorporado a la cabecera del programa la siguiente línea: `import java.util.Scanner;`. **Investiga qué es y coméntalo con tu profe.**
 
 
 ![](4.png)
@@ -50,7 +50,7 @@ Si escribimos `entradaEscaner` + un punto, vemos que _IntelliJ_ nos muestra todo
 
 ![](7.png)
 
-En el caso de querer introducir un texto ya lo sabemos (_.next()_), pero, ¿y un número?
+**En el caso de querer introducir un texto ya lo sabemos (_.next()_), pero, ¿y un número?**
 
 Para introducir números enteros por teclado, deberemos usar el método `.nextInt()` de la siguiente manera:
 
@@ -68,19 +68,19 @@ O si queremos que el valor dependa de una operación matemática...
 
 ---
 
-**¿Te ves ya capaz de realizar el programa pedido? ¡UN MOMENTO! :hand:** 
+**¿Te ves ya capaz de realizar el programa pedido? ¡UN MOMENTO! :hand::arrow_heading_down:** 
 
 Nos falta aclarar una cosa sobre el método `println`, ya que como has podido comprobar, **el programa que queremos hacer debe concatenar texto escrito directamente con el valor que van tomando las variables durante el transcurso del programa**. Por ejemplo:
 
 ![](11.png)
 
-La última línea ha concatenado (unido) "_Hola_" con el nombre que hemos introducido por teclado, "_bienvenido a_" y el curso que también ha sido introducido por el usuario. Para poder hacer esto, el método `println` permite concatenar diferentes valores usando el símbolo `+`. Esto es posible no solamente con texto, sino también con números o cualquier tipo de dato imprimible.
+La última línea ha concatenado (unido) "_Hola_" con el nombre que hemos introducido por teclado, "_bienvenido a_" y el curso que también ha sido introducido por el usuario. Para poder hacer esto, **el método `println` permite concatenar diferentes valores usando el símbolo `+`**. Esto es posible no solamente con texto, sino también con números o cualquier tipo de dato imprimible.
 
 ![](12.png)
 
 ---
 
-### :bulb: En resumen...
+### :checkered_flag: En resumen...
 
 ![](13.png)
 
@@ -94,6 +94,6 @@ La última línea ha concatenado (unido) "_Hola_" con el nombre que hemos introd
 
 ### :outbox_tray: Entrega
 
-Modifica el programa inicial para realizar el que se pide en esta práctica. Cuando acabes, sube todos los cambios a _GitHub_ y pega en esta tarea la _URL_ de tu repositorio en remoto.
+Modifica el programa inicial para realizar el que se pide en esta práctica. Cuando acabes, sube todos los cambios a _GitHub_ y pega en esta en la tarea de AULES disponible la _URL_ de tu repositorio en remoto.
 
-Además, debes subir una -o varias- captura de pantalla donde se vea el funcionamiento del programa que has implementado mientras lo ejecutas. 
+Además, debes subir a la tarea abierta una -o varias- captura de pantalla donde se vea el funcionamiento del programa que has implementado mientras lo ejecutas. 
