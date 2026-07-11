@@ -36,7 +36,7 @@ Permite centrar nuestra atención en los conceptos fundamentales de la algoritmi
 
     ![](image6.png)
 
-    - `Mientras (condicion) Hacer - FinMientras` y en el caso en que necesitemos repetir un bloque un número determinado de veces, por ejemplo, 3.
+    - `Mientras (condicion) Hacer` y en el caso en que necesitemos repetir un bloque un número determinado de veces, por ejemplo, 3.
 
     ![](image7.png)
 
