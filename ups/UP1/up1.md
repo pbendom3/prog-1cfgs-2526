@@ -2,6 +2,8 @@
 
 ![java basico](java_basico.png)
 
+---
+
 ## :book: Estructura de la unidad
 [INTRO. ¿Cómo funcionan los programas?](Como_funcionan_los_programas.pdf)
 
@@ -40,7 +42,9 @@
 
 [5. Control de errores (Excepciones básicas: try-catch)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/1_5_excepciones/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 3. La báscula del feriante de Rabasa]()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 3. La báscula del feriante de Rabasa:dart::fishing_pole_and_fish::ferris_wheel:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/p3/p3_feriante.md)
+
+--- 
 
 ## :small_red_triangle_down: EXÁMENES
 > [:page_facing_up: Teórico-práctico (escrito) - modelo A](EXAMEN_TEÓRICO_UD1_daw.pdf)
