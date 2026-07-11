@@ -36,7 +36,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:pushpin: [Chuleta] Java básico :paperclip:](referencia_java.pdf)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:pencil: Batería de programas sencillos en Java]()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:pencil: Batería de programas sencillos en Java :computer:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/bateria_java.md)
 
 [5. Control de errores (Excepciones básicas: try-catch)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/1_5_excepciones/index.html)
 

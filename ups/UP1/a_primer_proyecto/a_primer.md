@@ -11,7 +11,7 @@ Para hacerlo un poco más complicado, vamos a añadir:
 - Que el programa nos pregunte el **_curso_** y nos dé la bienvenida a la programación. 
 
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de funcionamiento :bulb::
+&nbsp;&nbsp;&nbsp;Ejemplo de funcionamiento :bulb::
 
 ![](1.png)
 
