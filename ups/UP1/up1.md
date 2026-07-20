@@ -34,11 +34,11 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:a:ctividad. Mi primer proyecto de desarrollo. Crear y ejecutar un programa simple en Java con IntelliJ IDEA](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_primer_proyecto/a_primer.md)
 
-[4. Fundamentos del lenguaje Java](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/1_4_fndamentos_java/index.html) 
+[4. Fundamentos del lenguaje _Java_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/1_4_fndamentos_java/index.html) 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:pushpin: [Chuleta] Java básico :paperclip:](referencia_java.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:pushpin: [Chuleta] _Java_ básico :paperclip:](referencia_java.pdf)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:pencil: Batería de programas sencillos en Java :computer:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/bateria_java.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:pencil: Batería de programas sencillos en _Java_ :computer:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/bateria_java.md)
 
 [5. Control de errores (Excepciones básicas: try-catch)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/1_5_excepciones/index.html)
 
