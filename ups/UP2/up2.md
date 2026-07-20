@@ -7,7 +7,7 @@
 
 ## :book: Estructura de la unidad
 
-[1. Trabajando con cadenas de caracteres en _Java_ (textos)](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_1_cadenas/index.html)
+[1. Trabajando con cadenas de caracteres en _Java_ (textos) :abcd:](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_1_cadenas/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios con cadenas de caracteres](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/bateria_dfd.md)
 
@@ -20,7 +20,7 @@
 
 [3. Estructuras de control condicional](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_3_condicionales/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:a:ctividad. Modificar programa de la actividad anterior para controlar el modo de ejecución con un _switch-case_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_pseudo/a_pseudo.md)	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Modificar programa de la actividad anterior para controlar el modo de ejecución con un _switch-case_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_pseudo/a_pseudo.md)	
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 2. Calculadora simple :heavy_multiplication_x::heavy_plus_sign::heavy_minus_sign::heavy_division_sign:](Práctica_2_Calculadora.pdf)
 
