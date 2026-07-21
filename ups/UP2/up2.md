@@ -15,8 +15,7 @@
      
 [2. Control de excepciones (nivel 2)](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_2_excepciones/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Uso de nuevas excepciones y método _.hasNextInt()_ para controlar formatos numéricos](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_pseudo/a_pseudo.md)	
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Uso de nuevas excepciones y método _.hasNextInt()_ para controlar formatos numéricos](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/actividad_excepciones.md)	
 
 [3. Estructuras de control condicional](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_3_condicionales/index.html)
 
