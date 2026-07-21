@@ -11,7 +11,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios con cadenas de caracteres](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_cadenas.md)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 1. Número de la suerte :1234:](Práctica1_Número_de_la_suerte.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 1. Número de la suerte :1234:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/p1/p1.md)
      
 [2. Control de excepciones (nivel 2)](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_2_excepciones/index.html)
 
