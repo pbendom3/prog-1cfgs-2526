@@ -50,7 +50,7 @@ Si escribimos `entradaEscaner` + un punto, vemos que _IntelliJ_ nos muestra todo
 
 ![](7.png)
 
-**En el caso de querer introducir un texto ya lo sabemos (_.next()_), pero, ¿y un número?**
+**En el caso de querer introducir un texto ya lo sabemos (con `.next()`), pero, ¿y un número?**
 
 Para introducir números enteros por teclado, deberemos usar el método `.nextInt()` de la siguiente manera:
 

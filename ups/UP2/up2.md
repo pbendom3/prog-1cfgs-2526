@@ -27,7 +27,7 @@
 
 [4. Estructuras de control repetitivas/iterativas (bucles :arrows_clockwise:)](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_5_bucles/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios bucles](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/bateria_dfd.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios bucles](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_bucles.md)
    
 [5. Trazas :pencil2:](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_7_trazas/index.html)
 
