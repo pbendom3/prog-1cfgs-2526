@@ -2,9 +2,9 @@
 
 Crea un programa que se comporte diferente según el modo de ejecución introducido por el usuario.  
 
-- Si el usuario elige el `modo 1`, el programa deberá pedir el año de nacimiento de la persona (_String_). Después, el programa debe convertir a entero (_int_) el valor introducido y comprobar si es un valor válido (`año >=1900` y `año <= año_actual`).
+- Si el usuario elige el `modo 1`, el programa deberá pedir el `año de nacimiento` de la persona (_String_). Después, el programa debe convertir a entero (_int_) el valor introducido y comprobar si es un valor válido (`año >=1900` y `año <= año_actual`).
 
-- Si el usuario elige el `modo 2`, el programa deberá pedir la edad de la persona (_int_). Además, deberemos asegurarnos de que es un valor válido (`edad >= 0`). Para no complicarlo mucho, calcularemos el `año de nacimiento` como `año_actual - edad` (sin tener en cuenta el mes de nacimiento exacto). 
+- Si el usuario elige el `modo 2`, el programa deberá pedir la `edad` de la persona (_int_). Además, deberemos asegurarnos de que es un valor válido (`edad >= 0`). Para no complicarlo mucho, calcularemos el `año de nacimiento` como `año_actual - edad` (sin tener en cuenta el mes de nacimiento exacto). 
 
 &nbsp;&nbsp;&nbsp;**:pushpin: NOTA**: Para obtener el `año actual`, utiliza la clase _`LocalDateTime`_ de la siguiente manera:
 
