@@ -31,7 +31,7 @@
    
 [5. Trazas :pencil2:](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_7_trazas/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 3. Comprobador de _ISBN_](Práctica_3_Comprobador_ISBN.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 3. Comprobador de _ISBN_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/p3/p3_isbn.md)
 
 ![control](Que-es-el-ISBN.jpg)
    
