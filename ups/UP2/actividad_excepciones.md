@@ -1,4 +1,4 @@
-## :a:ctividad. Uso de nuevas excepciones y método _.hasNextInt()_ para controlar formatos numéricos
+## :a:ctividad. Uso de nuevas excepciones y método _`.hasNextInt()`_ para controlar formatos numéricos
 
 Crea un programa que se comporte diferente según el modo de ejecución introducido por el usuario.  
 
@@ -6,7 +6,7 @@ Crea un programa que se comporte diferente según el modo de ejecución introduc
 
 - Si el usuario elige el `modo 2`, el programa deberá pedir la edad de la persona (_int_). Además, deberemos asegurarnos de que es un valor válido (`edad >= 0`). Para no complicarlo mucho, calcularemos el `año de nacimiento` como `año_actual - edad` (sin tener en cuenta el mes de nacimiento exacto). 
 
-&nbsp;&nbsp;&nbsp;&nbsp;**:pushpin: NOTA**: Para obtener el `año actual`, utiliza la clase _`LocalDateTime`_ de la siguiente manera:
+&nbsp;&nbsp;&nbsp;**:pushpin: NOTA**: Para obtener el `año actual`, utiliza la clase _`LocalDateTime`_ de la siguiente manera:
 
     LocalDateTime hoy = LocalDateTime.now();
 
