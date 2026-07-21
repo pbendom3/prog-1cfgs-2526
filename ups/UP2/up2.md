@@ -21,7 +21,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Modificar programa de la actividad anterior para controlar el modo de ejecución con un _switch-case_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/actividad_switchcase.md)	
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 2. Calculadora simple :heavy_multiplication_x::heavy_plus_sign::heavy_minus_sign::heavy_division_sign:](Práctica_2_Calculadora.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 2. Calculadora simple :heavy_multiplication_x::heavy_plus_sign::heavy_minus_sign::heavy_division_sign:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/p2/p2_calculadora.md)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:gift: **BONUS**: el operador ternario **_[:]_** en _Java_](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_4_ternario/index.html)
 
