@@ -9,7 +9,7 @@
 
 [1. Trabajando con cadenas de caracteres en _Java_ (textos) :abcd:](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_1_cadenas/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios con cadenas de caracteres](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/bateria_dfd.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios con cadenas de caracteres](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_cadenas.md)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 1. Número de la suerte :1234:](Práctica1_Número_de_la_suerte.pdf)
      
