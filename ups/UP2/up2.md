@@ -37,7 +37,7 @@
    
 [:gift: **BONUS**. Conociendo la clase _Random_ (generación de valores aleatorios :twisted_rightwards_arrows:)](https://pbendom3.github.io/prog-1cfgs/ups/UP2/2_6_random/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividades clase _Random_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/bateria_dfd.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividades clase _Random_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/actividades_random.md)
 
 ---
 
