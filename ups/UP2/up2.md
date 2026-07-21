@@ -41,15 +41,15 @@
 
 ---
 
-[**:pencil: Batería de problemas pre-examen :rocket:**](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/bateria_dfd.md)
+[**:pencil: Batería de problemas pre-examen :rocket:**](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_examen.md)
 
 ---
    
 ## :small_red_triangle_down: EXÁMENES
-> [:page_facing_up: Teórico-práctico (escrito) - modelo A](1_EXAMEN_TEÓRICO_UD2_DAM.pdf)
+> [:page_facing_up: Teórico-práctico (escrito) - modelo A](EXAMEN_UD2_TEORICO_DAM.pdf)
 
-> [:page_facing_up: Teórico-práctico (escrito) - modelo B](2_EXAMEN_TEÓRICO_UD2_DAW.pdf)
+> [:page_facing_up: Teórico-práctico (escrito) - modelo B](EXAMEN_UD2_TEORICO_DAW.pdf)
 
-> [:computer: Práctico - modelo A](3_EXAMEN_PRÁCTICO_UD2_A.pdf)
+> [:computer: Práctico - modelo A](EXAMEN_PRÁCTICO_UD2modeloDAW.pdf)
 
-> [:computer: Práctico - modelo B](4_EXAMEN_PRÁCTICO_UD2_B.pdf)
+> [:computer: Práctico - modelo B](EXAMEN_PRÁCTICO_UD2_modelo_DAM.pdf)

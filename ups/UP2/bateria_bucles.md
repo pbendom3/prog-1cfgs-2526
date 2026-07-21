@@ -24,7 +24,7 @@ Recuerda que si el resto es 0 es porque el dividendo es divisible entre el divis
 
 Imprime cada carácter (letra) de una cadena introducida por el usuario, en una nueva línea.
 
-&nbsp;&nbsp;&nbsp;Ejemplo:     
+&nbsp;&nbsp;&nbsp;Ejemplo :eyes::     
 
     Entrada: "Hola"                         
 
@@ -67,7 +67,7 @@ Calcula el factorial de un número _N_ cualquiera introducido por el usuario.
 
 Imprime una cadena cualquiera introducida por el usuario, en orden inverso.
 
-&nbsp;&nbsp;&nbsp;Ejemplo: 
+&nbsp;&nbsp;&nbsp;Ejemplo :eyes:: 
 
     Entrada: "hola"
     Salida: "aloh"

@@ -12,7 +12,7 @@
  
 **:arrow_forward: Ejercicio 6**. Necesitamos realizar un programa que decida por nosotros si tenemos que ir (o no) a comprar.
  
-Funcionamiento:
+Funcionamiento :eyes::
 
 - El programa nos debe preguntar si tenemos `tomate`.
 - El programa nos debe preguntar si tenemos `aceite`.

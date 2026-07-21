@@ -12,7 +12,7 @@
 
 &nbsp;&nbsp;&nbsp;e) Transforma la cadena de texto a mayúsculas `toUpperCase()`.
 
-&nbsp;&nbsp;&nbsp;**Ejemplo de ejecución:**
+&nbsp;&nbsp;&nbsp;**Ejemplo de ejecución :eyes::**
 
     INTRODUCE UNA PALABRA O FRASE: Prueba ejercicio caracteres
     
