@@ -28,4 +28,4 @@ Con los datos introducidos, el programa debe mostrar al usuario el nombre de su 
 
 ### :outbox_tray: Entrega
 
-Recopila en un documento de texto todos los pasos realizados anteriormente, pásalo a PDF y súbelo a la entrega de AULES disponible.
+Pega la _URL_ de tu repositorio de _GitHub_ en la entrega de AULES disponible.
