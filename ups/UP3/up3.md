@@ -12,7 +12,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 1. Batalla de samuráis ⚔️:crossed_flags:](2_Práctica1_Batalla_de_samuráis.pdf)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica ampliación. _Streamer Stats Challenge_ :movie_camera::computer:](2_Práctica1_Batalla_de_samuráis.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica ampliación. _Streamer Stats Challenge_ :movie_camera::man_with_gua_pi_mao::computer:](2_Práctica1_Batalla_de_samuráis.pdf)
     
 [:eight_spoked_asterisk: Ampliación **_split()_** y uso de **_asList()_**](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP3/3_2_split_aslist/index.html)
 
@@ -34,7 +34,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios pre-matrices: bucles anidados :arrows_counterclockwise::arrows_counterclockwise:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_cadenas.md)
 
-[4. Matrices (_arrays_ bidimensionales)](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP3/3_6_matrices/index.html)
+[3. Matrices (_arrays_ bidimensionales)](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP3/3_6_matrices/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Ejercicios de ejemplo :eyes:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_cadenas.md)
 
@@ -45,7 +45,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre matrices (nivel 1)](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_cadenas.md)
 
 
-[5. Tratamiento de vectores en matrices](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP3/3_7_vectores_matrices/index.html)
+[4. Tratamiento de vectores en matrices](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP3/3_7_vectores_matrices/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Mensajes en _Space Invaders_ :space_invader:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_primer_proyecto/a_primer.md)
 
