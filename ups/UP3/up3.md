@@ -10,7 +10,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: [Ayuda] Online _Java_ compiler, visual debugger and _AI_ tutor :robot::thought_balloon:](https://pythontutor.com/java.html#mode=edit)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 1. Batalla de samuráis ⚔️:crossed_flags:](2_Práctica1_Batalla_de_samuráis.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 1. Batalla de samuráis ⚔️:crossed_flags:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/p1_samurais/p1_samurais.md)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:arrow_upper_right: Práctica ampliación. _Streamer Stats Challenge_ :movie_camera::man_technologist:](2_Práctica1_Batalla_de_samuráis.pdf)
     
