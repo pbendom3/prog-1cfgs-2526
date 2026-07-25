@@ -412,7 +412,7 @@ for (int i = 0; i &amp;lt; 10; i++){
                      <string role="key" value="_storageName"></string>
                      <string value="img0.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpqes7ce\\img0.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp1g3wfi\\img0.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="a9f0d79aff4871e5191eeff353b3a19a"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -464,7 +464,7 @@ for (int i = 0; i &amp;lt; 10; i++){
                      <string role="key" value="_storageName"></string>
                      <string value="img1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpqes7ce\\img1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp1g3wfi\\img1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="ba3bce3168859b872e434bec6d2e3c61"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -746,7 +746,11 @@ Salida:
               <string role="key" value="anchors_linked_from_fields"></string>
               <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;pbl-task-description&quot;&gt;&lt;p&gt;Diseña un programa que muestre las tablas de multiplicar del 1 al 10.&lt;/p&gt;&lt;/div&gt;"></unicode>
+              <unicode content="true" value="&lt;div class=&quot;pbl-task-description&quot;&gt;&lt;p&gt;Diseña un programa que muestre las tablas de multiplicar del 1 al 9. Como el programa es para niños de 1º y 2º de primaria, para que no se lleguen a números muy grandes, controla si el resultado de la multiplicación es mayor a un número máximo establecido por el maestro y &lt;strong&gt;detén toda la tabla&lt;/strong&gt;. &lt;span style=&quot;text-decoration: underline; color: #ff0000; background-color: #ffff00;&quot;&gt;&lt;strong&gt;Usa etiquetas&lt;/strong&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify; padding-left: 30px;&quot;&gt;Ejemplo:&lt;/p&gt;
+&lt;p style=&quot;text-align: justify; padding-left: 90px;&quot;&gt;&lt;em&gt;Número máximo: 20&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify; padding-left: 90px;&quot;&gt;&lt;br /&gt;&lt;em&gt;Tabla del 1&lt;/em&gt;&lt;br /&gt;&lt;em&gt;1 x 1 = 1&lt;/em&gt;&lt;br /&gt;&lt;em&gt;1 x 2 = 2&lt;/em&gt;&lt;br /&gt;&lt;em&gt;...&lt;/em&gt;&lt;br /&gt;&lt;em&gt;1 x 9 = 9&lt;/em&gt;&lt;br /&gt;&lt;em&gt;1 x 10 = 10&lt;/em&gt;&lt;br /&gt;&lt;em&gt;Tabla del 2&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 1 = 2&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 2 = 4&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 3 = 6&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 4 = 8&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 5 = 10&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 6 = 12&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 7 = 14&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 8 = 16&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 9 = 18&lt;/em&gt;&lt;br /&gt;&lt;em&gt;2 x 10 = 20&lt;/em&gt;&lt;br /&gt;&lt;em&gt;Tabla del 3&lt;/em&gt;&lt;br /&gt;&lt;em&gt;3 x 1 = 3&lt;/em&gt;&lt;br /&gt;&lt;em&gt;3 x 2 = 6&lt;/em&gt;&lt;br /&gt;&lt;em&gt;3 x 3 = 9&lt;/em&gt;&lt;br /&gt;&lt;em&gt;3 x 4 = 12&lt;/em&gt;&lt;br /&gt;&lt;em&gt;3 x 5 = 15&lt;/em&gt;&lt;br /&gt;&lt;em&gt;3 x 6 = 18&lt;/em&gt;&lt;br /&gt;&lt;em&gt;3 x 7 = 21   ← Se supera el máximo, se detiene todo&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
               <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -873,7 +877,7 @@ Salida:
               <string role="key" value="anchors_linked_from_fields"></string>
               <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;pbl-task-description&quot;&gt;&lt;p&gt;Se pide realizar un programa que calcule los números primos que se encuentran en el rango desde 2 hasta &lt;em&gt;m&lt;/em&gt;. El programa debe pedir un número máximo &lt;em&gt;m&lt;/em&gt; e imprimir todos los primos en el rango indicado.&lt;/p&gt;
+              <unicode content="true" value="&lt;div class=&quot;pbl-task-description&quot;&gt;&lt;p&gt;Se pide realizar un programa que calcule los números primos que se encuentran en el rango desde 2 hasta &lt;em&gt;m&lt;/em&gt;. El programa debe pedir un número máximo &lt;em&gt;m&lt;/em&gt; e imprimir todos los primos en el rango indicado. &lt;span style=&quot;text-decoration: underline; color: #ff0000; background-color: #ffff00;&quot;&gt;&lt;strong&gt;Usa etiquetas&lt;/strong&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&quot;highlighted-code code-style-2 language-markup&quot;&gt;
 &lt;div&gt;
 &lt;pre&gt;&lt;code&gt;Introduzca el valor m: 21 
