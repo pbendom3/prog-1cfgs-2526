@@ -12,7 +12,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 1. Batalla de samuráis ⚔️:crossed_flags:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/p1_samurais/p1_samurais.md)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:arrow_upper_right: Práctica ampliación. _Streamer Stats Challenge_ :movie_camera::man_technologist:](2_Práctica1_Batalla_de_samuráis.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:arrow_upper_right: Práctica ampliación. _Streamer Stats Challenge_ :movie_camera::man_technologist:](Práctica1.StreamerStatsChallenge.pdf)
     
 [:eight_spoked_asterisk: Ampliación. Método **_.split()_** y uso de **_.asList()_**](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_2_split_aslist/index.html)
 
