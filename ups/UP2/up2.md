@@ -43,6 +43,8 @@
 
 [**:pencil: Batería de problemas pre-examen :rocket:**](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_examen.md)
 
+[:open_file_folder: Exámenes UP2 (curso 24-25)](https://github.com/pbendom3/prog-1cfgs/blob/main/ups/UP2/up2.md#ex%C3%A1menes)
+
 ---
    
 ## :small_red_triangle_down: EXÁMENES

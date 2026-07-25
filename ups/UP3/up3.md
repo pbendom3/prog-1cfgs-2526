@@ -8,13 +8,13 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre _arrays_ :black_square_button::black_square_button::black_square_button::black_square_button:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_cadenas.md)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: [Ayuda] Online _Java_ compiler, visual debugger and _AI_ tutor :alien::thought_balloon:](https://pythontutor.com/java.html#mode=edit)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: [Ayuda] Online _Java_ compiler, visual debugger and _AI_ tutor :robot::thought_balloon:](https://pythontutor.com/java.html#mode=edit)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 1. Batalla de samuráis ⚔️:crossed_flags:](2_Práctica1_Batalla_de_samuráis.pdf)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica ampliación. _Streamer Stats Challenge_ :movie_camera::man_with_gua_pi_mao::computer:](2_Práctica1_Batalla_de_samuráis.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:arrow_upper_right: Práctica ampliación. _Streamer Stats Challenge_ :movie_camera::man_technologist:](2_Práctica1_Batalla_de_samuráis.pdf)
     
-[:eight_spoked_asterisk: Ampliación **_split()_** y uso de **_asList()_**](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP3/3_2_split_aslist/index.html)
+[:eight_spoked_asterisk: Ampliación. Método **_.split()_** y uso de **_.asList()_**](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP3/3_2_split_aslist/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. La ruleta del casino :slot_machine: (_asList()_ + _return_)](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_primer_proyecto/a_primer.md)
        
@@ -26,7 +26,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Eliminar duplicados de un _array_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_primer_proyecto/a_primer.md)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:eight_spoked_asterisk: Ampliación. Eliminar duplicados de un _array_ con el método **_.distinct()_**](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP3/3_2_split_aslist/index.html)
+[:eight_spoked_asterisk: Ampliación. Eliminar duplicados de un _array_ con el método **_.distinct()_**](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP3/3_2_split_aslist/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 2. Simulación del sorteo de La Primitiva :game_die::clubs:](6_Práctica2_Simulación_del_sorteo_de_la_Primitiva.pdf)
 
@@ -55,11 +55,13 @@
 
 **:pencil: Batería de problemas pre-examen :rocket:**
 
-[(Vectores). POR QUÉ PIERDO AL PÁDEL](PORQUÉPIERDOALPÁDEL.pdf)
+- [POR QUÉ PIERDO AL PÁDEL (vectores)](PORQUÉPIERDOALPÁDEL.pdf)
 
-[(Matrices). EN BÚSQUEDA DE LA NOTITA DE AMOR](LABÚSQUEDADELANOTITADEAMOR.pdf)
+- [EN BÚSQUEDA DE LA NOTITA DE AMOR (matrices)](LABÚSQUEDADELANOTITADEAMOR.pdf)
 
-[(Matrices). Sopa de letras automatizada](Práctica3.Sopadeletras.pdf)
+- [Sopa de letras automatizada (matrices)](Práctica3.Sopadeletras.pdf)
+
+[:open_file_folder: Exámenes UP3 (curso 24-25)](https://github.com/pbendom3/prog-1cfgs/blob/main/ups/UP3/up3.md#ex%C3%A1menes)
 
 ---
 

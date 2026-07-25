@@ -48,6 +48,12 @@
 
 --- 
 
+**:pencil: Batería de problemas pre-examen :rocket:**
+
+[:open_file_folder: Exámenes UP1 (curso 24-25)](https://github.com/pbendom3/prog-1cfgs/blob/main/ups/UP1/up1.md#ex%C3%A1menes)
+
+---
+
 ## :small_red_triangle_down: EXÁMENES
 > [:page_facing_up: Teórico-práctico (escrito) - modelo A](EXAMEN_TEÓRICO_UD1_daw.pdf)
 
