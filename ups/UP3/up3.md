@@ -16,7 +16,7 @@
     
 [:eight_spoked_asterisk: Ampliación. Método **_.split()_** y uso de **_.asList()_**](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_2_split_aslist/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. La ruleta del casino :slot_machine: (_asList()_ + _return_)](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_primer_proyecto/a_primer.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. La ruleta del casino :slot_machine: (_asList()_ + _return_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_2_split_aslist/actividad_la_ruleta_del_casino_aslist__return.html)
        
 [2. Ordenación de arrays :zero::one::two::three::four::five::abc:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_3_ordenacion/index.html)
 
