@@ -46,9 +46,9 @@
 
 [4. Tratamiento de vectores en matrices](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_7_vectores_matrices/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Mensajes en _Space Invaders_ :space_invader:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_primer_proyecto/a_primer.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Mensajes en _Space Invaders_ :space_invader:](https://aceptaelreto.com/problem/statement.php?id=617)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 3. _ZX Spectrum_ :vhs:: pantallas de carga durante los 80 :tv:](6_Práctica2_Simulación_del_sorteo_de_la_Primitiva.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 3. _ZX Spectrum_ :vhs:: pantallas de carga durante los 80 :tv:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/p3_spectrum/Práctica3.ZXSpectrum.pdf)
 
 ---
 
