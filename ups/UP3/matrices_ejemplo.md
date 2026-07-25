@@ -3,6 +3,7 @@
 **:arrow_forward: Ejercicio 1**. Crea y carga una matriz cuadrada de _n_ filas por _n_ columnas. 
 
 &nbsp;&nbsp;&nbsp;a) Imprime la diagonal.
+
 &nbsp;&nbsp;&nbsp;b) Piensa una posible solución para imprimir la diagonal de forma invertida (la matriz debe ser la misma). Para n=4:
 
 ![array](inversa.png)
