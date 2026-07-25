@@ -6,7 +6,7 @@
 
 [1. Estructura de los vectores (_arrays_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_1_arrays/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre _arrays_ :black_square_button::black_square_button::black_square_button::black_square_button:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_cadenas.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre _arrays_ :black_square_button::black_square_button::black_square_button::black_square_button:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_1_arrays/batera_de_ejercicios_sobre_arrays.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: [Ayuda] Online _Java_ compiler, visual debugger and _AI_ tutor :robot::thought_balloon:](https://pythontutor.com/java.html#mode=edit)
 
