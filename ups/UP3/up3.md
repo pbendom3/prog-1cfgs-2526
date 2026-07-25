@@ -48,7 +48,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Mensajes en _Space Invaders_ :space_invader:](https://aceptaelreto.com/problem/statement.php?id=617)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 3. _ZX Spectrum_ :vhs:: pantallas de carga durante los 80 :tv:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/p3_spectrum/Práctica3.ZXSpectrum.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 3. _ZX Spectrum_ :vhs:: pantallas de carga durante los 80 :tv:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/p3_spectrum/p3_spectrum.md)
 
 ---
 
