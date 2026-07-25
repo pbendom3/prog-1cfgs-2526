@@ -21,11 +21,11 @@
 
 ### :school_satchel: Proyecto `individual`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:arrow_right: **Fase 1**. Elección de proyecto :mag_right:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:arrow_right: Fase 1**. Elección de proyecto :mag_right:
 
 > Entra en el sitio web de **_ProgramaMe: Concurso de Programación para Ciclos Formativos_** y elige alguno de los ejercicios que aparecen en los cuadernillos del histórico de problemas: https://programame.com/archive.php
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:arrow_right: **Fase 2**. Desarrollo, pruebas, documentación :file_folder: y entrega del proyecto :outbox_tray:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:arrow_right: Fase 2**. Desarrollo, pruebas, documentación :file_folder: y entrega del proyecto :outbox_tray:
 
 > Resolver problema con **2 versiones de programa (_.java_)**: 
 > - Aplicando programación modular y resolviendo el problema con un programa "bonito".
@@ -37,7 +37,7 @@
 
 > Generar memoria del proyecto en **_PDF_** (tipo informe de prácticas) y **materiales visuales** necesarios para la exposición oral (_Canva, PowerPoint_, etc.).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:arrow_right: **Fase 3**. Exposición + taller de evaluación entre iguales :speech_balloon:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:arrow_right: Fase 3**. Exposición + taller de evaluación entre iguales :speech_balloon:
 
 > :warning: Las personas que no expongan deben entregar un **videotutorial** explicando su solución.
 
