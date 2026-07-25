@@ -48,9 +48,9 @@
 
 --- 
 
-**:pencil: Batería de problemas pre-examen :rocket:**
+**:pencil::back: Exámenes años anteriores**
 
-[:open_file_folder: Exámenes UP1 (curso 24-25)](https://github.com/pbendom3/prog-1cfgs/blob/main/ups/UP1/up1.md#ex%C3%A1menes)
+- [:open_file_folder: Exámenes UP1 (curso 24-25)](https://github.com/pbendom3/prog-1cfgs/blob/main/ups/UP1/up1.md#ex%C3%A1menes)
 
 ---
 

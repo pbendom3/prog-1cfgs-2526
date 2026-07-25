@@ -60,7 +60,9 @@
 
 - [Sopa de letras automatizada (matrices)](Práctica3.Sopadeletras.pdf)
 
-[:open_file_folder: Exámenes UP3 (curso 24-25)](https://github.com/pbendom3/prog-1cfgs/blob/main/ups/UP3/up3.md#ex%C3%A1menes)
+**:pencil::back: Exámenes años anteriores**
+
+- [:open_file_folder: Exámenes UP3 (curso 24-25)](https://github.com/pbendom3/prog-1cfgs/blob/main/ups/UP3/up3.md#ex%C3%A1menes)
 
 ---
 

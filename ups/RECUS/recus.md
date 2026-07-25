@@ -1,16 +1,20 @@
 ## :bookmark_tabs: Exámenes de recuperación
 
 ### :o: Unidades 1-7 `pre-Semana Santa` (bloque _1ª+2ª ev._)
-- [:page_facing_up: Teórico-práctico (escrito)](1_EXAMEN_TEÓRICO_ABRIL.pdf)
-- [:computer: Práctico](2_EXAMEN_PRÁCTICO_ABRIL.pdf)
+
+> [:page_facing_up: Teórico-práctico (escrito)](1_EXAMEN_TEÓRICO_ABRIL.pdf)
+
+> [:computer: Práctico](2_EXAMEN_PRÁCTICO_ABRIL.pdf)
 
 ### :o: Unidades 1-7 `ordinaria` (bloque _1ª+2ª ev._)
-- [:page_facing_up: Teórico-práctico (escrito)](3_EXAMEN_TEÓRICO_MAYO.pdf)
-- [:computer: Práctico](4_EXAMEN_PRÁCTICO_MAYO.pdf)
+> [:page_facing_up: Teórico-práctico (escrito)](3_EXAMEN_TEÓRICO_MAYO.pdf)
+
+> [:computer: Práctico](4_EXAMEN_PRÁCTICO_MAYO.pdf)
 
 ### :o: Unidades 1-7 `extraordinaria` (bloque _1ª+2ª ev._)
-- [:page_facing_up: Teórico-práctico (escrito)](6_EXAMEN_TEÓRICO_JUNIO.pdf)
-- [:computer: Práctico](7_EXAMEN_PRÁCTICO_JUNIO.pdf)
+> [:page_facing_up: Teórico-práctico (escrito)](6_EXAMEN_TEÓRICO_JUNIO.pdf)
+
+> [:computer: Práctico](7_EXAMEN_PRÁCTICO_JUNIO.pdf)
 
 ---
 
