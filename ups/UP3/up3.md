@@ -26,7 +26,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Eliminar duplicados de un _array_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/actividad_duplicados.md)
 
-[:eight_spoked_asterisk: Ampliación. Eliminar duplicados de un _array_ con el método **_.distinct()_**](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_2_split_aslist/index.html)
+[:eight_spoked_asterisk: Ampliación. Eliminar duplicados de un _array_ con el método **_.distinct()_**](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/distinct/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 2. Simulación del sorteo de _La Primitiva_ :game_die::clubs:](6_Práctica2_Simulación_del_sorteo_de_la_Primitiva.pdf)
 
