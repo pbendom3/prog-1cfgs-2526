@@ -36,14 +36,13 @@
 
 [3. Matrices (_arrays_ bidimensionales)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_6_matrices/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Ejercicios de ejemplo :eyes:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_cadenas.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Ejercicios de ejemplo :eyes:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/matrices_ejemplo.md)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: _LLM Visualization_: Cómo funciona _ChatGPT_ (matrices)](https://bbycroft.net/llm)
 
 ![](llmchat.PNG)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre matrices (nivel 1)](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/bateria_cadenas.md)
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre matrices (nivel 1)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_6_matrices/batera_de_ejercicios_sobre_matrices_nivel_1.html)
 
 [4. Tratamiento de vectores en matrices](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_7_vectores_matrices/index.html)
 
