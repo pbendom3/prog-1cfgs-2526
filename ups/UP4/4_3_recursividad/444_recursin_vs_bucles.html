@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.4. Recursión vs Bucles | 4.4. Recursividad </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">4.4. Recursividad</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4.4. Recursividad</a></li>
+   <li><a href="441_la_pila_de_llamadas_bsica.html" class="no-ch">4.4.1. La pila de llamadas (básica)</a></li>
+   <li><a href="442_la_pila_de_llamadas_recursividad.html" class="no-ch">4.4.2. La pila de llamadas (recursividad)</a></li>
+   <li><a href="443_ampliacin_sobre_recursividad.html" class="no-ch">4.4.3. Ampliación sobre recursividad</a></li>
+   <li id="active"><a href="444_recursin_vs_bucles.html" class="active no-ch">4.4.4. Recursión vs Bucles</a></li>
+   <li><a href="actividades_sobre_recursividad_entregable.html" class="no-ch">Actividades sobre recursividad [entregable]</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="443_ampliacin_sobre_recursividad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividades_sobre_recursividad_entregable.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4.4. Recursión vs Bucles</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id27">
+<div class="iDevice emphasis0" >
+<div id="ta27_127_2" class="block iDevice_content">
+<div class="exe-text"><h5>Coste de la recursión</h5>
+<p>Como ya hemos visto, por cada llamada recursiva:</p>
+<ol>
+<li>Se crea un nuevo escalón en la pila de llamadas.</li>
+<li>Se guardan y actualizan variables locales.</li>
+<li>Guardamos la dirección de retorno para devolver el valor que nos hayan pedido.</li>
+</ol>
+<p>Esto implica más uso de memoria, más trabajo interno (tiempo) y además puede provocar <span style="color: #008000;"><strong><em>stack overflow</em></strong></span> si hay demasiadas llamadas. Por eso, los <strong>bucles son más eficientes en tiempo y memoria</strong>.</p>
+<div class="exe-fx exe-carousel">
+<h2>¿Qué es un StackOverflow?</h2>
+<p>En Java (y en casi cualquier lenguaje), un <em>StackOverflowError</em> ocurre cuando la pila de llamadas (call stack) se llena y ya no queda espacio para seguir guardando más información.</p>
+<h2>¿Cuándo ocurre un StackOverflow?</h2>
+<p>Principalmente cuando hay demasiadas llamadas anidadas, normalmente por recursión mal controlada. Por ejemplo, este código crea llamadas y llamadas sin parar hasta que la pila se queda sin espacio:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>void rec() { rec(); } // llamada infinita</code></pre>
+</div>
+</div>
+</div>
+<h5>Entonces… ¿por qué usar recursión?</h5>
+<p style="text-align: justify;">Algunos algoritmos son naturalmente recursivos (<em>DFS, quicksort, mergesort</em>) y el código queda más claro (árboles, grafos, divide‑y‑vencerás) pero incluso ahí, muchas implementaciones optimizadas usan bucles internos.</p>
+<p style="text-align: justify;">Otro uso común es el <em><strong>backtracking </strong></em>que habéis usado algunos de vosotros para resolver sudokus, laberintos, etc. en problemas típicos de olimpiada. En esos casos, la recursión hace que el código sea más claro y más fácil de razonar.</p>
+<p></p>
+<div id="t58a7f3c8-386b-a62f-6622-36ce8fa852b2" class="exe-dialog-text js-hidden">
+<p>En Java (y en casi cualquier lenguaje), un StackOverflowError ocurre cuando la pila de llamadas (call stack) se llena y ya no queda espacio para seguir guardando más información.</p>
+</div></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id28">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio: medir tiempo y memoria</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p><strong>Código base para medir <span style="color: #008000;">tiempo</span> y <span style="color: #008000;">memoria</span>:</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>System.gc(); //Limpia lo que pueda antes de medir
+
+long inicioEjecucion = System.nanoTime();
+long memoriaAntes = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+
+// PROGRAMA A REALIZAR
+
+long finEjecucion = System.nanoTime();
+long memoriaDespues = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+
+System.out.println("Tiempo: " + (finEjecucion - inicioEjecucion) + " ns");
+System.out.println("Memoria consumida: " + (memoriaDespues - memoriaAntes) + " bytes");</code></pre>
+</div>
+</div>
+<div class="exe-fx exe-carousel">
+<h2><em>System.gc()</em></h2>
+<p style="text-align: justify;"><span style="color: #008000;"><strong><em>gc()</em></strong> </span>en <em>Java</em> sirve para sugerir que se limpie memoria que ya no se está usando. La palabra clave aquí es <span style="color: #008000;"><strong>sugerir</strong></span>: no obliga a nada, no garantiza que ocurra en ese momento y la <em>JVM</em> puede ignorarlo si quiere. Esto es así porque en <em>Java</em> moderno, la <em>JVM</em> gestiona la memoria mejor que cualquier llamada manual.</p>
+<p style="text-align: justify;">No deberíamos usarlo en entornos de <strong>producción</strong> salvo en casos muy específicos.</p>
+</div>
+<p style="text-align: justify;">a) Recupera el ejercicio anterior que imprime los números de 1 a N y crea un método alternativo usando bucles que se comporte exactamente igual.</p>
+<p>b) Mide el tiempo y la memoria usada por cada uno de los métodos y compara los resultados obtenidos para ambos.</p>
+<p>b) Fuerza un error <em><strong>StackOverFlow</strong> </em>del método recursivo<em> </em>dando un valor 100.000 a N:</p>
+<p><img src="img0.5.png" width="691" height="469" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="padding-left: 30px;">Comprueba que el método no recursivo, en cambio, funciona perfectamente.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="443_ampliacin_sobre_recursividad.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="actividades_sobre_recursividad_entregable.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

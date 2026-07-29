@@ -28,13 +28,13 @@
    <li><a href="441_la_pila_de_llamadas_bsica.html" class="no-ch">4.4.1. La pila de llamadas (básica)</a></li>
    <li><a href="442_la_pila_de_llamadas_recursividad.html" class="no-ch">4.4.2. La pila de llamadas (recursividad)</a></li>
    <li><a href="443_ampliacin_sobre_recursividad.html" class="no-ch">4.4.3. Ampliación sobre recursividad</a></li>
-   <li><a href="soluciones.html" class="no-ch">Soluciones</a></li>
+   <li><a href="444_recursin_vs_bucles.html" class="no-ch">4.4.4. Recursión vs Bucles</a></li>
    <li id="active"><a href="actividades_sobre_recursividad_entregable.html" class="active no-ch">Actividades sobre recursividad [entregable]</a></li>
 </ul>
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="soluciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="444_recursin_vs_bucles.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -56,7 +56,7 @@
 }</code></pre>
 </div>
 </div>
-<p>para limpiar la pantalla antes de imprimir de nuevo el menú principal.</p></div>
+<p>para limpiar la pantalla antes de imprimir de nuevo el menú principal. Ten en cuenta que estas líneas <span style="color: #ff0000; background-color: #ffff99;"><strong>NO FUNCIONAN</strong></span> en la consola de <em>IntelliJ IDEA</em>. Para probarlo,<span style="color: #99cc00;"> </span><span style="color: #339966; background-color: #ffff99;"><strong>ejecuta tu programa desde la <em>Consola </em>de<em> Windows</em></strong></span>.</p></div>
 </div>
 </div>
 </article>
@@ -69,9 +69,9 @@
 <div class="pbl-task-description"><p>Crea un método que obtenga la cantidad de dígitos de un número N mayor que cero. Se debe pasar como parámetro el número N. </p>
 <p style="padding-left: 30px;">⚠️<span style="text-decoration: underline;"><span style="color: #ff0000; text-decoration: underline;"><strong>OJO</strong></span></span>: no vale pasarlo a <em>String </em>y calcular el tamaño con la función<em> length()</em>!!!</p>
 <ul>
-<li>Si ese número N es 0, devuelvo 0.</li>
-<li>Si N no es 0, recorremos del número dividiéndolo entre 10 hasta llegar a 0. </li>
-<li>Cada vez que dividamos entre 10, aumentamos en 1 nuestro contador.</li>
+<li>Si ese número N es &lt; 10, devuelvo 1.</li>
+<li>Si no, recorremos del número dividiéndolo entre 10 hasta llegar a quedarnos con un solo dígito. </li>
+<li>Cada vez que dividamos entre 10, sumamos 1.</li>
 </ul></div>
 </div>
 </div>
@@ -84,7 +84,8 @@
 <div class="iDevice_inner">
 <div class="iDevice_content_wrapper">
 <div id="ta20_130_2" class="block iDevice_content">
-<div class="pbl-task-description"><p>Crea un método que obtenga el resultado de elevar un número a otro. Ambos números se deben pasar como parámetros. Los números deben ser positivos. </p></div>
+<div class="pbl-task-description"><p>Crea un método que obtenga el resultado de elevar un número a otro. Ambos números (base y exponente) se deben pasar como parámetros. Los números deben ser positivos.</p>
+<p>¿Es necesario que el método reciba tanto base como exponente?</p></div>
 </div>
 </div>
 </div>
@@ -162,7 +163,7 @@
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="soluciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="444_recursin_vs_bucles.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
 </nav>
 </div>
 </div>

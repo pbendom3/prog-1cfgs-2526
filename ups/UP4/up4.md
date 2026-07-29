@@ -1,6 +1,6 @@
 # :blue_book: UP4. Programación modular
 
-![modular](modular.png)
+<img src="modular.png" width="300" height="">
 
 ## :book: Estructura de la unidad 
 
