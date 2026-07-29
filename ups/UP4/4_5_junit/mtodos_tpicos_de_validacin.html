@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Métodos típicos de validación | junit </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="patricia benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">junit</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">4.3. Introducción a las pruebas unitarias con JUnit</a></li>
+   <li id="active"><a href="mtodos_tpicos_de_validacin.html" class="active no-ch">Métodos típicos de validación</a></li>
+   <li><a href="simular_la_entrada_del_usuario_por_teclado_en_un_test.html" class="no-ch">Simular la entrada del usuario por teclado en un test</a></li>
+   <li><a href="validacin_de_la_entrada_tipo_int_trycatch.html" class="no-ch">Validación de la entrada tipo int (try-catch)</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="simular_la_entrada_del_usuario_por_teclado_en_un_test.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Métodos típicos de validación</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id3">
+<div class="iDevice emphasis0" >
+<div id="ta3_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Entre los métodos que tenemos disponibles, utilizaremos los siguientes:</p>
+<ul>
+<li style="text-align: justify;"><em><span style="color: #008000;"><strong>assertEquals</strong> </span>/ <span style="color: #008000;"><strong>assertNotEquals</strong></span>: </em>permiten comprobar que dos valores sean iguales o diferentes, respectivamente. Se usan para validar resultados concretos, como el valor de un atributo, el retorno de un método o una operación aritmética.</li>
+<li style="text-align: justify;"><em><span style="color: #008000;"><strong>assertTrue</strong> </span>/ <span style="color: #008000;"><strong>assertFalse</strong></span>: e</em>valúan que una condición booleana sea verdadera o falsa. Son útiles cuando queremos verificar expresiones lógicas, estados, o el resultado de métodos que retornan <em>boolean</em>.</li>
+<li style="text-align: justify;"><em><span style="color: #008000;"><strong>assertArrayEquals</strong></span>: </em>comprueba que dos vectores (<em>arrays</em>) sean iguales en tamaño y contenido.</li>
+</ul>
+<hr />
+<h5><strong><em>Método assertAll()</em></strong></h5>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>class DividirTest2 {
+
+    @Test
+    void dividir() {
+
+        //sin All
+        assertEquals(5,Dividir.dividir(10,2));
+        assertEquals(4,Dividir.dividir(20,5));
+
+        //con All
+        assertAll(
+                () -&gt; assertEquals(5,Dividir.dividir(10,2)),
+                () -&gt; assertEquals(4,Dividir.dividir(20,5))
+        );
+
+    }
+
+    @Test
+    void comprobarDivisor() {
+
+        assertFalse(Dividir.comprobarDivisor(0));
+
+    }
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">En <em>JUnit</em>, la diferencia entre usar varios <em>assert</em> normales y usar <em>assertAll</em> es cómo se manejan los errores que van saliendo durante la ejecución de las pruebas.</p>
+<ul>
+<li style="text-align: justify;">En caso de tener <strong>varios <em>asserts </em>seguidos</strong>, si el primero falla, la prueba se detiene ahí mismo. Los siguientes <em>asserts</em> no se ejecutarán, por lo que sólo veremos el primer error. Por lo tanto, no sabremos si sólo falló la primera validación o si había más errores.</li>
+</ul>
+<p><img src="img1.1.png" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li style="text-align: justify;">Con <strong><em>assertAll</em></strong>, <span style="font-size: 1.05em;"><em>JUnit</em> ejecuta todos los <em>asserts</em> dentro del bloque, incluso si uno falla. </span>Al final nos mostrará todos los errores juntos.</li>
+</ul>
+<p><img src="img1.2.png" width="991" height="441" alt="3" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="simular_la_entrada_del_usuario_por_teclado_en_un_test.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

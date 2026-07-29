@@ -16,7 +16,7 @@
 
 [3.  Recursividad](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP4/4_3_recursividad/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividades sobre recursividad](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/actividades_random.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividades sobre recursividad](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP4/4_3_recursividad/actividades_sobre_recursividad_entregable.html)
 
 [:gift: **BONUS**. Buenas prácticas: _Javadoc_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP4/4_4_javadoc/index.html)
 

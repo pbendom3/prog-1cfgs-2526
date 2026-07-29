@@ -25,12 +25,14 @@
 <nav id="siteNav">
 <ul>
    <li><a href="index.html" class="daddy main-node">4.3. Introducción a las pruebas unitarias con JUnit</a></li>
+   <li><a href="mtodos_tpicos_de_validacin.html" class="no-ch">Métodos típicos de validación</a></li>
+   <li><a href="simular_la_entrada_del_usuario_por_teclado_en_un_test.html" class="no-ch">Simular la entrada del usuario por teclado en un test</a></li>
    <li id="active"><a href="validacin_de_la_entrada_tipo_int_trycatch.html" class="active no-ch">Validación de la entrada tipo int (try-catch)</a></li>
 </ul>
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="simular_la_entrada_del_usuario_por_teclado_en_un_test.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -39,31 +41,9 @@
 <article class="iDevice_wrapper textIdevice" id="id2">
 <div class="iDevice emphasis0" >
 <div id="ta2_127_2" class="block iDevice_content">
-<div class="exe-text"><p>Una de las validaciones más típicas es la de formato de entrada, y como error, el que lanza la excepción <em><strong>java.util.InputMismatchException</strong></em> cuando introducimos caracteres cuando esperamos un número entero.</p>
-<p>Una forma de hacer uso de <em>JUnit</em> para validar esta casuística es la siguiente:</p>
-<p style="padding-left: 30px;">- Clase que contiene el método a validar:</p>
-<div class="highlighted-code code-style-2 language-java line-numbers">
-<div>
-<pre><code>import java.util.InputMismatchException;
-import java.util.Scanner;
-
-public class Prueba {
-
-    public int leerEntero() {
-        Scanner teclado = new Scanner(System.in);
-        System.out.print("Introduce un número: ");
-
-        try {
-            return teclado.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println("Formato de entrada no válido (número entero).");
-            return -1; //definimos un valor predeterminado en caso de error
-        }
-    }
-}</code></pre>
-</div>
-</div>
-<p style="padding-left: 30px;">- Caso de prueba <em>@Test</em>:</p>
+<div class="exe-text"><p>Además de simular la acción de introducir algo por teclado, cuando validamos formato de entrada, es común comprobar el error que lanza la excepción <em><strong>java.util.InputMismatchException</strong></em> cuando introducimos caracteres cuando esperamos un número entero.</p>
+<p>Una forma de hacer uso de <em>JUnit</em> para validar esta casuística es la siguiente...<span style="font-size: 0.8em; background-color: #333029; font-family: Monaco, Courier, monospace;"></span></p>
+<p style="padding-left: 30px;">Caso de prueba <em>@Test</em>:</p>
 <div class="highlighted-code code-style-2 language-java line-numbers">
 <div>
 <pre><code>
@@ -75,12 +55,12 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PruebaTest {
+class LeerTecladoTest {
 
     @Test
     void leerEntero() {
 
-        //simulamos que el usuario ingresa caracteres
+        //simulamos que el usuario introduce caracteres
         String entradaSimulada = "aaa"; // 'a' es un carácter no válido
         System.setIn(new ByteArrayInputStream(entradaSimulada.getBytes()));
 
@@ -88,10 +68,8 @@ class PruebaTest {
         ByteArrayOutputStream salida = new ByteArrayOutputStream();
         System.setOut(new PrintStream(salida));
 
-        Prueba prueba = new Prueba();
-
         //llamamos al metodo que procesa la entrada
-        int resultado = prueba.leerEntero();
+        int resultado = LeerTeclado.leerEntero();
 
         //verificamos que el valor que devuelve es el esperado (-1)
         assertEquals(-1, resultado);
@@ -105,7 +83,29 @@ class PruebaTest {
 }</code></pre>
 </div>
 </div>
-<p style="padding-left: 30px;"></p></div>
+<p style="padding-left: 30px;">El test verifica que si el usuario introduce algo inválido, el método devuelve -1 y muestra el mensaje de error esperado.</p>
+<p style="padding-left: 30px;">Es decir...</p>
+<p style="padding-left: 60px;">→ Que el método devuelve -1 cuando la entrada no es un entero:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>assertEquals(-1, resultado);</code></pre>
+</div>
+</div>
+<p style="padding-left: 60px;">→ Que muestra el mensaje de error correcto:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>assertTrue(salida.toString().trim().contains(salidaEsperada));</code></pre>
+</div>
+</div>
+<p style="padding-left: 60px;">→ Para obtener la <strong><em>salida</em> </strong>se asigna la consola (<em>out</em>) a un <em>buffer</em> de memoria que contendrá la información que se muestre cuando el método conteste algo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>//creamos un ByteArrayOutputStream para guardar la salida por consola
+ByteArrayOutputStream salida = new ByteArrayOutputStream();
+System.setOut(new PrintStream(salida));</code></pre>
+</div>
+</div>
+<p style="padding-left: 60px;">así el test podrá leer lo que el método ha mostrado por pantalla.</p></div>
 </div>
 </div>
 </article>
@@ -116,7 +116,7 @@ class PruebaTest {
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+<a href="simular_la_entrada_del_usuario_por_teclado_en_un_test.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
 </nav>
 </div>
 </div>

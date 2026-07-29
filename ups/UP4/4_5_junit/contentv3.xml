@@ -87,9 +87,9 @@
   <string role="key" value="_name"></string>
   <unicode value="JUNIT"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="3"></int>
+  <int value="6"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="2"></int>
+  <int value="4"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -316,7 +316,7 @@ class DividirTest {
                   <string role="key" value="_storageName"></string>
                   <string value="img0.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3zp6p5\\img0.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp_s5rxm\\img0.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="7e92697c40d6ddcdc66814c9ac9d7e38"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -368,7 +368,7 @@ class DividirTest {
                   <string role="key" value="_storageName"></string>
                   <string value="img1.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3zp6p5\\img1.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp_s5rxm\\img1.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="7531444bf55c036971ca297a1a1f9492"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -420,7 +420,7 @@ class DividirTest {
                   <string role="key" value="_storageName"></string>
                   <string value="img2.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3zp6p5\\img2.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp_s5rxm\\img2.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="e3b340ddefc1ec7be186ff052d19e0bb"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -472,7 +472,7 @@ class DividirTest {
                   <string role="key" value="_storageName"></string>
                   <string value="img3.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3zp6p5\\img3.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp_s5rxm\\img3.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="f8da243cad6642fae2c2cac5cda414f9"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -524,7 +524,7 @@ class DividirTest {
                   <string role="key" value="_storageName"></string>
                   <string value="img4.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3zp6p5\\img4.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp_s5rxm\\img4.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="6bb0f2a5f7ae8335a5c75d865cf7ee3d"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -576,7 +576,7 @@ class DividirTest {
                   <string role="key" value="_storageName"></string>
                   <string value="img5.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3zp6p5\\img5.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp_s5rxm\\img5.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="46eb3153f48ab13f36e787027e877cb4"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -628,7 +628,7 @@ class DividirTest {
                   <string role="key" value="_storageName"></string>
                   <string value="img6.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3zp6p5\\img6.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp_s5rxm\\img6.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="23a3c2b30620366332ab171613ba233f"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -717,7 +717,7 @@ class DividirTest {
       <instance class="exe.engine.node.Node" reference="14">
        <dictionary>
         <string role="key" value="_title"></string>
-        <unicode value="Validación de la entrada tipo int (try-catch)"></unicode>
+        <unicode value="Métodos típicos de validación"></unicode>
         <string role="key" value="idevices"></string>
         <list>
          <instance class="exe.engine.jsidevice.JsIdevice" reference="12">
@@ -793,20 +793,317 @@ class DividirTest {
               <string value=""></string>
               <string role="key" value="anchor_names"></string>
               <list></list>
-              <string role="key" value="anchors_linked_from_fields"></string>
-              <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;exe-text&quot;&gt;&lt;p&gt;Una de las validaciones más típicas es la de formato de entrada, y como error, el que lanza la excepción &lt;em&gt;&lt;strong&gt;java.util.InputMismatchException&lt;/strong&gt;&lt;/em&gt; cuando introducimos caracteres cuando esperamos un número entero.&lt;/p&gt;
-&lt;p&gt;Una forma de hacer uso de &lt;em&gt;JUnit&lt;/em&gt; para validar esta casuística es la siguiente:&lt;/p&gt;
-&lt;p style=&quot;padding-left: 30px;&quot;&gt;- Clase que contiene el método a validar:&lt;/p&gt;
+              <unicode content="true" value="&lt;div class=&quot;exe-text&quot;&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;Entre los métodos que tenemos disponibles, utilizaremos los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;em&gt;&lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;assertEquals&lt;/strong&gt; &lt;/span&gt;/ &lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;assertNotEquals&lt;/strong&gt;&lt;/span&gt;: &lt;/em&gt;permiten comprobar que dos valores sean iguales o diferentes, respectivamente. Se usan para validar resultados concretos, como el valor de un atributo, el retorno de un método o una operación aritmética.&lt;/li&gt;
+&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;em&gt;&lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;assertTrue&lt;/strong&gt; &lt;/span&gt;/ &lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;assertFalse&lt;/strong&gt;&lt;/span&gt;: e&lt;/em&gt;valúan que una condición booleana sea verdadera o falsa. Son útiles cuando queremos verificar expresiones lógicas, estados, o el resultado de métodos que retornan &lt;em&gt;boolean&lt;/em&gt;.&lt;/li&gt;
+&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;em&gt;&lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;assertArrayEquals&lt;/strong&gt;&lt;/span&gt;: &lt;/em&gt;comprueba que dos vectores (&lt;em&gt;arrays&lt;/em&gt;) sean iguales en tamaño y contenido.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h5&gt;&lt;strong&gt;&lt;em&gt;Método assertAll()&lt;/em&gt;&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;import java.util.InputMismatchException;
-import java.util.Scanner;
+&lt;pre&gt;&lt;code&gt;class DividirTest2 {
 
-public class Prueba {
+    @Test
+    void dividir() {
 
-    public int leerEntero() {
+        //sin All
+        assertEquals(5,Dividir.dividir(10,2));
+        assertEquals(4,Dividir.dividir(20,5));
+
+        //con All
+        assertAll(
+                () -&amp;gt; assertEquals(5,Dividir.dividir(10,2)),
+                () -&amp;gt; assertEquals(4,Dividir.dividir(20,5))
+        );
+
+    }
+
+    @Test
+    void comprobarDivisor() {
+
+        assertFalse(Dividir.comprobarDivisor(0));
+
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;En &lt;em&gt;JUnit&lt;/em&gt;, la diferencia entre usar varios &lt;em&gt;assert&lt;/em&gt; normales y usar &lt;em&gt;assertAll&lt;/em&gt; es cómo se manejan los errores que van saliendo durante la ejecución de las pruebas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;text-align: justify;&quot;&gt;En caso de tener &lt;strong&gt;varios &lt;em&gt;asserts &lt;/em&gt;seguidos&lt;/strong&gt;, si el primero falla, la prueba se detiene ahí mismo. Los siguientes &lt;em&gt;asserts&lt;/em&gt; no se ejecutarán, por lo que sólo veremos el primer error. Por lo tanto, no sabremos si sólo falló la primera validación o si había más errores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;resources/img1.1.png&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;text-align: justify;&quot;&gt;Con &lt;strong&gt;&lt;em&gt;assertAll&lt;/em&gt;&lt;/strong&gt;, &lt;span style=&quot;font-size: 1.05em;&quot;&gt;&lt;em&gt;JUnit&lt;/em&gt; ejecuta todos los &lt;em&gt;asserts&lt;/em&gt; dentro del bloque, incluso si uno falla. &lt;/span&gt;Al final nos mostrará todos los errores juntos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;resources/img1.2.png&quot; width=&quot;991&quot; height=&quot;441&quot; alt=&quot;3&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;/p&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list>
+                 <instance class="exe.engine.galleryidevice.GalleryImage">
+                  <dictionary>
+                   <string role="key" value="_caption"></string>
+                   <instance class="exe.engine.field.TextField">
+                    <dictionary>
+                     <string role="key" value="_id"></string>
+                     <int value="260"></int>
+                     <string role="key" value="_idevice"></string>
+                     <none></none>
+                     <string role="key" value="_instruc"></string>
+                     <string value=""></string>
+                     <string role="key" value="_name"></string>
+                     <string value=""></string>
+                     <string role="key" value="content"></string>
+                     <string value=""></string>
+                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                     <int value="4"></int>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_id"></string>
+                   <unicode value="3_127_2.1"></unicode>
+                   <string role="key" value="_imageResource"></string>
+                   <instance class="exe.engine.resource.Resource" reference="15">
+                    <dictionary>
+                     <string role="key" value="_idevice"></string>
+                     <reference key="12"></reference>
+                     <string role="key" value="_package"></string>
+                     <reference key="2"></reference>
+                     <string role="key" value="_storageName"></string>
+                     <string value="img1.1.png"></string>
+                     <string role="key" value="_userName"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpiidjdt.eXe\\previews\\img1.png"></string>
+                     <string role="key" value="checksum"></string>
+                     <string value="37eb4d2f7fe1901cc7beec6ea46e1a3f"></string>
+                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="warningMsg"></string>
+                     <string value=""></string>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_parent"></string>
+                   <reference key="13"></reference>
+                   <string role="key" value="_thumbnailResource"></string>
+                   <none></none>
+                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                   <int value="3"></int>
+                   <string role="key" value="makeThumbnail"></string>
+                   <bool value="0"></bool>
+                  </dictionary>
+                 </instance>
+                 <instance class="exe.engine.galleryidevice.GalleryImage">
+                  <dictionary>
+                   <string role="key" value="_caption"></string>
+                   <instance class="exe.engine.field.TextField">
+                    <dictionary>
+                     <string role="key" value="_id"></string>
+                     <int value="261"></int>
+                     <string role="key" value="_idevice"></string>
+                     <none></none>
+                     <string role="key" value="_instruc"></string>
+                     <string value=""></string>
+                     <string role="key" value="_name"></string>
+                     <string value=""></string>
+                     <string role="key" value="content"></string>
+                     <string value=""></string>
+                     <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                     <int value="4"></int>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_id"></string>
+                   <unicode value="3_127_2.2"></unicode>
+                   <string role="key" value="_imageResource"></string>
+                   <instance class="exe.engine.resource.Resource" reference="16">
+                    <dictionary>
+                     <string role="key" value="_idevice"></string>
+                     <reference key="12"></reference>
+                     <string role="key" value="_package"></string>
+                     <reference key="2"></reference>
+                     <string role="key" value="_storageName"></string>
+                     <string value="img1.2.png"></string>
+                     <string role="key" value="_userName"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpiidjdt.eXe\\previews\\img1.png"></string>
+                     <string role="key" value="checksum"></string>
+                     <string value="5b1eb2c87ce3700e72a26115b9aabe4d"></string>
+                     <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
+                     <int value="2"></int>
+                     <string role="key" value="warningMsg"></string>
+                     <string value=""></string>
+                    </dictionary>
+                   </instance>
+                   <string role="key" value="_parent"></string>
+                   <reference key="13"></reference>
+                   <string role="key" value="_thumbnailResource"></string>
+                   <none></none>
+                   <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
+                   <int value="3"></int>
+                   <string role="key" value="makeThumbnail"></string>
+                   <bool value="0"></bool>
+                  </dictionary>
+                 </instance>
+                </list>
+                <string role="key" value="idevice"></string>
+                <reference key="13"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="3"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="14"></reference>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="3"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="14"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list>
+            <reference key="15"></reference>
+            <reference key="16"></reference>
+           </list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="2"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="2"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:4.3.%20Introducci%C3%B3n%20a%20las%20pruebas%20unitarias%20con%20JUnit:M%C3%A9todos%20t%C3%ADpicos%20de%20validaci%C3%B3n"></string>
+        <string role="key" value="parent"></string>
+        <reference key="4"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="19">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="Simular la entrada del usuario por teclado en un test"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="17">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="text"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_typeName"></string>
+           <unicode value="Text"></unicode>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="text"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="18">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="128_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="17"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-text&quot;&gt;&lt;p&gt;Supongamos que tenemos un método que pide un número entero:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;public class LeerTeclado {
+
+    public static int leerEntero() {
         Scanner teclado = new Scanner(System.in);
         System.out.print(&quot;Introduce un número: &quot;);
 
@@ -820,49 +1117,28 @@ public class Prueba {
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p style=&quot;padding-left: 30px;&quot;&gt;- Caso de prueba &lt;em&gt;@Test&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;Si necesitamos introducir datos para testearlo, la estructura de nuestra clase &lt;em&gt;@Test&lt;/em&gt; quedaría así:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
 &lt;div&gt;
-&lt;pre&gt;&lt;code&gt;
-import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-class PruebaTest {
+&lt;pre&gt;&lt;code&gt;class LeerTecladoTest {
 
     @Test
-    void leerEntero() {
+    void testEntradaSimulada() {
 
-        //simulamos que el usuario ingresa caracteres
-        String entradaSimulada = &quot;aaa&quot;; // 'a' es un carácter no válido
+        // simulamos que el usuario escribe &quot;42&quot;
+        String entradaSimulada = &quot;42&quot;;
         System.setIn(new ByteArrayInputStream(entradaSimulada.getBytes()));
 
-        //creamos un ByteArrayOutputStream para guardar la salida por consola
-        ByteArrayOutputStream salida = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(salida));
+        // llamamos al método, que ahora leerá del input simulado
+        int resultado = LeerTeclado.leerEntero();
 
-        Prueba prueba = new Prueba();
-
-        //llamamos al metodo que procesa la entrada
-        int resultado = prueba.leerEntero();
-
-        //verificamos que el valor que devuelve es el esperado (-1)
-        assertEquals(-1, resultado);
-
-        //verificamos que se haya impreso el mensaje de error esperado
-        String salidaEsperada = &quot;Formato de entrada no válido (número entero).&quot;;
-       // assertEquals(salidaEsperada, salida.toString().trim());
-        assertTrue(salida.toString().trim().contains(salidaEsperada));
-
+        // comprobamos que devuelve lo esperado
+        assertEquals(42, resultado);
     }
+
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;p style=&quot;padding-left: 30px;&quot;&gt;&lt;/p&gt;&lt;/div&gt;"></unicode>
+&lt;/div&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
               <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -877,7 +1153,7 @@ class PruebaTest {
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="13"></reference>
+                <reference key="18"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -885,7 +1161,370 @@ class PruebaTest {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="14"></reference>
+              <none></none>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="4"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="19"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="20">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="text"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_typeName"></string>
+           <unicode value="Text"></unicode>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="text"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="21">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="129_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="20"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-text&quot;&gt;&lt;p&gt;&lt;strong&gt;¿Cómo simula el test la entrada del usuario?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;El test crea un &lt;em&gt;input&lt;/em&gt; falso:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;String entradaSimulada = &quot;aaa&quot;;
+System.setIn(new ByteArrayInputStream(entradaSimulada.getBytes()));&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Esto significa que en lugar de leer del teclado real, &lt;em&gt;System.in&lt;/em&gt; ahora leerá &quot;&lt;em&gt;aaa&lt;/em&gt;&quot; desde un flujo de &lt;em&gt;bytes&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Vale pero... ¡¿por qué &lt;em&gt;System.setIn()&lt;/em&gt; se pone antes de llamar al método?!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Porque el método que se está probando crea el &lt;em&gt;Scanner&lt;/em&gt; así:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;Scanner teclado = new Scanner(System.in);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;y &lt;em&gt;Scanner&lt;/em&gt; lee del &lt;em&gt;System.in&lt;/em&gt; en ese mismo momento. Por lo tanto:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Si antes de crear el &lt;em&gt;Scanner&lt;/em&gt; hacemos &lt;em&gt;System.setIn(...)&lt;/em&gt;, el &lt;em&gt;Scanner&lt;/em&gt; leerá el input simulado.&lt;/li&gt;
+&lt;li&gt;Si lo hacemos después, ya es tarde: el &lt;em&gt;Scanner&lt;/em&gt; se ha quedado conectado esperando al teclado real y entraremos en bucle. &lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;strong&gt;Pruébalo&lt;/strong&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="21"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <none></none>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="5"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="19"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="3"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="2"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:4.3.%20Introducci%C3%B3n%20a%20las%20pruebas%20unitarias%20con%20JUnit:Simular%20la%20entrada%20del%20usuario%20por%20teclado%20en%20un%20test"></string>
+        <string role="key" value="parent"></string>
+        <reference key="4"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list></list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="24">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="Validación de la entrada tipo int (try-catch)"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="22">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="text"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_typeName"></string>
+           <unicode value="Text"></unicode>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="text"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="23">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="127_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="22"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="anchors_linked_from_fields"></string>
+              <dictionary></dictionary>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-text&quot;&gt;&lt;p&gt;Además de simular la acción de introducir algo por teclado, cuando validamos formato de entrada, es común comprobar el error que lanza la excepción &lt;em&gt;&lt;strong&gt;java.util.InputMismatchException&lt;/strong&gt;&lt;/em&gt; cuando introducimos caracteres cuando esperamos un número entero.&lt;/p&gt;
+&lt;p&gt;Una forma de hacer uso de &lt;em&gt;JUnit&lt;/em&gt; para validar esta casuística es la siguiente...&lt;span style=&quot;font-size: 0.8em; background-color: #333029; font-family: Monaco, Courier, monospace;&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;Caso de prueba &lt;em&gt;@Test&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;
+import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class LeerTecladoTest {
+
+    @Test
+    void leerEntero() {
+
+        //simulamos que el usuario introduce caracteres
+        String entradaSimulada = &quot;aaa&quot;; // 'a' es un carácter no válido
+        System.setIn(new ByteArrayInputStream(entradaSimulada.getBytes()));
+
+        //creamos un ByteArrayOutputStream para guardar la salida por consola
+        ByteArrayOutputStream salida = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(salida));
+
+        //llamamos al metodo que procesa la entrada
+        int resultado = LeerTeclado.leerEntero();
+
+        //verificamos que el valor que devuelve es el esperado (-1)
+        assertEquals(-1, resultado);
+
+        //verificamos que se haya impreso el mensaje de error esperado
+        String salidaEsperada = &quot;Formato de entrada no válido (número entero).&quot;;
+       // assertEquals(salidaEsperada, salida.toString().trim());
+        assertTrue(salida.toString().trim().contains(salidaEsperada));
+
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;El test verifica que si el usuario introduce algo inválido, el método devuelve -1 y muestra el mensaje de error esperado.&lt;/p&gt;
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;Es decir...&lt;/p&gt;
+&lt;p style=&quot;padding-left: 60px;&quot;&gt;→ Que el método devuelve -1 cuando la entrada no es un entero:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;assertEquals(-1, resultado);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;padding-left: 60px;&quot;&gt;→ Que muestra el mensaje de error correcto:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;assertTrue(salida.toString().trim().contains(salidaEsperada));&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;padding-left: 60px;&quot;&gt;→ Para obtener la &lt;strong&gt;&lt;em&gt;salida&lt;/em&gt; &lt;/strong&gt;se asigna la consola (&lt;em&gt;out&lt;/em&gt;) a un &lt;em&gt;buffer&lt;/em&gt; de memoria que contendrá la información que se muestre cuando el método conteste algo:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;//creamos un ByteArrayOutputStream para guardar la salida por consola
+ByteArrayOutputStream salida = new ByteArrayOutputStream();
+System.setOut(new PrintStream(salida));&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;padding-left: 60px;&quot;&gt;así el test podrá leer lo que el método ha mostrado por pantalla.&lt;/p&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="23"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <reference key="24"></reference>
              </dictionary>
             </instance>
            </list>
@@ -902,7 +1541,7 @@ class PruebaTest {
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="14"></reference>
+           <reference key="24"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -938,7 +1577,11 @@ class PruebaTest {
     </dictionary>
    </instance>
    <unicode role="key" value="1"></unicode>
+   <reference key="24"></reference>
+   <unicode role="key" value="2"></unicode>
    <reference key="14"></reference>
+   <unicode role="key" value="3"></unicode>
+   <reference key="19"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -949,7 +1592,7 @@ class PruebaTest {
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="14"></reference>
+  <reference key="24"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -1987,9 +2630,17 @@ class PruebaTest {
    <list>
     <reference key="11"></reference>
    </list>
+   <string role="key" value="37eb4d2f7fe1901cc7beec6ea46e1a3f"></string>
+   <list>
+    <reference key="15"></reference>
+   </list>
    <string role="key" value="46eb3153f48ab13f36e787027e877cb4"></string>
    <list>
     <reference key="10"></reference>
+   </list>
+   <string role="key" value="5b1eb2c87ce3700e72a26115b9aabe4d"></string>
+   <list>
+    <reference key="16"></reference>
    </list>
    <string role="key" value="6bb0f2a5f7ae8335a5c75d865cf7ee3d"></string>
    <list>
