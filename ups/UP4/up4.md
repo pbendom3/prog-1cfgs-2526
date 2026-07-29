@@ -1,19 +1,28 @@
 # :blue_book: UP4. Programación modular
+
 ![modular](modular.png)
 
 ## :book: Estructura de la unidad 
 
-[1.  Estructura de un programa Java: funciones y procedimientos](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP4/4_1_metodos/index.html)
+[1.  Estructura de un programa _Java_: funciones y procedimientos](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP4/4_1_metodos/index.html)
 
 [2.  Ámbitos de una variable y sobrecarga de métodos](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP4/4_2_ambitos_sobrecarga/index.html)
 
-     :pushpin: [Ampliación ejercicios vectores y matrices (selección olimpiada)](3_ejercicios.pdf)
-  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre métodos `.()`](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP4/bateria_metodos.md)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pushpin: Ampliación ejercicios vectores y matrices (selección olimpiada)](3_ejercicios.pdf)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: [Plantillas] Modos de ejecución - _ProgramaMe_]([3_ejercicios.pdf](https://aceptaelreto.com/doc/templates.php))
+
 [3.  Recursividad](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP4/4_3_recursividad/index.html)
 
-:gift: [BONUS. Buenas prácticas: Javadoc](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP4/4_4_javadoc/index.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividades sobre recursividad](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/actividades_random.md)
 
-[4.  Introducción a las pruebas unitarias con JUnit](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP4/4_5_junit/index.html)
+[:gift: **BONUS**. Buenas prácticas: _Javadoc_](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP4/4_4_javadoc/index.html)
+
+<img src="javadoc.png" width="150" height="">
+
+[4.  Introducción a las pruebas unitarias con _JUnit_](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP4/4_5_junit/index.html)
 
 <img src="JUnit.png" width="200" height="">
 
