@@ -11,7 +11,10 @@
 
 **:arrow_forward: Ejercicio 4**. _ProgramaMe_.
 
-<iframe src="https://aceptaelreto.com/pub/problems/v001/05/st/statements/Spanish/index.html" width="100%" height="500px" style="border:none;"></iframe>
+![](ventas.png)
+![](ventas2.png)
+
+> 🔗 **Enlace al problema:** [¡Acepta el reto! - 105 Ventas](https://aceptaelreto.com)
 
 Resuelve el problema implementando los siguientes métodos:
 

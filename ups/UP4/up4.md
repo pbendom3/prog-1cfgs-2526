@@ -12,7 +12,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pushpin: Ampliación ejercicios vectores y matrices (selección olimpiada)](3_ejercicios.pdf)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: [Plantillas] Modos de ejecución - _ProgramaMe_]([3_ejercicios.pdf](https://aceptaelreto.com/doc/templates.php))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Plantillas - Modos de ejecución _ProgramaMe_](https://aceptaelreto.com/doc/templates.php)
 
 [3.  Recursividad](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP4/4_3_recursividad/index.html)
 
