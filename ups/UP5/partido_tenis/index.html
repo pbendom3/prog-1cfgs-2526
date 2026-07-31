@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ampliación relaciones agregación+composición+reflexivas: Partido de Tenis </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="Ampliación relaciones agregación+composición+reflexivas: Partido de Tenis" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Ampliación relaciones agregación+composición+reflexivas: Partido de Tenis</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active no-ch main-node">Ampliación relaciones (agregación+composición+reflexivas): Partido de Tenis</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Ampliación relaciones (agregación+composición+reflexivas): Partido de Tenis</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Partido de Tenis</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_127_2" class="block iDevice_content">
+<div class="pbl-task-description"><p>Modelar un partido de tenis usando los siguientes elementos:</p>
+<ul>
+<li style="text-align: justify;">Clase <span style="color: #008000;"><em><strong>Jugador</strong></em></span>. Contendrá los atributos <em><strong>nombre</strong></em>, <em><strong>ranking</strong> </em>y <em><strong>rival</strong> </em>(<em>Jugador</em>). El constructor recibe solamente el nombre y el ranking: el <em>rival</em> será asignado al crear un nuevo <em>Partido</em>.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Jugador j1 = new Jugador("Nadal", 1);
+Jugador j2 = new Jugador("Djokovic", 2);</code></pre>
+</div>
+</div>
+<ul>
+<li style="text-align: justify;">Clase <strong><span style="color: #008000;"><em>Set</em></span></strong>. Contendrá dos atributos <em><strong>puntosJ1 </strong></em>y <em><strong>puntosJ2</strong> </em>para representar la puntuación de cada jugador en el set. <span style="text-decoration: underline;">Se debe controlar que el valor de la puntuación asignada sea válida</span>: es decir, que al menos uno de los jugadores tenga 6 puntos y el rival una cifra no menor a 0. Controla también el <em>tie-break</em>: si un jugador tiene 7 puntos, el otro debe tener siempre 6 ò 5.</li>
+</ul>
+<p></p>
+<ul>
+<li style="text-align: justify;">Clase <span style="color: #008000;"><em><strong>Partido</strong></em></span>. Contendrá los atributos <em><strong>jugador1</strong></em>, <em><strong>jugador2</strong> </em>y la <strong>lista de</strong> <em><strong>Sets</strong></em>. El constructor recibe a los 2 jugadores, que ya deben existir en la aplicación principal. La lista de sets se inicializa vacía y esperamos a que se juegue dicho set para añadirlo mediante el método <span style="color: #008000;"><em><strong>insertarSet(int puntosJ1, int puntosJ2)</strong></em></span>. Recuerda que el <em>rival</em> de cada <em>Jugador</em> se asigna al crear el <em>Partido</em>.</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>Partido partido = new Partido(j1, j2);
+partido.insertarSet(6, 4);
+partido.insertarSet(7, 6);</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><span style="text-decoration: underline;">Resumen</span>:</p>
+<p style="padding-left: 60px;">✔️ La relación entre jugadores es reflexiva, ya que cada jugador puede tener como rival a otro jugador de la misma clase.</p>
+<p style="padding-left: 60px;">✔️ Partido crea los <em>Sets.</em></p>
+<p style="padding-left: 60px;">✔️ El jugador existe antes del partido.<br />✔️ El jugador puede jugar otros partidos.<br />✔️ Si el partido termina, el jugador sigue existiendo.</p>
+<hr />
+<h5>En el Main...</h5>
+<ol>
+<li>Crear dos objetos <em>Jugador</em> con <em>nombre</em> y <em>ranking</em>.</li>
+<li>Crear un objeto <em>Partido</em> usando los dos jugadores existentes.</li>
+<li>Insertar al menos dos sets en el partido con puntuaciones válidas para cada jugador.</li>
+<li>Mostrar por consola:
+<ol style="list-style-type: lower-alpha;">
+<li>Los nombres de los jugadores y sus rivales.</li>
+<li>La puntuación de cada set.</li>
+<li>El número total de sets jugados.</li>
+</ol>
+</li>
+</ol>
+<p><img src="img0.png" width="349" height="91" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

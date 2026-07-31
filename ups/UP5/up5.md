@@ -23,7 +23,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Incorporar _ArrayList_ a clases _Estudiante_ y _Editorial_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_3_relaciones/ejercicio_con_arraylist_para_guardar_varios_elementos.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: **Partido de Tenis**: ejercicio de ampliación :heavy_plus_sign: de relaciones (agregación+composición+reflexivas)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/distinct/index.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: **Partido de Tenis**: ejercicio :heavy_plus_sign: ampliación de relaciones (agregación+composición+reflexivas)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/partido_tenis/index.html)
 
 ---
    
@@ -50,6 +50,6 @@
 
 ## :small_red_triangle_down: EXÁMENES
 
-> [:computer: Práctico - modelo A](EXAMENPRÁCTICOUD3.pdf)
+> [:computer: Práctico - modelo A - _JJOO DE INVIERNO MILÁN D'AMPEZZO_](EXAMEN_PRÁCTICO_JUEGOS.pdf)
 
-> [:computer: Práctico - modelo B](EXAMENPRÁCTICOUD3.pdf)
+> [:computer: Práctico - modelo B - _BENIDORM FEST_](EXAMENPRÁCTICOUD5_BENIDORM.pdf)
