@@ -1,6 +1,6 @@
 # :blue_book: UP4. Programación modular
 
-<img src="modular.png" width="300" height="">
+<img src="modular.png" width="350" height="">
 
 ## :book: Estructura de la unidad 
 
@@ -20,11 +20,11 @@
 
 [:gift: **BONUS**. Buenas prácticas: _Javadoc_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP4/4_4_javadoc/index.html)
 
-<img src="javadoc.png" width="150" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="javadoc.png" width="150" height="">
 
 [4.  Introducción a las pruebas unitarias con _JUnit_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP4/4_5_junit/index.html)
 
-<img src="JUnit.png" width="200" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="JUnit.png" width="200" height="">
 
 ---
 
