@@ -50,6 +50,6 @@
 
 ## :small_red_triangle_down: EXÁMENES
 
-> [:computer: Práctico - modelo A - _JJOO DE INVIERNO MILÁN D'AMPEZZO_](EXAMEN_PRÁCTICO_JUEGOS.pdf)
+> [:computer: Práctico - modelo A - _JJOO DE INVIERNO MILÁN - CORTINA D'AMPEZZO 2026_](EXAMEN_PRÁCTICO_JUEGOS.pdf)
 
 > [:computer: Práctico - modelo B - _BENIDORM FEST_](EXAMENPRÁCTICOUD5_BENIDORM.pdf)
