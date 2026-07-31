@@ -28,7 +28,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Incorporar _ArrayList_ a clases _Estudiante_ y _Editorial_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_3_relaciones/ejercicio_con_arraylist_para_guardar_varios_elementos.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: **Partido de Tenis:tennis:**: ejercicio :heavy_plus_sign: ampliación de relaciones (agregación+composición+reflexivas)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/partido_tenis/index.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: **Partido de Tenis :tennis:**: ejercicio :heavy_plus_sign: ampliación de relaciones (agregación+composición+reflexivas)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/partido_tenis/index.html)
 
 ---
    
