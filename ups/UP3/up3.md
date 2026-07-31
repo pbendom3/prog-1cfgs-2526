@@ -22,7 +22,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Visualgo.net (ORDENACIÓN) - _visualising data structures and algorithms through animation_](https://visualgo.net/en/sorting)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="visualgo.PNG" width="500" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="visualgo.PNG" width="600" height="">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Eliminar duplicados de un _array_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/actividad_duplicados.md)
 
@@ -40,7 +40,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: _LLM Visualization_: Cómo funciona _ChatGPT_ (matrices)](https://bbycroft.net/llm)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="llmchat.PNG" width="500" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="llmchat.PNG" width="600" height="">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre matrices (nivel 1)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_6_matrices/batera_de_ejercicios_sobre_matrices_nivel_1.html)
 
