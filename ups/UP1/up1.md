@@ -1,6 +1,6 @@
 # :blue_book: UP1. Introducción a la programación y al lenguaje _Java_
 
-![java basico](java_basico.png)
+<img src="java_basico.png" width="350" height="">
 
 ---
 
