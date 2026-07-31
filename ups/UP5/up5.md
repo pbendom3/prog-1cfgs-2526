@@ -15,6 +15,8 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:wrench: Herramientas para digitalizar diagramas _UML_:**
 
+![](uml-class-diagrams-with-draw.io_.png)
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Visual Paradigm Online (diagramas _UML_)](https://online.visual-paradigm.com/app/diagrams/)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Draw.io (diagramas _UML_)](https://app.diagrams.net/)
