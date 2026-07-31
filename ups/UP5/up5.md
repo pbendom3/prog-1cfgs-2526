@@ -3,15 +3,15 @@
 
 ## :book: Estructura de la unidad 
 
-[1.  Introducción a la _POO_](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_1_introduccion_POO/index.html)
+[1.  Introducción a la _POO_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_1_introduccion_POO/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre clases y objetos :nut_and_bolt:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_1_arrays/batera_de_ejercicios_sobre_arrays.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre clases y objetos :nut_and_bolt:](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP5/bateria_clases.md)
 
-[2.  Método _toString()_ y uso de elementos _static_](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_2_tostrinc_static/index.html)
+[2.  Método _toString()_ y uso de elementos _static_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_2_tostrinc_static/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios de ampliación sobre clases/objetos y métodos _static_ :unlock:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_1_arrays/batera_de_ejercicios_sobre_arrays.html)
 
-[3.  Relaciones simples entre clases](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_3_relaciones/index.html)
+[3.  Relaciones simples entre clases](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_3_relaciones/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:wrench: Herramientas para digitalizar diagramas _UML_:**
 
@@ -19,7 +19,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Draw.io (diagramas _UML_)](https://app.diagrams.net/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:gift: **BONUS**. _ArrayList_ de objetos](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_4_arraylists/index.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:gift: **BONUS**. _ArrayList_ de objetos](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_4_arraylists/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Incorporar _ArrayList_ a clases _Estudiante_ y _Editorial_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/actividad_duplicados.md)
 
@@ -27,7 +27,7 @@
 
 ---
    
-[:triangular_flag_on_post: Práctica 1. _"El Formiguero"_ 🐜 y _"La Rebelión"_ :fire:](5_Práctica_ElFormiguero.pdf)
+[:triangular_flag_on_post: Práctica 1. _"El Formiguero"_ 🐜 y _"La Rebelión"_ :fire:](Práctica1.ElFormigueroyLaRebelión.pdf)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: **Tutorial**: Generar documentación en formato _Markdown_](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
