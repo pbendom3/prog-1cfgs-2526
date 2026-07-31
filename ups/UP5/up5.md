@@ -1,22 +1,55 @@
-# UP5. Introducción a la _Programación Orientada a Objetos (POO)_
+# :blue_book: UP5. Introducción a la _Programación Orientada a Objetos (POO)_
 ![objetos](objetos.png)
 
-## Estructura de la unidad [[Ver en PDF]](https://github.com/pbendom3/prog-1cfgs-daw/blob/main/temas_pdf/imprimir_ud5.pdf)
-1.  [Introducción a la POO](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_1_introduccion_POO/index.html)
-2.  [Método toString() y uso de elementos static](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_2_tostrinc_static/index.html)
-3.  [Relaciones simples entre clases](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_3_relaciones/index.html)
+## :book: Estructura de la unidad 
 
-    🎁 [BONUS. ArrayList de objetos](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_4_arraylists/index.html)
+[1.  Introducción a la _POO_](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_1_introduccion_POO/index.html)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios sobre clases y objetos :nut_and_bolt:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_1_arrays/batera_de_ejercicios_sobre_arrays.html)
+
+[2.  Método _toString()_ y uso de elementos _static_](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_2_tostrinc_static/index.html)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios de ampliación sobre clases/objetos y métodos _static_ :unlock:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_1_arrays/batera_de_ejercicios_sobre_arrays.html)
+
+[3.  Relaciones simples entre clases](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_3_relaciones/index.html)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:wrench: Herramientas para digitalizar diagramas _UML_:**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Visual Paradigm Online (diagramas _UML_)](https://online.visual-paradigm.com/app/diagrams/)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Draw.io (diagramas _UML_)](https://app.diagrams.net/)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:gift: **BONUS**. _ArrayList_ de objetos](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP5/5_4_arraylists/index.html)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Incorporar _ArrayList_ a clases _Estudiante_ y _Editorial_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/actividad_duplicados.md)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: **Partido de Tenis**: ejercicio de ampliación :heavy_plus_sign: de relaciones (agregación+composición+reflexivas)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/distinct/index.html)
+
+---
    
-- [Práctica 1. "El Formiguero" y "La Rebelión"](5_Práctica_ElFormiguero.pdf)
+[:triangular_flag_on_post: Práctica 1. _"El Formiguero"_ 🐜 y _"La Rebelión"_ :fire:](5_Práctica_ElFormiguero.pdf)
 
-- [Práctica 2. [PlantUML] Funcionalidades útiles para la POO (diagramas de clases automáticos)](6_Práctica2_Modelado_PlantUML.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: **Tutorial**: Generar documentación en formato _Markdown_](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-- [Práctica 3. Librerías de ayuda para la implementación de la POO: LOMBOK](7_Práctica3_Librerías_LOMBOK.pdf)
+[:triangular_flag_on_post: Práctica 2. _PlantUML_ :seedling: Funcionalidades útiles para la _POO_: diagramas de clases automáticos](6_Práctica2_Modelado_PlantUML.pdf)
 
-:heavy_plus_sign: [Ampliación [pre-examen]. App Bancaria](8_EJERCICIOS_PRE_EXAMEN.pdf)
+[:triangular_flag_on_post: Práctica 3. Librerías de ayuda para la implementación de la _POO_: _LOMBOK_ 🌶️
+](7_Práctica3_Librerías_LOMBOK.pdf)
 
-## EXÁMENES
-- [Teórico](9_EXAMEN_TEÓRICO_UD5.pdf)
-- [Práctico - modelo A](10_EXAMEN_PRÁCTICO_UD5.pdf)
-- [Práctico - modelo B](11_EXAMEN_PRÁCTICO_UD5.pdf)
+---
+
+**:pencil: Batería pre-examen :rocket:**
+
+- [_App_ Bancaria](8_EJERCICIOS_PRE_EXAMEN.pdf)
+
+**:pencil::back: Exámenes años anteriores**
+
+- [:open_file_folder: Exámenes UP5 (curso 24-25)](https://github.com/pbendom3/prog-1cfgs/blob/main/ups/UP5/up5.md#ex%C3%A1menes)
+
+---
+
+## :small_red_triangle_down: EXÁMENES
+
+> [:computer: Práctico - modelo A](EXAMENPRÁCTICOUD3.pdf)
+
+> [:computer: Práctico - modelo B](EXAMENPRÁCTICOUD3.pdf)
