@@ -33,7 +33,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 3. Comprobador de _ISBN_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP2/p3/p3_isbn.md)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Que-es-el-ISBN.jpg" width="400" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Que-es-el-ISBN.jpg" width="400" height="">
 
 [:gift: **BONUS**. Conociendo la clase _Random_ (generación de valores aleatorios :twisted_rightwards_arrows:)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP2/2_6_random/index.html)
 
