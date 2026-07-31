@@ -1,4 +1,5 @@
 # :blue_book: UP5. Introducción a la _Programación Orientada a Objetos (POO)_
+
 ![objetos](objetos.png)
 
 ## :book: Estructura de la unidad 
@@ -15,7 +16,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:wrench: Herramientas para digitalizar diagramas _UML_:**
 
-![](uml-class-diagrams-with-draw.io_.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="uml-class-diagrams-with-draw.io_.png" width="300" height="">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Visual Paradigm Online (diagramas _UML_)](https://online.visual-paradigm.com/app/diagrams/)
 
@@ -23,7 +24,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:gift: **BONUS**. _ArrayList_ de objetos (con ejercicios) :pencil:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_4_arraylists/index.html)
 
-![](1710399662387.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="1710399662387.png" width="300" height="">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Incorporar _ArrayList_ a clases _Estudiante_ y _Editorial_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_3_relaciones/ejercicio_con_arraylist_para_guardar_varios_elementos.html)
 
