@@ -21,13 +21,13 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:link: _Compute IT_ - Juego de Programación (pseudocódigo)](https://compute-it.toxicode.fr/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="cpmpute-it.PNG" width="500" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="cpmpute-it.PNG" width="500" height="">
 
 [3. Lenguajes de programación](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/1_3_lenguajes/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:link: Popularidad de los lenguajes de programación: _TIOBE Index_](https://www.tiobe.com/tiobe-index/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tiobe.PNG" width="500" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tiobe.PNG" width="500" height="">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:triangular_flag_on_post: Práctica 1. Programa “Hola Mundo” (_“Hello World!”_) en varios lenguajes](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/p1/p1_holamundo.md)
 
