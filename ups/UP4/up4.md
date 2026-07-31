@@ -1,6 +1,6 @@
 # :blue_book: UP4. Programación modular
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="modular.png" width="350" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="modular.png" width="350" height="">
 
 ## :book: Estructura de la unidad 
 
