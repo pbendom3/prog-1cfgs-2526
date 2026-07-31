@@ -59,26 +59,31 @@ d) Se implantarán varios constructores:
 
 ![](paciente.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:question: ¿Funciona igual? ¿Por qué? :confused:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:question: ¿Funciona igual? ¿Por qué? :confused:**
 
 - Un constructor con el `nombre`, `edad` y `sexo`, el resto por defecto.
 
 e) Los métodos que se implementarán son:
 
-- **_calcularIMC()_**: calculará si la persona esta en su peso ideal `IMC = (peso en kg)/(altura^2 en metros)`. Usa el método `Math.pow`
-    -  Si esta fórmula devuelve un valor menor que 20, la función devuelve un -1.
-    - Si devuelve un número entre 20 y 25 (incluidos), significa que esta por debajo de su peso ideal la función devuelve un 0 y,
-    - Si devuelve un valor mayor que 25 significa que tiene sobrepeso, la función devuelve un 1. 
+:small_blue_diamond: **_calcularIMC()_**: calculará si la persona esta en su peso ideal 
 
-    &nbsp;&nbsp;**:information_desk_person: Usa constantes para devolver estos valores.**
+> IMC = (peso en kg)/(_altura_<sup>2</sup> en metros). 
 
-- **_esMayorDeEdad()_**: indica si es mayor de edad, devuelve un _booleano_.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:information_desk_person: Usa el método `Math.pow()` para calcular el cuadrado de la altura.**
 
-- **_comprobarSexo(char sexo)_**: comprueba que el sexo introducido es correcto. Si no es correcto, será "X". **No será visible al exterior**.
+-  Si esta fórmula devuelve un valor menor que 20, la función devuelve un -1.
+- Si devuelve un número entre 20 y 25 (incluidos), significa que esta por debajo de su peso ideal la función devuelve un 0 y,
+- Si devuelve un valor mayor que 25 significa que tiene sobrepeso, la función devuelve un 1. 
 
-- **_mostrarInfoPaciente()_**: devuelve toda la información del objeto.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:information_desk_person: Usa constantes para devolver estos valores.**
 
-- Métodos _get/set_ de cada atributo, excepto del atributo `DNI`. 
+:small_blue_diamond: **_esMayorDeEdad()_**: indica si es mayor de edad, devuelve un _booleano_.
+
+:small_blue_diamond: **_comprobarSexo(char sexo)_**: comprueba que el sexo introducido es correcto. Si no es correcto, será `"X"`. **No será visible al exterior**.
+
+:small_blue_diamond: **_mostrarInfoPaciente()_**: devuelve toda la información del objeto.
+
+:small_blue_diamond: Métodos _get/set_ de cada atributo, excepto del atributo `DNI`. 
 
 f) Ahora, crea una clase ejecutable (_main_) que haga lo siguiente: 
 
