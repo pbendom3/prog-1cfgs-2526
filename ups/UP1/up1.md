@@ -61,4 +61,4 @@
 
 > [:computer: Práctico - modelo A - _ELECCIÓN DE NUEVO PAPA: FUMATA BLANCA_](EXAMEN_PRÁCTICO_UD1_modeloA.pdf)
 
-> [:computer: Práctico - modelo B - _ELECCIÓN DE DELGADO_](EXAMEN_PRÁCTICO_UD1_modeloB.pdf)
+> [:computer: Práctico - modelo B - _ELECCIÓN DE DELEGADO_](EXAMEN_PRÁCTICO_UD1_modeloB.pdf)
