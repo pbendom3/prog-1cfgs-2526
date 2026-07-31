@@ -6,7 +6,7 @@ a) Crea una clase de tipo _Televisor_ que cumpla con el siguiente diagrama:
 
 ![](tele.png)
 
-y teniendo en cuenta que el televisor tiene entre 1 y 99 canales.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y teniendo en cuenta que el televisor tiene entre 1 y 99 canales.
 
 b) Amplía la clase _Televisor_ con un atributo adicional para el `volumen (int)`. Añade también los `getters` y los `setters`.
 
