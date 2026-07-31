@@ -19,7 +19,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Draw.io (diagramas _UML_)](https://app.diagrams.net/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:gift: **BONUS**. _ArrayList_ de objetos](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_4_arraylists/index.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:gift: **BONUS**. _ArrayList_ de objetos (con ejercicios) :pencil:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_4_arraylists/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Incorporar _ArrayList_ a clases _Estudiante_ y _Editorial_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP3/actividad_duplicados.md)
 

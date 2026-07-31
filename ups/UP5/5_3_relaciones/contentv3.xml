@@ -87,9 +87,9 @@
   <string role="key" value="_name"></string>
   <unicode value="ud5_relaciones"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="12"></int>
+  <int value="14"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="7"></int>
+  <int value="8"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -224,7 +224,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="img0.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img0.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img0.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="befaa97a9740b08dc94feaa724cc8fd1"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -495,7 +495,7 @@ public class Grupo {
                      <string role="key" value="_storageName"></string>
                      <string value="img0.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img0.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img0.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="befaa97a9740b08dc94feaa724cc8fd1"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -547,7 +547,7 @@ public class Grupo {
                      <string role="key" value="_storageName"></string>
                      <string value="img1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="c185b131bae3ad778abe43bd60295c84"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -599,7 +599,7 @@ public class Grupo {
                      <string role="key" value="_storageName"></string>
                      <string value="img2.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img2.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img2.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="c50356abf68792c8b6a805013cebdd53"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -651,7 +651,7 @@ public class Grupo {
                      <string role="key" value="_storageName"></string>
                      <string value="img3.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img3.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img3.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="0f6f2b8ceff805372c3911b659e6b372"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -703,7 +703,7 @@ public class Grupo {
                      <string role="key" value="_storageName"></string>
                      <string value="img4.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img4.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img4.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="47d6dd256bb721095fdd3f87e4a1ff8e"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -895,7 +895,7 @@ public class Grupo {
                      <string role="key" value="_storageName"></string>
                      <string value="img0.1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img0.1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img0.1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="5958b89f89ceddf01c1120252487fe84"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1488,7 +1488,7 @@ public void setLibroPrestado(Libro libroPrestado) {
               <string role="key" value="content_w_resourcePaths"></string>
               <unicode content="true" value="&lt;div class=&quot;pbl-task-description&quot;&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: #ffff99;&quot;&gt;&lt;strong&gt;Una clase &lt;em&gt;Prestamo&lt;/em&gt; podría modelar la relación entre un &lt;em&gt;Libro&lt;/em&gt; y un &lt;em&gt;Estudiante&lt;/em&gt; cuando se presta un libro. Esto introduce lo que llamamos una asociación ternaria (entre tres clases).&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align: justify;&quot;&gt;a) Crea una nueva clase &lt;em&gt;Prestamo&lt;/em&gt; con los siguientes atributos: uno de tipo &lt;em&gt;Estudiante&lt;/em&gt;, otro de tipo &lt;em&gt;Libro&lt;/em&gt; y, por último, una de tipo &lt;em&gt;LocalDateTime&lt;/em&gt; que contenga la &lt;em&gt;fecha&lt;/em&gt; del préstamo realizado. Solamente debe haber un constructor que reciba todos los atributos necesarios por parámetro.&lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;b) Modifica el método &lt;strong&gt;&lt;em&gt;prestar()&lt;/em&gt;&lt;/strong&gt; de la clase &lt;em&gt;Libro&lt;/em&gt; para que se cree un objeto de tipo &lt;em&gt;Prestamo&lt;/em&gt; cada vez que se realice uno. Inicializa el parámetro &lt;em&gt;fecha&lt;/em&gt; con la función &lt;em&gt;LocalDate.now()&lt;/em&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;b) Modifica el método &lt;strong&gt;&lt;em&gt;prestar()&lt;/em&gt;&lt;/strong&gt; de la clase &lt;em&gt;Libro&lt;/em&gt; para que se cree un objeto de tipo &lt;em&gt;Prestamo&lt;/em&gt; cada vez que se realice uno. Inicializa el parámetro &lt;em&gt;fecha&lt;/em&gt; con la función &lt;em&gt;LocalDate.now()&lt;/em&gt;. &lt;strong&gt;Además de crearlo, haz que el método &lt;em&gt;prestar()&lt;/em&gt; devuelva el objeto préstamo generado al programa principal &lt;em&gt;main()&lt;/em&gt;.&lt;/strong&gt;&lt;/p&gt;
 &lt;p style=&quot;text-align: justify;&quot;&gt;c) Añade la clase &lt;em&gt;Prestamo&lt;/em&gt; al diagrama de relación entre clases.&lt;/p&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
@@ -1540,33 +1540,6 @@ public void setLibroPrestado(Libro libroPrestado) {
            <int value="0"></int>
           </dictionary>
          </instance>
-        </list>
-        <string role="key" value="_id"></string>
-        <unicode value="2"></unicode>
-        <string role="key" value="_package"></string>
-        <reference key="2"></reference>
-        <string role="key" value="anchor_fields"></string>
-        <list></list>
-        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
-        <int value="2"></int>
-        <string role="key" value="exportType"></string>
-        <string value="website"></string>
-        <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:5.3.%20Relaciones%20simples%20entre%20clases:5.3.2.%20Asociaciones%20bidireccionales"></string>
-        <string role="key" value="parent"></string>
-        <reference key="4"></reference>
-        <string role="key" value="top_anchors_linked_from_fields"></string>
-        <list></list>
-        <string role="key" value="children"></string>
-        <list></list>
-       </dictionary>
-      </instance>
-      <instance class="exe.engine.node.Node" reference="28">
-       <dictionary>
-        <string role="key" value="_title"></string>
-        <unicode value="BONUS: Paso por valor y por referencia"></unicode>
-        <string role="key" value="idevices"></string>
-        <list>
          <instance class="exe.engine.jsidevice.JsIdevice" reference="26">
           <dictionary>
            <string role="key" value="_title"></string>
@@ -1634,6 +1607,317 @@ public void setLibroPrestado(Libro libroPrestado) {
               <unicode value="127_2"></unicode>
               <string role="key" value="_idevice"></string>
               <reference key="26"></reference>
+              <string role="key" value="_instruc"></string>
+              <string value=""></string>
+              <string role="key" value="_name"></string>
+              <string value=""></string>
+              <string role="key" value="anchor_names"></string>
+              <list></list>
+              <string role="key" value="content_w_resourcePaths"></string>
+              <unicode content="true" value="&lt;div class=&quot;exe-text&quot;&gt;&lt;div class=&quot;exe-fx exe-carousel&quot;&gt;
+&lt;h2&gt;¿Y si quiero prestar varios libros al estudiante? ¿O si quiero reflejar en &lt;em&gt;Editorial&lt;/em&gt; todos los libros que tiene pubicados?&lt;/h2&gt;
+&lt;p&gt;Ve al &lt;strong&gt;&lt;span style=&quot;color: #008000;&quot;&gt;&lt;em&gt;BONUS&lt;/em&gt; &lt;/span&gt;&lt;/strong&gt;sobre &lt;span style=&quot;color: #008000;&quot;&gt;&lt;strong&gt;&lt;em&gt;ArrayList&lt;/em&gt; &lt;/strong&gt;&lt;/span&gt;disponible en AULES antes de seguir avanzando.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/div&gt;"></unicode>
+              <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+              <int value="4"></int>
+              <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+              <int value="2"></int>
+              <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+              <int value="3"></int>
+              <string role="key" value="htmlTag"></string>
+              <string value="div"></string>
+              <string role="key" value="images"></string>
+              <instance class="exe.engine.galleryidevice.GalleryImages">
+               <dictionary>
+                <string role="key" value=".listitems"></string>
+                <list></list>
+                <string role="key" value="idevice"></string>
+                <reference key="27"></reference>
+               </dictionary>
+              </instance>
+              <string role="key" value="intlinks_to_anchors"></string>
+              <dictionary></dictionary>
+              <string role="key" value="nextImageId"></string>
+              <int value="0"></int>
+              <string role="key" value="parentNode"></string>
+              <none></none>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="icon"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="id"></string>
+           <unicode value="12"></unicode>
+           <string role="key" value="ideviceCategory"></string>
+           <unicode value="Text and Tasks"></unicode>
+           <string role="key" value="lastIdevice"></string>
+           <bool value="0"></bool>
+           <string role="key" value="nextFieldId"></string>
+           <int value="3"></int>
+           <string role="key" value="originalicon"></string>
+           <string value=""></string>
+           <string role="key" value="parentNode"></string>
+           <reference key="19"></reference>
+           <string role="key" value="systemResources"></string>
+           <list></list>
+           <string role="key" value="undo"></string>
+           <bool value="1"></bool>
+           <string role="key" value="userResources"></string>
+           <list></list>
+           <string role="key" value="version"></string>
+           <int value="0"></int>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="_id"></string>
+        <unicode value="2"></unicode>
+        <string role="key" value="_package"></string>
+        <reference key="2"></reference>
+        <string role="key" value="anchor_fields"></string>
+        <list></list>
+        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+        <int value="2"></int>
+        <string role="key" value="exportType"></string>
+        <string value="website"></string>
+        <string role="key" value="last_full_node_path"></string>
+        <string value="exe-node:5.3.%20Relaciones%20simples%20entre%20clases:5.3.2.%20Asociaciones%20bidireccionales"></string>
+        <string role="key" value="parent"></string>
+        <reference key="4"></reference>
+        <string role="key" value="top_anchors_linked_from_fields"></string>
+        <list></list>
+        <string role="key" value="children"></string>
+        <list>
+         <instance class="exe.engine.node.Node" reference="30">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="Ejercicio con ArrayList para guardar varios elementos"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="28">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Actividad. Incorporar ArrayList a clases Estudiante y Editorial"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="pbl-tools"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_typeName"></string>
+              <unicode value="Task"></unicode>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="pbl"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="29">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="128_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="28"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;pbl-task-description&quot;&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;a) Implementa los &lt;strong&gt;&lt;em&gt;ArrayList &lt;/em&gt;&lt;/strong&gt;para que un objeto de tipo &lt;strong&gt;&lt;em&gt;Estudiante &lt;/em&gt;&lt;/strong&gt;pueda almacenar más de un libro. Es decir, que pueda pedir prestado más de un libro.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;b) Adapta el constructor, los getters, los setters y el &lt;em&gt;toString&lt;/em&gt; a la estructura nueva.&lt;br /&gt; &lt;br /&gt;c) Crea dos métodos nuevos en &lt;em&gt;Estudiante&lt;/em&gt;: uno para insertar libros nuevos en el &lt;em&gt;ArrayList &lt;/em&gt;(&lt;strong&gt;&lt;em&gt;anyadirLibro()&lt;/em&gt;&lt;/strong&gt;) y otro para borrar un libro de la lista (&lt;strong&gt;&lt;em&gt;borrarLibro()&lt;/em&gt;&lt;/strong&gt;).&lt;br /&gt; &lt;br /&gt;d) Modifica la condición del método &lt;em&gt;&lt;strong&gt;prestar()&lt;/strong&gt; &lt;/em&gt;de la clase &lt;strong&gt;&lt;em&gt;Libro &lt;/em&gt;&lt;/strong&gt;para que antes de asignarle un libro a un estudiante se compruebe si este ya tiene prestado el mismo libro (ya existe en la lista). Modifica también el camino feliz del método para que en lugar de llamar al &lt;em&gt;set&lt;/em&gt;, se llame al nuevo método &lt;em&gt;anyadirLibro()&lt;/em&gt;.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;e) Modifica el método &lt;strong&gt;&lt;em&gt;devolver()&lt;/em&gt; &lt;/strong&gt;de la clase &lt;strong&gt;&lt;em&gt;Libro &lt;/em&gt;&lt;/strong&gt;para que llame al método &lt;strong&gt;&lt;em&gt;eliminarLibro()&lt;/em&gt;&lt;/strong&gt; creado anteriormente. &lt;br /&gt; &lt;br /&gt;f) Cambia la relación entre &lt;em&gt;Libro &lt;/em&gt;y &lt;em&gt;Editorial &lt;/em&gt;para que tengan una relación bidireccional. Es decir, añade lógica para que &lt;strong&gt;&lt;em&gt;Editorial &lt;/em&gt;&lt;/strong&gt;contenga información de los libros que tiene publicados en un atributo de tipo &lt;em&gt;ArrayList&lt;/em&gt;. &lt;br /&gt; &lt;br /&gt;g) Adapta los getters, los setters y el &lt;em&gt;toString&lt;/em&gt; de la clase &lt;em&gt;Editorial &lt;/em&gt;a la estructura nueva. Crea &lt;strong&gt;dos métodos nuevos&lt;/strong&gt;, uno para añadir libros a la lista y otro para borrarlos.&lt;br /&gt; &lt;br /&gt;h) Modifica el &lt;strong&gt;constructor de la clase &lt;/strong&gt;&lt;em&gt;&lt;strong&gt;Libro&lt;/strong&gt; &lt;/em&gt;para que cada vez que se cree uno nuevo, se añada a la lista de libros publicados de la clase &lt;strong&gt;&lt;em&gt;Editorial&lt;/em&gt;&lt;/strong&gt;. &lt;/p&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="29"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="activity"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="13"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <unicode value="activity"></unicode>
+              <string role="key" value="parentNode"></string>
+              <reference key="30"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="7"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="2"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:5.3.%20Relaciones%20simples%20entre%20clases:5.3.2.%20Asociaciones%20bidireccionales:Ejercicio%20con%20ArrayList%20para%20guardar%20varios%20elementos"></string>
+           <string role="key" value="parent"></string>
+           <reference key="19"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+        </list>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.node.Node" reference="33">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="BONUS: Paso por valor y por referencia"></unicode>
+        <string role="key" value="idevices"></string>
+        <list>
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="31">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value=""></unicode>
+           <string role="key" value="_attributes"></string>
+           <list>
+            <tuple>
+             <string value="title"></string>
+             <list>
+              <string value="Title"></string>
+              <int value="0"></int>
+              <int value="0"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="category"></string>
+             <list>
+              <string value="Category"></string>
+              <int value="0"></int>
+              <int value="1"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="css-class"></string>
+             <list>
+              <string value="CSS class"></string>
+              <int value="0"></int>
+              <int value="2"></int>
+             </list>
+            </tuple>
+            <tuple>
+             <string value="icon"></string>
+             <list>
+              <string value="Icon"></string>
+              <int value="0"></int>
+              <int value="3"></int>
+             </list>
+            </tuple>
+           </list>
+           <string role="key" value="_author"></string>
+           <string value=""></string>
+           <string role="key" value="_iDeviceDir"></string>
+           <string value="text"></string>
+           <string role="key" value="_purpose"></string>
+           <string value=""></string>
+           <string role="key" value="_tip"></string>
+           <string value=""></string>
+           <string role="key" value="_typeName"></string>
+           <unicode value="Text"></unicode>
+           <string role="key" value="_valid"></string>
+           <bool value="1"></bool>
+           <string role="key" value="class_"></string>
+           <unicode value="text"></unicode>
+           <string role="key" value="edit"></string>
+           <bool value="0"></bool>
+           <string role="key" value="emphasis"></string>
+           <int value="0"></int>
+           <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+           <int value="1"></int>
+           <string role="key" value="fields"></string>
+           <list>
+            <instance class="exe.engine.field.TextAreaField" reference="32">
+             <dictionary>
+              <string role="key" value="_id"></string>
+              <unicode value="127_2"></unicode>
+              <string role="key" value="_idevice"></string>
+              <reference key="31"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -1714,16 +1998,16 @@ public void setLibroPrestado(Libro libroPrestado) {
                    <string role="key" value="_id"></string>
                    <unicode value="7_127_2.9"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="29">
+                   <instance class="exe.engine.resource.Resource" reference="34">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="26"></reference>
+                     <reference key="31"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="2"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="img0.2.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img0.2.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img0.2.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="b35c729fe20eab6008e80194e25bfc66"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1735,7 +2019,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="27"></reference>
+                   <reference key="32"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -1766,16 +2050,16 @@ public void setLibroPrestado(Libro libroPrestado) {
                    <string role="key" value="_id"></string>
                    <unicode value="7_127_2.10"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="30">
+                   <instance class="exe.engine.resource.Resource" reference="35">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="26"></reference>
+                     <reference key="31"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="2"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="img1.1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img1.1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img1.1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="9375f317620790d40ed5139c82d6a56e"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1787,7 +2071,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="27"></reference>
+                   <reference key="32"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -1818,16 +2102,16 @@ public void setLibroPrestado(Libro libroPrestado) {
                    <string role="key" value="_id"></string>
                    <unicode value="7_127_2.11"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="31">
+                   <instance class="exe.engine.resource.Resource" reference="36">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="26"></reference>
+                     <reference key="31"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="2"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="img2.1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img2.1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img2.1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="6dd4f3992c7fbda2584bc4f30c748591"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1839,7 +2123,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="27"></reference>
+                   <reference key="32"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -1850,7 +2134,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                  </instance>
                 </list>
                 <string role="key" value="idevice"></string>
-                <reference key="27"></reference>
+                <reference key="32"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -1858,7 +2142,7 @@ public void setLibroPrestado(Libro libroPrestado) {
               <string role="key" value="nextImageId"></string>
               <int value="12"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="28"></reference>
+              <reference key="33"></reference>
              </dictionary>
             </instance>
            </list>
@@ -1875,16 +2159,16 @@ public void setLibroPrestado(Libro libroPrestado) {
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="28"></reference>
+           <reference key="33"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
            <list>
-            <reference key="29"></reference>
-            <reference key="30"></reference>
-            <reference key="31"></reference>
+            <reference key="34"></reference>
+            <reference key="35"></reference>
+            <reference key="36"></reference>
            </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
@@ -1911,13 +2195,13 @@ public void setLibroPrestado(Libro libroPrestado) {
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="34">
+      <instance class="exe.engine.node.Node" reference="39">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="5.3.3. Composiciones"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="32">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="37">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -1978,12 +2262,12 @@ public void setLibroPrestado(Libro libroPrestado) {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="33">
+            <instance class="exe.engine.field.TextAreaField" reference="38">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="127_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="32"></reference>
+              <reference key="37"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2102,16 +2386,16 @@ public void setLibroPrestado(Libro libroPrestado) {
                    <string role="key" value="_id"></string>
                    <unicode value="8_127_2.1"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="35">
+                   <instance class="exe.engine.resource.Resource" reference="40">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="32"></reference>
+                     <reference key="37"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="2"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="img0.5.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img0.5.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img0.5.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="22c339a2a9f205643d3b5ee663323577"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2123,7 +2407,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="33"></reference>
+                   <reference key="38"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -2134,7 +2418,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                  </instance>
                 </list>
                 <string role="key" value="idevice"></string>
-                <reference key="33"></reference>
+                <reference key="38"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2142,7 +2426,7 @@ public void setLibroPrestado(Libro libroPrestado) {
               <string role="key" value="nextImageId"></string>
               <int value="2"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="34"></reference>
+              <reference key="39"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2159,20 +2443,20 @@ public void setLibroPrestado(Libro libroPrestado) {
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="34"></reference>
+           <reference key="39"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
            <list>
-            <reference key="35"></reference>
+            <reference key="40"></reference>
            </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="36">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="41">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Ejercicios "></unicode>
@@ -2233,12 +2517,12 @@ public void setLibroPrestado(Libro libroPrestado) {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="37">
+            <instance class="exe.engine.field.TextAreaField" reference="42">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="128_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="36"></reference>
+              <reference key="41"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2296,16 +2580,16 @@ public void setLibroPrestado(Libro libroPrestado) {
                    <string role="key" value="_id"></string>
                    <unicode value="9_128_2.2"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="38">
+                   <instance class="exe.engine.resource.Resource" reference="43">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="36"></reference>
+                     <reference key="41"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="2"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="img0.3.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img0.3.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img0.3.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="1739427cd72a587eb71251286c808c3a"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2317,7 +2601,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="37"></reference>
+                   <reference key="42"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -2328,7 +2612,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                  </instance>
                 </list>
                 <string role="key" value="idevice"></string>
-                <reference key="37"></reference>
+                <reference key="42"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2336,7 +2620,7 @@ public void setLibroPrestado(Libro libroPrestado) {
               <string role="key" value="nextImageId"></string>
               <int value="3"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="34"></reference>
+              <reference key="39"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2353,14 +2637,14 @@ public void setLibroPrestado(Libro libroPrestado) {
            <string role="key" value="originalicon"></string>
            <unicode value="activity"></unicode>
            <string role="key" value="parentNode"></string>
-           <reference key="34"></reference>
+           <reference key="39"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
            <list>
-            <reference key="38"></reference>
+            <reference key="43"></reference>
            </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
@@ -2387,13 +2671,13 @@ public void setLibroPrestado(Libro libroPrestado) {
         <list></list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="41">
+      <instance class="exe.engine.node.Node" reference="46">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="5.3.4. Asociaciones reflexivas"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="39">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="44">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -2454,12 +2738,12 @@ public void setLibroPrestado(Libro libroPrestado) {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="40">
+            <instance class="exe.engine.field.TextAreaField" reference="45">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="129_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="39"></reference>
+              <reference key="44"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2564,16 +2848,16 @@ public void setLibroPrestado(Libro libroPrestado) {
                    <string role="key" value="_id"></string>
                    <unicode value="10_129_2.3"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="42">
+                   <instance class="exe.engine.resource.Resource" reference="47">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="39"></reference>
+                     <reference key="44"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="2"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="img0.4.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img0.4.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img0.4.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="1e7a947daf4c500b81f80d9ad29d9ae4"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2585,7 +2869,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="40"></reference>
+                   <reference key="45"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -2616,16 +2900,16 @@ public void setLibroPrestado(Libro libroPrestado) {
                    <string role="key" value="_id"></string>
                    <unicode value="10_129_2.4"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="43">
+                   <instance class="exe.engine.resource.Resource" reference="48">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="39"></reference>
+                     <reference key="44"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="2"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="img1.2.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzh_tzs\\img1.2.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpzarbrd\\img1.2.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="f8c3d652b07ac3dbf082d39294a51dcb"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2637,7 +2921,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="40"></reference>
+                   <reference key="45"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -2648,7 +2932,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                  </instance>
                 </list>
                 <string role="key" value="idevice"></string>
-                <reference key="40"></reference>
+                <reference key="45"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2656,7 +2940,7 @@ public void setLibroPrestado(Libro libroPrestado) {
               <string role="key" value="nextImageId"></string>
               <int value="5"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="41"></reference>
+              <reference key="46"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2673,21 +2957,21 @@ public void setLibroPrestado(Libro libroPrestado) {
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="41"></reference>
+           <reference key="46"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
            <list>
-            <reference key="42"></reference>
-            <reference key="43"></reference>
+            <reference key="47"></reference>
+            <reference key="48"></reference>
            </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
           </dictionary>
          </instance>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="44">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="49">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Ejercicio"></unicode>
@@ -2748,12 +3032,12 @@ public void setLibroPrestado(Libro libroPrestado) {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="45">
+            <instance class="exe.engine.field.TextAreaField" reference="50">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="130_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="44"></reference>
+              <reference key="49"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2778,7 +3062,7 @@ public void setLibroPrestado(Libro libroPrestado) {
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="45"></reference>
+                <reference key="50"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2786,7 +3070,7 @@ public void setLibroPrestado(Libro libroPrestado) {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="41"></reference>
+              <reference key="46"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2803,7 +3087,7 @@ public void setLibroPrestado(Libro libroPrestado) {
            <string role="key" value="originalicon"></string>
            <unicode value="activity"></unicode>
            <string role="key" value="parentNode"></string>
-           <reference key="41"></reference>
+           <reference key="46"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -2843,11 +3127,13 @@ public void setLibroPrestado(Libro libroPrestado) {
    <unicode role="key" value="2"></unicode>
    <reference key="19"></reference>
    <unicode role="key" value="4"></unicode>
-   <reference key="34"></reference>
+   <reference key="39"></reference>
    <unicode role="key" value="5"></unicode>
-   <reference key="41"></reference>
+   <reference key="46"></reference>
    <unicode role="key" value="6"></unicode>
-   <reference key="28"></reference>
+   <reference key="33"></reference>
+   <unicode role="key" value="7"></unicode>
+   <reference key="30"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -2858,7 +3144,7 @@ public void setLibroPrestado(Libro libroPrestado) {
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="34"></reference>
+  <reference key="19"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -3898,15 +4184,15 @@ public void setLibroPrestado(Libro libroPrestado) {
    </list>
    <string role="key" value="1739427cd72a587eb71251286c808c3a"></string>
    <list>
-    <reference key="38"></reference>
+    <reference key="43"></reference>
    </list>
    <string role="key" value="1e7a947daf4c500b81f80d9ad29d9ae4"></string>
    <list>
-    <reference key="42"></reference>
+    <reference key="47"></reference>
    </list>
    <string role="key" value="22c339a2a9f205643d3b5ee663323577"></string>
    <list>
-    <reference key="35"></reference>
+    <reference key="40"></reference>
    </list>
    <string role="key" value="47d6dd256bb721095fdd3f87e4a1ff8e"></string>
    <list>
@@ -3918,15 +4204,15 @@ public void setLibroPrestado(Libro libroPrestado) {
    </list>
    <string role="key" value="6dd4f3992c7fbda2584bc4f30c748591"></string>
    <list>
-    <reference key="31"></reference>
+    <reference key="36"></reference>
    </list>
    <string role="key" value="9375f317620790d40ed5139c82d6a56e"></string>
    <list>
-    <reference key="30"></reference>
+    <reference key="35"></reference>
    </list>
    <string role="key" value="b35c729fe20eab6008e80194e25bfc66"></string>
    <list>
-    <reference key="29"></reference>
+    <reference key="34"></reference>
    </list>
    <string role="key" value="befaa97a9740b08dc94feaa724cc8fd1"></string>
    <list>
@@ -3943,7 +4229,7 @@ public void setLibroPrestado(Libro libroPrestado) {
    </list>
    <string role="key" value="f8c3d652b07ac3dbf082d39294a51dcb"></string>
    <list>
-    <reference key="43"></reference>
+    <reference key="48"></reference>
    </list>
   </dictionary>
   <string role="key" value="root"></string>

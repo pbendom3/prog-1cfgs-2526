@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Ejercicio con ArrayList para guardar varios elementos | 5.3. Relaciones simples entre clases </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">5.3. Relaciones simples entre clases</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">5.3. Relaciones simples entre clases</a></li>
+   <li><a href="531_asociacionesagregaciones.html" class="no-ch">5.3.1. Asociaciones/agregaciones</a></li>
+   <li class="current-page-parent"><a href="532_asociaciones_bidireccionales.html" class="current-page-parent daddy">5.3.2. Asociaciones bidireccionales</a>
+   <ul>
+      <li id="active"><a href="ejercicio_con_arraylist_para_guardar_varios_elementos.html" class="active no-ch">Ejercicio con ArrayList para guardar varios elementos</a></li>
+   </ul>
+   </li>
+   <li><a href="bonus_paso_por_valor_y_por_referencia.html" class="no-ch">BONUS: Paso por valor y por referencia</a></li>
+   <li><a href="533_composiciones.html" class="no-ch">5.3.3. Composiciones</a></li>
+   <li><a href="534_asociaciones_reflexivas.html" class="no-ch">5.3.4. Asociaciones reflexivas</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="532_asociaciones_bidireccionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bonus_paso_por_valor_y_por_referencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Ejercicio con ArrayList para guardar varios elementos</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id13">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Actividad. Incorporar ArrayList a clases Estudiante y Editorial</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_128_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">a) Implementa los <strong><em>ArrayList </em></strong>para que un objeto de tipo <strong><em>Estudiante </em></strong>pueda almacenar más de un libro. Es decir, que pueda pedir prestado más de un libro.</p>
+<p style="text-align: justify;">b) Adapta el constructor, los getters, los setters y el <em>toString</em> a la estructura nueva.<br /> <br />c) Crea dos métodos nuevos en <em>Estudiante</em>: uno para insertar libros nuevos en el <em>ArrayList </em>(<strong><em>anyadirLibro()</em></strong>) y otro para borrar un libro de la lista (<strong><em>borrarLibro()</em></strong>).<br /> <br />d) Modifica la condición del método <em><strong>prestar()</strong> </em>de la clase <strong><em>Libro </em></strong>para que antes de asignarle un libro a un estudiante se compruebe si este ya tiene prestado el mismo libro (ya existe en la lista). Modifica también el camino feliz del método para que en lugar de llamar al <em>set</em>, se llame al nuevo método <em>anyadirLibro()</em>.</p>
+<p style="text-align: justify;">e) Modifica el método <strong><em>devolver()</em> </strong>de la clase <strong><em>Libro </em></strong>para que llame al método <strong><em>eliminarLibro()</em></strong> creado anteriormente. <br /> <br />f) Cambia la relación entre <em>Libro </em>y <em>Editorial </em>para que tengan una relación bidireccional. Es decir, añade lógica para que <strong><em>Editorial </em></strong>contenga información de los libros que tiene publicados en un atributo de tipo <em>ArrayList</em>. <br /> <br />g) Adapta los getters, los setters y el <em>toString</em> de la clase <em>Editorial </em>a la estructura nueva. Crea <strong>dos métodos nuevos</strong>, uno para añadir libros a la lista y otro para borrarlos.<br /> <br />h) Modifica el <strong>constructor de la clase </strong><em><strong>Libro</strong> </em>para que cada vez que se cree uno nuevo, se añada a la lista de libros publicados de la clase <strong><em>Editorial</em></strong>. </p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="532_asociaciones_bidireccionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bonus_paso_por_valor_y_por_referencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

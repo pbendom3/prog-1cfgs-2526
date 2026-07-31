@@ -87,9 +87,9 @@
   <string role="key" value="_name"></string>
   <unicode value="ud5_arraylists"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="3"></int>
+  <int value="4"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="3"></int>
+  <int value="4"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -472,7 +472,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="262"></int>
+                  <int value="274"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -486,7 +486,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.24"></unicode>
+                <unicode value="0_127_2.36"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="5">
                  <dictionary>
@@ -497,7 +497,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img0.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img0.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img0.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="8bdcef75e2ea4b4b11aeb279a25f9550"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -524,7 +524,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="263"></int>
+                  <int value="275"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -538,7 +538,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.25"></unicode>
+                <unicode value="0_127_2.37"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="6">
                  <dictionary>
@@ -549,7 +549,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img1.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img1.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img1.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="d8b2be9248f2718d4150584188952e2a"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -576,7 +576,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="264"></int>
+                  <int value="276"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -590,7 +590,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.26"></unicode>
+                <unicode value="0_127_2.38"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="7">
                  <dictionary>
@@ -601,7 +601,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img10.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img10.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img10.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="385446514d503fa7c5199c3bed6ea9f2"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -628,7 +628,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="265"></int>
+                  <int value="277"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -642,7 +642,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.27"></unicode>
+                <unicode value="0_127_2.39"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="8">
                  <dictionary>
@@ -653,7 +653,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img11.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img11.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img11.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="4c1834eb807ab032c9a3fffdacde8cd8"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -680,7 +680,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="266"></int>
+                  <int value="278"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -694,7 +694,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.28"></unicode>
+                <unicode value="0_127_2.40"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="9">
                  <dictionary>
@@ -705,7 +705,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img2.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img2.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img2.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="41dd8ab27c41911361e8b462cd4da314"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -732,7 +732,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="267"></int>
+                  <int value="279"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -746,7 +746,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.29"></unicode>
+                <unicode value="0_127_2.41"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="10">
                  <dictionary>
@@ -757,7 +757,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img3.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img3.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img3.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="1b4eee20ad4469824a81addbb01084d6"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -784,7 +784,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="268"></int>
+                  <int value="280"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -798,7 +798,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.30"></unicode>
+                <unicode value="0_127_2.42"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="11">
                  <dictionary>
@@ -809,7 +809,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img4.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img4.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img4.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="cf87668bc6c857ef4ac3de8c9c342855"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -836,7 +836,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="269"></int>
+                  <int value="281"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -850,7 +850,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.31"></unicode>
+                <unicode value="0_127_2.43"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="12">
                  <dictionary>
@@ -861,7 +861,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img5.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img5.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img5.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="5fd7cf84b2d9d16d81ed5681cfdd01cf"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -888,7 +888,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="270"></int>
+                  <int value="282"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -902,7 +902,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.32"></unicode>
+                <unicode value="0_127_2.44"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="13">
                  <dictionary>
@@ -913,7 +913,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img6.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img6.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img6.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="b94e364b9e6ab5f0f4ec205967346836"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -940,7 +940,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="271"></int>
+                  <int value="283"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -954,7 +954,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.33"></unicode>
+                <unicode value="0_127_2.45"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="14">
                  <dictionary>
@@ -965,7 +965,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img7.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img7.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img7.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="c6ea7f48a718481114f97599e5210790"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -992,7 +992,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="272"></int>
+                  <int value="284"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -1006,7 +1006,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.34"></unicode>
+                <unicode value="0_127_2.46"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="15">
                  <dictionary>
@@ -1017,7 +1017,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img8.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img8.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img8.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="28b2d8d1fd9ff876ae05353e8e8f334f"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1044,7 +1044,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                 <instance class="exe.engine.field.TextField">
                  <dictionary>
                   <string role="key" value="_id"></string>
-                  <int value="273"></int>
+                  <int value="285"></int>
                   <string role="key" value="_idevice"></string>
                   <none></none>
                   <string role="key" value="_instruc"></string>
@@ -1058,7 +1058,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                  </dictionary>
                 </instance>
                 <string role="key" value="_id"></string>
-                <unicode value="0_127_2.35"></unicode>
+                <unicode value="0_127_2.47"></unicode>
                 <string role="key" value="_imageResource"></string>
                 <instance class="exe.engine.resource.Resource" reference="16">
                  <dictionary>
@@ -1069,7 +1069,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
                   <string role="key" value="_storageName"></string>
                   <string value="img9.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpf5msmx\\img9.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpt501r_\\img9.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="ee2287a71a881321c376f1761ae20fc6"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1098,7 +1098,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
            <string role="key" value="intlinks_to_anchors"></string>
            <dictionary></dictionary>
            <string role="key" value="nextImageId"></string>
-           <int value="36"></int>
+           <int value="48"></int>
            <string role="key" value="parentNode"></string>
            <reference key="4"></reference>
           </dictionary>
@@ -1169,7 +1169,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
          <instance class="exe.engine.jsidevice.JsIdevice" reference="17">
           <dictionary>
            <string role="key" value="_title"></string>
-           <unicode value="Ejercicios &quot;lista de la compra&quot;"></unicode>
+           <unicode value="Lista de la compra"></unicode>
            <string role="key" value="_attributes"></string>
            <list>
             <tuple>
@@ -1308,37 +1308,10 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
            <int value="0"></int>
           </dictionary>
          </instance>
-        </list>
-        <string role="key" value="_id"></string>
-        <unicode value="1"></unicode>
-        <string role="key" value="_package"></string>
-        <reference key="2"></reference>
-        <string role="key" value="anchor_fields"></string>
-        <list></list>
-        <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
-        <int value="2"></int>
-        <string role="key" value="exportType"></string>
-        <string value="website"></string>
-        <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:BONUS.%20ArrayList%20de%20objetos:Ejercicios%20sobre%20ArrayList"></string>
-        <string role="key" value="parent"></string>
-        <reference key="4"></reference>
-        <string role="key" value="top_anchors_linked_from_fields"></string>
-        <list></list>
-        <string role="key" value="children"></string>
-        <list></list>
-       </dictionary>
-      </instance>
-      <instance class="exe.engine.node.Node" reference="22">
-       <dictionary>
-        <string role="key" value="_title"></string>
-        <unicode value="Actividad. Incorporar ArrayList a clases Estudiante y Editorial"></unicode>
-        <string role="key" value="idevices"></string>
-        <list>
          <instance class="exe.engine.jsidevice.JsIdevice" reference="20">
           <dictionary>
            <string role="key" value="_title"></string>
-           <unicode value=""></unicode>
+           <unicode value="Autobús del Imserso"></unicode>
            <string role="key" value="_attributes"></string>
            <list>
             <tuple>
@@ -1377,21 +1350,21 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
            <string role="key" value="_author"></string>
            <string value=""></string>
            <string role="key" value="_iDeviceDir"></string>
-           <string value="text"></string>
+           <string value="pbl-tools"></string>
            <string role="key" value="_purpose"></string>
            <string value=""></string>
            <string role="key" value="_tip"></string>
            <string value=""></string>
            <string role="key" value="_typeName"></string>
-           <unicode value="Text"></unicode>
+           <unicode value="Task"></unicode>
            <string role="key" value="_valid"></string>
            <bool value="1"></bool>
            <string role="key" value="class_"></string>
-           <unicode value="text"></unicode>
+           <unicode value="pbl"></unicode>
            <string role="key" value="edit"></string>
            <bool value="0"></bool>
            <string role="key" value="emphasis"></string>
-           <int value="0"></int>
+           <int value="1"></int>
            <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
            <int value="1"></int>
            <string role="key" value="fields"></string>
@@ -1411,14 +1384,24 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
               <string role="key" value="anchors_linked_from_fields"></string>
               <dictionary></dictionary>
               <string role="key" value="content_w_resourcePaths"></string>
-              <unicode content="true" value="&lt;div class=&quot;exe-text&quot;&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;a) Implementa los &lt;em&gt;ArrayList &lt;/em&gt;para que un objeto de tipo Estudiante pueda almacenar más de un libro. Es decir, que pueda pedir prestado más de un libro.&lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;b) Adapta el constructor, los getters, los setters y el &lt;em&gt;toString&lt;/em&gt; a la estructura nueva.&lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;c) Crea dos métodos nuevos: uno para insertar libros nuevos en el &lt;em&gt;ArrayList (anyadirLibro)&lt;/em&gt; y otro para borrar un libro de la lista (&lt;em&gt;borrarLibro&lt;/em&gt;).&lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;d) Modifica la condición del método prestar() de la clase Libro para que antes de asignarle un libro a un estudiante se compruebe si este ya tiene prestado el mismo libro (ya existe en la lista). Modifica también el camino feliz del método para que en lugar de llamar al set, se llame al nuevo método anyadirLibro().&lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;e) Modifica el método devolver() de la clase Libro para que llame al método eliminarLibro() creado anteriormente. &lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;f) Cambia la relación entre Libro y Editorial para que tengan una relación bidireccional. Es decir, añade lógica para que Editorial contenga información de los libros que tiene publicados en un atributo de tipo ArrayList. &lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;g) Adapta los getters, los setters y el &lt;em&gt;toString&lt;/em&gt; de la clase &lt;strong&gt;&lt;em&gt;Editorial &lt;/em&gt;&lt;/strong&gt;a la estructura nueva. Crea dos métodos nuevos, uno para añadir libros a la lista y otro para borrarlos.&lt;/p&gt;
-&lt;p style=&quot;text-align: justify;&quot;&gt;h) Modifica el constructor de la clase &lt;em&gt;&lt;strong&gt;Libro &lt;/strong&gt;&lt;/em&gt;para que cada vez que se cree uno nuevo, se añada a la lista de libros publicados de la clase &lt;em&gt;&lt;strong&gt;Editorial&lt;/strong&gt;&lt;/em&gt;. &lt;/p&gt;&lt;/div&gt;"></unicode>
+              <unicode content="true" value="&lt;div class=&quot;pbl-task-description&quot;&gt;&lt;p&gt;Se quiere modelar un Autobús del Imserso que transporta a varios Abuelos en un viaje.&lt;/p&gt;
+&lt;p&gt;a) Crea la clase &lt;span style=&quot;color: #008000;&quot;&gt;&lt;em&gt;&lt;strong&gt;Abuelo&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;. Debe tener &lt;em&gt;&lt;strong&gt;nombre&lt;/strong&gt; &lt;/em&gt;y &lt;em&gt;&lt;strong&gt;edad&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;b) Crea la clase &lt;span style=&quot;color: #008000;&quot;&gt;&lt;em&gt;&lt;strong&gt;AutobusImserso&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;: Debe tener: &lt;em&gt;&lt;strong&gt;matricula&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;destino&lt;/strong&gt; &lt;/em&gt;y una &lt;em&gt;&lt;strong&gt;lista de Abuelos&lt;/strong&gt;&lt;/em&gt;. Además, se implementarán los siguientes métodos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;insertarAbuelo(Abuelo abuelo)&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;mostrarPasajeros()&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;borrarAbuelo()&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;mostrarMayores(int edad)&lt;/em&gt;&lt;/strong&gt; - muestra los pasajeros mayores a &lt;em&gt;edad &lt;/em&gt;años&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;c) Crea un programa principal que haga lo siguiente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crear varios objetos &lt;em&gt;Abuelo&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Crear un &lt;em&gt;AutobusImserso&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Insertar los abuelos al autobús.&lt;/li&gt;
+&lt;li&gt;Borrar un abuelo del autobús.&lt;/li&gt;
+&lt;li&gt;Mostrar los pasajeros.&lt;/li&gt;
+&lt;li&gt;Mostrar pasajeros mayores a 80 años.&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;"></unicode>
               <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
               <int value="4"></int>
               <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -1441,14 +1424,14 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="22"></reference>
+              <reference key="19"></reference>
              </dictionary>
             </instance>
            </list>
            <string role="key" value="icon"></string>
-           <unicode value=""></unicode>
+           <unicode value="activity"></unicode>
            <string role="key" value="id"></string>
-           <unicode value="2"></unicode>
+           <unicode value="3"></unicode>
            <string role="key" value="ideviceCategory"></string>
            <unicode value="Text and Tasks"></unicode>
            <string role="key" value="lastIdevice"></string>
@@ -1456,9 +1439,9 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
            <string role="key" value="nextFieldId"></string>
            <int value="3"></int>
            <string role="key" value="originalicon"></string>
-           <string value=""></string>
+           <unicode value="activity"></unicode>
            <string role="key" value="parentNode"></string>
-           <reference key="22"></reference>
+           <reference key="19"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -1471,7 +1454,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
          </instance>
         </list>
         <string role="key" value="_id"></string>
-        <unicode value="2"></unicode>
+        <unicode value="1"></unicode>
         <string role="key" value="_package"></string>
         <reference key="2"></reference>
         <string role="key" value="anchor_fields"></string>
@@ -1481,7 +1464,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
         <string role="key" value="exportType"></string>
         <string value="website"></string>
         <string role="key" value="last_full_node_path"></string>
-        <string value="exe-node:BONUS.%20ArrayList%20de%20objetos:Actividad.%20Incorporar%20ArrayList%20a%20clases%20Estudiante%20y%20Editorial"></string>
+        <string value="exe-node:BONUS.%20ArrayList%20de%20objetos:Ejercicios%20sobre%20ArrayList"></string>
         <string role="key" value="parent"></string>
         <reference key="4"></reference>
         <string role="key" value="top_anchors_linked_from_fields"></string>
@@ -1495,8 +1478,6 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
    </instance>
    <unicode role="key" value="1"></unicode>
    <reference key="19"></reference>
-   <unicode role="key" value="2"></unicode>
-   <reference key="22"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -1507,7 +1488,7 @@ for(int i = 0; i &amp;lt; listaPaises.size(); i++) {
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="4"></reference>
+  <reference key="19"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>

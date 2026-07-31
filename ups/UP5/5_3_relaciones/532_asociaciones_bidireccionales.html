@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
 <link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
 <link rel="stylesheet" type="text/css" href="content.css" />
 <link rel="stylesheet" type="text/css" href="nav.css" />
@@ -13,6 +14,7 @@
 <meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
 <!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
 <script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
 <script type="text/javascript" src="exe_highlighter.js"></script>
 <script type="text/javascript" src="common_i18n.js"></script>
 <script type="text/javascript" src="common.js"></script>
@@ -26,7 +28,11 @@
 <ul>
    <li><a href="index.html" class="daddy main-node">5.3. Relaciones simples entre clases</a></li>
    <li><a href="531_asociacionesagregaciones.html" class="no-ch">5.3.1. Asociaciones/agregaciones</a></li>
-   <li id="active"><a href="532_asociaciones_bidireccionales.html" class="active no-ch">5.3.2. Asociaciones bidireccionales</a></li>
+   <li id="active"><a href="532_asociaciones_bidireccionales.html" class="active daddy">5.3.2. Asociaciones bidireccionales</a>
+   <ul>
+      <li><a href="ejercicio_con_arraylist_para_guardar_varios_elementos.html" class="no-ch">Ejercicio con ArrayList para guardar varios elementos</a></li>
+   </ul>
+   </li>
    <li><a href="bonus_paso_por_valor_y_por_referencia.html" class="no-ch">BONUS: Paso por valor y por referencia</a></li>
    <li><a href="533_composiciones.html" class="no-ch">5.3.3. Composiciones</a></li>
    <li><a href="534_asociaciones_reflexivas.html" class="no-ch">5.3.4. Asociaciones reflexivas</a></li>
@@ -34,7 +40,7 @@
 </nav>
 <div id='topPagination'>
 <nav class="pagination noprt">
-<a href="531_asociacionesagregaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bonus_paso_por_valor_y_por_referencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="531_asociacionesagregaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_con_arraylist_para_guardar_varios_elementos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 <div id="main-wrapper">
@@ -125,10 +131,21 @@ public void setLibroPrestado(Libro libroPrestado) {
 <div id="ta6_132_2" class="block iDevice_content">
 <div class="pbl-task-description"><p style="text-align: justify;"><span style="background-color: #ffff99;"><strong>Una clase <em>Prestamo</em> podría modelar la relación entre un <em>Libro</em> y un <em>Estudiante</em> cuando se presta un libro. Esto introduce lo que llamamos una asociación ternaria (entre tres clases).</strong></span></p>
 <p style="text-align: justify;">a) Crea una nueva clase <em>Prestamo</em> con los siguientes atributos: uno de tipo <em>Estudiante</em>, otro de tipo <em>Libro</em> y, por último, una de tipo <em>LocalDateTime</em> que contenga la <em>fecha</em> del préstamo realizado. Solamente debe haber un constructor que reciba todos los atributos necesarios por parámetro.</p>
-<p style="text-align: justify;">b) Modifica el método <strong><em>prestar()</em></strong> de la clase <em>Libro</em> para que se cree un objeto de tipo <em>Prestamo</em> cada vez que se realice uno. Inicializa el parámetro <em>fecha</em> con la función <em>LocalDate.now()</em>.</p>
+<p style="text-align: justify;">b) Modifica el método <strong><em>prestar()</em></strong> de la clase <em>Libro</em> para que se cree un objeto de tipo <em>Prestamo</em> cada vez que se realice uno. Inicializa el parámetro <em>fecha</em> con la función <em>LocalDate.now()</em>. <strong>Además de crearlo, haz que el método <em>prestar()</em> devuelva el objeto préstamo generado al programa principal <em>main()</em>.</strong></p>
 <p style="text-align: justify;">c) Añade la clase <em>Prestamo</em> al diagrama de relación entre clases.</p></div>
 </div>
 </div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id12">
+<div class="iDevice emphasis0" >
+<div id="ta12_127_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-carousel">
+<h2>¿Y si quiero prestar varios libros al estudiante? ¿O si quiero reflejar en <em>Editorial</em> todos los libros que tiene pubicados?</h2>
+<p>Ve al <strong><span style="color: #008000;"><em>BONUS</em> </span></strong>sobre <span style="color: #008000;"><strong><em>ArrayList</em> </strong></span>disponible en AULES antes de seguir avanzando.</p>
+</div>
+<p></p></div>
 </div>
 </div>
 </article>
@@ -139,7 +156,7 @@ public void setLibroPrestado(Libro libroPrestado) {
 </div>
 <div id='bottomPagination'>
 <nav class="pagination noprt">
-<a href="531_asociacionesagregaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="bonus_paso_por_valor_y_por_referencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+<a href="531_asociacionesagregaciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ejercicio_con_arraylist_para_guardar_varios_elementos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
 </nav>
 </div>
 </div>
