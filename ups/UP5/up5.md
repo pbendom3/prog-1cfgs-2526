@@ -9,7 +9,7 @@
 
 [2.  Método _toString()_ y uso de elementos _static_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_2_tostrinc_static/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios de ampliación sobre clases/objetos y métodos _static_ :unlock:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_2_tostrinc_static/ejercicio_de_ampliacin_sobre_clasesobjetos_y_mtodos_static.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios :heavy_plus_sign: ampliación sobre clases/objetos y métodos _static_ :unlock:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_2_tostrinc_static/ejercicio_de_ampliacin_sobre_clasesobjetos_y_mtodos_static.html)
 
 [3.  Relaciones simples entre clases](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_3_relaciones/index.html)
 
@@ -21,9 +21,11 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:gift: **BONUS**. _ArrayList_ de objetos (con ejercicios) :pencil:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_4_arraylists/index.html)
 
+![](1710399662387.png)
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Incorporar _ArrayList_ a clases _Estudiante_ y _Editorial_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_3_relaciones/ejercicio_con_arraylist_para_guardar_varios_elementos.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: **Partido de Tenis**: ejercicio :heavy_plus_sign: ampliación de relaciones (agregación+composición+reflexivas)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/partido_tenis/index.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: **Partido de Tenis:tennis:**: ejercicio :heavy_plus_sign: ampliación de relaciones (agregación+composición+reflexivas)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/partido_tenis/index.html)
 
 ---
    
