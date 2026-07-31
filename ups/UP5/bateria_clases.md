@@ -75,7 +75,7 @@ e) Los métodos que se implementarán son:
 - Si devuelve un número entre 20 y 25 (incluidos), significa que esta por debajo de su peso ideal la función devuelve un 0 y,
 - Si devuelve un valor mayor que 25 significa que tiene sobrepeso, la función devuelve un 1. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:information_desk_person: Usa constantes para devolver estos valores.**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:information_desk_person: Usa constantes para devolver estos valores.**
 
 :small_blue_diamond: **_esMayorDeEdad()_**: indica si es mayor de edad, devuelve un _booleano_.
 

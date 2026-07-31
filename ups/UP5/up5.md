@@ -9,7 +9,7 @@
 
 [2.  Método _toString()_ y uso de elementos _static_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_2_tostrinc_static/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios de ampliación sobre clases/objetos y métodos _static_ :unlock:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP3/3_1_arrays/batera_de_ejercicios_sobre_arrays.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:pencil: Batería de ejercicios de ampliación sobre clases/objetos y métodos _static_ :unlock:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_2_tostrinc_static/ejercicio_de_ampliacin_sobre_clasesobjetos_y_mtodos_static.html)
 
 [3.  Relaciones simples entre clases](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP5/5_3_relaciones/index.html)
 
