@@ -1,6 +1,6 @@
 # :blue_book: UP4. Programación modular
 
-<img src="modular.png" width="350" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="modular.png" width="350" height="">
 
 ## :book: Estructura de la unidad 
 
@@ -24,7 +24,7 @@
 
 [4.  Introducción a las pruebas unitarias con _JUnit_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP4/4_5_junit/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="JUnit.png" width="200" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="JUnit.png" width="200" height="">
 
 ---
 
