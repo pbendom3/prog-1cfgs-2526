@@ -52,4 +52,4 @@
 
 > [:computer: Práctico - modelo A - _JJOO DE INVIERNO MILÁN - CORTINA D'AMPEZZO 2026_](EXAMEN_PRÁCTICO_JUEGOS.pdf)
 
-> [:computer: Práctico - modelo B - _BENIDORM FEST_](EXAMENPRÁCTICOUD5_BENIDORM.pdf)
+> [:computer: Práctico - modelo B - _BENIDORM FEST 2026_](EXAMENPRÁCTICOUD5_BENIDORM.pdf)

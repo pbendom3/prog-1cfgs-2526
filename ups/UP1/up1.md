@@ -59,6 +59,6 @@
 
 > [:page_facing_up: Teórico-práctico (escrito) - modelo B](EXAMEN_TEÓRICO_UD1_DAM.pdf)
 
-> [:computer: Práctico - modelo A](EXAMEN_PRÁCTICO_UD1_modeloA.pdf)
+> [:computer: Práctico - modelo A - _ELECCIÓN DE NUEVO PAPA: FUMATA BLANCA_](EXAMEN_PRÁCTICO_UD1_modeloA.pdf)
 
-> [:computer: Práctico - modelo B](EXAMEN_PRÁCTICO_UD1_modeloB.pdf)
+> [:computer: Práctico - modelo B - _ELECCIÓN DE DELGADO_](EXAMEN_PRÁCTICO_UD1_modeloB.pdf)

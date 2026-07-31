@@ -54,6 +54,6 @@
 
 > [:page_facing_up: Teórico-práctico (escrito) - modelo B](EXAMEN_UD2_TEORICO_DAW.pdf)
 
-> [:computer: Práctico - modelo A](EXAMEN_PRÁCTICO_UD2modeloDAW.pdf)
+> [:computer: Práctico - modelo A - _FAKEJACK_ + _Suma de vocales_](EXAMEN_PRÁCTICO_UD2modeloDAW.pdf)
 
-> [:computer: Práctico - modelo B](EXAMEN_PRÁCTICO_UD2_modelo_DAM.pdf)
+> [:computer: Práctico - modelo B - _Nivel de bronca_ + _Suma descendente_](EXAMEN_PRÁCTICO_UD2_modelo_DAM.pdf)
