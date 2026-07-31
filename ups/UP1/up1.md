@@ -20,7 +20,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:a:ctividad. Programando en pseudocódigo con PSeInt](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/a_pseudo/a_pseudo.md)	
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:link: Compute IT - Juego de Programación (pseudocódigo)](https://compute-it.toxicode.fr/)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](cpmpute-it.PNG)
+
+<img src="cpmpute-it.PNG" width="500" height="">
 
 [3. Lenguajes de programación](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP1/1_3_lenguajes/index.html)
 
