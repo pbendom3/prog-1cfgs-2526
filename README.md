@@ -1,4 +1,4 @@
-# Programación - 1º DAW/DAM _(curso 25-26)_
+# :school_satchel: Programación - 1º DAW/DAM _(curso 25-26)_
 
 > Curso auxiliar para el alumnado del módulo de **_Programación_** :man_technologist:
 
