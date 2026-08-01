@@ -32,4 +32,4 @@
 ---
 
 > [!NOTE]
-> :bookmark_tabs: [EXÁMENES DE RECUPERACIÓN](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/RECUS/recus.md)
+> :bookmark_tabs: [**EXÁMENES DE RECUPERACIÓN**](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/RECUS/recus.md)
