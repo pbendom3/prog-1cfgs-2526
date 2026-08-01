@@ -16,5 +16,24 @@
 
 ---
 
-> [!TIP]
+> [!NOTE]
 > :bookmark_tabs: [EXÁMENES DE RECUPERACIÓN](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/RECUS/recus.md)
+
+---
+> [!TIP]
+> **:construction: :bookmark_tabs: SIMULACROS DE EXÁMENES DE RECUPERACIÓN**
+><details>
+> <summary>ORDINARIA</summary>
+>
+>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:computer: <a href="TU_ENLACE_AQUI">Práctico</a> 
+></details>
+><details>
+> <summary>EXTRAORDINARIA</summary>
+>
+>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: <a href="TU_ENLACE_AQUI">Teórico-práctico (escrito)</a>
+>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:computer: <a href="TU_ENLACE_AQUI">Práctico</a> 
+></details>
+
+
+
+
