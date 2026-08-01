@@ -16,6 +16,8 @@
 
 [:gift: **BONUS**. Tipos enumerados (_enum_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_4_enums/index.html)
 
+![](enum_jarroba.jpg)
+
 [4.  Excepciones personalizadas (con ejercicios) :bookmark:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_5_excepciones/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 2. _Copa del Rey_: Mutxamel FC vs Real Madrid :soccer:](7_Práctica_2_Modernización_MUTXAMEL.pdf)
