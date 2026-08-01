@@ -10,7 +10,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 1. Sistema de pago _E-commerce_ :credit_card:](3_Práctica_1_Sistema_pago_ecommerce.pdf)
      
-[3.  Interfaces :handshake::cop: y clases anónimas :bust_in_silhouette: (con ejercicios)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/index.html)
+[3.  Interfaces :handshake: y clases anónimas :bust_in_silhouette: (con ejercicios)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Mejora con clases anónimas el proyecto de _Dispositivos Inteligentes_ :iphone:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html)
 
