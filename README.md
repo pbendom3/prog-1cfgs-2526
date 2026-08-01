@@ -15,11 +15,6 @@
 8.  [Programación gráfica y acceso a datos](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP8/up8.md) `3ºT - 56h` **-- Periodo de Formación en Empresa** :construction_worker:
 
 ---
-
-> [!NOTE]
-> :bookmark_tabs: [EXÁMENES DE RECUPERACIÓN](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/RECUS/recus.md)
-
----
 > [!TIP]
 > **:construction: :bookmark_tabs: SIMULACROS DE EXÁMENES DE RECUPERACIÓN**
 ><details>
@@ -34,6 +29,7 @@
 >  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:computer: <a href="TU_ENLACE_AQUI">Práctico</a> 
 ></details>
 
+---
 
-
-
+> [!NOTE]
+> :bookmark_tabs: [EXÁMENES DE RECUPERACIÓN](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/RECUS/recus.md)
