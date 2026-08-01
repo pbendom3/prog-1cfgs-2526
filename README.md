@@ -20,13 +20,13 @@
 ><details>
 > <summary>ORDINARIA</summary>
 >
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:computer: <a href="TU_ENLACE_AQUI">Práctico</a> 
+>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:computer:** <a href="TU_ENLACE_AQUI">Práctico</a> 
 ></details>
 ><details>
 > <summary>EXTRAORDINARIA</summary>
 >
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:page_facing_up: <a href="TU_ENLACE_AQUI">Teórico-práctico (escrito)</a>
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:computer: <a href="TU_ENLACE_AQUI">Práctico</a> 
+>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:page_facing_up:** <a href="TU_ENLACE_AQUI">Teórico-práctico (escrito)</a>
+>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**:computer:** <a href="TU_ENLACE_AQUI">Práctico</a> 
 ></details>
 
 ---
