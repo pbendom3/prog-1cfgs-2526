@@ -2,7 +2,7 @@
 
 > Curso auxiliar para el alumnado del módulo de **_Programación_** :man_technologist:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="curso-JAVA.jpg" width="700" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="curso-JAVA.jpg" width="600" height="">
 
 ## :books: Unidades
 1.  [Introducción a la programación y al lenguaje _Java_](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP1/up1.md) `1ºT - 28h`
