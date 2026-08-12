@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Aplicación de consola que simula una gestión de reservas de pistas deportivas | 7.3. Métodos útiles </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Patricia Benavente" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">7.3. Métodos útiles</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">7.3. Métodos útiles para la manipulación de colecciones</a></li>
+   <li class="current-page-parent"><a href="731_iteradores.html" class="current-page-parent daddy">7.3.1. Iteradores</a>
+   <ul>
+      <li id="active"><a href="aplicacin_de_consola_que_simula_una_gestin_de_reservas_de_pistas_deportivas.html" class="active no-ch">Aplicación de consola que simula una gestión de reservas de pistas deportivas</a></li>
+      <li><a href="listiterator.html" class="no-ch">ListIterator</a></li>
+   </ul>
+   </li>
+   <li><a href="732_comparadores.html" class="daddy">7.3.2. Comparadores</a>
+   <ul class="other-section">
+      <li><a href="ordenacin_de_mapas.html" class="no-ch">Ordenación de mapas</a></li>
+   </ul>
+   </li>
+   <li><a href="733_inmutabilidad_en_java.html" class="no-ch">7.3.3. Inmutabilidad en Java</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="731_iteradores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="listiterator.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Aplicación de consola que simula una gestión de reservas de pistas deportivas</h1></header>
+<article class="iDevice_wrapper pblIdevice em_iDevice em_iDevice_activity" id="id12">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Actividad</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_127_2" class="block iDevice_content">
+<div class="pbl-task-description"><p style="text-align: justify;">Las indicaciones que se dan son las siguientes:</p>
+<ul style="text-align: justify;">
+<li>Se dispone de <strong>Pistas</strong> de pádel y de tenis. Todas las pistas tienen atributos comunes, como el <strong>tipo</strong> de techado (<em>indoor</em> o exterior) y un <strong>identificador</strong>.</li>
+<li>Cada subtipo de pista tiene atributos propios. Por ejemplo:
+<ul>
+<li>Las pistas de <b>Tenis </b>pueden tener <em><strong>superficie</strong> </em>de tierra batida, cemento o hierba.</li>
+<li>Las pistas de <strong>Pádel</strong> pueden tener <em><strong>paredes</strong> </em>de cristal o de cemento.</li>
+</ul>
+</li>
+<li>Se dispone de una lista de <strong>Usuarios</strong> con <em><strong>nombre</strong> </em>e <em><strong>id</strong> </em>registrados en la aplicación.</li>
+<li>Las <strong>Reservas</strong> incluyen: el <strong><em>usuario</em> </strong>que ha reservado la pista, la <strong><em>pista</em> </strong>reservada (de pádel o tenis) y la <strong><em>fecha-hora</em></strong> de la partida. Se recomienda el uso de la clase <strong><em>LocalDateTime</em> </strong>para facilitar el trabajo con fechas:</li>
+</ul>
+<div class="highlighted-code code-style-2 language-java line-numbers" style="text-align: justify;">
+<div>
+<pre><code>LocalDateTime ejemplo = LocalDateTime.of(2026, 04, 1, 19, 50);
+LocalDateTime ahora = LocalDateTime.now();</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">a) Dibuja un diagrama de clases UML para representar el problema.</p>
+<p style="text-align: justify;">b) Implementa las clases de tu diagrama.</p>
+<p style="text-align: justify;">c)  Implementa una función que elimine todas las reservas asociadas a pistas de un tipo concreto (pádel o pickelball), suponiendo que dispones de una lista de objetos <strong>Reserva</strong>. </p>
+<p style="text-align: justify;">d) ¿Qué estructura de datos utilizarías para mejorar el almacenamiento de las reservas sabiendo que las búsquedas de reservas habituales se hacen por <strong>Usuario? </strong>Explica tu respuesta.</p>
+<p style="text-align: justify;">e) Implementa un método para la búsqueda de reservas por <strong>Usuario</strong> según la estructura que hayas elegido en el apartado anterior. El método debe devolver una lista con todas las reservas el usuario.</p>
+<p style="text-align: justify;">f) Implementa un método para la generación de una <strong>Reserva </strong>y su inserción a una lista -o en la estructura elegida en el apartado <em>d</em>)-, que lance una <strong>excepción personalizada</strong> si un <strong>Usuario</strong> ya tiene una <strong>Pista</strong> reservada en esa <strong>misma hora</strong> (conflicto de reservas). Genera también el código de la excepción.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="731_iteradores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="listiterator.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>

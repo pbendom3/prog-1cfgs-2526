@@ -71,7 +71,7 @@
   <string role="key" value="_intendedEndUserRoleType"></string>
   <unicode value=""></unicode>
   <string role="key" value="_isChanged"></string>
-  <bool value="0"></bool>
+  <bool value="1"></bool>
   <string role="key" value="_isTemplate"></string>
   <bool value="0"></bool>
   <string role="key" value="_lang"></string>
@@ -87,9 +87,9 @@
   <string role="key" value="_name"></string>
   <unicode value="7_3_iteradores_comparadores"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="12"></int>
+  <int value="13"></int>
   <string role="key" value="_nextNodeId"></string>
-  <int value="7"></int>
+  <int value="8"></int>
   <string role="key" value="_nodeIdDict"></string>
   <dictionary>
    <unicode role="key" value="0"></unicode>
@@ -599,7 +599,7 @@ public class IteratorObjetos {
                      <string role="key" value="_storageName"></string>
                      <string value="img0.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img0.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img0.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="089f9d82204f5fc3700ebf7fdfcfca62"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -651,7 +651,7 @@ public class IteratorObjetos {
                      <string role="key" value="_storageName"></string>
                      <string value="img1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="089392aa2bffcd83547ac5182d6cdfea"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -703,7 +703,7 @@ public class IteratorObjetos {
                      <string role="key" value="_storageName"></string>
                      <string value="img2.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img2.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img2.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="04c3ec21dbd077e540140a6e924c938a"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -755,7 +755,7 @@ public class IteratorObjetos {
                      <string role="key" value="_storageName"></string>
                      <string value="img3.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img3.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img3.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="cb3095d3c4de5a4c54a7277eda1c0b45"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -807,7 +807,7 @@ public class IteratorObjetos {
                      <string role="key" value="_storageName"></string>
                      <string value="img5.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img5.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img5.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="19d9245c561e88f2d47a42a346ccd34b"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -859,7 +859,7 @@ public class IteratorObjetos {
                      <string role="key" value="_storageName"></string>
                      <string value="img6.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img6.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img6.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="874211feb81cb03c925e9d7829562972"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -911,7 +911,7 @@ public class IteratorObjetos {
                      <string role="key" value="_storageName"></string>
                      <string value="img7.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img7.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img7.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="60caba1d52fd8fa15e4799b305510048"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -963,7 +963,7 @@ public class IteratorObjetos {
                      <string role="key" value="_storageName"></string>
                      <string value="img8.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img8.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img8.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="25d5890704a038060ef84765ffbbc497"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1015,7 +1015,7 @@ public class IteratorObjetos {
                      <string role="key" value="_storageName"></string>
                      <string value="iterador2.gif"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\iterador2.gif"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\iterador2.gif"></string>
                      <string role="key" value="checksum"></string>
                      <string value="46495f3ffbe93255504d05573ca080b0"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1106,10 +1106,185 @@ public class IteratorObjetos {
          <instance class="exe.engine.node.Node" reference="19">
           <dictionary>
            <string role="key" value="_title"></string>
-           <unicode value="ListIterator"></unicode>
+           <unicode value="Aplicación de consola que simula una gestión de reservas de pistas deportivas"></unicode>
            <string role="key" value="idevices"></string>
            <list>
             <instance class="exe.engine.jsidevice.JsIdevice" reference="17">
+             <dictionary>
+              <string role="key" value="_title"></string>
+              <unicode value="Actividad"></unicode>
+              <string role="key" value="_attributes"></string>
+              <list>
+               <tuple>
+                <string value="title"></string>
+                <list>
+                 <string value="Title"></string>
+                 <int value="0"></int>
+                 <int value="0"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="category"></string>
+                <list>
+                 <string value="Category"></string>
+                 <int value="0"></int>
+                 <int value="1"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="css-class"></string>
+                <list>
+                 <string value="CSS class"></string>
+                 <int value="0"></int>
+                 <int value="2"></int>
+                </list>
+               </tuple>
+               <tuple>
+                <string value="icon"></string>
+                <list>
+                 <string value="Icon"></string>
+                 <int value="0"></int>
+                 <int value="3"></int>
+                </list>
+               </tuple>
+              </list>
+              <string role="key" value="_author"></string>
+              <string value=""></string>
+              <string role="key" value="_iDeviceDir"></string>
+              <string value="pbl-tools"></string>
+              <string role="key" value="_purpose"></string>
+              <string value=""></string>
+              <string role="key" value="_tip"></string>
+              <string value=""></string>
+              <string role="key" value="_typeName"></string>
+              <unicode value="Task"></unicode>
+              <string role="key" value="_valid"></string>
+              <bool value="1"></bool>
+              <string role="key" value="class_"></string>
+              <unicode value="pbl"></unicode>
+              <string role="key" value="edit"></string>
+              <bool value="0"></bool>
+              <string role="key" value="emphasis"></string>
+              <int value="1"></int>
+              <string role="key" value="exe.engine.jsidevice.JsIdevice.persistenceVersion"></string>
+              <int value="1"></int>
+              <string role="key" value="fields"></string>
+              <list>
+               <instance class="exe.engine.field.TextAreaField" reference="18">
+                <dictionary>
+                 <string role="key" value="_id"></string>
+                 <unicode value="127_2"></unicode>
+                 <string role="key" value="_idevice"></string>
+                 <reference key="17"></reference>
+                 <string role="key" value="_instruc"></string>
+                 <string value=""></string>
+                 <string role="key" value="_name"></string>
+                 <string value=""></string>
+                 <string role="key" value="anchor_names"></string>
+                 <list></list>
+                 <string role="key" value="content_w_resourcePaths"></string>
+                 <unicode content="true" value="&lt;div class=&quot;pbl-task-description&quot;&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;Las indicaciones que se dan son las siguientes:&lt;/p&gt;
+&lt;ul style=&quot;text-align: justify;&quot;&gt;
+&lt;li&gt;Se dispone de &lt;strong&gt;Pistas&lt;/strong&gt; de pádel y de tenis. Todas las pistas tienen atributos comunes, como el &lt;strong&gt;tipo&lt;/strong&gt; de techado (&lt;em&gt;indoor&lt;/em&gt; o exterior) y un &lt;strong&gt;identificador&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Cada subtipo de pista tiene atributos propios. Por ejemplo:
+&lt;ul&gt;
+&lt;li&gt;Las pistas de &lt;b&gt;Tenis &lt;/b&gt;pueden tener &lt;em&gt;&lt;strong&gt;superficie&lt;/strong&gt; &lt;/em&gt;de tierra batida, cemento o hierba.&lt;/li&gt;
+&lt;li&gt;Las pistas de &lt;strong&gt;Pádel&lt;/strong&gt; pueden tener &lt;em&gt;&lt;strong&gt;paredes&lt;/strong&gt; &lt;/em&gt;de cristal o de cemento.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Se dispone de una lista de &lt;strong&gt;Usuarios&lt;/strong&gt; con &lt;em&gt;&lt;strong&gt;nombre&lt;/strong&gt; &lt;/em&gt;e &lt;em&gt;&lt;strong&gt;id&lt;/strong&gt; &lt;/em&gt;registrados en la aplicación.&lt;/li&gt;
+&lt;li&gt;Las &lt;strong&gt;Reservas&lt;/strong&gt; incluyen: el &lt;strong&gt;&lt;em&gt;usuario&lt;/em&gt; &lt;/strong&gt;que ha reservado la pista, la &lt;strong&gt;&lt;em&gt;pista&lt;/em&gt; &lt;/strong&gt;reservada (de pádel o tenis) y la &lt;strong&gt;&lt;em&gt;fecha-hora&lt;/em&gt;&lt;/strong&gt; de la partida. Se recomienda el uso de la clase &lt;strong&gt;&lt;em&gt;LocalDateTime&lt;/em&gt; &lt;/strong&gt;para facilitar el trabajo con fechas:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot; style=&quot;text-align: justify;&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;LocalDateTime ejemplo = LocalDateTime.of(2026, 04, 1, 19, 50);
+LocalDateTime ahora = LocalDateTime.now();&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;a) Dibuja un diagrama de clases UML para representar el problema.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;b) Implementa las clases de tu diagrama.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;c)  Implementa una función que elimine todas las reservas asociadas a pistas de un tipo concreto (pádel o pickelball), suponiendo que dispones de una lista de objetos &lt;strong&gt;Reserva&lt;/strong&gt;. &lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;d) ¿Qué estructura de datos utilizarías para mejorar el almacenamiento de las reservas sabiendo que las búsquedas de reservas habituales se hacen por &lt;strong&gt;Usuario? &lt;/strong&gt;Explica tu respuesta.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;e) Implementa un método para la búsqueda de reservas por &lt;strong&gt;Usuario&lt;/strong&gt; según la estructura que hayas elegido en el apartado anterior. El método debe devolver una lista con todas las reservas el usuario.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;f) Implementa un método para la generación de una &lt;strong&gt;Reserva &lt;/strong&gt;y su inserción a una lista -o en la estructura elegida en el apartado &lt;em&gt;d&lt;/em&gt;)-, que lance una &lt;strong&gt;excepción personalizada&lt;/strong&gt; si un &lt;strong&gt;Usuario&lt;/strong&gt; ya tiene una &lt;strong&gt;Pista&lt;/strong&gt; reservada en esa &lt;strong&gt;misma hora&lt;/strong&gt; (conflicto de reservas). Genera también el código de la excepción.&lt;/p&gt;&lt;/div&gt;"></unicode>
+                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+                 <int value="4"></int>
+                 <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+                 <int value="2"></int>
+                 <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+                 <int value="3"></int>
+                 <string role="key" value="htmlTag"></string>
+                 <string value="div"></string>
+                 <string role="key" value="images"></string>
+                 <instance class="exe.engine.galleryidevice.GalleryImages">
+                  <dictionary>
+                   <string role="key" value=".listitems"></string>
+                   <list></list>
+                   <string role="key" value="idevice"></string>
+                   <reference key="18"></reference>
+                  </dictionary>
+                 </instance>
+                 <string role="key" value="intlinks_to_anchors"></string>
+                 <dictionary></dictionary>
+                 <string role="key" value="nextImageId"></string>
+                 <int value="0"></int>
+                 <string role="key" value="parentNode"></string>
+                 <none></none>
+                </dictionary>
+               </instance>
+              </list>
+              <string role="key" value="icon"></string>
+              <unicode value="activity"></unicode>
+              <string role="key" value="id"></string>
+              <unicode value="12"></unicode>
+              <string role="key" value="ideviceCategory"></string>
+              <unicode value="Text and Tasks"></unicode>
+              <string role="key" value="lastIdevice"></string>
+              <bool value="0"></bool>
+              <string role="key" value="nextFieldId"></string>
+              <int value="3"></int>
+              <string role="key" value="originalicon"></string>
+              <unicode value="activity"></unicode>
+              <string role="key" value="parentNode"></string>
+              <reference key="19"></reference>
+              <string role="key" value="systemResources"></string>
+              <list></list>
+              <string role="key" value="undo"></string>
+              <bool value="1"></bool>
+              <string role="key" value="userResources"></string>
+              <list></list>
+              <string role="key" value="version"></string>
+              <int value="0"></int>
+             </dictionary>
+            </instance>
+           </list>
+           <string role="key" value="_id"></string>
+           <unicode value="7"></unicode>
+           <string role="key" value="_package"></string>
+           <reference key="4"></reference>
+           <string role="key" value="anchor_fields"></string>
+           <list></list>
+           <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exportType"></string>
+           <string value="website"></string>
+           <string role="key" value="last_full_node_path"></string>
+           <string value="exe-node:7.3.%20M%C3%A9todos%20%C3%BAtiles%20para%20la%20manipulaci%C3%B3n%20de%20colecciones:7.3.1.%20Iteradores:Aplicaci%C3%B3n%20de%20consola%20que%20simula%20una%20gesti%C3%B3n%20de%20reservas%20de%20pistas%20deportivas"></string>
+           <string role="key" value="parent"></string>
+           <reference key="7"></reference>
+           <string role="key" value="top_anchors_linked_from_fields"></string>
+           <list></list>
+           <string role="key" value="children"></string>
+           <list></list>
+          </dictionary>
+         </instance>
+         <instance class="exe.engine.node.Node" reference="22">
+          <dictionary>
+           <string role="key" value="_title"></string>
+           <unicode value="ListIterator"></unicode>
+           <string role="key" value="idevices"></string>
+           <list>
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="20">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value=""></unicode>
@@ -1170,12 +1345,12 @@ public class IteratorObjetos {
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="18">
+               <instance class="exe.engine.field.TextAreaField" reference="21">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="132_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="17"></reference>
+                 <reference key="20"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -1401,16 +1576,16 @@ public class ListIteratorIndices {
                       <string role="key" value="_id"></string>
                       <unicode value="7_132_2.17"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="20">
+                      <instance class="exe.engine.resource.Resource" reference="23">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="17"></reference>
+                        <reference key="20"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="4"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img1.1.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img1.1.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img1.1.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="6d0db542a3c8da02b9ef4e7aefecae5f"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1422,7 +1597,7 @@ public class ListIteratorIndices {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="18"></reference>
+                      <reference key="21"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -1453,16 +1628,16 @@ public class ListIteratorIndices {
                       <string role="key" value="_id"></string>
                       <unicode value="7_132_2.18"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="21">
+                      <instance class="exe.engine.resource.Resource" reference="24">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="17"></reference>
+                        <reference key="20"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="4"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img2.1.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img2.1.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img2.1.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="8ff2eba4a7ca22576bb78c4e49634801"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1474,7 +1649,7 @@ public class ListIteratorIndices {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="18"></reference>
+                      <reference key="21"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -1505,16 +1680,16 @@ public class ListIteratorIndices {
                       <string role="key" value="_id"></string>
                       <unicode value="7_132_2.19"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="22">
+                      <instance class="exe.engine.resource.Resource" reference="25">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="17"></reference>
+                        <reference key="20"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="4"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img3.1.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img3.1.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img3.1.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="961b588b9771bb509c45184fd891d8b1"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1526,7 +1701,7 @@ public class ListIteratorIndices {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="18"></reference>
+                      <reference key="21"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -1557,16 +1732,16 @@ public class ListIteratorIndices {
                       <string role="key" value="_id"></string>
                       <unicode value="7_132_2.20"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="23">
+                      <instance class="exe.engine.resource.Resource" reference="26">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="17"></reference>
+                        <reference key="20"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="4"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img3.2.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img3.2.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img3.2.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="40ff568057457b45c7e958a48229e0bf"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1578,7 +1753,7 @@ public class ListIteratorIndices {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="18"></reference>
+                      <reference key="21"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -1589,7 +1764,7 @@ public class ListIteratorIndices {
                     </instance>
                    </list>
                    <string role="key" value="idevice"></string>
-                   <reference key="18"></reference>
+                   <reference key="21"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -1597,7 +1772,7 @@ public class ListIteratorIndices {
                  <string role="key" value="nextImageId"></string>
                  <int value="21"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="19"></reference>
+                 <reference key="22"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -1614,23 +1789,23 @@ public class ListIteratorIndices {
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="19"></reference>
+              <reference key="22"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
               <bool value="1"></bool>
               <string role="key" value="userResources"></string>
               <list>
-               <reference key="20"></reference>
-               <reference key="21"></reference>
-               <reference key="22"></reference>
                <reference key="23"></reference>
+               <reference key="24"></reference>
+               <reference key="25"></reference>
+               <reference key="26"></reference>
               </list>
               <string role="key" value="version"></string>
               <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="24">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="27">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value="Ejercicio"></unicode>
@@ -1691,12 +1866,12 @@ public class ListIteratorIndices {
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="25">
+               <instance class="exe.engine.field.TextAreaField" reference="28">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="127_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="24"></reference>
+                 <reference key="27"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -1727,7 +1902,7 @@ public class ListIteratorIndices {
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="25"></reference>
+                   <reference key="28"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -1735,7 +1910,7 @@ public class ListIteratorIndices {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="19"></reference>
+                 <reference key="22"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -1752,7 +1927,7 @@ public class ListIteratorIndices {
               <string role="key" value="originalicon"></string>
               <unicode value="activity"></unicode>
               <string role="key" value="parentNode"></string>
-              <reference key="19"></reference>
+              <reference key="22"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -1763,7 +1938,7 @@ public class ListIteratorIndices {
               <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="26">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="29">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value="Acepta el reto: Teclado estropeado (144)"></unicode>
@@ -1824,12 +1999,12 @@ public class ListIteratorIndices {
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="27">
+               <instance class="exe.engine.field.TextAreaField" reference="30">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="133_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="26"></reference>
+                 <reference key="29"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -1855,7 +2030,7 @@ public class ListIteratorIndices {
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="27"></reference>
+                   <reference key="30"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -1863,7 +2038,7 @@ public class ListIteratorIndices {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="19"></reference>
+                 <reference key="22"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -1880,7 +2055,7 @@ public class ListIteratorIndices {
               <string role="key" value="originalicon"></string>
               <unicode value="activity"></unicode>
               <string role="key" value="parentNode"></string>
-              <reference key="19"></reference>
+              <reference key="22"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -1915,13 +2090,13 @@ public class ListIteratorIndices {
         </list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="30">
+      <instance class="exe.engine.node.Node" reference="33">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="7.3.2. Comparadores"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="28">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="31">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -1982,12 +2157,12 @@ public class ListIteratorIndices {
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="29">
+            <instance class="exe.engine.field.TextAreaField" reference="32">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="131_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="28"></reference>
+              <reference key="31"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2244,16 +2419,16 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
                    <string role="key" value="_id"></string>
                    <unicode value="6_131_2.6"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="31">
+                   <instance class="exe.engine.resource.Resource" reference="34">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="28"></reference>
+                     <reference key="31"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="4"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="comparable.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\comparable.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\comparable.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="767a3fa917fe204e524a00f48a3bae96"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2265,7 +2440,7 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="29"></reference>
+                   <reference key="32"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -2296,16 +2471,16 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
                    <string role="key" value="_id"></string>
                    <unicode value="6_131_2.7"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="32">
+                   <instance class="exe.engine.resource.Resource" reference="35">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="28"></reference>
+                     <reference key="31"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="4"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="img0.1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\img0.1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\img0.1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="3856996324969dfb3a70255f3a39d613"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2317,7 +2492,7 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="29"></reference>
+                   <reference key="32"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -2348,16 +2523,16 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
                    <string role="key" value="_id"></string>
                    <unicode value="6_131_2.8"></unicode>
                    <string role="key" value="_imageResource"></string>
-                   <instance class="exe.engine.resource.Resource" reference="33">
+                   <instance class="exe.engine.resource.Resource" reference="36">
                     <dictionary>
                      <string role="key" value="_idevice"></string>
-                     <reference key="28"></reference>
+                     <reference key="31"></reference>
                      <string role="key" value="_package"></string>
                      <reference key="4"></reference>
                      <string role="key" value="_storageName"></string>
                      <string value="javacomparator4.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp4lzmf8\\javacomparator4.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpifmaag\\javacomparator4.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="2769c0cd09f882a6ab6b8b1dbd230884"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2369,7 +2544,7 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
                     </dictionary>
                    </instance>
                    <string role="key" value="_parent"></string>
-                   <reference key="29"></reference>
+                   <reference key="32"></reference>
                    <string role="key" value="_thumbnailResource"></string>
                    <none></none>
                    <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -2380,7 +2555,7 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
                  </instance>
                 </list>
                 <string role="key" value="idevice"></string>
-                <reference key="29"></reference>
+                <reference key="32"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2388,7 +2563,7 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
               <string role="key" value="nextImageId"></string>
               <int value="9"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="30"></reference>
+              <reference key="33"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2405,16 +2580,16 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="30"></reference>
+           <reference key="33"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
            <bool value="1"></bool>
            <string role="key" value="userResources"></string>
            <list>
-            <reference key="31"></reference>
-            <reference key="32"></reference>
-            <reference key="33"></reference>
+            <reference key="34"></reference>
+            <reference key="35"></reference>
+            <reference key="36"></reference>
            </list>
            <string role="key" value="version"></string>
            <int value="0"></int>
@@ -2439,13 +2614,13 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
         <list></list>
         <string role="key" value="children"></string>
         <list>
-         <instance class="exe.engine.node.Node" reference="36">
+         <instance class="exe.engine.node.Node" reference="39">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="Ordenación de mapas"></unicode>
            <string role="key" value="idevices"></string>
            <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="34">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="37">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value=""></unicode>
@@ -2506,12 +2681,12 @@ public class PersonaComparator implements Comparator&amp;lt;Persona&amp;gt; {
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="35">
+               <instance class="exe.engine.field.TextAreaField" reference="38">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="127_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="34"></reference>
+                 <reference key="37"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -2601,7 +2776,7 @@ System.out.println(treeMap);  // {Juan=30, Carlos=35, Ana=25}  (ordenado en orde
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="35"></reference>
+                   <reference key="38"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -2609,7 +2784,7 @@ System.out.println(treeMap);  // {Juan=30, Carlos=35, Ana=25}  (ordenado en orde
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="36"></reference>
+                 <reference key="39"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -2626,7 +2801,7 @@ System.out.println(treeMap);  // {Juan=30, Carlos=35, Ana=25}  (ordenado en orde
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="36"></reference>
+              <reference key="39"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -2651,7 +2826,7 @@ System.out.println(treeMap);  // {Juan=30, Carlos=35, Ana=25}  (ordenado en orde
            <string role="key" value="last_full_node_path"></string>
            <string value="exe-node:7.3.%20M%C3%A9todos%20%C3%BAtiles%20para%20la%20manipulaci%C3%B3n%20de%20colecciones:7.3.2.%20Comparadores:Ordenaci%C3%B3n%20de%20mapas"></string>
            <string role="key" value="parent"></string>
-           <reference key="30"></reference>
+           <reference key="33"></reference>
            <string role="key" value="top_anchors_linked_from_fields"></string>
            <list></list>
            <string role="key" value="children"></string>
@@ -2661,13 +2836,13 @@ System.out.println(treeMap);  // {Juan=30, Carlos=35, Ana=25}  (ordenado en orde
         </list>
        </dictionary>
       </instance>
-      <instance class="exe.engine.node.Node" reference="39">
+      <instance class="exe.engine.node.Node" reference="42">
        <dictionary>
         <string role="key" value="_title"></string>
         <unicode value="7.3.3. Inmutabilidad en Java"></unicode>
         <string role="key" value="idevices"></string>
         <list>
-         <instance class="exe.engine.jsidevice.JsIdevice" reference="37">
+         <instance class="exe.engine.jsidevice.JsIdevice" reference="40">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value=""></unicode>
@@ -2728,12 +2903,12 @@ System.out.println(treeMap);  // {Juan=30, Carlos=35, Ana=25}  (ordenado en orde
            <int value="1"></int>
            <string role="key" value="fields"></string>
            <list>
-            <instance class="exe.engine.field.TextAreaField" reference="38">
+            <instance class="exe.engine.field.TextAreaField" reference="41">
              <dictionary>
               <string role="key" value="_id"></string>
               <unicode value="129_2"></unicode>
               <string role="key" value="_idevice"></string>
-              <reference key="37"></reference>
+              <reference key="40"></reference>
               <string role="key" value="_instruc"></string>
               <string value=""></string>
               <string role="key" value="_name"></string>
@@ -2851,7 +3026,7 @@ nombres = new ArrayList&amp;lt;&amp;gt;(); // error: no se puede reasignar una l
                 <string role="key" value=".listitems"></string>
                 <list></list>
                 <string role="key" value="idevice"></string>
-                <reference key="38"></reference>
+                <reference key="41"></reference>
                </dictionary>
               </instance>
               <string role="key" value="intlinks_to_anchors"></string>
@@ -2859,7 +3034,7 @@ nombres = new ArrayList&amp;lt;&amp;gt;(); // error: no se puede reasignar una l
               <string role="key" value="nextImageId"></string>
               <int value="0"></int>
               <string role="key" value="parentNode"></string>
-              <reference key="39"></reference>
+              <reference key="42"></reference>
              </dictionary>
             </instance>
            </list>
@@ -2876,7 +3051,7 @@ nombres = new ArrayList&amp;lt;&amp;gt;(); // error: no se puede reasignar una l
            <string role="key" value="originalicon"></string>
            <string value=""></string>
            <string role="key" value="parentNode"></string>
-           <reference key="39"></reference>
+           <reference key="42"></reference>
            <string role="key" value="systemResources"></string>
            <list></list>
            <string role="key" value="undo"></string>
@@ -2912,15 +3087,17 @@ nombres = new ArrayList&amp;lt;&amp;gt;(); // error: no se puede reasignar una l
     </dictionary>
    </instance>
    <unicode role="key" value="1"></unicode>
-   <reference key="30"></reference>
+   <reference key="33"></reference>
    <unicode role="key" value="2"></unicode>
    <reference key="7"></reference>
    <unicode role="key" value="3"></unicode>
-   <reference key="19"></reference>
+   <reference key="22"></reference>
    <unicode role="key" value="4"></unicode>
-   <reference key="39"></reference>
+   <reference key="42"></reference>
    <unicode role="key" value="6"></unicode>
-   <reference key="36"></reference>
+   <reference key="39"></reference>
+   <unicode role="key" value="7"></unicode>
+   <reference key="19"></reference>
   </dictionary>
   <string role="key" value="_objectives"></string>
   <unicode value=""></unicode>
@@ -2931,7 +3108,7 @@ nombres = new ArrayList&amp;lt;&amp;gt;(); // error: no se puede reasignar una l
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="3"></reference>
+  <reference key="19"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>
@@ -3987,15 +4164,15 @@ nombres = new ArrayList&amp;lt;&amp;gt;(); // error: no se puede reasignar una l
    </list>
    <string role="key" value="2769c0cd09f882a6ab6b8b1dbd230884"></string>
    <list>
-    <reference key="33"></reference>
+    <reference key="36"></reference>
    </list>
    <string role="key" value="3856996324969dfb3a70255f3a39d613"></string>
    <list>
-    <reference key="32"></reference>
+    <reference key="35"></reference>
    </list>
    <string role="key" value="40ff568057457b45c7e958a48229e0bf"></string>
    <list>
-    <reference key="23"></reference>
+    <reference key="26"></reference>
    </list>
    <string role="key" value="46495f3ffbe93255504d05573ca080b0"></string>
    <list>
@@ -4007,11 +4184,11 @@ nombres = new ArrayList&amp;lt;&amp;gt;(); // error: no se puede reasignar una l
    </list>
    <string role="key" value="6d0db542a3c8da02b9ef4e7aefecae5f"></string>
    <list>
-    <reference key="20"></reference>
+    <reference key="23"></reference>
    </list>
    <string role="key" value="767a3fa917fe204e524a00f48a3bae96"></string>
    <list>
-    <reference key="31"></reference>
+    <reference key="34"></reference>
    </list>
    <string role="key" value="874211feb81cb03c925e9d7829562972"></string>
    <list>
@@ -4019,11 +4196,11 @@ nombres = new ArrayList&amp;lt;&amp;gt;(); // error: no se puede reasignar una l
    </list>
    <string role="key" value="8ff2eba4a7ca22576bb78c4e49634801"></string>
    <list>
-    <reference key="21"></reference>
+    <reference key="24"></reference>
    </list>
    <string role="key" value="961b588b9771bb509c45184fd891d8b1"></string>
    <list>
-    <reference key="22"></reference>
+    <reference key="25"></reference>
    </list>
    <string role="key" value="cb3095d3c4de5a4c54a7277eda1c0b45"></string>
    <list>

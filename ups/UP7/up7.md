@@ -8,13 +8,13 @@
 
 [1.  Colecciones - listas (_List_), pilas (_Stack_), colas (_Queue_) y conjuntos (_Set_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP7/7_1_colecciones/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Colas. La lista de la compra :bread::egg::green_apple:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Colas. La lista de la compra :bread::egg::green_apple:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP7/7_1_colecciones/clase_linkedlist.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Conjuntos. Las tareas del funcionario :clipboard::man: + ejercicio _Set_ (_ProgramaMe_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Conjuntos. Las tareas del funcionario :clipboard::man: + ejercicio _Set_ (_ProgramaMe_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP7/7_1_colecciones/ejercicios_de_colecciones_haciendo_uso_de_objetos.html)
 
 [2.  Mapas o diccionarios: interfaz _Map_ (_clave-valor_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP7/mapitas/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Diccionario _Español - Inglés_ :notebook_with_decorative_cover:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Diccionario _Español - Inglés_ :notebook_with_decorative_cover:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP7/mapitas/index.html)
 
 [3.  Elementos útiles :ok_hand: para la manipulación de estructuras (iteradores, comparadores e inmutabilidad)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP7/7_3_metodos_utiles/index.html)
 
