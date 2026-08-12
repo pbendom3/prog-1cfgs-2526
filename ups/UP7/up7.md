@@ -18,17 +18,17 @@
 
 [3.  Elementos útiles :ok_hand: para la manipulación de estructuras (iteradores, comparadores e inmutabilidad)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP7/7_3_metodos_utiles/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Aplicación de consola que simula una gestión de reservas de pistas deportivas :basketball::soccer::tennis:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Aplicación de consola que simula una gestión de reservas de pistas deportivas :basketball::soccer::tennis:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP7/7_3_metodos_utiles/aplicacin_de_consola_que_simula_una_gestin_de_reservas_de_pistas_deportivas.html)
 
 [🎁 **BONUS**. Manipulación de cadenas de texto con _StringBuilder_](5_BONUS_StringBuilder.pdf)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Carrera de autobuses de _TikTok_ :bus::bus:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Carrera de autobuses de _TikTok_ :bus::bus:](5_BONUS_StringBuilder.pdf)
 
 ---
 
-[:triangular_flag_on_post: Práctica. Servicio de compra _online_ en MERCADAW :articulated_lorry:](7_Práctica_2_Modernización_MUTXAMEL.pdf)
+[:triangular_flag_on_post: Práctica. Servicio de compra _online_ en MERCADAW :articulated_lorry:](4_MERCADAW.pdf)
 
-[:muscle: Problemas de _AceptaElReto_ a resolver durante la unidad](7_Práctica_2_Modernización_MUTXAMEL.pdf)
+[:muscle: Problemas de _AceptaElReto_ a resolver durante la unidad](https://github.com/pbendom3/prog-1cfgs-2526/blob/main/ups/UP7/aceptaelreto.md)
 
 ---
 
@@ -40,9 +40,9 @@
 
 ## :small_red_triangle_down: EXÁMENES
 
-> [:page_facing_up: Teórico-práctico (escrito)](EXAMENTEÓRICOUD3DAW.pdf)
+> [:page_facing_up: Teórico-práctico (escrito)](6_EXAMEN_TEORICO_UD7.pdf)
 
-> [:computer: Práctico - _RECOLECTANDO OLIVAS_](EXAMENPRÁCTICOUD3.pdf)
+> [:computer: Práctico - _LISTA EPSTEIN_](7_EXAMEN_PRECTICO_UD7.pdf)
 
 ---
 
