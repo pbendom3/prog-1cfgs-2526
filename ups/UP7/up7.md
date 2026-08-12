@@ -1,6 +1,6 @@
 # :blue_book: UP7. Estructuras dinámicas de datos y programación funcional
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="estructuras.png" width="800" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="LISTA-ENLAZADA.png" width="800" height="">
 
 ## :book: Estructura de la unidad
 
@@ -10,7 +10,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Colas. La lista de la compra :bread::egg::green_apple:](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Conjuntos. Las tareas del funcionario :man: + ejercicio _Set_ (_ProgramaMe_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Conjuntos. Las tareas del funcionario :clipboard::man: + ejercicio _Set_ (_ProgramaMe_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP6/6_3_interfaces_clases_anonimas/mejora_con_clases_annimas_el_proyecto_de_dispositivos_inteligentes.html)
 
 [2.  Mapas o diccionarios: interfaz _Map_ (_clave-valor_)](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP7/mapitas/index.html)
 
