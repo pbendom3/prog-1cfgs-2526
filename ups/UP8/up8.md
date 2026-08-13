@@ -33,7 +33,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Acceso a _JSON to POJO_ (formato _JSON_ a estructura de clase _Java_)](https://json2csharp.com/code-converters/json-to-pojo)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 4. _JSON_ y APIs](https://pbendom3.github.io/prog-1cfgs-daw/ups/UP8/8_4_serializacion_json/bonus_consumiendo_apis_externas_desde_java.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 4. _JSON_ y APIs](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP8/8_4_serializacion_json/bonus_consumiendo_apis_externas_desde_java.html)
 
 [5. Acceso a bases de datos _NoSQL_: _MongoDB_]()
 
