@@ -16,7 +16,7 @@
 
 [🎁 **BONUS**. Herramientas _IA_ para la implementación de modelos de aprendizaje automático en aplicaciones (_Teachable Machine_ + _Tensorflow_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP8/tm/index.html)
 
-<img src="tm.png" width="800" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tm.PNG" width="800" height="">
 
 [3. Ficheros y flujos en _Java_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP8/8_3_ficheros_flujos/index.html)
 
@@ -25,7 +25,7 @@
 [4. Serialización de objetos. Ficheros _JSON_ y consumo de _APIs_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP8/8_4_serializacion_json/index.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Ejercicios sobre serialización :pencil:
-]()
+](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP8/8_4_serializacion_json/ejercicios_sobre_serializacin.html)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:link: Acceso a _JSON Formatter_](https://jsonformatter.org/)
 
@@ -35,7 +35,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:triangular_flag_on_post: Práctica 4. _JSON_ y APIs](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP8/8_4_serializacion_json/bonus_consumiendo_apis_externas_desde_java.html)
 
-[5. Acceso a bases de datos _NoSQL_: _MongoDB_]()
+5. Acceso a bases de datos _NoSQL_: _MongoDB_
 
 ---
 
