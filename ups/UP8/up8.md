@@ -16,7 +16,7 @@
 
 [🎁 **BONUS**. Herramientas _IA_ para la implementación de modelos de aprendizaje automático en aplicaciones (_Teachable Machine_ + _Tensorflow_)](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP8/tm/index.html)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tm.PNG" width="800" height="">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tm.PNG" width="500" height="">
 
 [3. Ficheros y flujos en _Java_](https://pbendom3.github.io/prog-1cfgs-2526/ups/UP8/8_3_ficheros_flujos/index.html)
 
