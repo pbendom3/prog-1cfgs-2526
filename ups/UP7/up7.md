@@ -24,6 +24,8 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[:a:ctividad. Carrera de autobuses de _TikTok_ :bus::bus:](5_BONUS_StringBuilder.pdf)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="buses.PNG" width="" height="">
+
 ---
 
 [:triangular_flag_on_post: Práctica. Servicio de compra _online_ en MERCADAW :articulated_lorry:](4_MERCADAW.pdf)

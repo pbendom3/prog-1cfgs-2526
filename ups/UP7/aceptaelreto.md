@@ -1,7 +1,5 @@
 ## :muscle: Problemas de _AceptaElReto_ a resolver durante la unidad
 
----
-
 :arrow_forward: Pilas:
 - 141 - Paréntesis balanceados
 - 198 - Evaluando expresiones

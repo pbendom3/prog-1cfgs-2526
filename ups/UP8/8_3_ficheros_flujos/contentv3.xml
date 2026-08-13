@@ -231,7 +231,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="img0.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img0.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img0.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="11243eb260f17257f02f03358aba4b32"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -283,7 +283,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="img1.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img1.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img1.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="7eabe97182b962c8c6a5aad1f8a1ceab"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -335,7 +335,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="img2.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img2.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img2.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="05d432b370a2d6a7f5cefced927ebf6d"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -669,7 +669,7 @@ if (archivos != null &amp;amp;&amp;amp; archivos.length &amp;gt; 0){
                      <string role="key" value="_storageName"></string>
                      <string value="img0.1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img0.1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img0.1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="6149e746deb207e2d6d7ef117c74fc84"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -721,7 +721,7 @@ if (archivos != null &amp;amp;&amp;amp; archivos.length &amp;gt; 0){
                      <string role="key" value="_storageName"></string>
                      <string value="img1.1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img1.1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img1.1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="06f74342dbf198538482ccfedbef958a"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -773,7 +773,7 @@ if (archivos != null &amp;amp;&amp;amp; archivos.length &amp;gt; 0){
                      <string role="key" value="_storageName"></string>
                      <string value="img2.1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img2.1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img2.1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="a56cff8829cead381f8119af181aefba"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1088,7 +1088,7 @@ public class LeerArchivoConScanner {
                      <string role="key" value="_storageName"></string>
                      <string value="img0.2.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img0.2.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img0.2.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="7dd192ac59e97c0d0d3e301e8e1bed38"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1140,7 +1140,7 @@ public class LeerArchivoConScanner {
                      <string role="key" value="_storageName"></string>
                      <string value="img1.2.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img1.2.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img1.2.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="a085110a09dafbf73aab9fc374712f56"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1192,7 +1192,7 @@ public class LeerArchivoConScanner {
                      <string role="key" value="_storageName"></string>
                      <string value="img2.2.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img2.2.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img2.2.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="2ea60e7ca33a63587c0deddee4c1313a"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1244,7 +1244,7 @@ public class LeerArchivoConScanner {
                      <string role="key" value="_storageName"></string>
                      <string value="img3.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img3.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img3.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="1ab8aeb4e51b585980d5c22e1cda5262"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1296,7 +1296,7 @@ public class LeerArchivoConScanner {
                      <string role="key" value="_storageName"></string>
                      <string value="img4.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img4.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img4.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="0e6a7762141031398e3ca6ddf65572bf"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1526,7 +1526,7 @@ public class Escribir {
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr /&gt;
-&lt;p style=&quot;padding-left: 30px; text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: #ffff99;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;span style=&quot;color: #008000; text-decoration: underline;&quot;&gt;ACTIVIDAD 8&lt;/span&gt;&lt;/span&gt;. Modifica el método creado en la &lt;span style=&quot;color: #008000;&quot;&gt;ACTIVIDAD 2&lt;/span&gt; para que dentro de cada archivo generado se escriba la frase “&lt;em&gt;Este es el fichero nombre(n).txt&lt;/em&gt;”.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;padding-left: 30px; text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: #ffff99;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;span style=&quot;color: #008000; text-decoration: underline;&quot;&gt;ACTIVIDAD 8&lt;/span&gt;&lt;/span&gt;. Modifica el método creado en la &lt;span style=&quot;color: #008000;&quot;&gt;ACTIVIDAD 4&lt;/span&gt; para que dentro de cada archivo generado se escriba la frase “&lt;em&gt;Este es el fichero nombre(n).txt&lt;/em&gt;”.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;padding-left: 30px; text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: #ffff99;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;span style=&quot;color: #008000; text-decoration: underline;&quot;&gt;ACTIVIDAD 9&lt;/span&gt;&lt;/span&gt;. Crea un método que reciba un archivo de texto y modifique su contenido, de modo que cada palabra del archivo deberá empezar en mayúscula.&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;padding-left: 60px; text-align: justify;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;(!)&lt;/span&gt; &lt;span style=&quot;color: #339966;&quot;&gt;PISTA&lt;/span&gt;&lt;/strong&gt;&lt;span style=&quot;color: #339966;&quot;&gt; &lt;/span&gt;Ve leyendo el archivo original y escribiendo las modificaciones sobre un archivo temporal:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
@@ -1626,7 +1626,7 @@ public class EjemploPrintWriter {
                      <string role="key" value="_storageName"></string>
                      <string value="img0.3.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img0.3.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img0.3.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="d8e6cb2cddbcf3d7690bcb04bc3388ae"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1678,7 +1678,7 @@ public class EjemploPrintWriter {
                      <string role="key" value="_storageName"></string>
                      <string value="img1.3.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmp3ak55d\\img1.3.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpafkyzg\\img1.3.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="a261152c3d2fc21abf58ec604cd39677"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2164,7 +2164,7 @@ public class LeerBinario {
   <string role="key" value="backgroundImgTile"></string>
   <bool value="0"></bool>
   <string role="key" value="currentNode"></string>
-  <reference key="10"></reference>
+  <reference key="24"></reference>
   <string role="key" value="dublinCore"></string>
   <instance class="exe.engine.package.DublinCore">
    <dictionary>

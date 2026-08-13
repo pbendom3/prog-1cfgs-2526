@@ -326,7 +326,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="1_8zJ4G6UTsAyqwpmbLyI5fg.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\1_8zJ4G6UTsAyqwpmbLyI5fg.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\1_8zJ4G6UTsAyqwpmbLyI5fg.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="409a2bbd23100bff0f2125bafb082e1c"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -378,7 +378,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="img1.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img1.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img1.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="17529b0c79a5b0413e78abd458e5ce1b"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -430,7 +430,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="img2.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img2.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img2.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="1ec3b52a8cb8595ccf00c42443999b2a"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -482,7 +482,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="img3.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img3.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img3.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="ff7439ec1e472e56ce2671926e4bd4da"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -534,7 +534,7 @@
                   <string role="key" value="_storageName"></string>
                   <string value="img4.png"></string>
                   <string role="key" value="_userName"></string>
-                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img4.png"></string>
+                  <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img4.png"></string>
                   <string role="key" value="checksum"></string>
                   <string value="31b53986b5c680d463a1299c798be1a9"></string>
                   <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1539,7 +1539,7 @@
                      <string role="key" value="_storageName"></string>
                      <string value="147291500-402b5260-4d61-41eb-a9ff-b38957abd81f.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\147291500-402b5260-4d61-41eb-a9ff-b38957abd81f.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\147291500-402b5260-4d61-41eb-a9ff-b38957abd81f.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="b250f5407d5ce0af7039d770c7b72bdb"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1591,7 +1591,7 @@
                      <string role="key" value="_storageName"></string>
                      <string value="img1.2.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img1.2.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img1.2.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="2de75f7b5f2bce108add03c9dfb266d5"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1643,7 +1643,7 @@
                      <string role="key" value="_storageName"></string>
                      <string value="img2.1.png"></string>
                      <string role="key" value="_userName"></string>
-                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img2.1.png"></string>
+                     <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img2.1.png"></string>
                      <string role="key" value="checksum"></string>
                      <string value="7148539d35c5403a490fc03ac00d933e"></string>
                      <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -1934,29 +1934,9 @@ public class PersonaJSON {
 &lt;/div&gt;
 &lt;h5&gt;&lt;img src=&quot;resources/img7.png&quot; width=&quot;459&quot; height=&quot;647&quot; alt=&quot;2&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;/h5&gt;
 &lt;h5&gt;&lt;img src=&quot;resources/img6.png&quot; width=&quot;710&quot; height=&quot;495&quot; alt=&quot;1&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;/h5&gt;
-&lt;h5&gt;De formato &lt;em&gt;JSON&lt;/em&gt; a objeto &lt;em&gt;Java&lt;/em&gt;:&lt;/h5&gt;
-&lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
-&lt;div&gt;
-&lt;pre&gt;&lt;code&gt;public class GsonEjemplo {
-    public static void main(String[] args) {
-
-        Gson gson = new Gson();
-
-        // convertir objeto a JSON
-        PersonaJSON persona = new PersonaJSON(&quot;Luis&quot;, 25, Arrays.asList(&quot;Java&quot;, &quot;Python&quot;));
-        String json = gson.toJson(persona);
-        System.out.println(&quot;JSON: &quot; + json);
-
-        // convertir JSON a objeto
-        PersonaJSON persona2 = gson.fromJson(json, PersonaJSON.class);
-        System.out.println(&quot;Nombre: &quot; + persona2.getNombre() + &quot;, Edad: &quot; + persona2.getEdad() + &quot; Lenguajes: &quot; + persona2.getLenguajes());
-    }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;resources/img1.1.png&quot; width=&quot;613&quot; height=&quot;173&quot; alt=&quot;2&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;/p&gt;
 &lt;h5&gt;&lt;strong&gt;Leer el &lt;em&gt;JSON&lt;/em&gt; desde el archivo&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Usaremos la clase &lt;em&gt;FileReader&lt;/em&gt;, que también conocemos de ejercicios previos.&lt;/p&gt;
+&lt;p&gt;Usaremos la clase &lt;strong&gt;&lt;em&gt;FileReader&lt;/em&gt;&lt;/strong&gt;, que también conocemos de ejercicios previos.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;Para objetos aislados (no es una lista)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class=&quot;highlighted-code code-style-2 language-java line-numbers&quot;&gt;
 &lt;div&gt;
 &lt;pre&gt;&lt;code&gt;public class GsonEjemplo {
@@ -1992,7 +1972,27 @@ public class PersonaJSON {
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;resources/img8.png&quot; width=&quot;446&quot; height=&quot;430&quot; alt=&quot;12&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;br /&gt;&lt;img src=&quot;resources/img9.png&quot; width=&quot;772&quot; height=&quot;290&quot; alt=&quot;13&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;/p&gt;&lt;/div&gt;"></unicode>
+&lt;p&gt;&lt;img src=&quot;resources/img8.png&quot; width=&quot;446&quot; height=&quot;430&quot; alt=&quot;12&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;br /&gt;&lt;img src=&quot;resources/img9.png&quot; width=&quot;772&quot; height=&quot;290&quot; alt=&quot;13&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;En caso de que el &lt;em&gt;JSON&lt;/em&gt; contenga una lista de objetos&lt;/span&gt;, deberemos expresar el&lt;em&gt; .class&lt;/em&gt; como vector:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;PersonaJSON[] personas = gson.fromJson(reader, PersonaJSON[].class);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;y posteriormente transformarlo a lista:&lt;/p&gt;
+&lt;div class=&quot;highlighted-code code-style-2 language-java&quot;&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code&gt;List&amp;lt;PersonaJSON&amp;gt; listaPersonas = Arrays.asList(personas);
+
+for (PersonaJSON persona : listaPersonas ) {
+        System.out.println(&quot;Nombre: &quot; + persona.getNombre());
+        System.out.println(&quot;Edad: &quot; + persona.getEdad());
+        System.out.println(&quot;Lenguajes: &quot; + persona.getLenguajes());
+    }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/div&gt;"></unicode>
                  <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
                  <int value="4"></int>
                  <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -2037,61 +2037,9 @@ public class PersonaJSON {
                         <string role="key" value="_storageName"></string>
                         <string value="img0.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img0.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img0.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="e3c6e2367523d3f5a22a84252b6c59e7"></string>
-                        <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
-                        <int value="2"></int>
-                        <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
-                        <int value="2"></int>
-                        <string role="key" value="warningMsg"></string>
-                        <string value=""></string>
-                       </dictionary>
-                      </instance>
-                      <string role="key" value="_parent"></string>
-                      <reference key="28"></reference>
-                      <string role="key" value="_thumbnailResource"></string>
-                      <none></none>
-                      <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
-                      <int value="3"></int>
-                      <string role="key" value="makeThumbnail"></string>
-                      <bool value="0"></bool>
-                     </dictionary>
-                    </instance>
-                    <instance class="exe.engine.galleryidevice.GalleryImage">
-                     <dictionary>
-                      <string role="key" value="_caption"></string>
-                      <instance class="exe.engine.field.TextField">
-                       <dictionary>
-                        <string role="key" value="_id"></string>
-                        <int value="293"></int>
-                        <string role="key" value="_idevice"></string>
-                        <none></none>
-                        <string role="key" value="_instruc"></string>
-                        <string value=""></string>
-                        <string role="key" value="_name"></string>
-                        <string value=""></string>
-                        <string role="key" value="content"></string>
-                        <string value=""></string>
-                        <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                        <int value="4"></int>
-                       </dictionary>
-                      </instance>
-                      <string role="key" value="_id"></string>
-                      <unicode value="8_127_2.13"></unicode>
-                      <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="31">
-                       <dictionary>
-                        <string role="key" value="_idevice"></string>
-                        <reference key="27"></reference>
-                        <string role="key" value="_package"></string>
-                        <reference key="2"></reference>
-                        <string role="key" value="_storageName"></string>
-                        <string value="img1.1.png"></string>
-                        <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img1.1.png"></string>
-                        <string role="key" value="checksum"></string>
-                        <string value="d3f698ad8b4ead838e0d7b1620c2b50c"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
                         <int value="2"></int>
                         <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
@@ -2132,7 +2080,7 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="8_127_2.14"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="32">
+                      <instance class="exe.engine.resource.Resource" reference="31">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
                         <reference key="27"></reference>
@@ -2141,7 +2089,7 @@ public class PersonaJSON {
                         <string role="key" value="_storageName"></string>
                         <string value="img3.1.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img3.1.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img3.1.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="99449a0cfdfebf9205dac433014dbc7f"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2184,7 +2132,7 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="8_127_2.15"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="33">
+                      <instance class="exe.engine.resource.Resource" reference="32">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
                         <reference key="27"></reference>
@@ -2193,7 +2141,7 @@ public class PersonaJSON {
                         <string role="key" value="_storageName"></string>
                         <string value="img4.1.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img4.1.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img4.1.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="6c036b9f70218df367c260146846d135"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2236,7 +2184,7 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="8_127_2.16"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="34">
+                      <instance class="exe.engine.resource.Resource" reference="33">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
                         <reference key="27"></reference>
@@ -2245,7 +2193,7 @@ public class PersonaJSON {
                         <string role="key" value="_storageName"></string>
                         <string value="img6.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img6.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img6.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="730487909fe5513130eff26ac248d860"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2288,7 +2236,7 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="8_127_2.17"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="35">
+                      <instance class="exe.engine.resource.Resource" reference="34">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
                         <reference key="27"></reference>
@@ -2297,7 +2245,7 @@ public class PersonaJSON {
                         <string role="key" value="_storageName"></string>
                         <string value="img7.1.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img7.1.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img7.1.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="5198dd864d108fcdb57ed0ae157d81e5"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2340,7 +2288,7 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="8_127_2.18"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="36">
+                      <instance class="exe.engine.resource.Resource" reference="35">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
                         <reference key="27"></reference>
@@ -2349,7 +2297,7 @@ public class PersonaJSON {
                         <string role="key" value="_storageName"></string>
                         <string value="img7.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img7.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img7.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="85ae39250570ef78636fed453b1447c4"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2392,7 +2340,7 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="8_127_2.19"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="37">
+                      <instance class="exe.engine.resource.Resource" reference="36">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
                         <reference key="27"></reference>
@@ -2401,7 +2349,7 @@ public class PersonaJSON {
                         <string role="key" value="_storageName"></string>
                         <string value="img8.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img8.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img8.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="7c3f49f6769bd6996c2ee54034cf7473"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2444,7 +2392,7 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="8_127_2.20"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="38">
+                      <instance class="exe.engine.resource.Resource" reference="37">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
                         <reference key="27"></reference>
@@ -2453,7 +2401,7 @@ public class PersonaJSON {
                         <string role="key" value="_storageName"></string>
                         <string value="img9.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img9.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img9.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="184057d5cc9b68c40aca3ab1dd43b6a1"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2496,7 +2444,7 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="8_127_2.21"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="39">
+                      <instance class="exe.engine.resource.Resource" reference="38">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
                         <reference key="27"></reference>
@@ -2505,7 +2453,7 @@ public class PersonaJSON {
                         <string role="key" value="_storageName"></string>
                         <string value="java-gson.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\java-gson.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\java-gson.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="1b158f47fb31742573571f4a36e30a81"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -2569,13 +2517,12 @@ public class PersonaJSON {
                <reference key="36"></reference>
                <reference key="37"></reference>
                <reference key="38"></reference>
-               <reference key="39"></reference>
               </list>
               <string role="key" value="version"></string>
               <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="40">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="39">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value="Práctica (1)"></unicode>
@@ -2636,12 +2583,12 @@ public class PersonaJSON {
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="41">
+               <instance class="exe.engine.field.TextAreaField" reference="40">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="131_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="40"></reference>
+                 <reference key="39"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -2682,7 +2629,7 @@ public class PersonaJSON {
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="41"></reference>
+                   <reference key="40"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -2739,13 +2686,13 @@ public class PersonaJSON {
            <list></list>
           </dictionary>
          </instance>
-         <instance class="exe.engine.node.Node" reference="44">
+         <instance class="exe.engine.node.Node" reference="43">
           <dictionary>
            <string role="key" value="_title"></string>
            <unicode value="BONUS. Consumiendo APIs externas desde Java. "></unicode>
            <string role="key" value="idevices"></string>
            <list>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="42">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="41">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value=""></unicode>
@@ -2806,12 +2753,12 @@ public class PersonaJSON {
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="43">
+               <instance class="exe.engine.field.TextAreaField" reference="42">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="129_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="42"></reference>
+                 <reference key="41"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -3093,16 +3040,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.13"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="45">
+                      <instance class="exe.engine.resource.Resource" reference="44">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="14982659.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\14982659.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\14982659.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="376c70f527842ab0b64cb6ecb1094bde"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3114,7 +3061,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3145,16 +3092,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.14"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="46">
+                      <instance class="exe.engine.resource.Resource" reference="45">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="images.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\images.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\images.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="37d59f0102d644c301d243491aa3b401"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3166,7 +3113,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3197,16 +3144,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.15"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="47">
+                      <instance class="exe.engine.resource.Resource" reference="46">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img10.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img10.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img10.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="f9ff0ebf0681d938d2c71bd805e1d6ac"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3218,7 +3165,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3249,16 +3196,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.16"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="48">
+                      <instance class="exe.engine.resource.Resource" reference="47">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img11.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img11.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img11.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="78ae1f50911e3880a90cf9ba64b727c9"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3270,7 +3217,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3301,16 +3248,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.17"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="49">
+                      <instance class="exe.engine.resource.Resource" reference="48">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img12.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img12.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img12.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="1a1e2048fd93a179e6d8a4e7f6ca8745"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3322,7 +3269,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3353,16 +3300,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.18"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="50">
+                      <instance class="exe.engine.resource.Resource" reference="49">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img2.2.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img2.2.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img2.2.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="e4adc9a8e939b20a0382ec3d39afc194"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3374,7 +3321,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3405,16 +3352,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.19"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="51">
+                      <instance class="exe.engine.resource.Resource" reference="50">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img3.2.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img3.2.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img3.2.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="f05b31da841d56d5e489c6b2d406c6fa"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3426,7 +3373,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3457,16 +3404,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.20"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="52">
+                      <instance class="exe.engine.resource.Resource" reference="51">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img4.2.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img4.2.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img4.2.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="c7e0140f0b95d7edfd0e9945e584fc9d"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3478,7 +3425,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3509,16 +3456,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.21"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="53">
+                      <instance class="exe.engine.resource.Resource" reference="52">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img5.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img5.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img5.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="cdb996dfdbd96cc0ca2c5cfa1716b4cc"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3530,7 +3477,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3561,16 +3508,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.22"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="54">
+                      <instance class="exe.engine.resource.Resource" reference="53">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img6.1.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img6.1.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img6.1.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="ea2ac0536b20c2c64a87114784bb7704"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3582,7 +3529,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3613,16 +3560,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.23"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="55">
+                      <instance class="exe.engine.resource.Resource" reference="54">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img7.2.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img7.2.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img7.2.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="c4199ab1419f797a56b4d57e1f4f7b46"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3634,7 +3581,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3665,16 +3612,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.24"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="56">
+                      <instance class="exe.engine.resource.Resource" reference="55">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img8.1.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img8.1.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img8.1.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="22b56216353339055fae503f2d166bc5"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3686,7 +3633,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3717,16 +3664,16 @@ public class PersonaJSON {
                       <string role="key" value="_id"></string>
                       <unicode value="10_129_2.25"></unicode>
                       <string role="key" value="_imageResource"></string>
-                      <instance class="exe.engine.resource.Resource" reference="57">
+                      <instance class="exe.engine.resource.Resource" reference="56">
                        <dictionary>
                         <string role="key" value="_idevice"></string>
-                        <reference key="42"></reference>
+                        <reference key="41"></reference>
                         <string role="key" value="_package"></string>
                         <reference key="2"></reference>
                         <string role="key" value="_storageName"></string>
                         <string value="img9.1.png"></string>
                         <string role="key" value="_userName"></string>
-                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpwzi93q\\img9.1.png"></string>
+                        <string value="c:\\users\\patri\\appdata\\local\\temp\\tmpj5mz6w\\img9.1.png"></string>
                         <string role="key" value="checksum"></string>
                         <string value="03b0f50afa1e356b756699a5e077ce66"></string>
                         <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
@@ -3738,7 +3685,7 @@ public class PersonaJSON {
                        </dictionary>
                       </instance>
                       <string role="key" value="_parent"></string>
-                      <reference key="43"></reference>
+                      <reference key="42"></reference>
                       <string role="key" value="_thumbnailResource"></string>
                       <none></none>
                       <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
@@ -3749,7 +3696,7 @@ public class PersonaJSON {
                     </instance>
                    </list>
                    <string role="key" value="idevice"></string>
-                   <reference key="43"></reference>
+                   <reference key="42"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -3757,7 +3704,7 @@ public class PersonaJSON {
                  <string role="key" value="nextImageId"></string>
                  <int value="26"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="44"></reference>
+                 <reference key="43"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -3774,13 +3721,14 @@ public class PersonaJSON {
               <string role="key" value="originalicon"></string>
               <string value=""></string>
               <string role="key" value="parentNode"></string>
-              <reference key="44"></reference>
+              <reference key="43"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
               <bool value="1"></bool>
               <string role="key" value="userResources"></string>
               <list>
+               <reference key="44"></reference>
                <reference key="45"></reference>
                <reference key="46"></reference>
                <reference key="47"></reference>
@@ -3793,13 +3741,12 @@ public class PersonaJSON {
                <reference key="54"></reference>
                <reference key="55"></reference>
                <reference key="56"></reference>
-               <reference key="57"></reference>
               </list>
               <string role="key" value="version"></string>
               <int value="0"></int>
              </dictionary>
             </instance>
-            <instance class="exe.engine.jsidevice.JsIdevice" reference="58">
+            <instance class="exe.engine.jsidevice.JsIdevice" reference="57">
              <dictionary>
               <string role="key" value="_title"></string>
               <unicode value="Práctica (2)"></unicode>
@@ -3860,12 +3807,12 @@ public class PersonaJSON {
               <int value="1"></int>
               <string role="key" value="fields"></string>
               <list>
-               <instance class="exe.engine.field.TextAreaField" reference="59">
+               <instance class="exe.engine.field.TextAreaField" reference="58">
                 <dictionary>
                  <string role="key" value="_id"></string>
                  <unicode value="130_2"></unicode>
                  <string role="key" value="_idevice"></string>
-                 <reference key="58"></reference>
+                 <reference key="57"></reference>
                  <string role="key" value="_instruc"></string>
                  <string value=""></string>
                  <string role="key" value="_name"></string>
@@ -3906,7 +3853,7 @@ public class PersonaJSON {
                    <string role="key" value=".listitems"></string>
                    <list></list>
                    <string role="key" value="idevice"></string>
-                   <reference key="59"></reference>
+                   <reference key="58"></reference>
                   </dictionary>
                  </instance>
                  <string role="key" value="intlinks_to_anchors"></string>
@@ -3914,7 +3861,7 @@ public class PersonaJSON {
                  <string role="key" value="nextImageId"></string>
                  <int value="0"></int>
                  <string role="key" value="parentNode"></string>
-                 <reference key="44"></reference>
+                 <reference key="43"></reference>
                 </dictionary>
                </instance>
               </list>
@@ -3931,7 +3878,7 @@ public class PersonaJSON {
               <string role="key" value="originalicon"></string>
               <unicode value="activity"></unicode>
               <string role="key" value="parentNode"></string>
-              <reference key="44"></reference>
+              <reference key="43"></reference>
               <string role="key" value="systemResources"></string>
               <list></list>
               <string role="key" value="undo"></string>
@@ -3970,7 +3917,7 @@ public class PersonaJSON {
     </dictionary>
    </instance>
    <unicode role="key" value="1"></unicode>
-   <reference key="44"></reference>
+   <reference key="43"></reference>
    <unicode role="key" value="4"></unicode>
    <reference key="29"></reference>
    <unicode role="key" value="5"></unicode>
@@ -5023,7 +4970,7 @@ public class PersonaJSON {
   <dictionary>
    <string role="key" value="03b0f50afa1e356b756699a5e077ce66"></string>
    <list>
-    <reference key="57"></reference>
+    <reference key="56"></reference>
    </list>
    <string role="key" value="17529b0c79a5b0413e78abd458e5ce1b"></string>
    <list>
@@ -5031,15 +4978,15 @@ public class PersonaJSON {
    </list>
    <string role="key" value="184057d5cc9b68c40aca3ab1dd43b6a1"></string>
    <list>
-    <reference key="38"></reference>
+    <reference key="37"></reference>
    </list>
    <string role="key" value="1a1e2048fd93a179e6d8a4e7f6ca8745"></string>
    <list>
-    <reference key="49"></reference>
+    <reference key="48"></reference>
    </list>
    <string role="key" value="1b158f47fb31742573571f4a36e30a81"></string>
    <list>
-    <reference key="39"></reference>
+    <reference key="38"></reference>
    </list>
    <string role="key" value="1ec3b52a8cb8595ccf00c42443999b2a"></string>
    <list>
@@ -5047,7 +4994,7 @@ public class PersonaJSON {
    </list>
    <string role="key" value="22b56216353339055fae503f2d166bc5"></string>
    <list>
-    <reference key="56"></reference>
+    <reference key="55"></reference>
    </list>
    <string role="key" value="2de75f7b5f2bce108add03c9dfb266d5"></string>
    <list>
@@ -5059,11 +5006,11 @@ public class PersonaJSON {
    </list>
    <string role="key" value="376c70f527842ab0b64cb6ecb1094bde"></string>
    <list>
-    <reference key="45"></reference>
+    <reference key="44"></reference>
    </list>
    <string role="key" value="37d59f0102d644c301d243491aa3b401"></string>
    <list>
-    <reference key="46"></reference>
+    <reference key="45"></reference>
    </list>
    <string role="key" value="409a2bbd23100bff0f2125bafb082e1c"></string>
    <list>
@@ -5071,11 +5018,11 @@ public class PersonaJSON {
    </list>
    <string role="key" value="5198dd864d108fcdb57ed0ae157d81e5"></string>
    <list>
-    <reference key="35"></reference>
+    <reference key="34"></reference>
    </list>
    <string role="key" value="6c036b9f70218df367c260146846d135"></string>
    <list>
-    <reference key="33"></reference>
+    <reference key="32"></reference>
    </list>
    <string role="key" value="7148539d35c5403a490fc03ac00d933e"></string>
    <list>
@@ -5083,23 +5030,23 @@ public class PersonaJSON {
    </list>
    <string role="key" value="730487909fe5513130eff26ac248d860"></string>
    <list>
-    <reference key="34"></reference>
+    <reference key="33"></reference>
    </list>
    <string role="key" value="78ae1f50911e3880a90cf9ba64b727c9"></string>
    <list>
-    <reference key="48"></reference>
+    <reference key="47"></reference>
    </list>
    <string role="key" value="7c3f49f6769bd6996c2ee54034cf7473"></string>
    <list>
-    <reference key="37"></reference>
+    <reference key="36"></reference>
    </list>
    <string role="key" value="85ae39250570ef78636fed453b1447c4"></string>
    <list>
-    <reference key="36"></reference>
+    <reference key="35"></reference>
    </list>
    <string role="key" value="99449a0cfdfebf9205dac433014dbc7f"></string>
    <list>
-    <reference key="32"></reference>
+    <reference key="31"></reference>
    </list>
    <string role="key" value="b250f5407d5ce0af7039d770c7b72bdb"></string>
    <list>
@@ -5107,19 +5054,15 @@ public class PersonaJSON {
    </list>
    <string role="key" value="c4199ab1419f797a56b4d57e1f4f7b46"></string>
    <list>
-    <reference key="55"></reference>
+    <reference key="54"></reference>
    </list>
    <string role="key" value="c7e0140f0b95d7edfd0e9945e584fc9d"></string>
    <list>
-    <reference key="52"></reference>
+    <reference key="51"></reference>
    </list>
    <string role="key" value="cdb996dfdbd96cc0ca2c5cfa1716b4cc"></string>
    <list>
-    <reference key="53"></reference>
-   </list>
-   <string role="key" value="d3f698ad8b4ead838e0d7b1620c2b50c"></string>
-   <list>
-    <reference key="31"></reference>
+    <reference key="52"></reference>
    </list>
    <string role="key" value="e3c6e2367523d3f5a22a84252b6c59e7"></string>
    <list>
@@ -5127,19 +5070,19 @@ public class PersonaJSON {
    </list>
    <string role="key" value="e4adc9a8e939b20a0382ec3d39afc194"></string>
    <list>
-    <reference key="50"></reference>
+    <reference key="49"></reference>
    </list>
    <string role="key" value="ea2ac0536b20c2c64a87114784bb7704"></string>
    <list>
-    <reference key="54"></reference>
+    <reference key="53"></reference>
    </list>
    <string role="key" value="f05b31da841d56d5e489c6b2d406c6fa"></string>
    <list>
-    <reference key="51"></reference>
+    <reference key="50"></reference>
    </list>
    <string role="key" value="f9ff0ebf0681d938d2c71bd805e1d6ac"></string>
    <list>
-    <reference key="47"></reference>
+    <reference key="46"></reference>
    </list>
    <string role="key" value="ff7439ec1e472e56ce2671926e4bd4da"></string>
    <list>

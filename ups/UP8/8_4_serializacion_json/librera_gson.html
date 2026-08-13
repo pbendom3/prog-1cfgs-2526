@@ -172,29 +172,9 @@ public class PersonaJSON {
 </div>
 <h5><img src="img7.png" width="459" height="647" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></h5>
 <h5><img src="img6.png" width="710" height="495" alt="1" style="display: block; margin-left: auto; margin-right: auto;" /></h5>
-<h5>De formato <em>JSON</em> a objeto <em>Java</em>:</h5>
-<div class="highlighted-code code-style-2 language-java line-numbers">
-<div>
-<pre><code>public class GsonEjemplo {
-    public static void main(String[] args) {
-
-        Gson gson = new Gson();
-
-        // convertir objeto a JSON
-        PersonaJSON persona = new PersonaJSON("Luis", 25, Arrays.asList("Java", "Python"));
-        String json = gson.toJson(persona);
-        System.out.println("JSON: " + json);
-
-        // convertir JSON a objeto
-        PersonaJSON persona2 = gson.fromJson(json, PersonaJSON.class);
-        System.out.println("Nombre: " + persona2.getNombre() + ", Edad: " + persona2.getEdad() + " Lenguajes: " + persona2.getLenguajes());
-    }
-}</code></pre>
-</div>
-</div>
-<p><img src="img1.1.png" width="613" height="173" alt="2" style="display: block; margin-left: auto; margin-right: auto;" /></p>
 <h5><strong>Leer el <em>JSON</em> desde el archivo</strong></h5>
-<p>Usaremos la clase <em>FileReader</em>, que también conocemos de ejercicios previos.</p>
+<p>Usaremos la clase <strong><em>FileReader</em></strong>, que también conocemos de ejercicios previos.</p>
+<p><span style="text-decoration: underline;">Para objetos aislados (no es una lista)</span>:</p>
 <div class="highlighted-code code-style-2 language-java line-numbers">
 <div>
 <pre><code>public class GsonEjemplo {
@@ -230,7 +210,27 @@ public class PersonaJSON {
 }</code></pre>
 </div>
 </div>
-<p><img src="img8.png" width="446" height="430" alt="12" style="display: block; margin-left: auto; margin-right: auto;" /><br /><img src="img9.png" width="772" height="290" alt="13" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+<p><img src="img8.png" width="446" height="430" alt="12" style="display: block; margin-left: auto; margin-right: auto;" /><br /><img src="img9.png" width="772" height="290" alt="13" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<p><span style="text-decoration: underline;">En caso de que el <em>JSON</em> contenga una lista de objetos</span>, deberemos expresar el<em> .class</em> como vector:</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>PersonaJSON[] personas = gson.fromJson(reader, PersonaJSON[].class);</code></pre>
+</div>
+</div>
+<p>y posteriormente transformarlo a lista:</p>
+<div class="highlighted-code code-style-2 language-java">
+<div>
+<pre><code>List&lt;PersonaJSON&gt; listaPersonas = Arrays.asList(personas);
+
+for (PersonaJSON persona : listaPersonas ) {
+        System.out.println("Nombre: " + persona.getNombre());
+        System.out.println("Edad: " + persona.getEdad());
+        System.out.println("Lenguajes: " + persona.getLenguajes());
+    }</code></pre>
+</div>
+</div>
+<p></p></div>
 </div>
 </div>
 </article>
